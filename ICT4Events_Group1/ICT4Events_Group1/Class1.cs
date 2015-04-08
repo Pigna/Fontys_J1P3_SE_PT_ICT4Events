@@ -9,5 +9,6 @@ namespace ICT4Events_Group1
     class Class1
     {
         Boolean werkt = false;
+        Boolean werktgoed = true;
     }
 }
