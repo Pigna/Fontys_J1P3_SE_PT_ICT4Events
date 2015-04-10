@@ -8,5 +8,13 @@ namespace ICT4Events_Group1
 {
     class Event
     {
+        //fields
+        public string Name;
+        public string Desc;
+        public DateTime Date;
+
+        //propperties
+        //constructor
+        //methodes
     }
 }

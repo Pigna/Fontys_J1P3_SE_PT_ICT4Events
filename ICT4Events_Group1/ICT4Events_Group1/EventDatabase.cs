@@ -8,5 +8,13 @@ namespace ICT4Events_Group1
 {
     class EventDatabase
     {
+        //fields
+        //propperties
+        //constructor
+        //methodes
+        public bool CreateEvent(Event eventnaam)
+        {
+            return true;
+        }
     }
 }
