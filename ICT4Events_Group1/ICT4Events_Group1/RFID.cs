@@ -11,11 +11,11 @@ namespace ICT4Events_Group1
         //fields
         private int code;
         private User owner;
-        public bool active = false;
+        public bool activex;
 
         //properties
-        public int Code { get; }
-        public User Owner { get; }
+        public int Code { get{return 1;} }       //return tijdelijk toegevoegd verander dit nog
+        public User Owner { get{return null;} }  //return tijdelijk toegevoegd verander dit nog
         public bool active { get; set; }
 
         //constructors
