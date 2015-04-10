@@ -8,5 +8,11 @@ namespace ICT4Events_Group1
 {
     class Employee
     {
+        //fields
+        private string username;
+        private string password;
+        //propperties
+        //constructor
+        //methodes
     }
 }
