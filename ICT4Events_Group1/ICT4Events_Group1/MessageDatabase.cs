@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ICT4Events_Group1
 {
-    class MessageDatabase
+    class MessageDatabase : Database
     {
         public bool hidemessage(Message bericht)
         {
