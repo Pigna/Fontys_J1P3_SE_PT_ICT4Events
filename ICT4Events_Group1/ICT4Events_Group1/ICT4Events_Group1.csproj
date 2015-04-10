@@ -53,6 +53,12 @@
     <Compile Include="Item.cs" />
     <Compile Include="MediaSharing.cs" />
     <Compile Include="MediaSharingDatabase.cs" />
+    <Compile Include="MediaSharingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MediaSharingForm.Designer.cs">
+      <DependentUpon>MediaSharingForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Message.cs" />
     <Compile Include="MessageDatabase.cs" />
     <Compile Include="Program.cs" />
