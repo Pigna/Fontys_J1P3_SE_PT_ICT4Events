@@ -30,7 +30,7 @@
         {
             this.btnVerhuur = new System.Windows.Forms.Button();
             this.btnBeheer = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnMediaShare = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -54,14 +54,15 @@
             this.btnBeheer.UseVisualStyleBackColor = true;
             this.btnBeheer.Click += new System.EventHandler(this.btnBeheer_Click);
             // 
-            // button3
+            // btnMediaShare
             // 
-            this.button3.Location = new System.Drawing.Point(48, 136);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(141, 23);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnMediaShare.Location = new System.Drawing.Point(48, 136);
+            this.btnMediaShare.Name = "btnMediaShare";
+            this.btnMediaShare.Size = new System.Drawing.Size(141, 23);
+            this.btnMediaShare.TabIndex = 2;
+            this.btnMediaShare.Text = "Media Sharing";
+            this.btnMediaShare.UseVisualStyleBackColor = true;
+            this.btnMediaShare.Click += new System.EventHandler(this.btnMediaShare_Click);
             // 
             // button4
             // 
@@ -78,7 +79,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(544, 402);
             this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btnMediaShare);
             this.Controls.Add(this.btnBeheer);
             this.Controls.Add(this.btnVerhuur);
             this.Name = "MainForm";
@@ -91,7 +92,7 @@
 
         private System.Windows.Forms.Button btnVerhuur;
         private System.Windows.Forms.Button btnBeheer;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnMediaShare;
         private System.Windows.Forms.Button button4;
     }
 }

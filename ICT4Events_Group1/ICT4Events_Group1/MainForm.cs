@@ -12,7 +12,7 @@ namespace ICT4Events_Group1
 {
     public partial class MainForm : Form
     {
-        VerhuurForm verhuur = new VerhuurForm(); GebruikerBeheerForm gb = new GebruikerBeheerForm();
+        VerhuurForm verhuur = new VerhuurForm(); GebruikerBeheerForm gb = new GebruikerBeheerForm(); MediaSharingForm Media = new MediaSharingForm();
 
 
         public MainForm()
@@ -31,6 +31,11 @@ namespace ICT4Events_Group1
         private void btnBeheer_Click(object sender, EventArgs e)
         {
             gb.ShowDialog();
+        }
+
+        private void btnMediaShare_Click(object sender, EventArgs e)
+        {
+            Media.ShowDialog();
         }
     }
 }
