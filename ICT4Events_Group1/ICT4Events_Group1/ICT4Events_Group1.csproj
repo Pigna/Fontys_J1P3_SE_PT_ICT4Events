@@ -50,10 +50,6 @@
     <Compile Include="EntranceDatabase.cs" />
     <Compile Include="Event.cs" />
     <Compile Include="EventDatabase.cs" />
-    <Compile Include="ICT4Event.cs" />
-    <Compile Include="ICT4Event.Designer.cs">
-      <DependentUpon>ICT4Event.cs</DependentUpon>
-    </Compile>
     <Compile Include="Item.cs" />
     <Compile Include="MediaSharing.cs" />
     <Compile Include="MediaSharingDatabase.cs" />

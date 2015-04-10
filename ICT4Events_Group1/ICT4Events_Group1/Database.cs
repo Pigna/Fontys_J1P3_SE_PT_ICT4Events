@@ -8,5 +8,34 @@ namespace ICT4Events_Group1
 {
     class Database
     {
+        //fields
+        protected string database = "";
+        protected string host = "";
+
+        //properties
+
+        //constructor
+
+        //methodes
+        private void Connect()
+        {
+
+        }
+        private void Disconnect()
+        {
+
+        }
+        private string getQuery(string query)
+        {
+            return null;
+        }
+        private bool doQuery(string query)
+        {
+            return true;
+        }
+        public User LogIn(string username, string password)
+        {
+            return null;
+        }
     }
 }
