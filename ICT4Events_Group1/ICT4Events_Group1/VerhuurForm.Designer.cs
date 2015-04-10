@@ -88,10 +88,10 @@
             // pbxLogo
             // 
             this.pbxLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pbxLogo.Image = global::ICT4Events_Group1.Properties.Resources.ict4events_os_home;
             this.pbxLogo.Location = new System.Drawing.Point(38, 12);
             this.pbxLogo.Name = "pbxLogo";
             this.pbxLogo.Size = new System.Drawing.Size(242, 78);
+            this.pbxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pbxLogo.TabIndex = 5;
             this.pbxLogo.TabStop = false;
             // 
