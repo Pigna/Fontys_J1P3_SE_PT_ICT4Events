@@ -8,21 +8,20 @@ namespace ICT4Events_Group1
 {
     class User
     {
+        //fields
         private string username;
-        private string RFID;
+        private RFID RFID;
         List<Item> itemlist = new List<Item>();
 
-        public string Username
-        {
-            get { return username; }
-            set { username = value; }
-        }
+        //properties
+        public string Username { get; set; }
+        public RFID rfid { get; set; }
 
-        public User(string username, string rfid)
-        {
-            this.username = username;
-            this.RFID = rfid;
-        }
+        //constructors
+        public User ( string username)
+        { this.username = username; }
+
+        //methoden
         public bool additem(int itemid)
         {
             
