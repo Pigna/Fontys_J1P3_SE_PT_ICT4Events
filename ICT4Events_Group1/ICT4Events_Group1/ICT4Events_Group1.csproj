@@ -62,6 +62,12 @@
     <Compile Include="RFID.cs" />
     <Compile Include="User.cs" />
     <Compile Include="UserDatabase.cs" />
+    <Compile Include="VerhuurForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VerhuurForm.Designer.cs">
+      <DependentUpon>VerhuurForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -71,6 +77,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="VerhuurForm.resx">
+      <DependentUpon>VerhuurForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
