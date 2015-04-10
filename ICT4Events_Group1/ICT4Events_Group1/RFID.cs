@@ -11,11 +11,13 @@ namespace ICT4Events_Group1
         //fields
         private int code;
         private User owner;
-        public bool active;
+        public bool active = false;
+
         //properties
         public int Code { get; }
         public User Owner { get; }
         public bool active { get; set; }
+
         //constructors
         public RFID (int code)
         { this.code = code; }

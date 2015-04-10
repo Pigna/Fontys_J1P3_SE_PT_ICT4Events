@@ -20,11 +20,10 @@ namespace ICT4Events_Group1
         //constructors
         public User ( string username)
         { this.username = username; }
-
+        
         //methoden
         public bool additem(int itemid)
         {
-            
             return true;
         }
 

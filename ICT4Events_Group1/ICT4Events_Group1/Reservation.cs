@@ -8,5 +8,6 @@ namespace ICT4Events_Group1
 {
     class Reservation
     {
+
     }
 }
