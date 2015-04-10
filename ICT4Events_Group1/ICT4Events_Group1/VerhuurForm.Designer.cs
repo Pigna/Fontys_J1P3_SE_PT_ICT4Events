@@ -39,6 +39,7 @@
             this.btnRentedList = new System.Windows.Forms.Button();
             this.lbxRentList = new System.Windows.Forms.ListBox();
             this.btnSearch = new System.Windows.Forms.Button();
+            this.lblDesc = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -50,6 +51,7 @@
             this.btnMessage.TabIndex = 0;
             this.btnMessage.Text = "Berichten";
             this.btnMessage.UseVisualStyleBackColor = true;
+            this.btnMessage.Click += new System.EventHandler(this.btnMessage_Click);
             // 
             // btnRent
             // 
@@ -101,8 +103,9 @@
             this.btnRentList.Name = "btnRentList";
             this.btnRentList.Size = new System.Drawing.Size(100, 23);
             this.btnRentList.TabIndex = 6;
-            this.btnRentList.Text = "Huur";
+            this.btnRentList.Text = "Huurbaar";
             this.btnRentList.UseVisualStyleBackColor = true;
+            this.btnRentList.Click += new System.EventHandler(this.btnRentList_Click);
             // 
             // btnRentableList
             // 
@@ -112,6 +115,7 @@
             this.btnRentableList.TabIndex = 7;
             this.btnRentableList.Text = "Verhuurbaar";
             this.btnRentableList.UseVisualStyleBackColor = true;
+            this.btnRentableList.Click += new System.EventHandler(this.btnRentableList_Click);
             // 
             // btnRentedList
             // 
@@ -121,13 +125,14 @@
             this.btnRentedList.TabIndex = 8;
             this.btnRentedList.Text = "Verhuurd";
             this.btnRentedList.UseVisualStyleBackColor = true;
+            this.btnRentedList.Click += new System.EventHandler(this.btnRentedList_Click);
             // 
             // lbxRentList
             // 
             this.lbxRentList.FormattingEnabled = true;
-            this.lbxRentList.Location = new System.Drawing.Point(182, 131);
+            this.lbxRentList.Location = new System.Drawing.Point(182, 157);
             this.lbxRentList.Name = "lbxRentList";
-            this.lbxRentList.Size = new System.Drawing.Size(440, 212);
+            this.lbxRentList.Size = new System.Drawing.Size(440, 186);
             this.lbxRentList.TabIndex = 9;
             // 
             // btnSearch
@@ -139,11 +144,20 @@
             this.btnSearch.Text = "Zoeken";
             this.btnSearch.UseVisualStyleBackColor = true;
             // 
+            // lblDesc
+            // 
+            this.lblDesc.AutoSize = true;
+            this.lblDesc.Location = new System.Drawing.Point(179, 138);
+            this.lblDesc.Name = "lblDesc";
+            this.lblDesc.Size = new System.Drawing.Size(0, 13);
+            this.lblDesc.TabIndex = 11;
+            // 
             // VerhuurForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(640, 364);
+            this.Controls.Add(this.lblDesc);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.lbxRentList);
             this.Controls.Add(this.btnRentedList);
@@ -157,6 +171,7 @@
             this.Controls.Add(this.btnMessage);
             this.Name = "VerhuurForm";
             this.Text = "VerhuurForm";
+            this.Load += new System.EventHandler(this.VerhuurForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -176,5 +191,6 @@
         private System.Windows.Forms.Button btnRentedList;
         private System.Windows.Forms.ListBox lbxRentList;
         private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.Label lblDesc;
     }
 }
