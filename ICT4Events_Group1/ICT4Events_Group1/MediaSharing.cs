@@ -10,6 +10,7 @@ namespace ICT4Events_Group1
     {
         //fields
         List<Message> messages = new List<Message>();
+        int MessageLike = 0;
         //properties
         //constructors
 
@@ -20,30 +21,68 @@ namespace ICT4Events_Group1
         }
         public List<Message> LoadMessages()
         {
-            return null;
+            return messages;
         }
         public List<Message> ReportedMessages()
         {
-            return null;
+            List<Message> Reportedmessages = new List<Message>();
+
+            //SELECT *
+            //FROM Message
+            //WHERE MessageState = "Reported";
+            return Reportedmessages;
         }
         public bool LikePost(Message message)
         {
-            return true;
+            //INSERT INTO Message(Messagestate)
+            //VALUES ('Like');
+            if (MessageLike == 1)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
         public bool PublishMessage(string title, string message)
-        {
-            return true;
+        {       
+            try
+            {
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+            
         }
         public bool PublishFile(string title, string message/*File*/)
         {
-            return true;
+            try
+            {
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
         }
         public bool PublishReaction(string reaction, Message message)
         {
-            return true;
+            try
+            {
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
         }
         public bool ReportPost(string reason, Message message)
         {
+            //INSERT INTO Message(Messagestate)
+            //VALUES ('Reported');
             return true;
         }
     }
