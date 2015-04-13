@@ -1,6 +1,6 @@
 ﻿namespace ICT4Events_Group1
 {
-    partial class GebruikerBeheerForm
+    partial class EventToevoegForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,45 +28,66 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnSearch = new System.Windows.Forms.Button();
-            this.lbxUsers = new System.Windows.Forms.ListBox();
-            this.btnNew = new System.Windows.Forms.Button();
+            this.tbPrijs = new System.Windows.Forms.TextBox();
+            this.tbEinddatum = new System.Windows.Forms.TextBox();
+            this.tbStartdatum = new System.Windows.Forms.TextBox();
+            this.tbEventnaam = new System.Windows.Forms.TextBox();
+            this.btnAnnuleren = new System.Windows.Forms.Button();
+            this.btnAanmaken = new System.Windows.Forms.Button();
             this.pbxLogo = new System.Windows.Forms.PictureBox();
-            this.tbxSearch = new System.Windows.Forms.TextBox();
             this.btnLogout = new System.Windows.Forms.Button();
             this.btnEntrance = new System.Windows.Forms.Button();
             this.btnRent = new System.Windows.Forms.Button();
             this.btnMessage = new System.Windows.Forms.Button();
-            this.btnFilterNotPayed = new System.Windows.Forms.Button();
-            this.btnFilterPressent = new System.Windows.Forms.Button();
+            this.tbBeschrijving = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnSearch
+            // tbPrijs
             // 
-            this.btnSearch.Location = new System.Drawing.Point(38, 157);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(100, 23);
-            this.btnSearch.TabIndex = 21;
-            this.btnSearch.Text = "Zoeken";
-            this.btnSearch.UseVisualStyleBackColor = true;
+            this.tbPrijs.Location = new System.Drawing.Point(182, 263);
+            this.tbPrijs.Name = "tbPrijs";
+            this.tbPrijs.Size = new System.Drawing.Size(100, 20);
+            this.tbPrijs.TabIndex = 63;
             // 
-            // lbxUsers
+            // tbEinddatum
             // 
-            this.lbxUsers.FormattingEnabled = true;
-            this.lbxUsers.Location = new System.Drawing.Point(182, 131);
-            this.lbxUsers.Name = "lbxUsers";
-            this.lbxUsers.Size = new System.Drawing.Size(440, 212);
-            this.lbxUsers.TabIndex = 20;
+            this.tbEinddatum.Location = new System.Drawing.Point(288, 135);
+            this.tbEinddatum.Name = "tbEinddatum";
+            this.tbEinddatum.Size = new System.Drawing.Size(100, 20);
+            this.tbEinddatum.TabIndex = 60;
             // 
-            // btnNew
+            // tbStartdatum
             // 
-            this.btnNew.Location = new System.Drawing.Point(38, 261);
-            this.btnNew.Name = "btnNew";
-            this.btnNew.Size = new System.Drawing.Size(100, 23);
-            this.btnNew.TabIndex = 17;
-            this.btnNew.Text = "Nieuwe Gebruiker";
-            this.btnNew.UseVisualStyleBackColor = true;
+            this.tbStartdatum.Location = new System.Drawing.Point(182, 135);
+            this.tbStartdatum.Name = "tbStartdatum";
+            this.tbStartdatum.Size = new System.Drawing.Size(100, 20);
+            this.tbStartdatum.TabIndex = 59;
+            // 
+            // tbEventnaam
+            // 
+            this.tbEventnaam.Location = new System.Drawing.Point(182, 109);
+            this.tbEventnaam.Name = "tbEventnaam";
+            this.tbEventnaam.Size = new System.Drawing.Size(100, 20);
+            this.tbEventnaam.TabIndex = 56;
+            // 
+            // btnAnnuleren
+            // 
+            this.btnAnnuleren.Location = new System.Drawing.Point(38, 290);
+            this.btnAnnuleren.Name = "btnAnnuleren";
+            this.btnAnnuleren.Size = new System.Drawing.Size(100, 23);
+            this.btnAnnuleren.TabIndex = 54;
+            this.btnAnnuleren.Text = "Annuleren";
+            this.btnAnnuleren.UseVisualStyleBackColor = true;
+            // 
+            // btnAanmaken
+            // 
+            this.btnAanmaken.Location = new System.Drawing.Point(38, 261);
+            this.btnAanmaken.Name = "btnAanmaken";
+            this.btnAanmaken.Size = new System.Drawing.Size(100, 23);
+            this.btnAanmaken.TabIndex = 53;
+            this.btnAanmaken.Text = "Aanmaken";
+            this.btnAanmaken.UseVisualStyleBackColor = true;
             // 
             // pbxLogo
             // 
@@ -75,22 +96,15 @@
             this.pbxLogo.Name = "pbxLogo";
             this.pbxLogo.Size = new System.Drawing.Size(242, 78);
             this.pbxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pbxLogo.TabIndex = 16;
+            this.pbxLogo.TabIndex = 52;
             this.pbxLogo.TabStop = false;
-            // 
-            // tbxSearch
-            // 
-            this.tbxSearch.Location = new System.Drawing.Point(38, 131);
-            this.tbxSearch.Name = "tbxSearch";
-            this.tbxSearch.Size = new System.Drawing.Size(100, 20);
-            this.tbxSearch.TabIndex = 15;
             // 
             // btnLogout
             // 
             this.btnLogout.Location = new System.Drawing.Point(547, 39);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(75, 23);
-            this.btnLogout.TabIndex = 14;
+            this.btnLogout.TabIndex = 50;
             this.btnLogout.Text = "Logout";
             this.btnLogout.UseVisualStyleBackColor = true;
             // 
@@ -99,7 +113,7 @@
             this.btnEntrance.Location = new System.Drawing.Point(466, 39);
             this.btnEntrance.Name = "btnEntrance";
             this.btnEntrance.Size = new System.Drawing.Size(75, 23);
-            this.btnEntrance.TabIndex = 13;
+            this.btnEntrance.TabIndex = 49;
             this.btnEntrance.Text = "Entree";
             this.btnEntrance.UseVisualStyleBackColor = true;
             // 
@@ -108,7 +122,7 @@
             this.btnRent.Location = new System.Drawing.Point(385, 39);
             this.btnRent.Name = "btnRent";
             this.btnRent.Size = new System.Drawing.Size(75, 23);
-            this.btnRent.TabIndex = 12;
+            this.btnRent.TabIndex = 48;
             this.btnRent.Text = "Huren";
             this.btnRent.UseVisualStyleBackColor = true;
             // 
@@ -117,46 +131,37 @@
             this.btnMessage.Location = new System.Drawing.Point(304, 39);
             this.btnMessage.Name = "btnMessage";
             this.btnMessage.Size = new System.Drawing.Size(75, 23);
-            this.btnMessage.TabIndex = 11;
+            this.btnMessage.TabIndex = 47;
             this.btnMessage.Text = "Berichten";
             this.btnMessage.UseVisualStyleBackColor = true;
             // 
-            // btnFilterNotPayed
+            // tbBeschrijving
             // 
-            this.btnFilterNotPayed.Location = new System.Drawing.Point(38, 319);
-            this.btnFilterNotPayed.Name = "btnFilterNotPayed";
-            this.btnFilterNotPayed.Size = new System.Drawing.Size(100, 23);
-            this.btnFilterNotPayed.TabIndex = 19;
-            this.btnFilterNotPayed.Text = "Filter Niet betaald";
-            this.btnFilterNotPayed.UseVisualStyleBackColor = true;
+            this.tbBeschrijving.Location = new System.Drawing.Point(182, 161);
+            this.tbBeschrijving.Multiline = true;
+            this.tbBeschrijving.Name = "tbBeschrijving";
+            this.tbBeschrijving.Size = new System.Drawing.Size(440, 96);
+            this.tbBeschrijving.TabIndex = 64;
             // 
-            // btnFilterPressent
-            // 
-            this.btnFilterPressent.Location = new System.Drawing.Point(38, 290);
-            this.btnFilterPressent.Name = "btnFilterPressent";
-            this.btnFilterPressent.Size = new System.Drawing.Size(100, 23);
-            this.btnFilterPressent.TabIndex = 18;
-            this.btnFilterPressent.Text = "Filter Aanwezige";
-            this.btnFilterPressent.UseVisualStyleBackColor = true;
-            // 
-            // GebruikerBeheerForm
+            // EventToevoegForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(642, 357);
-            this.Controls.Add(this.btnSearch);
-            this.Controls.Add(this.lbxUsers);
-            this.Controls.Add(this.btnFilterNotPayed);
-            this.Controls.Add(this.btnFilterPressent);
-            this.Controls.Add(this.btnNew);
+            this.ClientSize = new System.Drawing.Size(642, 321);
+            this.Controls.Add(this.tbBeschrijving);
+            this.Controls.Add(this.tbPrijs);
+            this.Controls.Add(this.tbEinddatum);
+            this.Controls.Add(this.tbStartdatum);
+            this.Controls.Add(this.tbEventnaam);
+            this.Controls.Add(this.btnAnnuleren);
+            this.Controls.Add(this.btnAanmaken);
             this.Controls.Add(this.pbxLogo);
-            this.Controls.Add(this.tbxSearch);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.btnEntrance);
             this.Controls.Add(this.btnRent);
             this.Controls.Add(this.btnMessage);
-            this.Name = "GebruikerBeheerForm";
-            this.Text = "GebruikerBeheerForm";
+            this.Name = "EventToevoegForm";
+            this.Text = "EventToevoegForm";
             ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -165,17 +170,17 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnSearch;
-        private System.Windows.Forms.ListBox lbxUsers;
-        private System.Windows.Forms.Button btnNew;
+        private System.Windows.Forms.TextBox tbPrijs;
+        private System.Windows.Forms.TextBox tbEinddatum;
+        private System.Windows.Forms.TextBox tbStartdatum;
+        private System.Windows.Forms.TextBox tbEventnaam;
+        private System.Windows.Forms.Button btnAnnuleren;
+        private System.Windows.Forms.Button btnAanmaken;
         private System.Windows.Forms.PictureBox pbxLogo;
-        private System.Windows.Forms.TextBox tbxSearch;
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Button btnEntrance;
         private System.Windows.Forms.Button btnRent;
         private System.Windows.Forms.Button btnMessage;
-        private System.Windows.Forms.Button btnFilterNotPayed;
-        private System.Windows.Forms.Button btnFilterPressent;
-
+        private System.Windows.Forms.TextBox tbBeschrijving;
     }
 }
