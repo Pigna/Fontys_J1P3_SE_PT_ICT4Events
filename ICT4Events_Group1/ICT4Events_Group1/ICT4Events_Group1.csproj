@@ -44,6 +44,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EventBeheerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EventBeheerForm.Designer.cs">
+      <DependentUpon>EventBeheerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EventToevoegForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EventToevoegForm.Designer.cs">
+      <DependentUpon>EventToevoegForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="GebruikerBeheerForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -56,6 +68,12 @@
     <Compile Include="EntranceDatabase.cs" />
     <Compile Include="Event.cs" />
     <Compile Include="EventDatabase.cs" />
+    <Compile Include="GebruikerToevoegForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GebruikerToevoegForm.Designer.cs">
+      <DependentUpon>GebruikerToevoegForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Item.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
@@ -86,8 +104,17 @@
     <Compile Include="VerhuurForm.Designer.cs">
       <DependentUpon>VerhuurForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="EventBeheerForm.resx">
+      <DependentUpon>EventBeheerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EventToevoegForm.resx">
+      <DependentUpon>EventToevoegForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GebruikerBeheerForm.resx">
       <DependentUpon>GebruikerBeheerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GebruikerToevoegForm.resx">
+      <DependentUpon>GebruikerToevoegForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
