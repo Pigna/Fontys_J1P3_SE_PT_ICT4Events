@@ -24,9 +24,16 @@ namespace ICT4Events_Group1
         {
             return null;
         }
-        public bool PaymentCheck()
+        public bool PaymentCheck(string code)
         {
-            return true;
+            string sql = "SELECT betaald FROM Gebruikers WHERE id = " + code;
+            string resultaat = getQuery(sql);
+            if (resultaat == "0")
+            { return false; }
+            else
+            { return true; }
+
+            
         }
         public bool SendCode(int code)
         {
@@ -36,6 +43,6 @@ namespace ICT4Events_Group1
         {
             return 0;
         }
-
+       
     }
 }

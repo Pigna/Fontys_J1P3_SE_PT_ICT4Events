@@ -26,6 +26,10 @@ namespace ICT4Events_Group1
         {
             return true;
         }
+        public User getuser(int code)
+        {
+            return null;  
+        }
 
     }
 }

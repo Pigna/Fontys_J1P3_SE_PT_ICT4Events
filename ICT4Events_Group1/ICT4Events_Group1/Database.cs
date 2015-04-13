@@ -25,11 +25,11 @@ namespace ICT4Events_Group1
         {
 
         }
-        private string getQuery(string query)
+        public string getQuery(string query)
         {
             return null;
         }
-        private bool doQuery(string query)
+        public bool doQuery(string query)
         {
             return true;
         }

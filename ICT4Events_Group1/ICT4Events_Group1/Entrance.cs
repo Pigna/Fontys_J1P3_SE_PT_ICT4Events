@@ -38,9 +38,9 @@ namespace ICT4Events_Group1
         {
             return true;
         }
-        public bool SearchUser()
+        public User SearchUser()
         {
-            return true;
+            return null;
         }
         public bool LinkRFID()
         {

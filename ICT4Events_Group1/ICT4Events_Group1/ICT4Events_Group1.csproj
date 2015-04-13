@@ -44,11 +44,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="entranceForm.cs">
+    <Compile Include="EntranceForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="entranceForm.Designer.cs">
-      <DependentUpon>entranceForm.cs</DependentUpon>
+    <Compile Include="EntranceForm.Designer.cs">
+      <DependentUpon>EntranceForm.cs</DependentUpon>
     </Compile>
     <Compile Include="GebruikerBeheerForm.cs">
       <SubType>Form</SubType>
@@ -92,8 +92,8 @@
     <Compile Include="VerhuurForm.Designer.cs">
       <DependentUpon>VerhuurForm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="entranceForm.resx">
-      <DependentUpon>entranceForm.cs</DependentUpon>
+    <EmbeddedResource Include="EntranceForm.resx">
+      <DependentUpon>EntranceForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GebruikerBeheerForm.resx">
       <DependentUpon>GebruikerBeheerForm.cs</DependentUpon>
