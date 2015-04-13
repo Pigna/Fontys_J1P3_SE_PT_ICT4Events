@@ -40,6 +40,13 @@
             this.lbxRentList = new System.Windows.Forms.ListBox();
             this.btnSearch = new System.Windows.Forms.Button();
             this.lblDesc = new System.Windows.Forms.Label();
+            this.tbxItemID = new System.Windows.Forms.TextBox();
+            this.lblItemID = new System.Windows.Forms.Label();
+            this.lblDate1 = new System.Windows.Forms.Label();
+            this.lblDate2 = new System.Windows.Forms.Label();
+            this.btnRentItem = new System.Windows.Forms.Button();
+            this.dtpVan = new System.Windows.Forms.DateTimePicker();
+            this.dtpTot = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -77,7 +84,7 @@
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(75, 23);
             this.btnLogout.TabIndex = 3;
-            this.btnLogout.Text = "Logout";
+            this.btnLogout.Text = "Uitloggen";
             this.btnLogout.UseVisualStyleBackColor = true;
             // 
             // tbxSearch
@@ -143,6 +150,7 @@
             this.btnSearch.TabIndex = 10;
             this.btnSearch.Text = "Zoeken";
             this.btnSearch.UseVisualStyleBackColor = true;
+;
             // 
             // lblDesc
             // 
@@ -152,11 +160,76 @@
             this.lblDesc.Size = new System.Drawing.Size(0, 13);
             this.lblDesc.TabIndex = 11;
             // 
+            // tbxItemID
+            // 
+            this.tbxItemID.Location = new System.Drawing.Point(182, 384);
+            this.tbxItemID.Name = "tbxItemID";
+            this.tbxItemID.Size = new System.Drawing.Size(100, 20);
+            this.tbxItemID.TabIndex = 12;
+            // 
+            // lblItemID
+            // 
+            this.lblItemID.AutoSize = true;
+            this.lblItemID.Location = new System.Drawing.Point(179, 407);
+            this.lblItemID.Name = "lblItemID";
+            this.lblItemID.Size = new System.Drawing.Size(41, 13);
+            this.lblItemID.TabIndex = 15;
+            this.lblItemID.Text = "Item ID";
+            this.lblItemID.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // lblDate1
+            // 
+            this.lblDate1.AutoSize = true;
+            this.lblDate1.Location = new System.Drawing.Point(285, 407);
+            this.lblDate1.Name = "lblDate1";
+            this.lblDate1.Size = new System.Drawing.Size(26, 13);
+            this.lblDate1.TabIndex = 16;
+            this.lblDate1.Text = "Van";
+            // 
+            // lblDate2
+            // 
+            this.lblDate2.AutoSize = true;
+            this.lblDate2.Location = new System.Drawing.Point(391, 407);
+            this.lblDate2.Name = "lblDate2";
+            this.lblDate2.Size = new System.Drawing.Size(23, 13);
+            this.lblDate2.TabIndex = 17;
+            this.lblDate2.Text = "Tot";
+            // 
+            // btnRentItem
+            // 
+            this.btnRentItem.Location = new System.Drawing.Point(547, 384);
+            this.btnRentItem.Name = "btnRentItem";
+            this.btnRentItem.Size = new System.Drawing.Size(75, 23);
+            this.btnRentItem.TabIndex = 18;
+            this.btnRentItem.Text = "Huur item";
+            this.btnRentItem.UseVisualStyleBackColor = true;
+            // 
+            // dtpVan
+            // 
+            this.dtpVan.Location = new System.Drawing.Point(288, 384);
+            this.dtpVan.Name = "dtpVan";
+            this.dtpVan.Size = new System.Drawing.Size(100, 20);
+            this.dtpVan.TabIndex = 19;
+            // 
+            // dtpTot
+            // 
+            this.dtpTot.Location = new System.Drawing.Point(394, 384);
+            this.dtpTot.Name = "dtpTot";
+            this.dtpTot.Size = new System.Drawing.Size(100, 20);
+            this.dtpTot.TabIndex = 20;
+            // 
             // VerhuurForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(640, 364);
+            this.ClientSize = new System.Drawing.Size(640, 466);
+            this.Controls.Add(this.dtpTot);
+            this.Controls.Add(this.dtpVan);
+            this.Controls.Add(this.btnRentItem);
+            this.Controls.Add(this.lblDate2);
+            this.Controls.Add(this.lblDate1);
+            this.Controls.Add(this.lblItemID);
+            this.Controls.Add(this.tbxItemID);
             this.Controls.Add(this.lblDesc);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.lbxRentList);
@@ -192,5 +265,12 @@
         private System.Windows.Forms.ListBox lbxRentList;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Label lblDesc;
+        private System.Windows.Forms.TextBox tbxItemID;
+        private System.Windows.Forms.Label lblItemID;
+        private System.Windows.Forms.Label lblDate1;
+        private System.Windows.Forms.Label lblDate2;
+        private System.Windows.Forms.Button btnRentItem;
+        private System.Windows.Forms.DateTimePicker dtpVan;
+        private System.Windows.Forms.DateTimePicker dtpTot;
     }
 }
