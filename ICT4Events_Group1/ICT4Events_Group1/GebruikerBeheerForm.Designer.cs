@@ -38,7 +38,7 @@
             this.btnRent = new System.Windows.Forms.Button();
             this.btnMessage = new System.Windows.Forms.Button();
             this.btnFilterNotPayed = new System.Windows.Forms.Button();
-            this.btnFilterPressent = new System.Windows.Forms.Button();
+            this.btnRefresh = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -67,6 +67,7 @@
             this.btnNew.TabIndex = 17;
             this.btnNew.Text = "Nieuwe Gebruiker";
             this.btnNew.UseVisualStyleBackColor = true;
+            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
             // 
             // pbxLogo
             // 
@@ -130,14 +131,14 @@
             this.btnFilterNotPayed.Text = "Filter Niet betaald";
             this.btnFilterNotPayed.UseVisualStyleBackColor = true;
             // 
-            // btnFilterPressent
+            // btnRefresh
             // 
-            this.btnFilterPressent.Location = new System.Drawing.Point(38, 290);
-            this.btnFilterPressent.Name = "btnFilterPressent";
-            this.btnFilterPressent.Size = new System.Drawing.Size(100, 23);
-            this.btnFilterPressent.TabIndex = 18;
-            this.btnFilterPressent.Text = "Filter Aanwezige";
-            this.btnFilterPressent.UseVisualStyleBackColor = true;
+            this.btnRefresh.Location = new System.Drawing.Point(38, 290);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(100, 23);
+            this.btnRefresh.TabIndex = 18;
+            this.btnRefresh.Text = "Refresh";
+            this.btnRefresh.UseVisualStyleBackColor = true;
             // 
             // GebruikerBeheerForm
             // 
@@ -147,7 +148,7 @@
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.lbxUsers);
             this.Controls.Add(this.btnFilterNotPayed);
-            this.Controls.Add(this.btnFilterPressent);
+            this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.btnNew);
             this.Controls.Add(this.pbxLogo);
             this.Controls.Add(this.tbxSearch);
@@ -175,7 +176,7 @@
         private System.Windows.Forms.Button btnRent;
         private System.Windows.Forms.Button btnMessage;
         private System.Windows.Forms.Button btnFilterNotPayed;
-        private System.Windows.Forms.Button btnFilterPressent;
+        private System.Windows.Forms.Button btnRefresh;
 
     }
 }

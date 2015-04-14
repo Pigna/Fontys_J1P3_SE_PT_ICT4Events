@@ -9,17 +9,17 @@ namespace ICT4Events_Group1
     class RFID
     {
         //fields
-        private int code;
+        private string code;
         private User owner;
         public bool activex;
 
         //properties
-        public int Code { get{return 1;} }       //return tijdelijk toegevoegd verander dit nog
+        public string Code { get{return "";} }       //return tijdelijk toegevoegd verander dit nog
         public User Owner { get{return null;} }  //return tijdelijk toegevoegd verander dit nog
         public bool active { get; set; }
 
         //constructors
-        public RFID (int code)
+        public RFID (string code)
         { this.code = code; }
     }
 }

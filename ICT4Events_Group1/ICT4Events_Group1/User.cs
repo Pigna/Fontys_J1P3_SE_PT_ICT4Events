@@ -12,6 +12,7 @@ namespace ICT4Events_Group1
         private string username;
         private RFID RFID;
         List<Item> itemlist = new List<Item>();
+        UserDatabase userdatabase = new UserDatabase();
 
         //properties
         public string Username { get; set; }
@@ -25,6 +26,11 @@ namespace ICT4Events_Group1
         public bool additem(int itemid)
         {
             return true;
+        }
+        public string toString()
+        {
+            userdatabase.getDataRFID(RFID);
+            return "asd";
         }
 
     }
