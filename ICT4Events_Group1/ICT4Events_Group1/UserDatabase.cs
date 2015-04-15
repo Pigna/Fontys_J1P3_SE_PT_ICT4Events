@@ -52,5 +52,14 @@ namespace ICT4Events_Group1
         {
             return true;
         }
+        public List<User> getUserlist()
+        {
+            string code = "SELECT * FROM GEBRUIKER;";
+            return null;
+        }
+        public void getDataRFID(RFID rfid)
+        {
+            string code = "SELECT * FROM GEBRUIKER WHERE RFID = " + rfid.Code + ";";
+        }
     }
 }

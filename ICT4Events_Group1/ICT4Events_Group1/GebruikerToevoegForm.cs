@@ -19,7 +19,7 @@ namespace ICT4Events_Group1
 
         private void btnAanmaken_Click(object sender, EventArgs e)
         {
-
+            
         }
     }
 }
