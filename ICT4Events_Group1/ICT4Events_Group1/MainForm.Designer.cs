@@ -41,7 +41,7 @@
             // btnVerhuur
             // 
             this.btnVerhuur.Location = new System.Drawing.Point(64, 96);
-            this.btnVerhuur.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnVerhuur.Margin = new System.Windows.Forms.Padding(4);
             this.btnVerhuur.Name = "btnVerhuur";
             this.btnVerhuur.Size = new System.Drawing.Size(188, 28);
             this.btnVerhuur.TabIndex = 0;
@@ -52,7 +52,7 @@
             // btnBeheer
             // 
             this.btnBeheer.Location = new System.Drawing.Point(64, 132);
-            this.btnBeheer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBeheer.Margin = new System.Windows.Forms.Padding(4);
             this.btnBeheer.Name = "btnBeheer";
             this.btnBeheer.Size = new System.Drawing.Size(188, 28);
             this.btnBeheer.TabIndex = 1;
@@ -63,7 +63,7 @@
             // btnMediaShare
             // 
             this.btnMediaShare.Location = new System.Drawing.Point(64, 167);
-            this.btnMediaShare.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnMediaShare.Margin = new System.Windows.Forms.Padding(4);
             this.btnMediaShare.Name = "btnMediaShare";
             this.btnMediaShare.Size = new System.Drawing.Size(188, 28);
             this.btnMediaShare.TabIndex = 2;
@@ -74,12 +74,13 @@
             // button4
             // 
             this.button4.Location = new System.Drawing.Point(64, 203);
-            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button4.Margin = new System.Windows.Forms.Padding(4);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(188, 28);
             this.button4.TabIndex = 3;
             this.button4.Text = "button4";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // txtUser
             // 
@@ -126,7 +127,7 @@
             this.Controls.Add(this.btnMediaShare);
             this.Controls.Add(this.btnBeheer);
             this.Controls.Add(this.btnVerhuur);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MainForm";
             this.Text = "MainForm";
             this.ResumeLayout(false);

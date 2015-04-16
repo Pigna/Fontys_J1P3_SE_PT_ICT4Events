@@ -16,5 +16,10 @@ namespace ICT4Events_Group1
         {
             InitializeComponent();
         }
+
+        private void tbEinddatum_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

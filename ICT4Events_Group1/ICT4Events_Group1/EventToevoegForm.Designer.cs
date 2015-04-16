@@ -45,46 +45,53 @@
             // 
             // tbPrijs
             // 
-            this.tbPrijs.Location = new System.Drawing.Point(182, 263);
+            this.tbPrijs.Location = new System.Drawing.Point(243, 324);
+            this.tbPrijs.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbPrijs.Name = "tbPrijs";
-            this.tbPrijs.Size = new System.Drawing.Size(100, 20);
+            this.tbPrijs.Size = new System.Drawing.Size(132, 22);
             this.tbPrijs.TabIndex = 63;
             // 
             // tbEinddatum
             // 
-            this.tbEinddatum.Location = new System.Drawing.Point(288, 135);
+            this.tbEinddatum.Location = new System.Drawing.Point(384, 166);
+            this.tbEinddatum.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbEinddatum.Name = "tbEinddatum";
-            this.tbEinddatum.Size = new System.Drawing.Size(100, 20);
+            this.tbEinddatum.Size = new System.Drawing.Size(132, 22);
             this.tbEinddatum.TabIndex = 60;
+            this.tbEinddatum.TextChanged += new System.EventHandler(this.tbEinddatum_TextChanged);
             // 
             // tbStartdatum
             // 
-            this.tbStartdatum.Location = new System.Drawing.Point(182, 135);
+            this.tbStartdatum.Location = new System.Drawing.Point(243, 166);
+            this.tbStartdatum.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbStartdatum.Name = "tbStartdatum";
-            this.tbStartdatum.Size = new System.Drawing.Size(100, 20);
+            this.tbStartdatum.Size = new System.Drawing.Size(132, 22);
             this.tbStartdatum.TabIndex = 59;
             // 
             // tbEventnaam
             // 
-            this.tbEventnaam.Location = new System.Drawing.Point(182, 109);
+            this.tbEventnaam.Location = new System.Drawing.Point(243, 134);
+            this.tbEventnaam.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbEventnaam.Name = "tbEventnaam";
-            this.tbEventnaam.Size = new System.Drawing.Size(100, 20);
+            this.tbEventnaam.Size = new System.Drawing.Size(132, 22);
             this.tbEventnaam.TabIndex = 56;
             // 
             // btnAnnuleren
             // 
-            this.btnAnnuleren.Location = new System.Drawing.Point(38, 290);
+            this.btnAnnuleren.Location = new System.Drawing.Point(51, 357);
+            this.btnAnnuleren.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAnnuleren.Name = "btnAnnuleren";
-            this.btnAnnuleren.Size = new System.Drawing.Size(100, 23);
+            this.btnAnnuleren.Size = new System.Drawing.Size(133, 28);
             this.btnAnnuleren.TabIndex = 54;
             this.btnAnnuleren.Text = "Annuleren";
             this.btnAnnuleren.UseVisualStyleBackColor = true;
             // 
             // btnAanmaken
             // 
-            this.btnAanmaken.Location = new System.Drawing.Point(38, 261);
+            this.btnAanmaken.Location = new System.Drawing.Point(51, 321);
+            this.btnAanmaken.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAanmaken.Name = "btnAanmaken";
-            this.btnAanmaken.Size = new System.Drawing.Size(100, 23);
+            this.btnAanmaken.Size = new System.Drawing.Size(133, 28);
             this.btnAanmaken.TabIndex = 53;
             this.btnAanmaken.Text = "Aanmaken";
             this.btnAanmaken.UseVisualStyleBackColor = true;
@@ -92,62 +99,68 @@
             // pbxLogo
             // 
             this.pbxLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pbxLogo.Location = new System.Drawing.Point(38, 12);
+            this.pbxLogo.Location = new System.Drawing.Point(51, 15);
+            this.pbxLogo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pbxLogo.Name = "pbxLogo";
-            this.pbxLogo.Size = new System.Drawing.Size(242, 78);
+            this.pbxLogo.Size = new System.Drawing.Size(323, 96);
             this.pbxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pbxLogo.TabIndex = 52;
             this.pbxLogo.TabStop = false;
             // 
             // btnLogout
             // 
-            this.btnLogout.Location = new System.Drawing.Point(547, 39);
+            this.btnLogout.Location = new System.Drawing.Point(729, 48);
+            this.btnLogout.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(75, 23);
+            this.btnLogout.Size = new System.Drawing.Size(100, 28);
             this.btnLogout.TabIndex = 50;
             this.btnLogout.Text = "Logout";
             this.btnLogout.UseVisualStyleBackColor = true;
             // 
             // btnEntrance
             // 
-            this.btnEntrance.Location = new System.Drawing.Point(466, 39);
+            this.btnEntrance.Location = new System.Drawing.Point(621, 48);
+            this.btnEntrance.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnEntrance.Name = "btnEntrance";
-            this.btnEntrance.Size = new System.Drawing.Size(75, 23);
+            this.btnEntrance.Size = new System.Drawing.Size(100, 28);
             this.btnEntrance.TabIndex = 49;
             this.btnEntrance.Text = "Entree";
             this.btnEntrance.UseVisualStyleBackColor = true;
             // 
             // btnRent
             // 
-            this.btnRent.Location = new System.Drawing.Point(385, 39);
+            this.btnRent.Location = new System.Drawing.Point(513, 48);
+            this.btnRent.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnRent.Name = "btnRent";
-            this.btnRent.Size = new System.Drawing.Size(75, 23);
+            this.btnRent.Size = new System.Drawing.Size(100, 28);
             this.btnRent.TabIndex = 48;
             this.btnRent.Text = "Huren";
             this.btnRent.UseVisualStyleBackColor = true;
             // 
             // btnMessage
             // 
-            this.btnMessage.Location = new System.Drawing.Point(304, 39);
+            this.btnMessage.Location = new System.Drawing.Point(405, 48);
+            this.btnMessage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnMessage.Name = "btnMessage";
-            this.btnMessage.Size = new System.Drawing.Size(75, 23);
+            this.btnMessage.Size = new System.Drawing.Size(100, 28);
             this.btnMessage.TabIndex = 47;
             this.btnMessage.Text = "Berichten";
             this.btnMessage.UseVisualStyleBackColor = true;
             // 
             // tbBeschrijving
             // 
-            this.tbBeschrijving.Location = new System.Drawing.Point(182, 161);
+            this.tbBeschrijving.Location = new System.Drawing.Point(243, 198);
+            this.tbBeschrijving.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbBeschrijving.Multiline = true;
             this.tbBeschrijving.Name = "tbBeschrijving";
-            this.tbBeschrijving.Size = new System.Drawing.Size(440, 96);
+            this.tbBeschrijving.Size = new System.Drawing.Size(585, 117);
             this.tbBeschrijving.TabIndex = 64;
             // 
             // EventToevoegForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(642, 321);
+            this.ClientSize = new System.Drawing.Size(856, 395);
             this.Controls.Add(this.tbBeschrijving);
             this.Controls.Add(this.tbPrijs);
             this.Controls.Add(this.tbEinddatum);
@@ -160,6 +173,7 @@
             this.Controls.Add(this.btnEntrance);
             this.Controls.Add(this.btnRent);
             this.Controls.Add(this.btnMessage);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "EventToevoegForm";
             this.Text = "EventToevoegForm";
             ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).EndInit();
