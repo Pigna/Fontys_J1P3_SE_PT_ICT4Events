@@ -9,9 +9,13 @@ namespace ICT4Events_Group1
     class Event
     {
         //fields
+        private int id;
+
         public string Name;
         public string Desc;
-        public DateTime Date;
+        public DateTime startDate;
+        public DateTime endDate;
+        public float price;
 
         //propperties
         //constructor
