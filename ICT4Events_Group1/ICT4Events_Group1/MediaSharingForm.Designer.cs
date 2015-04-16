@@ -31,25 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MediaSharingForm));
             this.tbSearch = new System.Windows.Forms.TextBox();
             this.lblCategorie = new System.Windows.Forms.Label();
-            this.lblGames = new System.Windows.Forms.Label();
-            this.lblFun = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.tbMessage = new System.Windows.Forms.TextBox();
-            this.btnUpload = new System.Windows.Forms.Button();
-            this.btnPost = new System.Windows.Forms.Button();
-            this.btnProfile = new System.Windows.Forms.Button();
-            this.btnLogout = new System.Windows.Forms.Button();
-            this.pbPhoto = new System.Windows.Forms.PictureBox();
-            this.lblTitel = new System.Windows.Forms.Label();
-            this.lblPoster = new System.Windows.Forms.Label();
-            this.lblTekst = new System.Windows.Forms.Label();
-            this.lblTesktLink = new System.Windows.Forms.Label();
-            this.btnLike = new System.Windows.Forms.Button();
-            this.lblLike = new System.Windows.Forms.Label();
-            this.btnComment = new System.Windows.Forms.Button();
-            this.lblComment = new System.Windows.Forms.Label();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.pbPhoto2 = new System.Windows.Forms.PictureBox();
             this.lblComment2 = new System.Windows.Forms.Label();
@@ -60,12 +43,28 @@
             this.lblTekst2 = new System.Windows.Forms.Label();
             this.btnLike2 = new System.Windows.Forms.Button();
             this.lblTekstLink2 = new System.Windows.Forms.Label();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.pbPhoto = new System.Windows.Forms.PictureBox();
+            this.lblComment = new System.Windows.Forms.Label();
+            this.lblTitel = new System.Windows.Forms.Label();
+            this.btnComment = new System.Windows.Forms.Button();
+            this.lblPoster = new System.Windows.Forms.Label();
+            this.lblLike = new System.Windows.Forms.Label();
+            this.lblTekst = new System.Windows.Forms.Label();
+            this.btnLike = new System.Windows.Forms.Button();
+            this.lblTesktLink = new System.Windows.Forms.Label();
+            this.btnPost = new System.Windows.Forms.Button();
+            this.btnUpload = new System.Windows.Forms.Button();
+            this.tbMessage = new System.Windows.Forms.TextBox();
+            this.btnProfile = new System.Windows.Forms.Button();
+            this.btnLogout = new System.Windows.Forms.Button();
+            this.lbCategorie = new System.Windows.Forms.ListBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbPhoto)).BeginInit();
-            this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbPhoto2)).BeginInit();
+            this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPhoto)).BeginInit();
             this.SuspendLayout();
             // 
             // tbSearch
@@ -75,6 +74,7 @@
             this.tbSearch.Size = new System.Drawing.Size(100, 20);
             this.tbSearch.TabIndex = 0;
             this.tbSearch.Text = "Search";
+            this.tbSearch.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbSearch_KeyDown);
             // 
             // lblCategorie
             // 
@@ -85,30 +85,11 @@
             this.lblCategorie.TabIndex = 1;
             this.lblCategorie.Text = "Categorieën";
             // 
-            // lblGames
-            // 
-            this.lblGames.AutoSize = true;
-            this.lblGames.Location = new System.Drawing.Point(6, 55);
-            this.lblGames.Name = "lblGames";
-            this.lblGames.Size = new System.Drawing.Size(47, 13);
-            this.lblGames.TabIndex = 2;
-            this.lblGames.Text = "#Games";
-            // 
-            // lblFun
-            // 
-            this.lblFun.AutoSize = true;
-            this.lblFun.Location = new System.Drawing.Point(6, 68);
-            this.lblFun.Name = "lblFun";
-            this.lblFun.Size = new System.Drawing.Size(32, 13);
-            this.lblFun.TabIndex = 3;
-            this.lblFun.Text = "#Fun";
-            // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.lbCategorie);
             this.groupBox1.Controls.Add(this.lblCategorie);
-            this.groupBox1.Controls.Add(this.lblFun);
             this.groupBox1.Controls.Add(this.tbSearch);
-            this.groupBox1.Controls.Add(this.lblGames);
             this.groupBox1.Location = new System.Drawing.Point(12, 44);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(200, 398);
@@ -127,150 +108,6 @@
             this.groupBox2.Size = new System.Drawing.Size(505, 398);
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
-            // 
-            // tbMessage
-            // 
-            this.tbMessage.Location = new System.Drawing.Point(16, 8);
-            this.tbMessage.Multiline = true;
-            this.tbMessage.Name = "tbMessage";
-            this.tbMessage.Size = new System.Drawing.Size(286, 93);
-            this.tbMessage.TabIndex = 0;
-            this.tbMessage.Text = "Title\r\nNew Message\r\n";
-            // 
-            // btnUpload
-            // 
-            this.btnUpload.Location = new System.Drawing.Point(142, 68);
-            this.btnUpload.Name = "btnUpload";
-            this.btnUpload.Size = new System.Drawing.Size(75, 23);
-            this.btnUpload.TabIndex = 1;
-            this.btnUpload.Text = "Upload file";
-            this.btnUpload.UseVisualStyleBackColor = true;
-            // 
-            // btnPost
-            // 
-            this.btnPost.Location = new System.Drawing.Point(223, 68);
-            this.btnPost.Name = "btnPost";
-            this.btnPost.Size = new System.Drawing.Size(75, 23);
-            this.btnPost.TabIndex = 2;
-            this.btnPost.Text = "Post";
-            this.btnPost.UseVisualStyleBackColor = true;
-            // 
-            // btnProfile
-            // 
-            this.btnProfile.Location = new System.Drawing.Point(455, 12);
-            this.btnProfile.Name = "btnProfile";
-            this.btnProfile.Size = new System.Drawing.Size(75, 23);
-            this.btnProfile.TabIndex = 3;
-            this.btnProfile.Text = "Profile";
-            this.btnProfile.UseVisualStyleBackColor = true;
-            // 
-            // btnLogout
-            // 
-            this.btnLogout.Location = new System.Drawing.Point(536, 12);
-            this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(75, 23);
-            this.btnLogout.TabIndex = 6;
-            this.btnLogout.Text = "Logout";
-            this.btnLogout.UseVisualStyleBackColor = true;
-            // 
-            // pbPhoto
-            // 
-            this.pbPhoto.Image = ((System.Drawing.Image)(resources.GetObject("pbPhoto.Image")));
-            this.pbPhoto.Location = new System.Drawing.Point(6, 8);
-            this.pbPhoto.Name = "pbPhoto";
-            this.pbPhoto.Size = new System.Drawing.Size(30, 26);
-            this.pbPhoto.TabIndex = 3;
-            this.pbPhoto.TabStop = false;
-            // 
-            // lblTitel
-            // 
-            this.lblTitel.AutoSize = true;
-            this.lblTitel.Location = new System.Drawing.Point(42, 8);
-            this.lblTitel.Name = "lblTitel";
-            this.lblTitel.Size = new System.Drawing.Size(63, 13);
-            this.lblTitel.TabIndex = 4;
-            this.lblTitel.Text = "Bericht Titel";
-            // 
-            // lblPoster
-            // 
-            this.lblPoster.AutoSize = true;
-            this.lblPoster.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.5F);
-            this.lblPoster.Location = new System.Drawing.Point(42, 21);
-            this.lblPoster.Name = "lblPoster";
-            this.lblPoster.Size = new System.Drawing.Size(58, 12);
-            this.lblPoster.TabIndex = 5;
-            this.lblPoster.Text = "Naam poster";
-            // 
-            // lblTekst
-            // 
-            this.lblTekst.AutoSize = true;
-            this.lblTekst.Location = new System.Drawing.Point(42, 33);
-            this.lblTekst.Name = "lblTekst";
-            this.lblTekst.Size = new System.Drawing.Size(129, 13);
-            this.lblTekst.TabIndex = 6;
-            this.lblTekst.Text = "Een stuk tekst zonder link";
-            // 
-            // lblTesktLink
-            // 
-            this.lblTesktLink.AutoSize = true;
-            this.lblTesktLink.Location = new System.Drawing.Point(42, 46);
-            this.lblTesktLink.Name = "lblTesktLink";
-            this.lblTesktLink.Size = new System.Drawing.Size(164, 13);
-            this.lblTesktLink.TabIndex = 7;
-            this.lblTesktLink.Text = "Een stuk tekst eventueel met link";
-            // 
-            // btnLike
-            // 
-            this.btnLike.Location = new System.Drawing.Point(185, 62);
-            this.btnLike.Name = "btnLike";
-            this.btnLike.Size = new System.Drawing.Size(21, 21);
-            this.btnLike.TabIndex = 7;
-            this.btnLike.Text = "+";
-            this.btnLike.UseVisualStyleBackColor = true;
-            // 
-            // lblLike
-            // 
-            this.lblLike.AutoSize = true;
-            this.lblLike.Location = new System.Drawing.Point(210, 66);
-            this.lblLike.Name = "lblLike";
-            this.lblLike.Size = new System.Drawing.Size(27, 13);
-            this.lblLike.TabIndex = 8;
-            this.lblLike.Text = "Like";
-            // 
-            // btnComment
-            // 
-            this.btnComment.Location = new System.Drawing.Point(243, 62);
-            this.btnComment.Name = "btnComment";
-            this.btnComment.Size = new System.Drawing.Size(21, 21);
-            this.btnComment.TabIndex = 9;
-            this.btnComment.Text = ">";
-            this.btnComment.UseVisualStyleBackColor = true;
-            // 
-            // lblComment
-            // 
-            this.lblComment.AutoSize = true;
-            this.lblComment.Location = new System.Drawing.Point(270, 66);
-            this.lblComment.Name = "lblComment";
-            this.lblComment.Size = new System.Drawing.Size(51, 13);
-            this.lblComment.TabIndex = 10;
-            this.lblComment.Text = "Comment";
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.pbPhoto);
-            this.groupBox3.Controls.Add(this.lblComment);
-            this.groupBox3.Controls.Add(this.lblTitel);
-            this.groupBox3.Controls.Add(this.btnComment);
-            this.groupBox3.Controls.Add(this.lblPoster);
-            this.groupBox3.Controls.Add(this.lblLike);
-            this.groupBox3.Controls.Add(this.lblTekst);
-            this.groupBox3.Controls.Add(this.btnLike);
-            this.groupBox3.Controls.Add(this.lblTesktLink);
-            this.groupBox3.Location = new System.Drawing.Point(17, 107);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(347, 100);
-            this.groupBox3.TabIndex = 11;
-            this.groupBox3.TabStop = false;
             // 
             // groupBox4
             // 
@@ -371,6 +208,158 @@
             this.lblTekstLink2.TabIndex = 7;
             this.lblTekstLink2.Text = "Een stuk tekst eventueel met link";
             // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.pbPhoto);
+            this.groupBox3.Controls.Add(this.lblComment);
+            this.groupBox3.Controls.Add(this.lblTitel);
+            this.groupBox3.Controls.Add(this.btnComment);
+            this.groupBox3.Controls.Add(this.lblPoster);
+            this.groupBox3.Controls.Add(this.lblLike);
+            this.groupBox3.Controls.Add(this.lblTekst);
+            this.groupBox3.Controls.Add(this.btnLike);
+            this.groupBox3.Controls.Add(this.lblTesktLink);
+            this.groupBox3.Location = new System.Drawing.Point(17, 107);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(347, 100);
+            this.groupBox3.TabIndex = 11;
+            this.groupBox3.TabStop = false;
+            // 
+            // pbPhoto
+            // 
+            this.pbPhoto.Image = ((System.Drawing.Image)(resources.GetObject("pbPhoto.Image")));
+            this.pbPhoto.Location = new System.Drawing.Point(6, 8);
+            this.pbPhoto.Name = "pbPhoto";
+            this.pbPhoto.Size = new System.Drawing.Size(30, 26);
+            this.pbPhoto.TabIndex = 3;
+            this.pbPhoto.TabStop = false;
+            // 
+            // lblComment
+            // 
+            this.lblComment.AutoSize = true;
+            this.lblComment.Location = new System.Drawing.Point(270, 66);
+            this.lblComment.Name = "lblComment";
+            this.lblComment.Size = new System.Drawing.Size(51, 13);
+            this.lblComment.TabIndex = 10;
+            this.lblComment.Text = "Comment";
+            // 
+            // lblTitel
+            // 
+            this.lblTitel.AutoSize = true;
+            this.lblTitel.Location = new System.Drawing.Point(42, 8);
+            this.lblTitel.Name = "lblTitel";
+            this.lblTitel.Size = new System.Drawing.Size(63, 13);
+            this.lblTitel.TabIndex = 4;
+            this.lblTitel.Text = "Bericht Titel";
+            // 
+            // btnComment
+            // 
+            this.btnComment.Location = new System.Drawing.Point(243, 62);
+            this.btnComment.Name = "btnComment";
+            this.btnComment.Size = new System.Drawing.Size(21, 21);
+            this.btnComment.TabIndex = 9;
+            this.btnComment.Text = ">";
+            this.btnComment.UseVisualStyleBackColor = true;
+            // 
+            // lblPoster
+            // 
+            this.lblPoster.AutoSize = true;
+            this.lblPoster.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.5F);
+            this.lblPoster.Location = new System.Drawing.Point(42, 21);
+            this.lblPoster.Name = "lblPoster";
+            this.lblPoster.Size = new System.Drawing.Size(58, 12);
+            this.lblPoster.TabIndex = 5;
+            this.lblPoster.Text = "Naam poster";
+            // 
+            // lblLike
+            // 
+            this.lblLike.AutoSize = true;
+            this.lblLike.Location = new System.Drawing.Point(210, 66);
+            this.lblLike.Name = "lblLike";
+            this.lblLike.Size = new System.Drawing.Size(27, 13);
+            this.lblLike.TabIndex = 8;
+            this.lblLike.Text = "Like";
+            // 
+            // lblTekst
+            // 
+            this.lblTekst.AutoSize = true;
+            this.lblTekst.Location = new System.Drawing.Point(42, 33);
+            this.lblTekst.Name = "lblTekst";
+            this.lblTekst.Size = new System.Drawing.Size(129, 13);
+            this.lblTekst.TabIndex = 6;
+            this.lblTekst.Text = "Een stuk tekst zonder link";
+            // 
+            // btnLike
+            // 
+            this.btnLike.Location = new System.Drawing.Point(185, 62);
+            this.btnLike.Name = "btnLike";
+            this.btnLike.Size = new System.Drawing.Size(21, 21);
+            this.btnLike.TabIndex = 7;
+            this.btnLike.Text = "+";
+            this.btnLike.UseVisualStyleBackColor = true;
+            // 
+            // lblTesktLink
+            // 
+            this.lblTesktLink.AutoSize = true;
+            this.lblTesktLink.Location = new System.Drawing.Point(42, 46);
+            this.lblTesktLink.Name = "lblTesktLink";
+            this.lblTesktLink.Size = new System.Drawing.Size(164, 13);
+            this.lblTesktLink.TabIndex = 7;
+            this.lblTesktLink.Text = "Een stuk tekst eventueel met link";
+            // 
+            // btnPost
+            // 
+            this.btnPost.Location = new System.Drawing.Point(223, 68);
+            this.btnPost.Name = "btnPost";
+            this.btnPost.Size = new System.Drawing.Size(75, 23);
+            this.btnPost.TabIndex = 2;
+            this.btnPost.Text = "Post";
+            this.btnPost.UseVisualStyleBackColor = true;
+            // 
+            // btnUpload
+            // 
+            this.btnUpload.Location = new System.Drawing.Point(142, 68);
+            this.btnUpload.Name = "btnUpload";
+            this.btnUpload.Size = new System.Drawing.Size(75, 23);
+            this.btnUpload.TabIndex = 1;
+            this.btnUpload.Text = "Upload file";
+            this.btnUpload.UseVisualStyleBackColor = true;
+            // 
+            // tbMessage
+            // 
+            this.tbMessage.Location = new System.Drawing.Point(16, 8);
+            this.tbMessage.Multiline = true;
+            this.tbMessage.Name = "tbMessage";
+            this.tbMessage.Size = new System.Drawing.Size(286, 93);
+            this.tbMessage.TabIndex = 0;
+            this.tbMessage.Text = "Title\r\nNew Message\r\n";
+            // 
+            // btnProfile
+            // 
+            this.btnProfile.Location = new System.Drawing.Point(455, 12);
+            this.btnProfile.Name = "btnProfile";
+            this.btnProfile.Size = new System.Drawing.Size(75, 23);
+            this.btnProfile.TabIndex = 3;
+            this.btnProfile.Text = "Profile";
+            this.btnProfile.UseVisualStyleBackColor = true;
+            // 
+            // btnLogout
+            // 
+            this.btnLogout.Location = new System.Drawing.Point(536, 12);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(75, 23);
+            this.btnLogout.TabIndex = 6;
+            this.btnLogout.Text = "Logout";
+            this.btnLogout.UseVisualStyleBackColor = true;
+            // 
+            // lbCategorie
+            // 
+            this.lbCategorie.FormattingEnabled = true;
+            this.lbCategorie.Location = new System.Drawing.Point(6, 58);
+            this.lbCategorie.Name = "lbCategorie";
+            this.lbCategorie.Size = new System.Drawing.Size(100, 329);
+            this.lbCategorie.TabIndex = 4;
+            // 
             // MediaSharingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -386,12 +375,12 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbPhoto)).EndInit();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbPhoto2)).EndInit();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPhoto)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -400,8 +389,6 @@
 
         private System.Windows.Forms.TextBox tbSearch;
         private System.Windows.Forms.Label lblCategorie;
-        private System.Windows.Forms.Label lblGames;
-        private System.Windows.Forms.Label lblFun;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
@@ -429,5 +416,6 @@
         private System.Windows.Forms.TextBox tbMessage;
         private System.Windows.Forms.Button btnProfile;
         private System.Windows.Forms.Button btnLogout;
+        private System.Windows.Forms.ListBox lbCategorie;
     }
 }

@@ -16,5 +16,31 @@ namespace ICT4Events_Group1
         {
             InitializeComponent();
         }
+              
+
+        private void tbSearch_KeyDown(object sender, KeyEventArgs e)
+        {
+           
+            if (e.KeyCode == Keys.Enter)
+            {
+                foreach (string text in lbCategorie.Items)
+                {
+                    if (tbSearch.Text == text)
+                    {
+                        
+                    }
+                    else
+                    {
+                        lbCategorie.Items.Add(tbSearch.Text);
+                    }
+                    
+                        
+                }
+
+                lbCategorie.Items.Add(tbSearch.Text);
+                
+            }
+
+        }
     }
 }
