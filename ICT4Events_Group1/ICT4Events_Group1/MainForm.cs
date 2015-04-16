@@ -13,7 +13,7 @@ namespace ICT4Events_Group1
     public partial class MainForm : Form
     {
         VerhuurForm verhuur = new VerhuurForm(); GebruikerBeheerForm gb = new GebruikerBeheerForm(); MediaSharingForm Media = new MediaSharingForm();
-
+        
 
         public MainForm()
         {
