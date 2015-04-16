@@ -19,12 +19,12 @@ namespace ICT4Events_Group1
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            string code = tb_code.Text;
+           /* string code = tb_code.Text;
             User resultaat = EntranceDatabase.getuser(code);
             resultaat.Username = lb_naam.Text;
             resultaat.adress = lb_adress.Text;
 
-
+            */
         }
     }
 }

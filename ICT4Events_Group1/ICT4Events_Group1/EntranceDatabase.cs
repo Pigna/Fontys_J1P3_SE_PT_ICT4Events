@@ -27,12 +27,12 @@ namespace ICT4Events_Group1
         public bool PaymentCheck(string code)
         {
             string sql = "SELECT betaald FROM Gebruikers WHERE id = " + code;
-            string resultaat = getQuery(sql);
+            /*string resultaat = getQuery(sql);
             if (resultaat == "0")
             { return false; }
             else
-            { return true; }
-
+            { return true; }*/
+            return false;
             
         }
         public bool SendCode(int code)

@@ -37,5 +37,14 @@ namespace ICT4Events_Group1
         {
             Media.ShowDialog();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Database test = new Database();
+            if (test.logIn(txtUser.Text, txtPass.Text))
+                lblCur.Text = test.Logged.ToString();
+            else
+                lblCur.Text = "Nope";
+        }
     }
 }

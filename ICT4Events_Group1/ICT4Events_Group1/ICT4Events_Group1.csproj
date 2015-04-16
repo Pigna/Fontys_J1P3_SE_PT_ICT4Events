@@ -32,6 +32,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Oracle.DataAccess, Version=4.112.2.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=AMD64" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.DirectoryServices" />
@@ -45,7 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EntranceForm.cs">
+    <!--<Compile Include="EntranceForm.cs">-->
     <Compile Include="EventBeheerForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,16 +113,11 @@
     <Compile Include="VerhuurForm.Designer.cs">
       <DependentUpon>VerhuurForm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="EntranceForm.resx">
-      <DependentUpon>EntranceForm.cs</DependentUpon>
     <EmbeddedResource Include="EventBeheerForm.resx">
       <DependentUpon>EventBeheerForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EventToevoegForm.resx">
       <DependentUpon>EventToevoegForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="entranceForm.resx">
-      <DependentUpon>entranceForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GebruikerBeheerForm.resx">
       <DependentUpon>GebruikerBeheerForm.cs</DependentUpon>
