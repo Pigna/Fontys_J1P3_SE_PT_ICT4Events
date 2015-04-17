@@ -13,9 +13,16 @@ namespace ICT4Events_Group1
     public partial class GebruikerToevoegForm : Form
     {
         UserDatabase userDatabase;
+        EventDatabase eventDatabase;
         public GebruikerToevoegForm()
         {
             InitializeComponent();
+            List<Event> eventlist = eventDatabase.getEvents();
+            foreach (Event e in eventlist)
+            {
+                cbEvent.Items.Add(e.Name);
+            }
+
         }
         private bool CheckEmailFormat(string email)
         {
@@ -34,6 +41,7 @@ namespace ICT4Events_Group1
         }
         private void btnAanmaken_Click(object sender, EventArgs e)
         {
+            string selectedEvent = (string)cbEvent.SelectedValue;
             string voornaam = tbVoornaam.Text;
             string tussenvoegsel = tbTussenvoegsel.Text; //niet verplicht
             string achternaam = tbAchternaam.Text;
@@ -48,9 +56,13 @@ namespace ICT4Events_Group1
             string username = tbUsername.Text;
             string password = tbPassword.Text;
             string passwordcheck = tbPasswordCheck.Text;
+            DateTime startdatum = dtpStartdatum.Value;
+            DateTime einddatum = dtpEinddatum.Value;
+            bool betaald = cbBetaald.Checked;
             //Check of verplichte velden niet leeg zijn.
             if
             (
+            selectedEvent != "" &
             voornaam != "" &
             achternaam != "" &
             straat != "" &
@@ -61,7 +73,9 @@ namespace ICT4Events_Group1
             email != "" &
             username != "" &
             password != "" &
-            passwordcheck != ""
+            passwordcheck != "" &
+            startdatum != null &
+            einddatum != null
             )
             {
                 //check password en email en of gebruikersnaam al bestaad
@@ -72,9 +86,25 @@ namespace ICT4Events_Group1
                     if (!userDatabase.usernameExist(username) & CheckUsernameFormat(username))
                     {
                         //check password
-                        if (CheckPasswordFormat(password))
+                        if (CheckPasswordFormat(password) && password == passwordcheck)
                         {
+                            //userDatabase.adduser()
                             User user = new User(1, username, voornaam, tussenvoegsel, achternaam);
+                            tbVoornaam.Clear();
+                            tbTussenvoegsel.Clear(); //niet verplicht
+                            tbAchternaam.Clear();
+                            tbStraat.Clear();
+                            tbHuisnummer.Clear();
+                            tbPostcode.Clear();
+                            tbWoonplaats.Clear();
+                            tbRekeningnr.Clear();
+                            tbEmail.Clear();
+                            tbVastnr.Clear();
+                            tbMobielnr.Clear();
+                            tbUsername.Clear();
+                            tbPassword.Clear();
+                            tbPasswordCheck.Clear();
+                            cbBetaald.Checked = false;
                         }
                         else
                         {
@@ -95,6 +125,11 @@ namespace ICT4Events_Group1
             {
                 MessageBox.Show("Vul alle verplichte velden in.");
             }
+        }
+
+        private void btnAnnuleren_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }
