@@ -104,33 +104,33 @@ namespace ICT4Events_Group1
             if (data.Count > 0) // Logged in!
             {
                 Dictionary<string, object> cur = data[0];
-                current = new User(Convert.ToInt16(cur["ID"]), (string) cur["USERNAME"], (string) cur["VOORNAAM"], (string) cur["TUSSENVOEGSEL"], (string) cur["ACHTERNAAM"]);
+                current = new User(Convert.ToInt16(cur["id"]), (string) cur["username"], (string) cur["voornaam"], (string) cur["tussenvoegsel"], (string) cur["achternaam"]);
             }
 
             return data.Count > 0;
         }
         public bool empLogIn(string username, string password)
         {
-           /* OracleDataReader data = getQuery("SELECT Id, Username, Adminrights, Password From Employee WHERE Username = '" + username + "' AND Password = '" + password + "';");
+             List<Dictionary<string, object>> data = getQuery("SELECT Id, Username, Adminrights, Password From Employee WHERE Username = '" + username + "' AND Password = '" + password + "';");
 
-            if (data == null)
-                return false; 
+             if (data == null)
+                 return false;
 
-            if (data.Read()) // Logged in!
-            {
-                loggedInEmployee = new Employee(data.GetInt16(0), data.GetString(1), data.GetString(3), data.GetBoolean(2));
-            }
-            */
-            return false;
+             if (data.Count > 0) // Logged in!
+             {
+                 Dictionary<string, object> cur = data[0];
+                 loggedInEmployee = new Employee(Convert.ToInt16(cur["id"]), (string)cur["username"], (string)cur["password"], Convert.ToInt16(cur["adminrights"]) == 1);
+             }
+
+            return data.Count > 0;
         }
 
         public int getLatestId(String table)
         {
-            /*OracleDataReader data = getQuery("SELECT MAX(Id) + 1 FROM "+table+";");
+            List<Dictionary<string, object>> data = getQuery("SELECT MAX(Id) + 1 AS ID FROM " + table + ";");
 
-            if (data.Read())
-                return data.GetInt16(0);
-            */
+            if (data.Count > 0)
+                return Convert.ToInt16(data[0]["id"]);
             return -1;
         }
     }

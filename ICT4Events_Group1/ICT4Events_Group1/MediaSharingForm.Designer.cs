@@ -34,6 +34,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lbCategorie = new System.Windows.Forms.ListBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.tbTitle = new System.Windows.Forms.TextBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.pbPhoto2 = new System.Windows.Forms.PictureBox();
             this.lblComment2 = new System.Windows.Forms.Label();
@@ -59,7 +60,6 @@
             this.tbMessage = new System.Windows.Forms.TextBox();
             this.btnProfile = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
-            this.tbTitle = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -75,7 +75,9 @@
             this.tbSearch.Size = new System.Drawing.Size(100, 20);
             this.tbSearch.TabIndex = 0;
             this.tbSearch.Text = "Search";
+            this.tbSearch.Enter += new System.EventHandler(this.tbSearch_Enter);
             this.tbSearch.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbSearch_KeyDown);
+            this.tbSearch.Leave += new System.EventHandler(this.tbSearch_Leave);
             // 
             // lblCategorie
             // 
@@ -118,6 +120,16 @@
             this.groupBox2.Size = new System.Drawing.Size(505, 398);
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
+            // 
+            // tbTitle
+            // 
+            this.tbTitle.Location = new System.Drawing.Point(16, 6);
+            this.tbTitle.Name = "tbTitle";
+            this.tbTitle.Size = new System.Drawing.Size(129, 20);
+            this.tbTitle.TabIndex = 13;
+            this.tbTitle.Text = "Title";
+            this.tbTitle.Enter += new System.EventHandler(this.tbTitle_Enter);
+            this.tbTitle.Leave += new System.EventHandler(this.tbTitle_Leave);
             // 
             // groupBox4
             // 
@@ -346,6 +358,8 @@
             this.tbMessage.Size = new System.Drawing.Size(286, 69);
             this.tbMessage.TabIndex = 0;
             this.tbMessage.Text = "New Message\r\n";
+            this.tbMessage.Enter += new System.EventHandler(this.tbMessage_Enter);
+            this.tbMessage.Leave += new System.EventHandler(this.tbMessage_Leave);
             // 
             // btnProfile
             // 
@@ -365,14 +379,6 @@
             this.btnLogout.TabIndex = 6;
             this.btnLogout.Text = "Logout";
             this.btnLogout.UseVisualStyleBackColor = true;
-            // 
-            // tbTitle
-            // 
-            this.tbTitle.Location = new System.Drawing.Point(16, 6);
-            this.tbTitle.Name = "tbTitle";
-            this.tbTitle.Size = new System.Drawing.Size(129, 20);
-            this.tbTitle.TabIndex = 13;
-            this.tbTitle.Text = "Title";
             // 
             // MediaSharingForm
             // 

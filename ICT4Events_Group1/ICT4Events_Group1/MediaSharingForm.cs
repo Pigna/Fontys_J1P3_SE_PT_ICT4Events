@@ -83,5 +83,44 @@ namespace ICT4Events_Group1
         {
             // gegevens uit de database
         }
+
+        private void tbTitle_Enter(object sender, EventArgs e)
+        {
+            if (tbTitle.Text == "Title")
+            {
+                tbTitle.Clear();
+            }
+        }
+
+        private void tbMessage_Enter(object sender, EventArgs e)
+        {            
+                tbMessage.Clear();            
+        }
+
+        private void tbSearch_Enter(object sender, EventArgs e)
+        {
+            tbSearch.Clear();
+        }
+
+        private void tbTitle_Leave(object sender, EventArgs e)
+        {
+            if (tbTitle.Text == "")
+            {
+                tbTitle.Text = "Title";
+            }
+        }
+
+        private void tbMessage_Leave(object sender, EventArgs e)
+        {
+            if (tbMessage.Text == "")
+            {
+                tbMessage.Text = "New Message";
+            }
+        }
+
+        private void tbSearch_Leave(object sender, EventArgs e)
+        {
+            tbSearch.Text = "Search";
+        }
     }
 }

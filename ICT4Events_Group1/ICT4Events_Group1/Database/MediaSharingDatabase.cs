@@ -28,14 +28,18 @@ namespace ICT4Events_Group1
         public List<Message> getMessages(Event eventnaam)
         {
             List<Message> mes = new List<Message>();
-            /*OracleDataReader data = getQuery("SELECT Id, Inhoud FROM Message");
-
-            while (data.Read())
+            
+            List<Dictionary<string, object>> messages = getQuery("SELECT Id, Inhoud FROM Message");
+            if (messages == null)
             {
-                mes.Add(new Message());
+                return null;
             }
-            return mes;*/
-            return null;
+            for (int i = 0; i < messages.Count; i++)
+            {
+                Dictionary<string, object> cur = messages[i];
+                mes.Add(new Message(Convert.ToInt16(cur["id"]), (string)cur["inhoud"]));
+            }
+            return mes;
            
         }
         public bool sendLike(Message message, User user, int id)

@@ -41,9 +41,10 @@
             // 
             // btnVerhuur
             // 
-            this.btnVerhuur.Location = new System.Drawing.Point(48, 78);
+            this.btnVerhuur.Location = new System.Drawing.Point(64, 96);
+            this.btnVerhuur.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnVerhuur.Name = "btnVerhuur";
-            this.btnVerhuur.Size = new System.Drawing.Size(141, 23);
+            this.btnVerhuur.Size = new System.Drawing.Size(188, 28);
             this.btnVerhuur.TabIndex = 0;
             this.btnVerhuur.Text = "Verhuur";
             this.btnVerhuur.UseVisualStyleBackColor = true;
@@ -51,9 +52,10 @@
             // 
             // btnBeheer
             // 
-            this.btnBeheer.Location = new System.Drawing.Point(48, 107);
+            this.btnBeheer.Location = new System.Drawing.Point(64, 132);
+            this.btnBeheer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnBeheer.Name = "btnBeheer";
-            this.btnBeheer.Size = new System.Drawing.Size(141, 23);
+            this.btnBeheer.Size = new System.Drawing.Size(188, 28);
             this.btnBeheer.TabIndex = 1;
             this.btnBeheer.Text = "Beheer";
             this.btnBeheer.UseVisualStyleBackColor = true;
@@ -61,9 +63,10 @@
             // 
             // btnMediaShare
             // 
-            this.btnMediaShare.Location = new System.Drawing.Point(48, 136);
+            this.btnMediaShare.Location = new System.Drawing.Point(64, 167);
+            this.btnMediaShare.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnMediaShare.Name = "btnMediaShare";
-            this.btnMediaShare.Size = new System.Drawing.Size(141, 23);
+            this.btnMediaShare.Size = new System.Drawing.Size(188, 28);
             this.btnMediaShare.TabIndex = 2;
             this.btnMediaShare.Text = "Media Sharing";
             this.btnMediaShare.UseVisualStyleBackColor = true;
@@ -71,36 +74,37 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(48, 165);
+            this.button4.Location = new System.Drawing.Point(64, 203);
+            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(141, 23);
+            this.button4.Size = new System.Drawing.Size(188, 28);
             this.button4.TabIndex = 3;
-            this.button4.Text = "button4";
+            this.button4.Text = "Event";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // txtUser
             // 
-            this.txtUser.Location = new System.Drawing.Point(345, 58);
-            this.txtUser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtUser.Location = new System.Drawing.Point(460, 71);
+            this.txtUser.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtUser.Name = "txtUser";
-            this.txtUser.Size = new System.Drawing.Size(76, 20);
+            this.txtUser.Size = new System.Drawing.Size(100, 22);
             this.txtUser.TabIndex = 4;
             // 
             // txtPass
             // 
-            this.txtPass.Location = new System.Drawing.Point(345, 82);
-            this.txtPass.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPass.Location = new System.Drawing.Point(460, 101);
+            this.txtPass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPass.Name = "txtPass";
-            this.txtPass.Size = new System.Drawing.Size(76, 20);
+            this.txtPass.Size = new System.Drawing.Size(100, 22);
             this.txtPass.TabIndex = 5;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(345, 110);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Location = new System.Drawing.Point(460, 135);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 19);
+            this.button1.Size = new System.Drawing.Size(100, 23);
             this.button1.TabIndex = 6;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
@@ -109,17 +113,17 @@
             // lblCur
             // 
             this.lblCur.AutoSize = true;
-            this.lblCur.Location = new System.Drawing.Point(345, 152);
-            this.lblCur.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCur.Location = new System.Drawing.Point(460, 187);
             this.lblCur.Name = "lblCur";
-            this.lblCur.Size = new System.Drawing.Size(0, 13);
+            this.lblCur.Size = new System.Drawing.Size(0, 17);
             this.lblCur.TabIndex = 7;
             // 
             // btn_Entrance
             // 
-            this.btn_Entrance.Location = new System.Drawing.Point(48, 194);
+            this.btn_Entrance.Location = new System.Drawing.Point(64, 239);
+            this.btn_Entrance.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_Entrance.Name = "btn_Entrance";
-            this.btn_Entrance.Size = new System.Drawing.Size(141, 23);
+            this.btn_Entrance.Size = new System.Drawing.Size(188, 28);
             this.btn_Entrance.TabIndex = 8;
             this.btn_Entrance.Text = "Entrance";
             this.btn_Entrance.UseVisualStyleBackColor = true;
@@ -127,9 +131,9 @@
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(544, 402);
+            this.ClientSize = new System.Drawing.Size(725, 495);
             this.Controls.Add(this.btn_Entrance);
             this.Controls.Add(this.lblCur);
             this.Controls.Add(this.button1);
@@ -139,6 +143,7 @@
             this.Controls.Add(this.btnMediaShare);
             this.Controls.Add(this.btnBeheer);
             this.Controls.Add(this.btnVerhuur);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "MainForm";
             this.Text = "MainForm";
             this.ResumeLayout(false);
