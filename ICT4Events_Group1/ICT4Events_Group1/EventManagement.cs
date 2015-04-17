@@ -29,8 +29,8 @@ namespace ICT4Events_Group1
         {
             InitializeComponent();
 
-            lbxEmployees.Items.AddRange(db.getEmployees().ToArray());
-            lbxLastEvents.Items.AddRange(db.getEvents().ToArray());
+            //lbxEmployees.Items.AddRange(db.getEmployees().ToArray());
+            //lbxLastEvents.Items.AddRange(db.getEvents().ToArray());
         }
 
         private void lblEuro_Click(object sender, EventArgs e)
