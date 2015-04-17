@@ -36,7 +36,7 @@ namespace ICT4Events_Group1
                     if (tbSearch.Text == text && i != 1)
                     {
                         tbSearch.Font = new Font(DefaultFont.FontFamily, DefaultFont.Size, FontStyle.Bold);
-                        
+                         
                     }
                     else
                     {
