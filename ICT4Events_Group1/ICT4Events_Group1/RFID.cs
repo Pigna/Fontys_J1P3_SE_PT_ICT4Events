@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ICT4Events_Group1
 {
-    class RFID
+    class RFID_
     {
         //fields
         private string code;
@@ -19,7 +19,7 @@ namespace ICT4Events_Group1
         public bool active { get; set; }
 
         //constructors
-        public RFID (string code)
+        public RFID_ (string code)
         { this.code = code; }
     }
 }

@@ -40,7 +40,7 @@ namespace ICT4Events_Group1
             return ret;
         }
         //zoek gebruiker op RFID
-        public void getDataRFID(RFID rfid)
+        public void getDataRFID(RFID_ rfid)
         {
             //string code = "SELECT * FROM GEBRUIKER WHERE RFID = " + rfid.Code + ";";
         }

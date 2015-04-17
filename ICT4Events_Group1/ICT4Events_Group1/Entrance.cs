@@ -10,7 +10,7 @@ namespace ICT4Events_Group1
     {
         //fields
         private Employee employee;
-        private List<RFID> tags;
+        private List<RFID_> tags;
         private int code;
 
         //propperties
@@ -18,11 +18,11 @@ namespace ICT4Events_Group1
         //constructor
 
         //methodes
-        public List<RFID> GetActiveRFID()
+        public List<RFID_> GetActiveRFID()
         {
             return null;
         }
-        public List<RFID> GetInactiveRFID()
+        public List<RFID_> GetInactiveRFID()
         {
             return null;
         }

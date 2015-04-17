@@ -13,14 +13,14 @@ namespace ICT4Events_Group1
         private int id;
         private string naam;
 
-        private RFID RFID;
+        private RFID_ RFID;
         List<Item> itemlist = new List<Item>();
         UserDatabase userdatabase = new UserDatabase();
 
         //properties
         public string Username { get { return username; } }
         public int Id { get { return id; } }
-        public RFID rfid { get; set; }
+        public RFID_ rfid { get; set; }
 
         //constructors
         public User ( int id, string username, string voornaam, string tussenvoegsel, string achternaam)

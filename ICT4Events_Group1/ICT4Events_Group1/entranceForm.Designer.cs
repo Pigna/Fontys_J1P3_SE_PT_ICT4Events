@@ -46,6 +46,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btn_rlink = new System.Windows.Forms.Button();
+            this.tb_proto = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.profile.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_profile)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_paspoort)).BeginInit();
@@ -157,7 +159,7 @@
             // 
             // btn_scanIn
             // 
-            this.btn_scanIn.Location = new System.Drawing.Point(79, 206);
+            this.btn_scanIn.Location = new System.Drawing.Point(185, 237);
             this.btn_scanIn.Name = "btn_scanIn";
             this.btn_scanIn.Size = new System.Drawing.Size(100, 23);
             this.btn_scanIn.TabIndex = 29;
@@ -218,11 +220,29 @@
             this.btn_rlink.UseVisualStyleBackColor = true;
             this.btn_rlink.Click += new System.EventHandler(this.btn_rlink_Click);
             // 
+            // tb_proto
+            // 
+            this.tb_proto.Location = new System.Drawing.Point(79, 208);
+            this.tb_proto.Name = "tb_proto";
+            this.tb_proto.Size = new System.Drawing.Size(100, 20);
+            this.tb_proto.TabIndex = 37;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(35, 208);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(25, 13);
+            this.label3.TabIndex = 38;
+            this.label3.Text = "prot";
+            // 
             // EntranceForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(901, 477);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.tb_proto);
             this.Controls.Add(this.btn_rlink);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -267,5 +287,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btn_rlink;
+        private System.Windows.Forms.TextBox tb_proto;
+        private System.Windows.Forms.Label label3;
     }
 }
