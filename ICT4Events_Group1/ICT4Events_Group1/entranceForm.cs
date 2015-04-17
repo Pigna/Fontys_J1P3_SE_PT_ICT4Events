@@ -120,6 +120,7 @@ namespace ICT4Events_Group1
         {
             MainForm mf = new MainForm();
             mf.ShowDialog();
+         
             
         }
 
