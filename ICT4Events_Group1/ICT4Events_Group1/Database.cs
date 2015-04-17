@@ -1,6 +1,6 @@
 ﻿using Oracle.DataAccess.Client;
 using Oracle.DataAccess;
-using Oracle.DataAccess.Type;
+//using Oracle.DataAccess.Type;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -38,6 +38,8 @@ namespace ICT4Events_Group1
 
         protected OracleDataReader getQuery(string query)
         {
+            try
+            {
             Connect();
                 OracleCommand cmd = new OracleCommand();
                 cmd.Connection = con;
@@ -45,8 +47,11 @@ namespace ICT4Events_Group1
                 cmd.CommandType = System.Data.CommandType.Text;
                 OracleDataReader data = cmd.ExecuteReader();
             Disconnect();
+                return data;
 
-            return data;
+            }
+            catch { return null; }
+            finally { Disconnect(); }
         }
 
         protected int doQuery(string query)
@@ -75,11 +80,11 @@ namespace ICT4Events_Group1
         }
         public bool empLogIn(string username, string password)
         {
-            OracleDataReader data = getQuery("SELECT Id, Username, Adminrights From Employee WHERE Username = '" + username + "' AND Password = '" + password + "';");
+            OracleDataReader data = getQuery("SELECT Id, Username, Adminrights,password From Employee WHERE Username = '" + username + "' AND Password = '" + password + "';");
 
             if (data.Read()) // Logged in!
             {
-                loggedInEmployee = new Employee(data.GetInt16(0), data.GetString(1), data.GetBoolean(2));
+                loggedInEmployee = new Employee(data.GetInt16(0), data.GetString(1),data.GetString(3), data.GetBoolean(2));
             }
 
             return data.Read();

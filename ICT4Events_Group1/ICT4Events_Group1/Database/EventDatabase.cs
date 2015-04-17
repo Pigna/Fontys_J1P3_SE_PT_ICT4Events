@@ -1,4 +1,5 @@
 ﻿using System;
+using Oracle.DataAccess.Client;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,9 +15,9 @@ namespace ICT4Events_Group1
 
             OracleDataReader data = getQuery("SELECT Id, Username, Password, Adminrights FROM Employee");
 
-            while (data.read())
+            while (data.Read())
             {
-                ret.Add(new Employee(data.GetInt16(0), data.GetString(1), data.GetString(2), data.GetInt16(3)));
+                ret.Add(new Employee(data.GetInt16(0), data.GetString(1), data.GetString(2), data.GetInt16(3) == 1));
             }
             return ret;
         }
@@ -27,9 +28,9 @@ namespace ICT4Events_Group1
 
             OracleDataReader data = getQuery("SELECT Id, Username, Password, Adminrights FROM Employee WHERE Username LIKE '%"+filter+"%' OR Id LIKE '%"+filter+"%';");
 
-            while (data.read())
+            while (data.Read())
             {
-                ret.Add(new Employee(data.GetInt16(0), data.GetString(1), data.GetString(2), data.GetInt16(3)));
+                ret.Add(new Employee(data.GetInt16(0), data.GetString(1), data.GetString(2), data.GetInt16(3) == 1));
             }
             return ret;
         }
@@ -51,9 +52,9 @@ namespace ICT4Events_Group1
 
             OracleDataReader data = getQuery("SELECT Id, Naam, Startdatum, Einddatum, Beschrijving, Kosten FROM Employee");
 
-            while (data.read())
+            while (data.Read())
             {
-                ret.Add(new Event(data.GetInt16(0), data.GetString(1), data.GetString(4), data.GetValue(2), data.GetValue(2), (float) data.GetDecimal(5)));
+                ret.Add(new Event(data.GetInt16(0), data.GetString(1), data.GetString(4), data.GetDateTime(2), data.GetDateTime(3), (float) data.GetDecimal(5)));
             }
             return ret;
         }
@@ -64,9 +65,9 @@ namespace ICT4Events_Group1
 
             OracleDataReader data = getQuery("SELECT Id, Naam, Startdatum, Einddatum, Beschrijving, Kosten FROM Employee WHERE Naam LIKE '%"+filter+"%' OR Beschrijving LIKE '%"+filter+"%' OR Id LIKE '%"+filter+"%'");
 
-            while (data.read())
+            while (data.Read())
             {
-                ret.Add(new Event(data.GetInt16(0), data.GetString(1), data.GetString(4), data.GetValue(2), data.GetValue(2), (float)data.GetDecimal(5)));
+                ret.Add(new Event(data.GetInt16(0), data.GetString(1), data.GetString(4), data.GetDateTime(2), data.GetDateTime(2), (float)data.GetDecimal(5)));
             }
             return ret;
         }
