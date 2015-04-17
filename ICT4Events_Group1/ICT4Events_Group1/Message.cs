@@ -15,6 +15,14 @@ namespace ICT4Events_Group1
         private string title;
         private string content;
         private string attachment; // file
+        private int id;
+        string Inhoud { get; set; }
+        public int Id { get { return id; } }
+        public Message (int id, string inhoud)
+        {
+            this.id = id;
+            this.Inhoud = inhoud;
+        }
         
     }
 }
