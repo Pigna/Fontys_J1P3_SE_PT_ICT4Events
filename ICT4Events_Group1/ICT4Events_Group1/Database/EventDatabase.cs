@@ -15,8 +15,11 @@ namespace ICT4Events_Group1
 
             List<Dictionary<string, object>> data = getQuery("SELECT Id, Username, Password, Adminrights FROM Employee");
 
+            if (data == null)
+                return ret;
+
             for(int c = 0; c < data.Count; c++)
-                ret.Add(new Employee(Convert.ToInt16(data[c]["id"]), (string)data[c]["username"], (string)data[c]["password"], Convert.ToInt16(data[c]["ddminrights"]) == 1));
+                ret.Add(new Employee(Convert.ToInt16(data[c]["id"]), (string)data[c]["username"], (string)data[c]["password"], Convert.ToInt16(data[c]["adminrights"]) == 1));
 
             return ret;
         }
@@ -25,7 +28,10 @@ namespace ICT4Events_Group1
         {
             List<Employee> ret = new List<Employee>();
 
-            List<Dictionary<string, object>> data = getQuery("SELECT Id, Username, Password, Adminrights FROM Employee WHERE Username LIKE '%" + filter + "%' OR Id LIKE '%" + filter + "%';");
+            List<Dictionary<string, object>> data = getQuery("SELECT Id, Username, Password, Adminrights FROM Employee WHERE Username LIKE '%" + filter + "%' OR Id LIKE '%" + filter + "%'");
+
+            if (data == null)
+                return ret;
 
             for (int c = 0; c < data.Count; c++)
                 ret.Add(new Employee(Convert.ToInt16(data[c]["id"]), (string)data[c]["username"], (string)data[c]["password"], Convert.ToInt16(data[c]["adminrights"]) == 1));
@@ -35,12 +41,13 @@ namespace ICT4Events_Group1
 
         public bool deleteEmployee(Employee e)
         {
-            return doQuery("DELETE FROM Employee WHERE Id = " + e.id) > 0;
+            int dox = doQuery("DELETE FROM Employee WHERE Id = " + e.id);
+            return dox > 0;
         }
 
         public bool createEmployee(Employee e)
         {
-            return doQuery("INSERT INTO Employee (Id, Username, Password) VALUES (" + e.id + ", " + e.username + ", " + e.password + ");") > 0;
+            return doQuery("INSERT INTO Employee (Id, Username, Password) VALUES (" + e.id + ", " + e.username + ", " + e.password + ")") > 0;
         }
 
 
@@ -48,7 +55,10 @@ namespace ICT4Events_Group1
         {
             List<Event> ret = new List<Event>();
 
-            List<Dictionary<string, object>> data = getQuery("SELECT Id, Naam, Startdatum, Einddatum, Beschrijving, Kosten FROM event");
+            List<Dictionary<string, object>> data = getQuery("SELECT Id, Naam, Startdatum, Einddatum, Beschrijving, Kosten FROM Event");
+
+            if (data == null)
+                return ret;
 
             for (int c = 0; c < data.Count; c++)
                 ret.Add(new Event(Convert.ToInt16(data[c]["id"]), (string)data[c]["naam"], (string)data[c]["beschrijving"], (DateTime)data[c]["startdatum"], (DateTime)data[c]["einddatum"], (float) data[c]["kosten"]));
@@ -62,6 +72,9 @@ namespace ICT4Events_Group1
 
             List<Dictionary<string, object>> data = getQuery("SELECT Id, Naam, Startdatum, Einddatum, Beschrijving, Kosten FROM Employee WHERE Naam LIKE '%"+filter+"%' OR Beschrijving LIKE '%"+filter+"%' OR Id LIKE '%"+filter+"%'");
 
+            if (data == null)
+                return ret;
+
             for (int c = 0; c < data.Count; c++)
                 ret.Add(new Event(Convert.ToInt16(data[c]["id"]), (string)data[c]["naam"], (string)data[c]["beschrijving"], (DateTime)data[c]["startdatum"], (DateTime)data[c]["einddatum"], (float)data[c]["kosten"]));
 
@@ -70,7 +83,8 @@ namespace ICT4Events_Group1
 
         public bool deleteEvent(Event e)
         {
-            return doQuery("DELETE FROM Event WHERE Id = " + e.id) > 0;
+            int dox= doQuery("DELETE FROM Event WHERE Id = " + e.id);
+            return dox > 1;
         }
 
         public bool createEvent(Event e)
