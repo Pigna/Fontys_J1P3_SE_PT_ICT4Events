@@ -15,8 +15,15 @@ namespace ICT4Events_Group1
         //methodes
         public bool sendMessage(Message bericht, int id, string inhoud)
         {
-            //OracleDataReader data = doQuery("INSERT INTO Message(Id, Inhoud) VALUES(id, inhoud)");
-            return true;            
+            try
+            {
+                doQuery("INSERT INTO Message(Id, Inhoud) VALUES(id, inhoud)");
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
         }
         public List<Message> getMessages(Event eventnaam)
         {

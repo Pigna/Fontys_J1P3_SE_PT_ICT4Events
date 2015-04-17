@@ -11,8 +11,7 @@ using System.Windows.Forms;
 namespace ICT4Events_Group1
 {
     public partial class MediaSharingForm : Form
-    {
-        int i = 0;
+    {        
         Reactie reactie = new Reactie();
         List<String> categorie = new List<String>();
         public MediaSharingForm()
