@@ -12,8 +12,11 @@ namespace ICT4Events_Group1
 {
     public partial class MainForm : Form
     {
-        VerhuurForm verhuur = new VerhuurForm(); GebruikerBeheerForm gb = new GebruikerBeheerForm(); MediaSharingForm Media = new MediaSharingForm();
-        
+        VerhuurForm verhuur = new VerhuurForm(); 
+        GebruikerBeheerForm gb = new GebruikerBeheerForm(); 
+        MediaSharingForm Media = new MediaSharingForm();
+        EventManagement ev = new EventManagement();
+
 
         public MainForm()
         {
@@ -45,6 +48,11 @@ namespace ICT4Events_Group1
                 lblCur.Text = test.Logged.ToString();
             else
                 lblCur.Text = "Nope";
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            ev.ShowDialog();
         }
     }
 }
