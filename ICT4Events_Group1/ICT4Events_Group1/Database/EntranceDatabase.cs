@@ -44,10 +44,31 @@ namespace ICT4Events_Group1
         {
             return true;
         }
-        public int GetCode(int code)
+        public bool GetCode(int code)
         {
-            return 0;
+           OracleDataReader data = getQuery("SELECT id FROM gebruikers WHERE rfid = " + code + ";");
+
+            if ( data == null)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
-       
+       public bool activateCode(int id, string rfid)
+        {
+            try
+            {
+                doQuery("UPDATE gebruiker SET rfid TO " + rfid + "WHERE id = " + id + ";");
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+
+        }
     }
 }

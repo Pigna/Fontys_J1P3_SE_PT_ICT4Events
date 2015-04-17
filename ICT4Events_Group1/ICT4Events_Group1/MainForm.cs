@@ -12,10 +12,11 @@ namespace ICT4Events_Group1
 {
     public partial class MainForm : Form
     {
-        /*VerhuurForm verhuur = new VerhuurForm(); 
+        VerhuurForm verhuur = new VerhuurForm(); 
         GebruikerBeheerForm gb = new GebruikerBeheerForm(); 
         MediaSharingForm Media = new MediaSharingForm();
-        EventManagement ev = new EventManagement();*/
+        EventManagement ev = new EventManagement();
+        EntranceForm ef = new EntranceForm();
 
 
         public MainForm()
@@ -27,32 +28,37 @@ namespace ICT4Events_Group1
         private void btnVerhuur_Click(object sender, EventArgs e)
         {
             
-           // verhuur.ShowDialog();
+            verhuur.ShowDialog();
             
         }
 
         private void btnBeheer_Click(object sender, EventArgs e)
         {
-            //gb.ShowDialog();
+            gb.ShowDialog();
         }
 
         private void btnMediaShare_Click(object sender, EventArgs e)
         {
-            //Media.ShowDialog();
+            Media.ShowDialog();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             Database test = new Database();
             if (test.logIn(txtUser.Text, txtPass.Text))
-                lblCur.Text = "Yesz";
+                lblCur.Text = test.Logged.ToString();
             else
-                lblCur.Text = "Nope | " + txtUser.Text + " | " + txtPass.Text;
+                lblCur.Text = "Nope";
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            //ev.ShowDialog();
+            ev.ShowDialog();
+        }
+
+        private void btn_Entrance_Click(object sender, EventArgs e)
+        {
+            ef.ShowDialog();
         }
     }
 }

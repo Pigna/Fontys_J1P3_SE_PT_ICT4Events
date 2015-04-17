@@ -12,8 +12,9 @@ namespace ICT4Events_Group1
 {
     public partial class MediaSharingForm : Form
     {
-        int i = 0;
-        Reactie reactie = new Reactie(); 
+        
+        Reactie reactie = new Reactie();
+        List<String> categorie = new List<String>();
         public MediaSharingForm()
         {
             InitializeComponent();
@@ -21,34 +22,37 @@ namespace ICT4Events_Group1
               
         private void tbSearch_KeyDown(object sender, KeyEventArgs e)
         {
+            int i = 0;
            
             if (e.KeyCode == Keys.Enter)
             {
-                if (i == 0)
-                    {
-                        lbCategorie.Items.Add(tbSearch.Text);
-                        i++;
-                    }
-
-                foreach (string text in lbCategorie.Items)
-                {
-                    
-                    if (tbSearch.Text == text && i != 1)
-                    {
-                        tbSearch.Font = new Font(DefaultFont.FontFamily, DefaultFont.Size, FontStyle.Bold);
-                         
-                    }
-                    else
-                    {
-                        lbCategorie.Items.Add(tbSearch.Text);
-                    }
-
-                        
+                if (lbCategorie.Items.Contains(tbSearch.Text))
+                {                    
                 }
-
+                else
+                {
+                        foreach (String text in categorie)
+                    {                    
+                        if (tbSearch.Text == text)
+                        {
+                            tbSearch.Font = new Font(DefaultFont.FontFamily, DefaultFont.Size, FontStyle.Bold);                         
+                        }
+                        else if(i==0)
+                        {                        
+                            lbCategorie.Items.Add(tbSearch.Text);
+                            i++;
+                        }                        
+                    }
+                        if (i == 0)
+                        {
+                            categorie.Add(tbSearch.Text);
+                            lbCategorie.Items.Add(tbSearch.Text);
+                        }
+                        i = 0;
+                }
+                         
                 
             }
-
         }
 
         private void btnPost_Click(object sender, EventArgs e)

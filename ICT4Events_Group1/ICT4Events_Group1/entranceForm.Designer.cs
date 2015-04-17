@@ -36,21 +36,19 @@
             this.pb_paspoort = new System.Windows.Forms.PictureBox();
             this.btnMessage = new System.Windows.Forms.Button();
             this.btnRent = new System.Windows.Forms.Button();
-            this.btnEntrance = new System.Windows.Forms.Button();
+            this.btnevent = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
             this.tbxSearch = new System.Windows.Forms.TextBox();
-            this.pbxLogo = new System.Windows.Forms.PictureBox();
             this.btn_scanIn = new System.Windows.Forms.Button();
             this.btn_scanUit = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbxRFID = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btn_rlink = new System.Windows.Forms.Button();
             this.profile.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_profile)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_paspoort)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // profile
@@ -118,6 +116,7 @@
             this.btnMessage.TabIndex = 22;
             this.btnMessage.Text = "Berichten";
             this.btnMessage.UseVisualStyleBackColor = true;
+            this.btnMessage.Click += new System.EventHandler(this.btnMessage_Click);
             // 
             // btnRent
             // 
@@ -127,15 +126,17 @@
             this.btnRent.TabIndex = 23;
             this.btnRent.Text = "Huren";
             this.btnRent.UseVisualStyleBackColor = true;
+            this.btnRent.Click += new System.EventHandler(this.btnRent_Click);
             // 
-            // btnEntrance
+            // btnevent
             // 
-            this.btnEntrance.Location = new System.Drawing.Point(454, 51);
-            this.btnEntrance.Name = "btnEntrance";
-            this.btnEntrance.Size = new System.Drawing.Size(75, 23);
-            this.btnEntrance.TabIndex = 24;
-            this.btnEntrance.Text = "Entree";
-            this.btnEntrance.UseVisualStyleBackColor = true;
+            this.btnevent.Location = new System.Drawing.Point(454, 51);
+            this.btnevent.Name = "btnevent";
+            this.btnevent.Size = new System.Drawing.Size(75, 23);
+            this.btnevent.TabIndex = 24;
+            this.btnevent.Text = "event";
+            this.btnevent.UseVisualStyleBackColor = true;
+            this.btnevent.Click += new System.EventHandler(this.btnevent_Click);
             // 
             // btnLogout
             // 
@@ -145,6 +146,7 @@
             this.btnLogout.TabIndex = 25;
             this.btnLogout.Text = "Logout";
             this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // tbxSearch
             // 
@@ -152,16 +154,6 @@
             this.tbxSearch.Name = "tbxSearch";
             this.tbxSearch.Size = new System.Drawing.Size(100, 20);
             this.tbxSearch.TabIndex = 26;
-            // 
-            // pbxLogo
-            // 
-            this.pbxLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pbxLogo.Location = new System.Drawing.Point(26, 24);
-            this.pbxLogo.Name = "pbxLogo";
-            this.pbxLogo.Size = new System.Drawing.Size(242, 78);
-            this.pbxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pbxLogo.TabIndex = 27;
-            this.pbxLogo.TabStop = false;
             // 
             // btn_scanIn
             // 
@@ -191,12 +183,12 @@
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
-            // textBox1
+            // tbxRFID
             // 
-            this.textBox1.Location = new System.Drawing.Point(79, 176);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 33;
+            this.tbxRFID.Location = new System.Drawing.Point(79, 176);
+            this.tbxRFID.Name = "tbxRFID";
+            this.tbxRFID.Size = new System.Drawing.Size(100, 20);
+            this.tbxRFID.TabIndex = 33;
             // 
             // label1
             // 
@@ -224,6 +216,7 @@
             this.btn_rlink.TabIndex = 36;
             this.btn_rlink.Text = "link RFID";
             this.btn_rlink.UseVisualStyleBackColor = true;
+            this.btn_rlink.Click += new System.EventHandler(this.btn_rlink_Click);
             // 
             // EntranceForm
             // 
@@ -233,15 +226,14 @@
             this.Controls.Add(this.btn_rlink);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbxRFID);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.profile);
             this.Controls.Add(this.btn_scanUit);
             this.Controls.Add(this.btnMessage);
             this.Controls.Add(this.btn_scanIn);
             this.Controls.Add(this.btnRent);
-            this.Controls.Add(this.btnEntrance);
-            this.Controls.Add(this.pbxLogo);
+            this.Controls.Add(this.btnevent);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.tbxSearch);
             this.Name = "EntranceForm";
@@ -250,7 +242,6 @@
             this.profile.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_profile)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_paspoort)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -266,14 +257,13 @@
         private System.Windows.Forms.PictureBox pb_paspoort;
         private System.Windows.Forms.Button btnMessage;
         private System.Windows.Forms.Button btnRent;
-        private System.Windows.Forms.Button btnEntrance;
+        private System.Windows.Forms.Button btnevent;
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.TextBox tbxSearch;
-        private System.Windows.Forms.PictureBox pbxLogo;
         private System.Windows.Forms.Button btn_scanIn;
         private System.Windows.Forms.Button btn_scanUit;
         private System.Windows.Forms.Button btnSearch;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbxRFID;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btn_rlink;
