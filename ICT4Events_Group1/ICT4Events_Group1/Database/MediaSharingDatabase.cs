@@ -37,9 +37,17 @@ namespace ICT4Events_Group1
             return mes;
            
         }
-        public bool sendLike(Message message, User user)
+        public bool sendLike(Message message, User user, int id)
         {
-            return true;
+            try
+            {
+                doQuery("INSERT INTO Like(Id, User, Message) VALUES(id, user, message");
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
         }
     }
 }
