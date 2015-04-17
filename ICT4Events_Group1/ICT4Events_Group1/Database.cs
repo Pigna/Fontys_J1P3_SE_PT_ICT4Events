@@ -26,7 +26,7 @@ namespace ICT4Events_Group1
         private void Connect()
         {
             con = new OracleConnection();
-            con.ConnectionString = "Data Source=ORCL;User Id=system;Password=pass;";
+            con.ConnectionString = "Data Source=localhost;Persist Security Info=True;User ID=system;Password=jewachtwoord;Unicode=True";
             con.Open();
         }
 
@@ -56,15 +56,20 @@ namespace ICT4Events_Group1
 
         protected int doQuery(string query)
         {
-            Connect();
-                OracleCommand cmd = new OracleCommand();
-                cmd.Connection = con;
-                cmd.CommandText = query;
-                cmd.CommandType = System.Data.CommandType.Text;
-                int data = cmd.ExecuteNonQuery();
-            Disconnect();
+            try
+            {
+                Connect();
+                    OracleCommand cmd = new OracleCommand();
+                    cmd.Connection = con;
+                    cmd.CommandText = query;
+                    cmd.CommandType = System.Data.CommandType.Text;
+                    int data = cmd.ExecuteNonQuery();
+                Disconnect();
 
-            return data;
+                return data;
+            }
+            catch { return -1; }
+            finally { Disconnect(); }
         }
 
         public bool logIn(string username, string password)
