@@ -14,7 +14,7 @@ namespace ICT4Events_Group1
         //constructor
         //methodes
         public bool sendMessage(Message bericht)
-        {
+        {            
             return true;
         }
         public List<Message> getMessages(Event eventnaam)
