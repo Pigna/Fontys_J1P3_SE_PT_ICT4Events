@@ -44,6 +44,9 @@
             this.btn_scanUit = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btn_rlink = new System.Windows.Forms.Button();
             this.profile.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_profile)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_paspoort)).BeginInit();
@@ -145,7 +148,7 @@
             // 
             // tbxSearch
             // 
-            this.tbxSearch.Location = new System.Drawing.Point(26, 143);
+            this.tbxSearch.Location = new System.Drawing.Point(79, 147);
             this.tbxSearch.Name = "tbxSearch";
             this.tbxSearch.Size = new System.Drawing.Size(100, 20);
             this.tbxSearch.TabIndex = 26;
@@ -162,7 +165,7 @@
             // 
             // btn_scanIn
             // 
-            this.btn_scanIn.Location = new System.Drawing.Point(26, 302);
+            this.btn_scanIn.Location = new System.Drawing.Point(79, 206);
             this.btn_scanIn.Name = "btn_scanIn";
             this.btn_scanIn.Size = new System.Drawing.Size(100, 23);
             this.btn_scanIn.TabIndex = 29;
@@ -171,7 +174,7 @@
             // 
             // btn_scanUit
             // 
-            this.btn_scanUit.Location = new System.Drawing.Point(132, 302);
+            this.btn_scanUit.Location = new System.Drawing.Point(185, 206);
             this.btn_scanUit.Name = "btn_scanUit";
             this.btn_scanUit.Size = new System.Drawing.Size(100, 23);
             this.btn_scanUit.TabIndex = 30;
@@ -180,7 +183,7 @@
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(26, 169);
+            this.btnSearch.Location = new System.Drawing.Point(185, 147);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(100, 23);
             this.btnSearch.TabIndex = 32;
@@ -190,16 +193,46 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(26, 276);
+            this.textBox1.Location = new System.Drawing.Point(79, 176);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(206, 20);
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 33;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(38, 150);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(15, 13);
+            this.label1.TabIndex = 34;
+            this.label1.Text = "id";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(38, 176);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(32, 13);
+            this.label2.TabIndex = 35;
+            this.label2.Text = "RFID";
+            // 
+            // btn_rlink
+            // 
+            this.btn_rlink.Location = new System.Drawing.Point(185, 174);
+            this.btn_rlink.Name = "btn_rlink";
+            this.btn_rlink.Size = new System.Drawing.Size(100, 23);
+            this.btn_rlink.TabIndex = 36;
+            this.btn_rlink.Text = "link RFID";
+            this.btn_rlink.UseVisualStyleBackColor = true;
             // 
             // EntranceForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(901, 477);
+            this.Controls.Add(this.btn_rlink);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.profile);
@@ -241,5 +274,8 @@
         private System.Windows.Forms.Button btn_scanUit;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btn_rlink;
     }
 }
