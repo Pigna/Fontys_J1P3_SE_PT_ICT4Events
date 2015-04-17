@@ -32,6 +32,7 @@
             this.tbSearch = new System.Windows.Forms.TextBox();
             this.lblCategorie = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lbCategorie = new System.Windows.Forms.ListBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.pbPhoto2 = new System.Windows.Forms.PictureBox();
@@ -58,7 +59,7 @@
             this.tbMessage = new System.Windows.Forms.TextBox();
             this.btnProfile = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
-            this.lbCategorie = new System.Windows.Forms.ListBox();
+            this.tbTitle = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -96,8 +97,17 @@
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             // 
+            // lbCategorie
+            // 
+            this.lbCategorie.FormattingEnabled = true;
+            this.lbCategorie.Location = new System.Drawing.Point(6, 58);
+            this.lbCategorie.Name = "lbCategorie";
+            this.lbCategorie.Size = new System.Drawing.Size(100, 329);
+            this.lbCategorie.TabIndex = 4;
+            // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.tbTitle);
             this.groupBox2.Controls.Add(this.groupBox4);
             this.groupBox2.Controls.Add(this.groupBox3);
             this.groupBox2.Controls.Add(this.btnPost);
@@ -260,6 +270,7 @@
             this.btnComment.TabIndex = 9;
             this.btnComment.Text = ">";
             this.btnComment.UseVisualStyleBackColor = true;
+            this.btnComment.Click += new System.EventHandler(this.btnComment_Click);
             // 
             // lblPoster
             // 
@@ -297,6 +308,7 @@
             this.btnLike.TabIndex = 7;
             this.btnLike.Text = "+";
             this.btnLike.UseVisualStyleBackColor = true;
+            this.btnLike.Click += new System.EventHandler(this.btnLike_Click);
             // 
             // lblTesktLink
             // 
@@ -315,6 +327,7 @@
             this.btnPost.TabIndex = 2;
             this.btnPost.Text = "Post";
             this.btnPost.UseVisualStyleBackColor = true;
+            this.btnPost.Click += new System.EventHandler(this.btnPost_Click);
             // 
             // btnUpload
             // 
@@ -327,12 +340,12 @@
             // 
             // tbMessage
             // 
-            this.tbMessage.Location = new System.Drawing.Point(16, 8);
+            this.tbMessage.Location = new System.Drawing.Point(16, 32);
             this.tbMessage.Multiline = true;
             this.tbMessage.Name = "tbMessage";
-            this.tbMessage.Size = new System.Drawing.Size(286, 93);
+            this.tbMessage.Size = new System.Drawing.Size(286, 69);
             this.tbMessage.TabIndex = 0;
-            this.tbMessage.Text = "Title\r\nNew Message\r\n";
+            this.tbMessage.Text = "New Message\r\n";
             // 
             // btnProfile
             // 
@@ -342,6 +355,7 @@
             this.btnProfile.TabIndex = 3;
             this.btnProfile.Text = "Profile";
             this.btnProfile.UseVisualStyleBackColor = true;
+            this.btnProfile.Click += new System.EventHandler(this.btnProfile_Click);
             // 
             // btnLogout
             // 
@@ -352,13 +366,13 @@
             this.btnLogout.Text = "Logout";
             this.btnLogout.UseVisualStyleBackColor = true;
             // 
-            // lbCategorie
+            // tbTitle
             // 
-            this.lbCategorie.FormattingEnabled = true;
-            this.lbCategorie.Location = new System.Drawing.Point(6, 58);
-            this.lbCategorie.Name = "lbCategorie";
-            this.lbCategorie.Size = new System.Drawing.Size(100, 329);
-            this.lbCategorie.TabIndex = 4;
+            this.tbTitle.Location = new System.Drawing.Point(16, 6);
+            this.tbTitle.Name = "tbTitle";
+            this.tbTitle.Size = new System.Drawing.Size(129, 20);
+            this.tbTitle.TabIndex = 13;
+            this.tbTitle.Text = "Title";
             // 
             // MediaSharingForm
             // 
@@ -417,5 +431,6 @@
         private System.Windows.Forms.Button btnProfile;
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.ListBox lbCategorie;
+        private System.Windows.Forms.TextBox tbTitle;
     }
 }
