@@ -27,12 +27,16 @@ namespace ICT4Events_Group1
             {
                 try
                 {
-                    OracleDataReader result = endata.GetContact(Convert.ToInt32(tbxSearch.Text));
-                    lb_naam.Text = result.GetString(0) + " " + result.GetString(1) + " " + result.GetString(2);
-                    lb_adress.Text = result.GetString(3);
-                    pb_paspoort.ImageLocation = result.GetString(5);
-                    pb_profile.ImageLocation = result.GetString(4);
-                    if (result.GetInt16(6) == 0)
+                    //  current = new User(Convert.ToInt16(cur["ID"]), (string) cur["USERNAME"], (string) cur["VOORNAAM"], (string) cur["TUSSENVOEGSEL"], (string) cur["ACHTERNAAM"]);
+            
+                    List<Dictionary<string, object>> data = endata.GetContact(Convert.ToInt32(tbxSearch.Text));
+                    Dictionary<string, object> cur = data[0];
+
+                    lb_naam.Text = (string)cur["voornaam"] + " " + (string)cur["tussenvoegsel"] + " " + (string)cur["achternaam"];
+                    lb_adress.Text = (string)cur["woonplaats"];
+                    pb_paspoort.ImageLocation = (string)cur["paspoort"];
+                    pb_profile.ImageLocation = (string)cur["foto"];
+                    if ((int)cur["betaald"] == 0)
                     {
                         lb_payed.Text = "nog niet betaald";
                     }
