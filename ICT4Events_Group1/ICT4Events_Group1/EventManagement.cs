@@ -10,17 +10,6 @@ using System.Windows.Forms;
 
 namespace ICT4Events_Group1
 {
-
-    // Create event
-    // INSERT INTO Event (Naam, Startdatum, Einddatum, Beschrijving, Kosten) VALUES ('NAAM', to_date('00-00-0000 00:00','MM-DD-YYYY hh24:MI'), 00-00-0000, 'BESCHRIJVING', 000.00);
-    // Delete event
-    // DELETE FROM Event WHERE Id = %SelectedItem%.Id;
-
-    // Create Employee
-    // INSERT INTO Employee (Username, Password) VALUES ('NAAM', 'PASSWORD');
-    // Delete Employee
-    // DELETE FROM Employee WHERE Id = %SelectedItem%.Id;
-
     public partial class EventManagement : Form
     {
         EventDatabase db = new EventDatabase();
@@ -29,8 +18,8 @@ namespace ICT4Events_Group1
         {
             InitializeComponent();
 
-            //lbxEmployees.Items.AddRange(db.getEmployees().ToArray());
-            //lbxLastEvents.Items.AddRange(db.getEvents().ToArray());
+            lbxEmployees.Items.AddRange(db.getEmployees().ToArray());
+            lbxLastEvents.Items.AddRange(db.getEvents().ToArray());
         }
 
         private void lblEuro_Click(object sender, EventArgs e)

@@ -23,5 +23,9 @@ namespace ICT4Events_Group1
             this.admin = admin;
         }
         //methodes
+        public override string ToString()
+        {
+            return id + ": " + username;
+        }
     }
 }

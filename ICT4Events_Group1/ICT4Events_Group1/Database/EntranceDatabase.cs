@@ -46,7 +46,7 @@ namespace ICT4Events_Group1
         }
         public bool GetCode(int code)
         {
-           OracleDataReader data = getQuery("SELECT id FROM gebruikers WHERE rfid = " + code + ";");
+           /*OracleDataReader data = getQuery("SELECT id FROM gebruikers WHERE rfid = " + code + ";");
 
             if ( data == null)
             {
@@ -55,7 +55,9 @@ namespace ICT4Events_Group1
             else
             {
                 return false;
-            }
+            }*/
+
+            return false;
         }
        public bool activateCode(int id, string rfid)
         {
