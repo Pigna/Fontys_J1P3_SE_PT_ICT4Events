@@ -85,11 +85,11 @@ namespace ICT4Events_Group1
         }
         public bool empLogIn(string username, string password)
         {
-            OracleDataReader data = getQuery("SELECT Id, Username, Adminrights From Employee WHERE Username = '" + username + "' AND Password = '" + password + "';");
+            OracleDataReader data = getQuery("SELECT Id, Username, Adminrights, Password From Employee WHERE Username = '" + username + "' AND Password = '" + password + "';");
 
             if (data.Read()) // Logged in!
             {
-                loggedInEmployee = new Employee(data.GetInt16(0), data.GetString(1), data.GetBoolean(2));
+                loggedInEmployee = new Employee(data.GetInt16(0), data.GetString(1), data.GetString(3), data.GetBoolean(2));
             }
 
             return data.Read();
