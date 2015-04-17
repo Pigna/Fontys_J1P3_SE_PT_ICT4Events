@@ -47,6 +47,11 @@
   </ItemGroup>
   <ItemGroup>
     <!--<Compile Include="EntranceForm.cs">-->
+    <Compile Include="Database\EntranceDatabase.cs" />
+    <Compile Include="Database\EventDatabase.cs" />
+    <Compile Include="Database\MediaSharingDatabase.cs" />
+    <Compile Include="Database\MessageDatabase.cs" />
+    <Compile Include="Database\UserDatabase.cs" />
     <Compile Include="EventBeheerForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,9 +85,7 @@
     <Compile Include="Database.cs" />
     <Compile Include="Employee.cs" />
     <Compile Include="Entrance.cs" />
-    <Compile Include="EntranceDatabase.cs" />
     <Compile Include="Event.cs" />
-    <Compile Include="EventDatabase.cs" />
     <Compile Include="GebruikerToevoegForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,7 +100,6 @@
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="MediaSharing.cs" />
-    <Compile Include="MediaSharingDatabase.cs" />
     <Compile Include="MediaSharingForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -105,14 +107,12 @@
       <DependentUpon>MediaSharingForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Message.cs" />
-    <Compile Include="MessageDatabase.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Report.cs" />
     <Compile Include="Reservation.cs" />
     <Compile Include="RFID.cs" />
     <Compile Include="User.cs" />
-    <Compile Include="UserDatabase.cs" />
     <Compile Include="VerhuurForm.cs">
       <SubType>Form</SubType>
     </Compile>

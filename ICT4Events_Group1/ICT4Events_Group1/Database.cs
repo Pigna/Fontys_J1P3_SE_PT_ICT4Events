@@ -1,4 +1,6 @@
 ﻿using Oracle.DataAccess.Client;
+using Oracle.DataAccess;
+using Oracle.DataAccess.Type;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -81,6 +83,16 @@ namespace ICT4Events_Group1
             }
 
             return data.Read();
+        }
+
+        public int getLatestId(String table)
+        {
+            OracleDataReader data = getQuery("SELECT MAX(Id) + 1 FROM "+table+";");
+
+            if (data.Read())
+                return data.GetInt16(0);
+
+            return -1;
         }
     }
 }
