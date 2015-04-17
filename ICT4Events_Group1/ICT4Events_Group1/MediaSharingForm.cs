@@ -13,7 +13,8 @@ namespace ICT4Events_Group1
     public partial class MediaSharingForm : Form
     {
         int i = 0;
-        Reactie reactie = new Reactie(); 
+        Reactie reactie = new Reactie();
+        List<String> categorie = new List<String>();
         public MediaSharingForm()
         {
             InitializeComponent();
@@ -24,31 +25,27 @@ namespace ICT4Events_Group1
            
             if (e.KeyCode == Keys.Enter)
             {
-                if (i == 0)
-                    {
-                        lbCategorie.Items.Add(tbSearch.Text);
-                        i++;
-                    }
-
-                foreach (string text in lbCategorie.Items)
+                if (lbCategorie.Items.Contains(tbSearch.Text))
+                {                    
+                }
+                else
                 {
-                    
-                    if (tbSearch.Text == text && i != 1)
-                    {
-                        tbSearch.Font = new Font(DefaultFont.FontFamily, DefaultFont.Size, FontStyle.Bold);
+                    categorie.Add(tbSearch.Text);
+                    lbCategorie.Items.Add(tbSearch.Text);
+                }
                          
+                foreach (String text in categorie)
+                {                    
+                    if (tbSearch.Text == text)
+                    {
+                        tbSearch.Font = new Font(DefaultFont.FontFamily, DefaultFont.Size, FontStyle.Bold);                         
                     }
                     else
-                    {
+                    {                        
                         lbCategorie.Items.Add(tbSearch.Text);
-                    }
-
-                        
-                }
-
-                
+                    }                        
+                }                
             }
-
         }
 
         private void btnPost_Click(object sender, EventArgs e)

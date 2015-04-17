@@ -8,14 +8,15 @@ using System.Threading.Tasks;
 namespace ICT4Events_Group1
 {
     class MediaSharingDatabase : Database
-    {
+    {       
         //fields
         //propperties
         //constructor
         //methodes
-        public bool sendMessage(Message bericht)
-        {            
-            return true;
+        public bool sendMessage(Message bericht, int id, string inhoud)
+        {
+            //OracleDataReader data = doQuery("INSERT INTO Message(Id, Inhoud) VALUES(id, inhoud)");
+            return true;            
         }
         public List<Message> getMessages(Event eventnaam)
         {

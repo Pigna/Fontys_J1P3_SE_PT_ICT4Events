@@ -12,11 +12,26 @@ namespace ICT4Events_Group1
 {
     public partial class GebruikerToevoegForm : Form
     {
+        UserDatabase userDatabase;
         public GebruikerToevoegForm()
         {
             InitializeComponent();
         }
-
+        private bool CheckEmailFormat(string email)
+        {
+            //nog te maken! checken of email wel een email format is
+            return true;
+        }
+        private bool CheckUsernameFormat(string username)
+        {
+            //nog te maken! checken of Username wel correct format is
+            return true;
+        }
+        private bool CheckPasswordFormat(string password)
+        {
+            //nog te maken! checken of Password wel correct format is
+            return true;
+        }
         private void btnAanmaken_Click(object sender, EventArgs e)
         {
             string voornaam = tbVoornaam.Text;
@@ -49,10 +64,32 @@ namespace ICT4Events_Group1
             passwordcheck != ""
             )
             {
-                //check password en email en of gebruiersnaam al bestaad
+                //check password en email en of gebruikersnaam al bestaad
                 //email check
-                
-                //User user = new User(1, );
+                if(!userDatabase.emailExist(email) & CheckEmailFormat(email))
+                {
+                    //check username
+                    if (!userDatabase.usernameExist(username) & CheckUsernameFormat(username))
+                    {
+                        //check password
+                        if (CheckPasswordFormat(password))
+                        {
+                            User user = new User(1, username, voornaam, tussenvoegsel, achternaam);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Wachtwoord voldoet niet aan de eisen.");
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Gebruikersnaam bestaat al of voldoet niet aan de eisen.");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Email bestaat al of voldoet niet aan de eisen.");
+                }
             }
             else
             {
