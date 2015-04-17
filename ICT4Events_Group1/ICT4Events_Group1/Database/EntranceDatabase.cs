@@ -45,9 +45,9 @@ namespace ICT4Events_Group1
         }
         public bool GetCode(int code)
         {
-            get
+            //get
 
-            return data;
+            return true;
         }
        public bool activateCode(int id, string rfid)
         {
