@@ -40,13 +40,13 @@ namespace ICT4Events_Group1
         {
             try
             {
-                Connect();
+            Connect();
                 OracleCommand cmd = new OracleCommand();
                 cmd.Connection = con;
                 cmd.CommandText = query;
                 cmd.CommandType = System.Data.CommandType.Text;
                 OracleDataReader data = cmd.ExecuteReader();
-                Disconnect();
+            Disconnect();
                 return data;
 
             }
