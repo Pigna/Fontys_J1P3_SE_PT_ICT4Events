@@ -25,9 +25,10 @@ namespace ICT4Events_Group1
         {
             
             
-                OracleDataReader data = getQuery("SELECT voornaam, tussenvoegsel, achternaam, woonplaats, foto, paspoort, betaald FROM gebruiker WHERE id = " + id + ";");
+               // OracleDataReader data = getQuery("SELECT voornaam, tussenvoegsel, achternaam, woonplaats, foto, paspoort, betaald FROM gebruiker WHERE id = " + id + ";");
 
-                return data;
+                //return data;
+            return null;
             
           
         }

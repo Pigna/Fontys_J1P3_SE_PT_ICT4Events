@@ -20,13 +20,14 @@ namespace ICT4Events_Group1
         public List<Message> getMessages(Event eventnaam)
         {
             List<Message> mes = new List<Message>();
-            OracleDataReader data = getQuery("SELECT Id, Inhoud FROM Message");
+            /*OracleDataReader data = getQuery("SELECT Id, Inhoud FROM Message");
 
             while (data.Read())
             {
                 mes.Add(new Message());
             }
-            return mes;
+            return mes;*/
+            return null;
            
         }
         public bool sendLike(Message message, User user)
