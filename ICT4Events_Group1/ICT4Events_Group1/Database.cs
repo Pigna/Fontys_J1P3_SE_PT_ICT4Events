@@ -26,7 +26,7 @@ namespace ICT4Events_Group1
         private void Connect()
         {
             con = new OracleConnection();
-            con.ConnectionString = "Data Source=ORCL;User Id=system;Password=pass;";
+            con.ConnectionString = "Data Source=localhost;Persist Security Info=True;User ID=system;Password=jewachtwoord;Unicode=True";
             con.Open();
         }
 
@@ -56,15 +56,20 @@ namespace ICT4Events_Group1
 
         protected int doQuery(string query)
         {
-            Connect();
-                OracleCommand cmd = new OracleCommand();
-                cmd.Connection = con;
-                cmd.CommandText = query;
-                cmd.CommandType = System.Data.CommandType.Text;
-                int data = cmd.ExecuteNonQuery();
-            Disconnect();
+            try
+            {
+                Connect();
+                    OracleCommand cmd = new OracleCommand();
+                    cmd.Connection = con;
+                    cmd.CommandText = query;
+                    cmd.CommandType = System.Data.CommandType.Text;
+                    int data = cmd.ExecuteNonQuery();
+                Disconnect();
 
-            return data;
+                return data;
+            }
+            catch { return -1; }
+            finally { Disconnect(); }
         }
 
         public bool logIn(string username, string password)
@@ -80,11 +85,11 @@ namespace ICT4Events_Group1
         }
         public bool empLogIn(string username, string password)
         {
-            OracleDataReader data = getQuery("SELECT Id, Username, Adminrights,password From Employee WHERE Username = '" + username + "' AND Password = '" + password + "';");
+            OracleDataReader data = getQuery("SELECT Id, Username, Adminrights, Password From Employee WHERE Username = '" + username + "' AND Password = '" + password + "';");
 
             if (data.Read()) // Logged in!
             {
-                loggedInEmployee = new Employee(data.GetInt16(0), data.GetString(1),data.GetString(3), data.GetBoolean(2));
+                loggedInEmployee = new Employee(data.GetInt16(0), data.GetString(1), data.GetString(3), data.GetBoolean(2));
             }
 
             return data.Read();

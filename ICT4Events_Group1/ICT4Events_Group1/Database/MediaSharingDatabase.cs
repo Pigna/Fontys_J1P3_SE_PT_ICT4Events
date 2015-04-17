@@ -1,4 +1,5 @@
 ﻿using System;
+using Oracle.DataAccess.Client;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,12 +14,20 @@ namespace ICT4Events_Group1
         //constructor
         //methodes
         public bool sendMessage(Message bericht)
-        {
+        {            
             return true;
         }
         public List<Message> getMessages(Event eventnaam)
         {
-            return null;
+            List<Message> mes = new List<Message>();
+            OracleDataReader data = getQuery("SELECT Id, Inhoud FROM Message");
+
+            while (data.Read())
+            {
+                mes.Add(new Message());
+            }
+            return mes;
+           
         }
         public bool sendLike(Message message, User user)
         {
