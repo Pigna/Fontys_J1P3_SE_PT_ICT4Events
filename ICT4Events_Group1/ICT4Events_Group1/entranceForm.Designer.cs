@@ -40,10 +40,10 @@
             this.btnLogout = new System.Windows.Forms.Button();
             this.tbxSearch = new System.Windows.Forms.TextBox();
             this.pbxLogo = new System.Windows.Forms.PictureBox();
-            this.btnRentList = new System.Windows.Forms.Button();
-            this.btnRentableList = new System.Windows.Forms.Button();
-            this.btnRentedList = new System.Windows.Forms.Button();
+            this.btn_scanIn = new System.Windows.Forms.Button();
+            this.btn_scanUit = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.profile.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_profile)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_paspoort)).BeginInit();
@@ -160,32 +160,23 @@
             this.pbxLogo.TabIndex = 27;
             this.pbxLogo.TabStop = false;
             // 
-            // btnRentList
+            // btn_scanIn
             // 
-            this.btnRentList.Location = new System.Drawing.Point(26, 273);
-            this.btnRentList.Name = "btnRentList";
-            this.btnRentList.Size = new System.Drawing.Size(100, 23);
-            this.btnRentList.TabIndex = 28;
-            this.btnRentList.Text = "Huur";
-            this.btnRentList.UseVisualStyleBackColor = true;
+            this.btn_scanIn.Location = new System.Drawing.Point(26, 302);
+            this.btn_scanIn.Name = "btn_scanIn";
+            this.btn_scanIn.Size = new System.Drawing.Size(100, 23);
+            this.btn_scanIn.TabIndex = 29;
+            this.btn_scanIn.Text = "scan in";
+            this.btn_scanIn.UseVisualStyleBackColor = true;
             // 
-            // btnRentableList
+            // btn_scanUit
             // 
-            this.btnRentableList.Location = new System.Drawing.Point(26, 302);
-            this.btnRentableList.Name = "btnRentableList";
-            this.btnRentableList.Size = new System.Drawing.Size(100, 23);
-            this.btnRentableList.TabIndex = 29;
-            this.btnRentableList.Text = "Verhuurbaar";
-            this.btnRentableList.UseVisualStyleBackColor = true;
-            // 
-            // btnRentedList
-            // 
-            this.btnRentedList.Location = new System.Drawing.Point(26, 331);
-            this.btnRentedList.Name = "btnRentedList";
-            this.btnRentedList.Size = new System.Drawing.Size(100, 23);
-            this.btnRentedList.TabIndex = 30;
-            this.btnRentedList.Text = "Verhuurd";
-            this.btnRentedList.UseVisualStyleBackColor = true;
+            this.btn_scanUit.Location = new System.Drawing.Point(132, 302);
+            this.btn_scanUit.Name = "btn_scanUit";
+            this.btn_scanUit.Size = new System.Drawing.Size(100, 23);
+            this.btn_scanUit.TabIndex = 30;
+            this.btn_scanUit.Text = "scan uit";
+            this.btn_scanUit.UseVisualStyleBackColor = true;
             // 
             // btnSearch
             // 
@@ -197,18 +188,25 @@
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(26, 276);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(206, 20);
+            this.textBox1.TabIndex = 33;
+            // 
             // EntranceForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(901, 477);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.profile);
-            this.Controls.Add(this.btnRentedList);
+            this.Controls.Add(this.btn_scanUit);
             this.Controls.Add(this.btnMessage);
-            this.Controls.Add(this.btnRentableList);
+            this.Controls.Add(this.btn_scanIn);
             this.Controls.Add(this.btnRent);
-            this.Controls.Add(this.btnRentList);
             this.Controls.Add(this.btnEntrance);
             this.Controls.Add(this.pbxLogo);
             this.Controls.Add(this.btnLogout);
@@ -239,9 +237,9 @@
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.TextBox tbxSearch;
         private System.Windows.Forms.PictureBox pbxLogo;
-        private System.Windows.Forms.Button btnRentList;
-        private System.Windows.Forms.Button btnRentableList;
-        private System.Windows.Forms.Button btnRentedList;
+        private System.Windows.Forms.Button btn_scanIn;
+        private System.Windows.Forms.Button btn_scanUit;
         private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Oracle.DataAccess.Client;
 
 namespace ICT4Events_Group1
 {
@@ -20,18 +21,21 @@ namespace ICT4Events_Group1
         {
             return null;
         }
-        public User GetContact(User user)
+        public OracleDataReader GetContact(int id)
         {
-            return null;
+            
+            
+                OracleDataReader data = getQuery("SELECT voornaam, tussenvoegsel, achternaam, woonplaats, foto, paspoort, betaald FROM gebruiker WHERE id = " + id);
+
+                return data;
+            
+          
         }
+
+        
         public bool PaymentCheck(string code)
         {
-            string sql = "SELECT betaald FROM Gebruikers WHERE id = " + code;
-            /*string resultaat = getQuery(sql);
-            if (resultaat == "0")
-            { return false; }
-            else
-            { return true; }*/
+            
             return false;
             
         }

@@ -119,6 +119,9 @@
     <Compile Include="VerhuurForm.Designer.cs">
       <DependentUpon>VerhuurForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="entranceForm.resx">
+      <DependentUpon>entranceForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EventBeheerForm.resx">
       <DependentUpon>EventBeheerForm.cs</DependentUpon>
     </EmbeddedResource>
