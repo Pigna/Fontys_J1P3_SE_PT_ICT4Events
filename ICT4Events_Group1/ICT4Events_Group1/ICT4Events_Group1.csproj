@@ -47,6 +47,10 @@
   </ItemGroup>
   <ItemGroup>
     <!--<Compile Include="EntranceForm.cs">-->
+    <Compile Include="Database\EntranceDatabase.cs" />
+    <Compile Include="Database\MediaSharingDatabase.cs" />
+    <Compile Include="Database\MessageDatabase.cs" />
+    <Compile Include="Database\UserDatabase.cs" />
     <Compile Include="EventBeheerForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,9 +84,7 @@
     <Compile Include="Database.cs" />
     <Compile Include="Employee.cs" />
     <Compile Include="Entrance.cs" />
-    <Compile Include="EntranceDatabase.cs" />
     <Compile Include="Event.cs" />
-    <Compile Include="EventDatabase.cs" />
     <Compile Include="GebruikerToevoegForm.cs">
       <SubType>Form</SubType>
     </Compile>
