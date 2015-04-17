@@ -11,7 +11,8 @@ using System.Windows.Forms;
 namespace ICT4Events_Group1
 {
     public partial class MediaSharingForm : Form
-    {        
+    {
+        
         Reactie reactie = new Reactie();
         List<String> categorie = new List<String>();
         public MediaSharingForm()
@@ -21,6 +22,7 @@ namespace ICT4Events_Group1
               
         private void tbSearch_KeyDown(object sender, KeyEventArgs e)
         {
+            int i = 0;
            
             if (e.KeyCode == Keys.Enter)
             {
@@ -29,21 +31,27 @@ namespace ICT4Events_Group1
                 }
                 else
                 {
-                    categorie.Add(tbSearch.Text);
-                    lbCategorie.Items.Add(tbSearch.Text);
+                        foreach (String text in categorie)
+                    {                    
+                        if (tbSearch.Text == text)
+                        {
+                            tbSearch.Font = new Font(DefaultFont.FontFamily, DefaultFont.Size, FontStyle.Bold);                         
+                        }
+                        else if(i==0)
+                        {                        
+                            lbCategorie.Items.Add(tbSearch.Text);
+                            i++;
+                        }                        
+                    }
+                        if (i == 0)
+                        {
+                            categorie.Add(tbSearch.Text);
+                            lbCategorie.Items.Add(tbSearch.Text);
+                        }
+                        i = 0;
                 }
                          
-                foreach (String text in categorie)
-                {                    
-                    if (tbSearch.Text == text)
-                    {
-                        tbSearch.Font = new Font(DefaultFont.FontFamily, DefaultFont.Size, FontStyle.Bold);                         
-                    }
-                    else
-                    {                        
-                        lbCategorie.Items.Add(tbSearch.Text);
-                    }                        
-                }                
+                
             }
         }
 

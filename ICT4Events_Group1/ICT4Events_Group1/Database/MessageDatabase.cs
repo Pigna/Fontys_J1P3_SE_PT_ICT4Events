@@ -13,7 +13,9 @@ namespace ICT4Events_Group1
             return true;
         }
 
-        public bool deliteMessage(Message bericht)
-        { return true; }
+        public bool deleteMessage(Message bericht)
+        { 
+            return true; 
+        }
     }
 }
