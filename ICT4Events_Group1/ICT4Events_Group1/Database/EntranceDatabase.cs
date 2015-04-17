@@ -43,10 +43,24 @@ namespace ICT4Events_Group1
         {
             return true;
         }
-        public int GetCode(int code)
+        public bool GetCode(int code)
         {
-            return 0;
+            get
+
+            return data;
         }
-       
+       public bool activateCode(int id, string rfid)
+        {
+            try
+            {
+                doQuery("UPDATE gebruiker SET rfid TO " + rfid + "WHERE id = " + id + ";");
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+
+        }
     }
 }

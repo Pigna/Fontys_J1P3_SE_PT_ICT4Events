@@ -16,6 +16,7 @@ namespace ICT4Events_Group1
         GebruikerBeheerForm gb = new GebruikerBeheerForm(); 
         MediaSharingForm Media = new MediaSharingForm();
         EventManagement ev = new EventManagement();
+        EntranceForm ef = new EntranceForm();
 
 
         public MainForm()
@@ -53,6 +54,11 @@ namespace ICT4Events_Group1
         private void button4_Click(object sender, EventArgs e)
         {
             ev.ShowDialog();
+        }
+
+        private void btn_Entrance_Click(object sender, EventArgs e)
+        {
+            ef.ShowDialog();
         }
     }
 }

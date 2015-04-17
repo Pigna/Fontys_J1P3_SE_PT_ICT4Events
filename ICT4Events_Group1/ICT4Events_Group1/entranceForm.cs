@@ -35,5 +35,20 @@ namespace ICT4Events_Group1
               lb_payed.Text = "betaald";
           }
         }
+
+        private void btn_rlink_Click(object sender, EventArgs e)
+        {
+            
+
+
+
+            bool result = endata.activateCode(Convert.ToInt32(tbxSearch.Text), tbxRFID.Text);
+            if (result)
+            { MessageBox.Show("linken van rfid gelukt"); }
+            else
+            {
+                MessageBox.Show("linken is niet gelukt");
+            }
+        }
     }
 }

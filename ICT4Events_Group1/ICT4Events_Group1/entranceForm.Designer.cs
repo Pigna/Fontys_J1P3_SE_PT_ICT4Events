@@ -43,7 +43,7 @@
             this.btn_scanIn = new System.Windows.Forms.Button();
             this.btn_scanUit = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbxRFID = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btn_rlink = new System.Windows.Forms.Button();
@@ -191,12 +191,12 @@
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
-            // textBox1
+            // tbxRFID
             // 
-            this.textBox1.Location = new System.Drawing.Point(79, 176);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 33;
+            this.tbxRFID.Location = new System.Drawing.Point(79, 176);
+            this.tbxRFID.Name = "tbxRFID";
+            this.tbxRFID.Size = new System.Drawing.Size(100, 20);
+            this.tbxRFID.TabIndex = 33;
             // 
             // label1
             // 
@@ -224,6 +224,7 @@
             this.btn_rlink.TabIndex = 36;
             this.btn_rlink.Text = "link RFID";
             this.btn_rlink.UseVisualStyleBackColor = true;
+            this.btn_rlink.Click += new System.EventHandler(this.btn_rlink_Click);
             // 
             // EntranceForm
             // 
@@ -233,7 +234,7 @@
             this.Controls.Add(this.btn_rlink);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbxRFID);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.profile);
             this.Controls.Add(this.btn_scanUit);
@@ -273,7 +274,7 @@
         private System.Windows.Forms.Button btn_scanIn;
         private System.Windows.Forms.Button btn_scanUit;
         private System.Windows.Forms.Button btnSearch;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbxRFID;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btn_rlink;
