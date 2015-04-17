@@ -21,14 +21,14 @@ namespace ICT4Events_Group1
         {
             return null;
         }
-        public OracleDataReader GetContact(int id)
+        public List<Dictionary<string, object>> GetContact(int id)
         {
             
             
-               // OracleDataReader data = getQuery("SELECT voornaam, tussenvoegsel, achternaam, woonplaats, foto, paspoort, betaald FROM gebruiker WHERE id = " + id + ";");
+              List< Dictionary<string, object>> data = getQuery("SELECT voornaam, tussenvoegsel, achternaam, woonplaats, foto, paspoort, betaald FROM gebruiker WHERE id = " + id);
 
-                //return data;
-            return null;
+                return data;
+           
             
           
         }
@@ -46,7 +46,7 @@ namespace ICT4Events_Group1
         }
         public bool GetCode(int code)
         {
-           OracleDataReader data = getQuery("SELECT id FROM gebruikers WHERE rfid = " + code + ";");
+           List<Dictionary<string, object>> data = getQuery("SELECT id FROM gebruikers WHERE rfid = " + code);
 
             if ( data == null)
             {
@@ -61,7 +61,7 @@ namespace ICT4Events_Group1
         {
             try
             {
-                doQuery("UPDATE gebruiker SET rfid TO " + rfid + "WHERE id = " + id + ";");
+                doQuery("UPDATE gebruiker SET rfid TO " + rfid + "WHERE id = " + id);
                 return true;
             }
             catch
