@@ -26,5 +26,14 @@ namespace ICT4Events_Group1
             GebruikerToevoegForm adduser = new GebruikerToevoegForm();
             adduser.ShowDialog();
         }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            lbxUsers.Items.Clear();
+            foreach (User user in userlist)
+            {
+                lbxUsers.Items.Add(user);
+            }
+        }
     }
 }
