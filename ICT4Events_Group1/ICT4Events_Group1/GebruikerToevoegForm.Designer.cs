@@ -65,6 +65,10 @@
             this.cbBetaald = new System.Windows.Forms.CheckBox();
             this.cbEvent = new System.Windows.Forms.ComboBox();
             this.label17 = new System.Windows.Forms.Label();
+            this.btnPaspoortLocation = new System.Windows.Forms.Button();
+            this.btnFotoLocation = new System.Windows.Forms.Button();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnAanmaken
@@ -166,21 +170,21 @@
             // 
             // tbUsername
             // 
-            this.tbUsername.Location = new System.Drawing.Point(182, 328);
+            this.tbUsername.Location = new System.Drawing.Point(182, 382);
             this.tbUsername.Name = "tbUsername";
             this.tbUsername.Size = new System.Drawing.Size(100, 20);
             this.tbUsername.TabIndex = 44;
             // 
             // tbPassword
             // 
-            this.tbPassword.Location = new System.Drawing.Point(288, 328);
+            this.tbPassword.Location = new System.Drawing.Point(288, 382);
             this.tbPassword.Name = "tbPassword";
             this.tbPassword.Size = new System.Drawing.Size(100, 20);
             this.tbPassword.TabIndex = 45;
             // 
             // tbPasswordCheck
             // 
-            this.tbPasswordCheck.Location = new System.Drawing.Point(394, 328);
+            this.tbPasswordCheck.Location = new System.Drawing.Point(394, 382);
             this.tbPasswordCheck.Name = "tbPasswordCheck";
             this.tbPasswordCheck.Size = new System.Drawing.Size(100, 20);
             this.tbPasswordCheck.TabIndex = 46;
@@ -260,7 +264,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(186, 311);
+            this.label9.Location = new System.Drawing.Point(186, 365);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(84, 13);
             this.label9.TabIndex = 55;
@@ -287,7 +291,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(291, 311);
+            this.label12.Location = new System.Drawing.Point(291, 365);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(68, 13);
             this.label12.TabIndex = 58;
@@ -296,7 +300,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(397, 311);
+            this.label13.Location = new System.Drawing.Point(397, 365);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(52, 13);
             this.label13.TabIndex = 59;
@@ -314,7 +318,7 @@
             // dtpStartdatum
             // 
             this.dtpStartdatum.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpStartdatum.Location = new System.Drawing.Point(182, 373);
+            this.dtpStartdatum.Location = new System.Drawing.Point(182, 427);
             this.dtpStartdatum.MinDate = new System.DateTime(2015, 4, 17, 0, 0, 0, 0);
             this.dtpStartdatum.Name = "dtpStartdatum";
             this.dtpStartdatum.Size = new System.Drawing.Size(100, 20);
@@ -323,7 +327,7 @@
             // dtpEinddatum
             // 
             this.dtpEinddatum.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpEinddatum.Location = new System.Drawing.Point(288, 372);
+            this.dtpEinddatum.Location = new System.Drawing.Point(288, 426);
             this.dtpEinddatum.MinDate = new System.DateTime(2015, 4, 17, 0, 0, 0, 0);
             this.dtpEinddatum.Name = "dtpEinddatum";
             this.dtpEinddatum.Size = new System.Drawing.Size(100, 20);
@@ -332,7 +336,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(186, 356);
+            this.label15.Location = new System.Drawing.Point(186, 410);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(26, 13);
             this.label15.TabIndex = 63;
@@ -341,7 +345,7 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(291, 356);
+            this.label16.Location = new System.Drawing.Point(291, 410);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(23, 13);
             this.label16.TabIndex = 64;
@@ -350,7 +354,7 @@
             // cbBetaald
             // 
             this.cbBetaald.AutoSize = true;
-            this.cbBetaald.Location = new System.Drawing.Point(183, 405);
+            this.cbBetaald.Location = new System.Drawing.Point(183, 459);
             this.cbBetaald.Name = "cbBetaald";
             this.cbBetaald.Size = new System.Drawing.Size(62, 17);
             this.cbBetaald.TabIndex = 65;
@@ -374,11 +378,53 @@
             this.label17.TabIndex = 67;
             this.label17.Text = "Event*";
             // 
+            // btnPaspoortLocation
+            // 
+            this.btnPaspoortLocation.Location = new System.Drawing.Point(182, 336);
+            this.btnPaspoortLocation.Name = "btnPaspoortLocation";
+            this.btnPaspoortLocation.Size = new System.Drawing.Size(100, 23);
+            this.btnPaspoortLocation.TabIndex = 68;
+            this.btnPaspoortLocation.Text = "Bestand";
+            this.btnPaspoortLocation.UseVisualStyleBackColor = true;
+            this.btnPaspoortLocation.Click += new System.EventHandler(this.btnPaspoortLocation_Click);
+            // 
+            // btnFotoLocation
+            // 
+            this.btnFotoLocation.Location = new System.Drawing.Point(288, 336);
+            this.btnFotoLocation.Name = "btnFotoLocation";
+            this.btnFotoLocation.Size = new System.Drawing.Size(100, 23);
+            this.btnFotoLocation.TabIndex = 69;
+            this.btnFotoLocation.Text = "Bestand";
+            this.btnFotoLocation.UseVisualStyleBackColor = true;
+            this.btnFotoLocation.Click += new System.EventHandler(this.btnFotoLocation_Click);
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(186, 320);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(49, 13);
+            this.label18.TabIndex = 70;
+            this.label18.Text = "Paspoort";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(291, 320);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(57, 13);
+            this.label19.TabIndex = 71;
+            this.label19.Text = "Profiel foto";
+            // 
             // GebruikerToevoegForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(642, 446);
+            this.ClientSize = new System.Drawing.Size(642, 481);
+            this.Controls.Add(this.label19);
+            this.Controls.Add(this.label18);
+            this.Controls.Add(this.btnFotoLocation);
+            this.Controls.Add(this.btnPaspoortLocation);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.cbEvent);
             this.Controls.Add(this.cbBetaald);
@@ -462,5 +508,9 @@
         private System.Windows.Forms.CheckBox cbBetaald;
         private System.Windows.Forms.ComboBox cbEvent;
         private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Button btnPaspoortLocation;
+        private System.Windows.Forms.Button btnFotoLocation;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label19;
     }
 }
