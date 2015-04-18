@@ -366,7 +366,7 @@
             this.cbEvent.FormattingEnabled = true;
             this.cbEvent.Location = new System.Drawing.Point(182, 25);
             this.cbEvent.Name = "cbEvent";
-            this.cbEvent.Size = new System.Drawing.Size(121, 21);
+            this.cbEvent.Size = new System.Drawing.Size(206, 21);
             this.cbEvent.TabIndex = 66;
             // 
             // label17

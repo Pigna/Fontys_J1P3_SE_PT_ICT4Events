@@ -52,7 +52,7 @@ namespace ICT4Events_Group1
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnVerwijderEvent_Click(object sender, EventArgs e)
         {
             if (db.deleteEvent((Event)lbxLastEvents.SelectedItem))
             {
@@ -63,20 +63,36 @@ namespace ICT4Events_Group1
 
         private void btnCreateEvent_Click(object sender, EventArgs e)
         {
-            Event new_event = new Event(db.getLatestId("Event"), txtNaam.Text, txtBeschrijving.Text, datTimeStart.Value, datTimeEnd.Value, (float) numCost.Value);
-            if (db.createEvent(new_event))
+            string eventnaam = tbxNaam.Text;
+            string eventbeschrijving = txtBeschrijving.Text;
+            DateTime eventstart = datTimeStart.Value;
+            DateTime eventeind = datTimeStart.Value;
+            float eventkoste = (float)numCost.Value;
+            if
+            (
+            eventnaam != "" &
+            eventbeschrijving != "" &
+            eventstart != null &
+            eventeind != null &
+            eventkoste != null
+            )
             {
-                MessageBox.Show(new_event.Name + " is aangemaakt!");
-                txtNaam.Text = "";
-                txtBeschrijving.Text = "";
-                numCost.Value = new Decimal(0.00);
+                Event new_event = new Event(db.getLatestId("Event"), eventnaam, eventbeschrijving, eventstart, eventeind, eventkoste);
+                if (db.createEvent(new_event))
+                {
+                    MessageBox.Show(new_event.Name + " is aangemaakt!");
+                    tbxNaam.Text = "";
+                    txtBeschrijving.Text = "";
+                    numCost.Value = new Decimal(0.00);
 
-                lbxLastEvents.Items.AddRange(db.getEvents().ToArray());
+                    lbxLastEvents.Items.AddRange(db.getEvents().ToArray());
+                }
+                else
+                {
+                    MessageBox.Show("Event is niet aangemaakt.");
+                }
             }
-            else
-            {
-                MessageBox.Show("Event is niet aangemaakt.");
-            }
+
         }
 
         private void btnCreateEmployee_Click(object sender, EventArgs e)
