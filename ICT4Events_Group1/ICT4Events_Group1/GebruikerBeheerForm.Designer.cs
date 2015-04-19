@@ -40,7 +40,7 @@
             // btnSearch
             // 
             this.btnSearch.Location = new System.Drawing.Point(42, 68);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(4);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(133, 28);
             this.btnSearch.TabIndex = 21;
@@ -52,7 +52,7 @@
             this.lbxUsers.FormattingEnabled = true;
             this.lbxUsers.ItemHeight = 16;
             this.lbxUsers.Location = new System.Drawing.Point(234, 36);
-            this.lbxUsers.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lbxUsers.Margin = new System.Windows.Forms.Padding(4);
             this.lbxUsers.Name = "lbxUsers";
             this.lbxUsers.Size = new System.Drawing.Size(585, 260);
             this.lbxUsers.TabIndex = 20;
@@ -60,7 +60,7 @@
             // btnNew
             // 
             this.btnNew.Location = new System.Drawing.Point(42, 196);
-            this.btnNew.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnNew.Margin = new System.Windows.Forms.Padding(4);
             this.btnNew.Name = "btnNew";
             this.btnNew.Size = new System.Drawing.Size(133, 28);
             this.btnNew.TabIndex = 17;
@@ -71,7 +71,7 @@
             // tbxSearch
             // 
             this.tbxSearch.Location = new System.Drawing.Point(42, 36);
-            this.tbxSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbxSearch.Margin = new System.Windows.Forms.Padding(4);
             this.tbxSearch.Name = "tbxSearch";
             this.tbxSearch.Size = new System.Drawing.Size(132, 22);
             this.tbxSearch.TabIndex = 15;
@@ -79,7 +79,7 @@
             // btnRefresh
             // 
             this.btnRefresh.Location = new System.Drawing.Point(42, 232);
-            this.btnRefresh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRefresh.Margin = new System.Windows.Forms.Padding(4);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(133, 28);
             this.btnRefresh.TabIndex = 18;
@@ -89,7 +89,7 @@
             // 
             // btnDeleteUser
             // 
-            this.btnDeleteUser.Location = new System.Drawing.Point(38, 232);
+            this.btnDeleteUser.Location = new System.Drawing.Point(42, 168);
             this.btnDeleteUser.Name = "btnDeleteUser";
             this.btnDeleteUser.Size = new System.Drawing.Size(100, 23);
             this.btnDeleteUser.TabIndex = 22;
@@ -99,7 +99,7 @@
             // 
             // btnEditUser
             // 
-            this.btnEditUser.Location = new System.Drawing.Point(38, 203);
+            this.btnEditUser.Location = new System.Drawing.Point(42, 139);
             this.btnEditUser.Name = "btnEditUser";
             this.btnEditUser.Size = new System.Drawing.Size(100, 23);
             this.btnEditUser.TabIndex = 23;
@@ -111,16 +111,15 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(642, 357);
+            this.ClientSize = new System.Drawing.Size(856, 317);
             this.Controls.Add(this.btnEditUser);
             this.Controls.Add(this.btnDeleteUser);
-            this.ClientSize = new System.Drawing.Size(856, 317);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.lbxUsers);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.btnNew);
             this.Controls.Add(this.tbxSearch);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "GebruikerBeheerForm";
             this.Text = "GebruikerBeheerForm";
             this.ResumeLayout(false);
