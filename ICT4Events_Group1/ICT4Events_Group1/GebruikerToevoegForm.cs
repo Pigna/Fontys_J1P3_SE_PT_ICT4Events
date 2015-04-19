@@ -14,12 +14,14 @@ namespace ICT4Events_Group1
 {
     public partial class GebruikerToevoegForm : Form
     {
+        Database db = new Database();
         UserDatabase userDatabase = new UserDatabase();
         EventDatabase eventDatabase = new EventDatabase();
         string[] filesPaspoort;
         string[] filesProfielfoto;
         List<Event> eventlist = new List<Event>();
         List<Dictionary<string, object>> dataList;
+        int userid;
         public GebruikerToevoegForm()
         {
             InitializeComponent();
@@ -34,6 +36,7 @@ namespace ICT4Events_Group1
         public GebruikerToevoegForm(int id)
         {
             InitializeComponent();
+            userid = id;
             //getlist of all events
             eventlist = eventDatabase.getEvents();
             foreach (Event e in eventlist)
@@ -144,8 +147,8 @@ namespace ICT4Events_Group1
                         //check password
                         if (CheckPasswordFormat(password) && password == passwordcheck)
                         {
-                            userDatabase.adduser(1, GetEvent(selectedEvent), voornaam, tussenvoegsel, achternaam, straat, huisnummer, postcode, woonplaats, Paspoort, rekeningnr, Profielfoto, email, vastnr, mobielnr, username, password, startdatum, einddatum, betaald);
-                            User user = new User(1, username, voornaam, tussenvoegsel, achternaam);
+                            userDatabase.adduser(db.getLatestId("Gebruiker"), GetEvent(selectedEvent), voornaam, tussenvoegsel, achternaam, straat, huisnummer, postcode, woonplaats, Paspoort, rekeningnr, Profielfoto, email, vastnr, mobielnr, username, password, startdatum, einddatum, betaald);
+                            User user = new User(db.getLatestId("Gebruiker"), username, voornaam, tussenvoegsel, achternaam);
                             tbVoornaam.Clear();
                             tbTussenvoegsel.Clear(); //niet verplicht
                             tbAchternaam.Clear();
@@ -255,7 +258,7 @@ namespace ICT4Events_Group1
                         //check password
                         if (CheckPasswordFormat(password) && password == passwordcheck)
                         {
-                            userDatabase.adduser(1, GetEvent(selectedEvent), voornaam, tussenvoegsel, achternaam, straat, huisnummer, postcode, woonplaats, Paspoort, rekeningnr, Profielfoto, email, vastnr, mobielnr, username, password, startdatum, einddatum, betaald);
+                            userDatabase.adduser(userid, GetEvent(selectedEvent), voornaam, tussenvoegsel, achternaam, straat, huisnummer, postcode, woonplaats, Paspoort, rekeningnr, Profielfoto, email, vastnr, mobielnr, username, password, startdatum, einddatum, betaald);
                         }
                         else
                         {
