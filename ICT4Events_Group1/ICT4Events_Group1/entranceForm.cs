@@ -20,7 +20,7 @@ namespace ICT4Events_Group1
 
         public EntranceForm()
         {
-            InitializeComponent();}}}
+            InitializeComponent();
 
             //rfid = new RFID();
 
