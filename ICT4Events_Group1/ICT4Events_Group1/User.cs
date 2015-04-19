@@ -42,5 +42,10 @@ namespace ICT4Events_Group1
         {
             return true;
         }
+
+        public override string ToString()
+        {
+            return id + ": " + username;
+        }
     }
 }

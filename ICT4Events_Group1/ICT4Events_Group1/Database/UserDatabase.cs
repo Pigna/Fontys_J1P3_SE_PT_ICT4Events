@@ -64,7 +64,7 @@ namespace ICT4Events_Group1
         //Controleer of email bestaat in de database
         public bool emailExist(string email)
         {
-            List<Dictionary<string, object>> data = getQuery("SELECT Id FROM Gebruiker WHERE Email = " + email);
+            List<Dictionary<string, object>> data = getQuery("SELECT Id FROM Gebruiker WHERE Email = '" + email + "'");
             if ((data.Count > 0) || (data.Count == null))
             {
                 return true;

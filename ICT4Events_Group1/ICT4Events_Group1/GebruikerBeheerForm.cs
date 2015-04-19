@@ -54,9 +54,12 @@ namespace ICT4Events_Group1
 
         private void btnEditUser_Click(object sender, EventArgs e)
         {
-            User asd = (User)lbxUsers.SelectedItem;
-            GebruikerToevoegForm editUser = new GebruikerToevoegForm(asd.Id);
-            editUser.ShowDialog();
+            if (!(lbxUsers.SelectedItem == null || lbxUsers.SelectedItem == ""))
+            {
+                User asd = (User)lbxUsers.SelectedItem;
+                GebruikerToevoegForm editUser = new GebruikerToevoegForm(asd.Id);
+                editUser.ShowDialog();
+            }
         }
     }
 }
