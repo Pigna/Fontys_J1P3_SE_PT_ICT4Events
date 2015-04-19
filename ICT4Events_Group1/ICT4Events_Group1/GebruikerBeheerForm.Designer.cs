@@ -115,6 +115,7 @@
             this.ClientSize = new System.Drawing.Size(642, 357);
             this.Controls.Add(this.btnEditUser);
             this.Controls.Add(this.btnDeleteUser);
+            this.ClientSize = new System.Drawing.Size(856, 317);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.lbxUsers);
             this.Controls.Add(this.btnRefresh);

@@ -145,12 +145,6 @@
     <EmbeddedResource Include="entranceForm.resx">
       <DependentUpon>entranceForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EventBeheerForm.resx">
-      <DependentUpon>EventBeheerForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GebruikerAanpasForm.resx">
-      <DependentUpon>GebruikerAanpasForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Reactie.resx">
       <DependentUpon>Reactie.cs</DependentUpon>
     </EmbeddedResource>
