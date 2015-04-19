@@ -14,8 +14,16 @@ namespace ICT4Events_Group1
         }
 
         public bool deleteMessage(Message bericht)
-        { 
-            return true; 
+        {            
+            try
+            {
+                doQuery("DELETE Id, Inhoud FROM Message WHERE Id = 1");
+                return true;
+            }
+            catch
+            {
+                return false;
+            } 
         }
     }
 }

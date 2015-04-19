@@ -12,9 +12,10 @@ namespace ICT4Events_Group1
 {
     public partial class MediaSharingForm : Form
     {
-        
+        MediaSharingDatabase mediasharing = new MediaSharingDatabase();
         Reactie reactie = new Reactie();
         List<String> categorie = new List<String>();
+        int idcount = 1;
         public MediaSharingForm()
         {
             InitializeComponent();
@@ -59,8 +60,9 @@ namespace ICT4Events_Group1
         {
             if (tbTitle.Text != "" || tbMessage.Text != "")
             {
-                lblTitel.Text = tbTitle.Text;
-                lblTekst.Text = tbMessage.Text;
+                Message bericht = new Message(idcount, tbMessage.Text);
+                mediasharing.sendMessage(bericht, idcount, tbMessage.Text);
+                tbMessage1.Text = tbMessage.Text;
                 lblPoster.Text = "Nick"; //hier moet de naam opgevraagd worden uit de database.
             }
             else
@@ -121,6 +123,11 @@ namespace ICT4Events_Group1
         private void tbSearch_Leave(object sender, EventArgs e)
         {
             tbSearch.Text = "Search";
+        }
+
+        private void lblLike_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
