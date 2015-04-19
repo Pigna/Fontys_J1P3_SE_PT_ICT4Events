@@ -31,23 +31,18 @@
             this.btnSearch = new System.Windows.Forms.Button();
             this.lbxUsers = new System.Windows.Forms.ListBox();
             this.btnNew = new System.Windows.Forms.Button();
-            this.pbxLogo = new System.Windows.Forms.PictureBox();
             this.tbxSearch = new System.Windows.Forms.TextBox();
-            this.btnLogout = new System.Windows.Forms.Button();
-            this.btnEntrance = new System.Windows.Forms.Button();
-            this.btnRent = new System.Windows.Forms.Button();
-            this.btnMessage = new System.Windows.Forms.Button();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.btnDeleteUser = new System.Windows.Forms.Button();
             this.btnEditUser = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(38, 157);
+            this.btnSearch.Location = new System.Drawing.Point(42, 68);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(100, 23);
+            this.btnSearch.Size = new System.Drawing.Size(133, 28);
             this.btnSearch.TabIndex = 21;
             this.btnSearch.Text = "Zoeken";
             this.btnSearch.UseVisualStyleBackColor = true;
@@ -55,79 +50,38 @@
             // lbxUsers
             // 
             this.lbxUsers.FormattingEnabled = true;
-            this.lbxUsers.Location = new System.Drawing.Point(182, 131);
+            this.lbxUsers.ItemHeight = 16;
+            this.lbxUsers.Location = new System.Drawing.Point(234, 36);
+            this.lbxUsers.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lbxUsers.Name = "lbxUsers";
-            this.lbxUsers.Size = new System.Drawing.Size(440, 212);
+            this.lbxUsers.Size = new System.Drawing.Size(585, 260);
             this.lbxUsers.TabIndex = 20;
             // 
             // btnNew
             // 
-            this.btnNew.Location = new System.Drawing.Point(38, 261);
+            this.btnNew.Location = new System.Drawing.Point(42, 196);
+            this.btnNew.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnNew.Name = "btnNew";
-            this.btnNew.Size = new System.Drawing.Size(100, 23);
+            this.btnNew.Size = new System.Drawing.Size(133, 28);
             this.btnNew.TabIndex = 17;
             this.btnNew.Text = "Nieuwe Gebruiker";
             this.btnNew.UseVisualStyleBackColor = true;
             this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
             // 
-            // pbxLogo
-            // 
-            this.pbxLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pbxLogo.Location = new System.Drawing.Point(38, 12);
-            this.pbxLogo.Name = "pbxLogo";
-            this.pbxLogo.Size = new System.Drawing.Size(242, 78);
-            this.pbxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pbxLogo.TabIndex = 16;
-            this.pbxLogo.TabStop = false;
-            // 
             // tbxSearch
             // 
-            this.tbxSearch.Location = new System.Drawing.Point(38, 131);
+            this.tbxSearch.Location = new System.Drawing.Point(42, 36);
+            this.tbxSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbxSearch.Name = "tbxSearch";
-            this.tbxSearch.Size = new System.Drawing.Size(100, 20);
+            this.tbxSearch.Size = new System.Drawing.Size(132, 22);
             this.tbxSearch.TabIndex = 15;
-            // 
-            // btnLogout
-            // 
-            this.btnLogout.Location = new System.Drawing.Point(547, 39);
-            this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(75, 23);
-            this.btnLogout.TabIndex = 14;
-            this.btnLogout.Text = "Logout";
-            this.btnLogout.UseVisualStyleBackColor = true;
-            // 
-            // btnEntrance
-            // 
-            this.btnEntrance.Location = new System.Drawing.Point(466, 39);
-            this.btnEntrance.Name = "btnEntrance";
-            this.btnEntrance.Size = new System.Drawing.Size(75, 23);
-            this.btnEntrance.TabIndex = 13;
-            this.btnEntrance.Text = "Entree";
-            this.btnEntrance.UseVisualStyleBackColor = true;
-            // 
-            // btnRent
-            // 
-            this.btnRent.Location = new System.Drawing.Point(385, 39);
-            this.btnRent.Name = "btnRent";
-            this.btnRent.Size = new System.Drawing.Size(75, 23);
-            this.btnRent.TabIndex = 12;
-            this.btnRent.Text = "Huren";
-            this.btnRent.UseVisualStyleBackColor = true;
-            // 
-            // btnMessage
-            // 
-            this.btnMessage.Location = new System.Drawing.Point(304, 39);
-            this.btnMessage.Name = "btnMessage";
-            this.btnMessage.Size = new System.Drawing.Size(75, 23);
-            this.btnMessage.TabIndex = 11;
-            this.btnMessage.Text = "Berichten";
-            this.btnMessage.UseVisualStyleBackColor = true;
             // 
             // btnRefresh
             // 
-            this.btnRefresh.Location = new System.Drawing.Point(38, 290);
+            this.btnRefresh.Location = new System.Drawing.Point(42, 232);
+            this.btnRefresh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(100, 23);
+            this.btnRefresh.Size = new System.Drawing.Size(133, 28);
             this.btnRefresh.TabIndex = 18;
             this.btnRefresh.Text = "Refresh";
             this.btnRefresh.UseVisualStyleBackColor = true;
@@ -155,24 +109,20 @@
             // 
             // GebruikerBeheerForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(642, 357);
             this.Controls.Add(this.btnEditUser);
             this.Controls.Add(this.btnDeleteUser);
+            this.ClientSize = new System.Drawing.Size(856, 317);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.lbxUsers);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.btnNew);
-            this.Controls.Add(this.pbxLogo);
             this.Controls.Add(this.tbxSearch);
-            this.Controls.Add(this.btnLogout);
-            this.Controls.Add(this.btnEntrance);
-            this.Controls.Add(this.btnRent);
-            this.Controls.Add(this.btnMessage);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "GebruikerBeheerForm";
             this.Text = "GebruikerBeheerForm";
-            ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -183,12 +133,7 @@
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.ListBox lbxUsers;
         private System.Windows.Forms.Button btnNew;
-        private System.Windows.Forms.PictureBox pbxLogo;
         private System.Windows.Forms.TextBox tbxSearch;
-        private System.Windows.Forms.Button btnLogout;
-        private System.Windows.Forms.Button btnEntrance;
-        private System.Windows.Forms.Button btnRent;
-        private System.Windows.Forms.Button btnMessage;
         private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.Button btnDeleteUser;
         private System.Windows.Forms.Button btnEditUser;

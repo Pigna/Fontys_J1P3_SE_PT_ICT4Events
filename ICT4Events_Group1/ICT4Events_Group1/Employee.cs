@@ -12,7 +12,7 @@ namespace ICT4Events_Group1
         public int id;
         public string password;
         public string username;
-        private bool admin;
+        public bool admin;
         //propperties
         //constructor
         public Employee(int id, string username, string Password, bool admin)

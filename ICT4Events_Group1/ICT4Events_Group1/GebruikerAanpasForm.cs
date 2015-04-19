@@ -18,10 +18,10 @@ namespace ICT4Events_Group1
         string[] filesPaspoort;
         string[] filesProfielfoto;
         List<Event> eventlist;
-        public GebruikerAanpasForm(User user)
+        public GebruikerAanpasForm(/*User user*/)
         {
             InitializeComponent();
-            this.selectedUser = user;
+            /*this.selectedUser = user;
 
             //getuser data | Put data into a array?
             dataList = userdb.getDataRFID(selectedUser.rfid);
@@ -44,7 +44,7 @@ namespace ICT4Events_Group1
             dtpEinddatum.Value = (DateTime)dataList[0]["startdatum"];
             cbBetaald.Checked = (bool)dataList[0]["betaald"];
             filesPaspoort[0] = (string)dataList[0]["event"];
-            filesProfielfoto[0] = (string)dataList[0]["event"];
+            filesProfielfoto[0] = (string)dataList[0]["event"];*/
         }
         private bool CheckEmailFormat(string email)
         {

@@ -95,34 +95,17 @@ namespace ICT4Events_Group1
             }
         }
 
-        private void btnMessage_Click(object sender, EventArgs e)
-        {
 
-            MediaSharingForm msf = new MediaSharingForm();
-         msf.ShowDialog();
+        
 
-        }
 
-        private void btnRent_Click(object sender, EventArgs e)
-        {
-           VerhuurForm verhuur = new VerhuurForm();
-            verhuur.ShowDialog();
-           
-        }
 
-        private void btnevent_Click(object sender, EventArgs e)
-        {
-            EventManagement ev = new EventManagement();
-            ev.ShowDialog();
-        }
 
-        private void btnLogout_Click(object sender, EventArgs e)
-        {
-           MainForm mf = new MainForm();
-            mf.ShowDialog();
+
+       
          
             
-        }
+        
         // als de tag gescant is wordt het veld gevult met de code
         void rfid_Tag(object sender, TagEventArgs e)
         {

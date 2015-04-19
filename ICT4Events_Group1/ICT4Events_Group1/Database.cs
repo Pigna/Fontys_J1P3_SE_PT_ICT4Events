@@ -8,14 +8,21 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace ICT4Events_Group1
+
+
+    /* USERS:
+     * user: 'Kevinisswag', 'geenswag'
+     * Emp.: 'Nick', 'Cactus'
+     * Admin: 'Martijn', 'xxxxxx'
+     * */
 {
     class Database
     {
         //fields
         protected OracleConnection con;
 
-        private User current;
-        private Employee loggedInEmployee;
+        private static User current;
+        private static Employee loggedInEmployee;
         public Object Logged { get { if (loggedInEmployee == null) return current; return loggedInEmployee; } }
 
         //properties
@@ -23,14 +30,15 @@ namespace ICT4Events_Group1
         //constructor
         public Database()
         {
-            con = new OracleConnection();
-            con.ConnectionString = "Data Source=fhictora01.fhict.local/fhictora;Persist Security Info=True;User ID=dbi329331;Password=vbNEA73jMt";
-            
+
         }
 
         //methodes
         private void Connect()
         {
+            con = new OracleConnection();
+            con.ConnectionString = "Data Source=fhictora01.fhict.local/fhictora;Persist Security Info=True;User ID=dbi329331;Password=vbNEA73jMt";
+            
             con.Open();
         }
 
@@ -111,7 +119,7 @@ namespace ICT4Events_Group1
         }
         public bool empLogIn(string username, string password)
         {
-             List<Dictionary<string, object>> data = getQuery("SELECT Id, Username, Adminrights, Password From Employee WHERE Username = '" + username + "' AND Password = '" + password + "';");
+             List<Dictionary<string, object>> data = getQuery("SELECT Id, Username, Adminrights, Password From Employee WHERE Username = '" + username + "' AND Password = '" + password + "'");
 
              if (data == null)
                  return false;
