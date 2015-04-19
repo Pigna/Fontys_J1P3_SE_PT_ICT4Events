@@ -41,6 +41,7 @@
             this.tbTitle.Size = new System.Drawing.Size(129, 20);
             this.tbTitle.TabIndex = 17;
             this.tbTitle.Text = "Title";
+            this.tbTitle.Enter += new System.EventHandler(this.tbTitle_Enter);
             // 
             // btnPost
             // 
@@ -60,6 +61,7 @@
             this.btnUpload.TabIndex = 15;
             this.btnUpload.Text = "Upload file";
             this.btnUpload.UseVisualStyleBackColor = true;
+            this.btnUpload.Click += new System.EventHandler(this.btnUpload_Click);
             // 
             // tbMessage
             // 
@@ -69,6 +71,8 @@
             this.tbMessage.Size = new System.Drawing.Size(286, 69);
             this.tbMessage.TabIndex = 14;
             this.tbMessage.Text = "New Message\r\n";
+            this.tbMessage.TextChanged += new System.EventHandler(this.tbMessage_TextChanged);
+            this.tbMessage.Enter += new System.EventHandler(this.tbMessage_Enter);
             // 
             // Reactie
             // 
