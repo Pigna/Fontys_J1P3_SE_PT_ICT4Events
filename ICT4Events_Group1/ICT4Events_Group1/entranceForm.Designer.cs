@@ -165,6 +165,7 @@
             this.btn_scanIn.TabIndex = 29;
             this.btn_scanIn.Text = "scan in";
             this.btn_scanIn.UseVisualStyleBackColor = true;
+            this.btn_scanIn.Click += new System.EventHandler(this.btn_scanIn_Click);
             // 
             // btn_scanUit
             // 
@@ -174,6 +175,7 @@
             this.btn_scanUit.TabIndex = 30;
             this.btn_scanUit.Text = "scan uit";
             this.btn_scanUit.UseVisualStyleBackColor = true;
+            this.btn_scanUit.Click += new System.EventHandler(this.btn_scanUit_Click);
             // 
             // btnSearch
             // 

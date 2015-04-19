@@ -123,8 +123,7 @@ namespace ICT4Events_Group1
          
             
         }
-
-        //Tag event handler...we'll display the tag code in the field on the GUI
+        // als de tag gescant is wordt het veld gevult met de code
         void rfid_Tag(object sender, TagEventArgs e)
         {
             tbxRFID.Text = e.Tag;
@@ -133,7 +132,7 @@ namespace ICT4Events_Group1
           
         }
 
-        //Tag lost event handler...here we simply want to clear our tag field in the GUI
+        //als de tag weg is word het veld weer blank
         void rfid_TagLost(object sender, TagEventArgs e)
         {
             tbxRFID.Text = "";
@@ -226,6 +225,36 @@ namespace ICT4Events_Group1
             Application.Exit();
         }
         #endregion
+
+        private void btn_scanIn_Click(object sender, EventArgs e)
+        {
+            int result = endata.activateCode(Convert.ToInt32(tbxRFID.Text));
+            if(result == 0)
+            { MessageBox.Show("linken niet gelukt"); }
+            else if ( result == 1)
+            {
+                MessageBox.Show("is al in gescant");
+            }
+            else
+            {
+                MessageBox.Show("rfid is ingescant");
+            }
+        }
+
+        private void btn_scanUit_Click(object sender, EventArgs e)
+        {
+            int result = endata.diActivateCode(Convert.ToInt32(tbxRFID.Text));
+            if (result == 0)
+            { MessageBox.Show("linken niet gelukt"); }
+            else if (result == 1)
+            {
+                MessageBox.Show("is al uit gescant");
+            }
+            else
+            {
+                MessageBox.Show("rfid is uitgescant");
+            }
+        }
 
 
     }
