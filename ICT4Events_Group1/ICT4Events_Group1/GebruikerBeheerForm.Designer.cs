@@ -37,8 +37,9 @@
             this.btnEntrance = new System.Windows.Forms.Button();
             this.btnRent = new System.Windows.Forms.Button();
             this.btnMessage = new System.Windows.Forms.Button();
-            this.btnFilterNotPayed = new System.Windows.Forms.Button();
             this.btnRefresh = new System.Windows.Forms.Button();
+            this.btnDeleteUser = new System.Windows.Forms.Button();
+            this.btnEditUser = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -122,15 +123,6 @@
             this.btnMessage.Text = "Berichten";
             this.btnMessage.UseVisualStyleBackColor = true;
             // 
-            // btnFilterNotPayed
-            // 
-            this.btnFilterNotPayed.Location = new System.Drawing.Point(38, 319);
-            this.btnFilterNotPayed.Name = "btnFilterNotPayed";
-            this.btnFilterNotPayed.Size = new System.Drawing.Size(100, 23);
-            this.btnFilterNotPayed.TabIndex = 19;
-            this.btnFilterNotPayed.Text = "Filter Niet betaald";
-            this.btnFilterNotPayed.UseVisualStyleBackColor = true;
-            // 
             // btnRefresh
             // 
             this.btnRefresh.Location = new System.Drawing.Point(38, 290);
@@ -141,14 +133,35 @@
             this.btnRefresh.UseVisualStyleBackColor = true;
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
+            // btnDeleteUser
+            // 
+            this.btnDeleteUser.Location = new System.Drawing.Point(38, 232);
+            this.btnDeleteUser.Name = "btnDeleteUser";
+            this.btnDeleteUser.Size = new System.Drawing.Size(100, 23);
+            this.btnDeleteUser.TabIndex = 22;
+            this.btnDeleteUser.Text = "Verwijder";
+            this.btnDeleteUser.UseVisualStyleBackColor = true;
+            this.btnDeleteUser.Click += new System.EventHandler(this.btnDeleteUser_Click);
+            // 
+            // btnEditUser
+            // 
+            this.btnEditUser.Location = new System.Drawing.Point(38, 203);
+            this.btnEditUser.Name = "btnEditUser";
+            this.btnEditUser.Size = new System.Drawing.Size(100, 23);
+            this.btnEditUser.TabIndex = 23;
+            this.btnEditUser.Text = "Aanpassen";
+            this.btnEditUser.UseVisualStyleBackColor = true;
+            this.btnEditUser.Click += new System.EventHandler(this.btnEditUser_Click);
+            // 
             // GebruikerBeheerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(642, 357);
+            this.Controls.Add(this.btnEditUser);
+            this.Controls.Add(this.btnDeleteUser);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.lbxUsers);
-            this.Controls.Add(this.btnFilterNotPayed);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.btnNew);
             this.Controls.Add(this.pbxLogo);
@@ -176,8 +189,9 @@
         private System.Windows.Forms.Button btnEntrance;
         private System.Windows.Forms.Button btnRent;
         private System.Windows.Forms.Button btnMessage;
-        private System.Windows.Forms.Button btnFilterNotPayed;
         private System.Windows.Forms.Button btnRefresh;
+        private System.Windows.Forms.Button btnDeleteUser;
+        private System.Windows.Forms.Button btnEditUser;
 
     }
 }

@@ -7,27 +7,44 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.IO;
 
 namespace ICT4Events_Group1
 {
-    public partial class GebruikerToevoegForm : Form
+    public partial class GebruikerAanpasForm : Form
     {
-        UserDatabase userDatabase;
-        EventDatabase eventDatabase;
+        User selectedUser;
+        UserDatabase userdb;
+        List<Dictionary<string, object>> dataList;
         string[] filesPaspoort;
         string[] filesProfielfoto;
         List<Event> eventlist;
-        public GebruikerToevoegForm()
+        public GebruikerAanpasForm(User user)
         {
             InitializeComponent();
-            //getlist of all events
-            eventlist = eventDatabase.getEvents();
-            foreach (Event e in eventlist)
-            {
-                cbEvent.Items.Add(e.Name);
-            }
+            this.selectedUser = user;
 
+            //getuser data | Put data into a array?
+            dataList = userdb.getDataRFID(selectedUser.rfid);
+            cbEvent.SelectedValue = (Event)dataList[0]["event"];
+            tbVoornaam.Text = (string)dataList[0]["voornaam"];
+            tbTussenvoegsel.Text = (string)dataList[0]["tussenvoegsel"];
+            tbAchternaam.Text = (string)dataList[0]["achternaam"];
+            tbStraat.Text = (string)dataList[0]["straat"];
+            tbHuisnummer.Text = (string)dataList[0]["huisnummer"];
+            tbPostcode.Text = (string)dataList[0]["postcode"];
+            tbWoonplaats.Text = (string)dataList[0]["woonplaats"];
+            tbRekeningnr.Text = (string)dataList[0]["rekeningnr"];
+            tbEmail.Text = (string)dataList[0]["email"];
+            tbVastnr.Text = (string)dataList[0]["telefoon"];
+            tbMobielnr.Text = (string)dataList[0]["mobiel"];
+            tbUsername.Text = (string)dataList[0]["username"];
+            tbPassword.Text = (string)dataList[0]["password"];
+            tbPasswordCheck.Text = (string)dataList[0]["password"];
+            dtpStartdatum.Value = (DateTime)dataList[0]["startdatum"];
+            dtpEinddatum.Value = (DateTime)dataList[0]["startdatum"];
+            cbBetaald.Checked = (bool)dataList[0]["betaald"];
+            filesPaspoort[0] = (string)dataList[0]["event"];
+            filesProfielfoto[0] = (string)dataList[0]["event"];
         }
         private bool CheckEmailFormat(string email)
         {
@@ -49,14 +66,14 @@ namespace ICT4Events_Group1
             //get eventname
             foreach (Event e in eventlist)
             {
-                if(e.Name == eventname)
+                if (e.Name == eventname)
                 {
                     return e;
                 }
             }
             return null;
         }
-        private void btnAanmaken_Click(object sender, EventArgs e)
+        private void btnAanpassen_Click(object sender, EventArgs e)
         {
             string selectedEvent = (string)cbEvent.SelectedValue;
             string voornaam = tbVoornaam.Text;
@@ -101,15 +118,15 @@ namespace ICT4Events_Group1
             {
                 //check password en email en of gebruikersnaam al bestaad
                 //email check
-                if(!userDatabase.emailExist(email) & CheckEmailFormat(email))
+                if(!userdb.emailExist(email) & CheckEmailFormat(email))
                 {
                     //check username
-                    if (!userDatabase.usernameExist(username) & CheckUsernameFormat(username))
+                    if (!userdb.usernameExist(username) & CheckUsernameFormat(username))
                     {
                         //check password
                         if (CheckPasswordFormat(password) && password == passwordcheck)
                         {
-                            userDatabase.adduser(1, GetEvent(selectedEvent), voornaam, tussenvoegsel, achternaam, straat, huisnummer, postcode, woonplaats, Paspoort, rekeningnr, Profielfoto, email, vastnr, mobielnr, username, password, startdatum, einddatum, betaald);
+                            userdb.adduser(1, GetEvent(selectedEvent), voornaam, tussenvoegsel, achternaam, straat, huisnummer, postcode, woonplaats, Paspoort, rekeningnr, Profielfoto, email, vastnr, mobielnr, username, password, startdatum, einddatum, betaald);
                             User user = new User(1, username, voornaam, tussenvoegsel, achternaam);
                             tbVoornaam.Clear();
                             tbTussenvoegsel.Clear(); //niet verplicht
@@ -146,25 +163,6 @@ namespace ICT4Events_Group1
             {
                 MessageBox.Show("Vul alle verplichte velden in.");
             }
-        }
-
-        private void btnAnnuleren_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
-        private void btnPaspoortLocation_Click(object sender, EventArgs e)
-        {
-            FolderBrowserDialog fbd = new FolderBrowserDialog();
-            DialogResult result = fbd.ShowDialog();
-            filesPaspoort = Directory.GetFiles(fbd.SelectedPath);
-        }
-
-        private void btnFotoLocation_Click(object sender, EventArgs e)
-        {
-            FolderBrowserDialog fbd = new FolderBrowserDialog();
-            DialogResult result = fbd.ShowDialog();
-            filesProfielfoto = Directory.GetFiles(fbd.SelectedPath);
         }
     }
 }

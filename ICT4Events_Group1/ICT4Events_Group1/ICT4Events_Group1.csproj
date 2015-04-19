@@ -62,6 +62,12 @@
     <Compile Include="EventBeheerForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="GebruikerAanpasForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GebruikerAanpasForm.Designer.cs">
+      <DependentUpon>GebruikerAanpasForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reactie.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -137,6 +143,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EventBeheerForm.resx">
       <DependentUpon>EventBeheerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GebruikerAanpasForm.resx">
+      <DependentUpon>GebruikerAanpasForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reactie.resx">
       <DependentUpon>Reactie.cs</DependentUpon>

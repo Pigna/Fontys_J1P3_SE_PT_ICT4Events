@@ -49,7 +49,7 @@
             this.txtBeschrijving = new System.Windows.Forms.RichTextBox();
             this.datTimeEnd = new System.Windows.Forms.DateTimePicker();
             this.datTimeStart = new System.Windows.Forms.DateTimePicker();
-            this.txtNaam = new System.Windows.Forms.TextBox();
+            this.tbxNaam = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnCreateEmployee = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
@@ -58,9 +58,9 @@
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.lbxEmployees = new System.Windows.Forms.ListBox();
             this.txtEmployee = new System.Windows.Forms.TextBox();
-            this.btnEmployee = new System.Windows.Forms.Button();
-            this.btnDelete = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnSearchEmployee = new System.Windows.Forms.Button();
+            this.btnVerwijderMedewerker = new System.Windows.Forms.Button();
+            this.btnVerwijderEvent = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).BeginInit();
             this.grpEvent.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numCost)).BeginInit();
@@ -159,11 +159,11 @@
             this.grpEvent.Controls.Add(this.txtBeschrijving);
             this.grpEvent.Controls.Add(this.datTimeEnd);
             this.grpEvent.Controls.Add(this.datTimeStart);
-            this.grpEvent.Controls.Add(this.txtNaam);
+            this.grpEvent.Controls.Add(this.tbxNaam);
             this.grpEvent.Location = new System.Drawing.Point(30, 132);
-            this.grpEvent.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grpEvent.Margin = new System.Windows.Forms.Padding(2);
             this.grpEvent.Name = "grpEvent";
-            this.grpEvent.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grpEvent.Padding = new System.Windows.Forms.Padding(2);
             this.grpEvent.Size = new System.Drawing.Size(422, 136);
             this.grpEvent.TabIndex = 24;
             this.grpEvent.TabStop = false;
@@ -173,7 +173,7 @@
             // btnCreateEvent
             // 
             this.btnCreateEvent.Location = new System.Drawing.Point(266, 105);
-            this.btnCreateEvent.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCreateEvent.Margin = new System.Windows.Forms.Padding(2);
             this.btnCreateEvent.Name = "btnCreateEvent";
             this.btnCreateEvent.Size = new System.Drawing.Size(145, 19);
             this.btnCreateEvent.TabIndex = 11;
@@ -237,7 +237,7 @@
             this.lblEuro.BackColor = System.Drawing.Color.White;
             this.lblEuro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblEuro.Location = new System.Drawing.Point(52, 45);
-            this.lblEuro.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lblEuro.Margin = new System.Windows.Forms.Padding(2);
             this.lblEuro.Name = "lblEuro";
             this.lblEuro.Padding = new System.Windows.Forms.Padding(0, 1, 0, 2);
             this.lblEuro.Size = new System.Drawing.Size(15, 18);
@@ -250,7 +250,7 @@
             this.numCost.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.numCost.DecimalPlaces = 2;
             this.numCost.Location = new System.Drawing.Point(65, 45);
-            this.numCost.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numCost.Margin = new System.Windows.Forms.Padding(2);
             this.numCost.Name = "numCost";
             this.numCost.Size = new System.Drawing.Size(118, 20);
             this.numCost.TabIndex = 4;
@@ -259,7 +259,7 @@
             // txtBeschrijving
             // 
             this.txtBeschrijving.Location = new System.Drawing.Point(266, 22);
-            this.txtBeschrijving.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBeschrijving.Margin = new System.Windows.Forms.Padding(2);
             this.txtBeschrijving.Name = "txtBeschrijving";
             this.txtBeschrijving.Size = new System.Drawing.Size(146, 77);
             this.txtBeschrijving.TabIndex = 3;
@@ -268,7 +268,7 @@
             // datTimeEnd
             // 
             this.datTimeEnd.Location = new System.Drawing.Point(52, 103);
-            this.datTimeEnd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.datTimeEnd.Margin = new System.Windows.Forms.Padding(2);
             this.datTimeEnd.Name = "datTimeEnd";
             this.datTimeEnd.Size = new System.Drawing.Size(132, 20);
             this.datTimeEnd.TabIndex = 2;
@@ -277,20 +277,20 @@
             // datTimeStart
             // 
             this.datTimeStart.Location = new System.Drawing.Point(52, 80);
-            this.datTimeStart.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.datTimeStart.Margin = new System.Windows.Forms.Padding(2);
             this.datTimeStart.Name = "datTimeStart";
             this.datTimeStart.Size = new System.Drawing.Size(132, 20);
             this.datTimeStart.TabIndex = 1;
             this.datTimeStart.ValueChanged += new System.EventHandler(this.datTimeStart_ValueChanged);
             // 
-            // txtNaam
+            // tbxNaam
             // 
-            this.txtNaam.Location = new System.Drawing.Point(52, 22);
-            this.txtNaam.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.txtNaam.Name = "txtNaam";
-            this.txtNaam.Size = new System.Drawing.Size(132, 20);
-            this.txtNaam.TabIndex = 0;
-            this.txtNaam.TextChanged += new System.EventHandler(this.txtNaam_TextChanged);
+            this.tbxNaam.Location = new System.Drawing.Point(52, 22);
+            this.tbxNaam.Margin = new System.Windows.Forms.Padding(2);
+            this.tbxNaam.Name = "tbxNaam";
+            this.tbxNaam.Size = new System.Drawing.Size(132, 20);
+            this.tbxNaam.TabIndex = 0;
+            this.tbxNaam.TextChanged += new System.EventHandler(this.txtNaam_TextChanged);
             // 
             // groupBox1
             // 
@@ -300,9 +300,9 @@
             this.groupBox1.Controls.Add(this.txtPassword);
             this.groupBox1.Controls.Add(this.txtUsername);
             this.groupBox1.Location = new System.Drawing.Point(30, 283);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(196, 95);
             this.groupBox1.TabIndex = 25;
             this.groupBox1.TabStop = false;
@@ -311,7 +311,7 @@
             // btnCreateEmployee
             // 
             this.btnCreateEmployee.Location = new System.Drawing.Point(7, 63);
-            this.btnCreateEmployee.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCreateEmployee.Margin = new System.Windows.Forms.Padding(2);
             this.btnCreateEmployee.Name = "btnCreateEmployee";
             this.btnCreateEmployee.Size = new System.Drawing.Size(176, 19);
             this.btnCreateEmployee.TabIndex = 4;
@@ -342,7 +342,7 @@
             // txtPassword
             // 
             this.txtPassword.Location = new System.Drawing.Point(52, 41);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(2);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '-';
             this.txtPassword.Size = new System.Drawing.Size(132, 20);
@@ -351,7 +351,7 @@
             // txtUsername
             // 
             this.txtUsername.Location = new System.Drawing.Point(52, 18);
-            this.txtUsername.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(2);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(132, 20);
             this.txtUsername.TabIndex = 0;
@@ -371,44 +371,44 @@
             this.txtEmployee.Size = new System.Drawing.Size(100, 20);
             this.txtEmployee.TabIndex = 27;
             // 
-            // btnEmployee
+            // btnSearchEmployee
             // 
-            this.btnEmployee.Location = new System.Drawing.Point(344, 283);
-            this.btnEmployee.Name = "btnEmployee";
-            this.btnEmployee.Size = new System.Drawing.Size(62, 18);
-            this.btnEmployee.TabIndex = 28;
-            this.btnEmployee.Text = "Zoeken";
-            this.btnEmployee.UseVisualStyleBackColor = true;
-            this.btnEmployee.Click += new System.EventHandler(this.btnEmployee_Click);
+            this.btnSearchEmployee.Location = new System.Drawing.Point(344, 283);
+            this.btnSearchEmployee.Name = "btnSearchEmployee";
+            this.btnSearchEmployee.Size = new System.Drawing.Size(62, 18);
+            this.btnSearchEmployee.TabIndex = 28;
+            this.btnSearchEmployee.Text = "Zoeken";
+            this.btnSearchEmployee.UseVisualStyleBackColor = true;
+            this.btnSearchEmployee.Click += new System.EventHandler(this.btnEmployee_Click);
             // 
-            // btnDelete
+            // btnVerwijderMedewerker
             // 
-            this.btnDelete.Location = new System.Drawing.Point(344, 358);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(62, 20);
-            this.btnDelete.TabIndex = 29;
-            this.btnDelete.Text = "Verwijder";
-            this.btnDelete.UseVisualStyleBackColor = true;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            this.btnVerwijderMedewerker.Location = new System.Drawing.Point(344, 358);
+            this.btnVerwijderMedewerker.Name = "btnVerwijderMedewerker";
+            this.btnVerwijderMedewerker.Size = new System.Drawing.Size(62, 20);
+            this.btnVerwijderMedewerker.TabIndex = 29;
+            this.btnVerwijderMedewerker.Text = "Verwijder";
+            this.btnVerwijderMedewerker.UseVisualStyleBackColor = true;
+            this.btnVerwijderMedewerker.Click += new System.EventHandler(this.btnDelete_Click);
             // 
-            // button1
+            // btnVerwijderEvent
             // 
-            this.button1.Location = new System.Drawing.Point(458, 358);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(155, 20);
-            this.button1.TabIndex = 30;
-            this.button1.Text = "Verwijder";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnVerwijderEvent.Location = new System.Drawing.Point(458, 358);
+            this.btnVerwijderEvent.Name = "btnVerwijderEvent";
+            this.btnVerwijderEvent.Size = new System.Drawing.Size(155, 20);
+            this.btnVerwijderEvent.TabIndex = 30;
+            this.btnVerwijderEvent.Text = "Verwijder";
+            this.btnVerwijderEvent.UseVisualStyleBackColor = true;
+            this.btnVerwijderEvent.Click += new System.EventHandler(this.btnVerwijderEvent_Click);
             // 
             // EventManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(644, 402);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.btnDelete);
-            this.Controls.Add(this.btnEmployee);
+            this.Controls.Add(this.btnVerwijderEvent);
+            this.Controls.Add(this.btnVerwijderMedewerker);
+            this.Controls.Add(this.btnSearchEmployee);
             this.Controls.Add(this.txtEmployee);
             this.Controls.Add(this.lbxEmployees);
             this.Controls.Add(this.groupBox1);
@@ -422,7 +422,7 @@
             this.Controls.Add(this.btnEntrance);
             this.Controls.Add(this.btnRent);
             this.Controls.Add(this.btnMessage);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "EventManagement";
             this.Text = "EventManagement";
             ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).EndInit();
@@ -453,7 +453,7 @@
         private System.Windows.Forms.RichTextBox txtBeschrijving;
         private System.Windows.Forms.DateTimePicker datTimeEnd;
         private System.Windows.Forms.DateTimePicker datTimeStart;
-        private System.Windows.Forms.TextBox txtNaam;
+        private System.Windows.Forms.TextBox tbxNaam;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
@@ -468,8 +468,8 @@
         private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.ListBox lbxEmployees;
         private System.Windows.Forms.TextBox txtEmployee;
-        private System.Windows.Forms.Button btnEmployee;
-        private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnSearchEmployee;
+        private System.Windows.Forms.Button btnVerwijderMedewerker;
+        private System.Windows.Forms.Button btnVerwijderEvent;
     }
 }
