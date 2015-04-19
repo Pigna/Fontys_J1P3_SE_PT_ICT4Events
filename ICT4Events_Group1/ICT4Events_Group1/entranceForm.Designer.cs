@@ -43,6 +43,7 @@
             this.btn_rlink = new System.Windows.Forms.Button();
             this.tb_proto = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.btn_aanw = new System.Windows.Forms.Button();
             this.profile.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_profile)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_paspoort)).BeginInit();
@@ -183,11 +184,22 @@
             this.label3.TabIndex = 38;
             this.label3.Text = "prot";
             // 
+            // btn_aanw
+            // 
+            this.btn_aanw.Location = new System.Drawing.Point(63, 291);
+            this.btn_aanw.Name = "btn_aanw";
+            this.btn_aanw.Size = new System.Drawing.Size(100, 23);
+            this.btn_aanw.TabIndex = 39;
+            this.btn_aanw.Text = "aanwezigen";
+            this.btn_aanw.UseVisualStyleBackColor = true;
+            this.btn_aanw.Click += new System.EventHandler(this.btn_aanw_Click);
+            // 
             // EntranceForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(901, 350);
+            this.Controls.Add(this.btn_aanw);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.tb_proto);
             this.Controls.Add(this.btn_rlink);
@@ -226,5 +238,6 @@
         private System.Windows.Forms.Button btn_rlink;
         private System.Windows.Forms.TextBox tb_proto;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btn_aanw;
     }
 }
