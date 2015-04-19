@@ -12,10 +12,23 @@ namespace ICT4Events_Group1
 {
     public partial class VerhuurForm : Form
     {
+        VerhuurDatabase db = new VerhuurDatabase();
+        string cat = null;
+
         public VerhuurForm()
         {
             InitializeComponent();
-            lbxRentList.Items.Add("ID -=-=- Naam -=-=- Materiaal -=-=- Van -=-=- Tot -=-=- Prijs");
+
+            printList(db.getCatAantal(VerhuurDatabase.Soort.Alles));
+        }
+
+        private void printList(Dictionary<string, int> list){
+            lbxRentList.Items.Clear();
+
+            foreach(KeyValuePair<string, int> entry in list)
+                {
+                    lbxRentList.Items.Add(entry.Key + " (" + entry.Value + ")");
+                }
         }
 
         private void VerhuurForm_Load(object sender, EventArgs e)
@@ -23,69 +36,107 @@ namespace ICT4Events_Group1
 
         }
 
-        private void btnMessage_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void btnRentList_Click(object sender, EventArgs e)
-        {
-            lblDesc.Text = ("Huurbaar");
-            lbxRentList.Items.Clear();
-            lbxRentList.Items.Add("ID -=-=- Naam -=-=- Materiaal -=-=- Van -=-=- Tot -=-=- Prijs");
-
-
-//            for(int i = 0; i < /* aantal items in database (maak deze query) */; i++)
-//            {
-//            lbxRentList.Items.Add((string)/*item op i plek in de database*/ );
-//            }
-        }
-        
-        private void btnRentableList_Click(object sender, EventArgs e)
-        {
-            lblDesc.Text = ("Verhuurbaar");
-            lbxRentList.Items.Clear();
-            lbxRentList.Items.Add("ID -=-=- Naam -=-=- Materiaal -=-=- Van -=-=- Tot -=-=- Prijs");
-
-
-//            for(int i = 0; i < /* aantal items in database waarvan de datum van uitleen en teruggave niet overlappen met de huidige datum (maak deze query) */; i++)
-//            {
-//            lbxRentList.Items.Add((string)/*item op i plek in de database waar datum van uitleen en teruggave niet overlappen met de huidige datum*/ );
-//            }
-        }
-
-        private void btnRentedList_Click(object sender, EventArgs e)
-        {
-            lblDesc.Text = ("Verhuurd");
-            lbxRentList.Items.Clear();
-            lbxRentList.Items.Add("ID -=-=- Naam -=-=- Materiaal -=-=- Van -=-=- Tot -=-=- Prijs");
-
-//            for(int i = 0; i < /* aantal items in database waar de datum van uitleen en teruggave overlappen met de huidige datum(maak deze query) */; i++)
-//            {
-//            lbxRentList.Items.Add((string)/*item op i plek in de database waar de datum van uitleen en teruggave wel overlappen met de huidige datum*/ );
-//            }
-        }
+   
 
         private void label1_Click(object sender, EventArgs e)
         {
 
         }
 
-//        private void btnSearch_Click(object sender, EventArgs e)
-//        {
-//            lbxRentList.Items.Clear();
-//            lbxRentList.Items.Add(/* maak hier de query die het item laat zien met het id dat */ (int)tbxSearch.Text /* bevat */);
 
-//        }
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            if(cat == null) 
+                printList(db.getCatAantal(getSoort(), tbxSearch.Text));
+            else
+            {
+                lbxRentList.Items.Clear();
+                lbxRentList.Items.AddRange(db.getItems(cat, getSoort(), tbxSearch.Text).ToArray());
+            }
+        }
 
-//        private void btnRentItem_Click(object sender, EventArgs e)
-//        {
-//            int itemid = (int)tbxItemID.Text;
-//            DateTime vanDate = dtpVan.Value;
-//            DateTime totDate = dtpTot.Value;
+        private VerhuurDatabase.Soort getSoort()
+        {
+            if (radAlles.Checked)
+                return VerhuurDatabase.Soort.Alles;
+            if (radHuurbaar.Checked)
+                return VerhuurDatabase.Soort.Huurbaar;
 
-            /* iets van een database connectie dat hij dit item als gehuurd zet in de database */
+            return VerhuurDatabase.Soort.Verhuurd;
+        }
 
-//        }
+        private void tbxItemID_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+        
+        }
+
+        private void radVerhuurd_CheckedChanged(object sender, EventArgs e)
+        {
+            if(cat == null) printList(db.getCatAantal(getSoort()));
+            else 
+            {
+                lbxRentList.Items.Clear();
+                lbxRentList.Items.AddRange(db.getItems(cat, getSoort()).ToArray());
+            }
+        }
+
+        private void radAlles_CheckedChanged(object sender, EventArgs e)
+        {
+            if(cat == null) printList(db.getCatAantal(getSoort()));
+            else
+            {
+                lbxRentList.Items.Clear();
+                lbxRentList.Items.AddRange(db.getItems(cat, getSoort()).ToArray());
+            }
+        }
+
+        private void radHuurbaar_CheckedChanged(object sender, EventArgs e)
+        {
+            if(cat == null) printList(db.getCatAantal(getSoort()));
+            else
+            {
+                lbxRentList.Items.Clear();
+                lbxRentList.Items.AddRange(db.getItems(cat, getSoort()).ToArray());
+            }
+        }
+
+        private void lbxRentList_DoubleClick(object sender, EventArgs e)
+        {
+            if (lbxRentList.SelectedItem != null && cat == null)
+            {
+                cat = ((string)lbxRentList.SelectedItem).Substring(0, ((string)lbxRentList.SelectedItem).IndexOf(" ("));
+                lbxRentList.Items.Clear();
+                lbxRentList.Items.AddRange(db.getItems(cat, getSoort()).ToArray());
+            }
+        }
+
+        private void lbxRentList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            cat = null;
+            lbxRentList.Items.Clear();
+            printList(db.getCatAantal(getSoort()));
+        }
+
+        private void btnRentItem_Click(object sender, EventArgs e)
+        {
+            if (!db.addVerhuur(Convert.ToInt16(tbxItemID.Text), Convert.ToInt16(txtGebruiker.Text), dtpVan.Value, dtpTot.Value))
+                MessageBox.Show("n");
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if(!db.brengTerug(Convert.ToInt16(txtItem.Text), ckbBetaald_b.Checked))
+                MessageBox.Show("n");
+        }
     }
 }

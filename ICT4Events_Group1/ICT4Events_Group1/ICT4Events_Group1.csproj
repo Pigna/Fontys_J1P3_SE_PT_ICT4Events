@@ -54,6 +54,12 @@
   </ItemGroup>
   <ItemGroup>
     <!--<Compile Include="EntranceForm.cs">-->
+    <Compile Include="BerichtBeheerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BerichtBeheerForm.Designer.cs">
+      <DependentUpon>BerichtBeheerForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Database\EntranceDatabase.cs" />
     <Compile Include="Database\EventDatabase.cs" />
     <Compile Include="Database\MediaSharingDatabase.cs" />
@@ -62,6 +68,13 @@
     <Compile Include="EventBeheerForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="GebruikerAanpasForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GebruikerAanpasForm.Designer.cs">
+      <DependentUpon>GebruikerAanpasForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Database\VerhuurDatabase.cs" />
     <Compile Include="Reactie.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,18 +83,6 @@
     </Compile>
     <Compile Include="EventBeheerForm.Designer.cs">
       <DependentUpon>EventBeheerForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="EventManagement.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="EventManagement.Designer.cs">
-      <DependentUpon>EventManagement.cs</DependentUpon>
-    </Compile>
-    <Compile Include="EventToevoegForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="EventToevoegForm.Designer.cs">
-      <DependentUpon>EventToevoegForm.cs</DependentUpon>
     </Compile>
     <Compile Include="entranceForm.cs">
       <SubType>Form</SubType>
@@ -106,11 +107,11 @@
       <DependentUpon>GebruikerToevoegForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Item.cs" />
-    <Compile Include="MainForm.cs">
+    <Compile Include="MenuForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainForm.Designer.cs">
-      <DependentUpon>MainForm.cs</DependentUpon>
+    <Compile Include="MenuForm.Designer.cs">
+      <DependentUpon>MenuForm.cs</DependentUpon>
     </Compile>
     <Compile Include="MediaSharing.cs" />
     <Compile Include="MediaSharingForm.cs">
@@ -126,6 +127,12 @@
     <Compile Include="Reservation.cs" />
     <Compile Include="RFID.cs" />
     <Compile Include="User.cs" />
+    <Compile Include="UserLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserLogin.Designer.cs">
+      <DependentUpon>UserLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="VerhuurForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,17 +142,11 @@
     <EmbeddedResource Include="entranceForm.resx">
       <DependentUpon>entranceForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EventBeheerForm.resx">
-      <DependentUpon>EventBeheerForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Reactie.resx">
       <DependentUpon>Reactie.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EventManagement.resx">
-      <DependentUpon>EventManagement.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="EventToevoegForm.resx">
-      <DependentUpon>EventToevoegForm.cs</DependentUpon>
+    <EmbeddedResource Include="EventBeheerForm.resx">
+      <DependentUpon>EventBeheerForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GebruikerBeheerForm.resx">
       <DependentUpon>GebruikerBeheerForm.cs</DependentUpon>
@@ -153,8 +154,8 @@
     <EmbeddedResource Include="GebruikerToevoegForm.resx">
       <DependentUpon>GebruikerToevoegForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainForm.resx">
-      <DependentUpon>MainForm.cs</DependentUpon>
+    <EmbeddedResource Include="MenuForm.resx">
+      <DependentUpon>MenuForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MediaSharingForm.resx">
       <DependentUpon>MediaSharingForm.cs</DependentUpon>
@@ -169,6 +170,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UserLogin.resx">
+      <DependentUpon>UserLogin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="VerhuurForm.resx">
       <DependentUpon>VerhuurForm.cs</DependentUpon>
     </EmbeddedResource>
