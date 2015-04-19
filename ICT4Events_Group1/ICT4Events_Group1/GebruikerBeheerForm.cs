@@ -13,9 +13,11 @@ namespace ICT4Events_Group1
     public partial class GebruikerBeheerForm : Form
     {
         List<User> userlist = new List<User>();
+        UserDatabase userdb = new UserDatabase();
         public GebruikerBeheerForm()
         {
             InitializeComponent();
+            userlist = userdb.getUserlist();
             foreach (User user in userlist)
             {
                 lbxUsers.Items.Add(user);
@@ -34,6 +36,26 @@ namespace ICT4Events_Group1
             {
                 lbxUsers.Items.Add(user);
             }
+        }
+
+        private void btnDeleteUser_Click(object sender, EventArgs e)
+        {
+            if (userdb.deleteUser((User)lbxUsers.SelectedItem))
+            {
+                lbxUsers.Items.Remove(lbxUsers.SelectedItem);
+                foreach (User user in userlist)
+                {
+                    userlist.Clear();
+                    userlist = userdb.getUserlist();
+                }
+                MessageBox.Show("Employee verwijdert.");
+            }
+        }
+
+        private void btnEditUser_Click(object sender, EventArgs e)
+        {
+            GebruikerAanpasForm editUser = new GebruikerAanpasForm((User)lbxUsers.SelectedItem);
+            editUser.ShowDialog();
         }
     }
 }
