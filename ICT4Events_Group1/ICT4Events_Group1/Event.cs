@@ -30,5 +30,9 @@ namespace ICT4Events_Group1
         }
 
         //methodes
+        public override string ToString()
+        {
+            return id + ": " + Name + " [€" + price + "]";
+        }
     }
 }
