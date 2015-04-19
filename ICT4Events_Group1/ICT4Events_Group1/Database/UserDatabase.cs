@@ -25,7 +25,8 @@ namespace ICT4Events_Group1
         //verwijder gebruiker
         public bool deleteUser(User user)
         {
-            return true;
+            int tof = doQuery("DELETE FROM Gebruiker WHERE Id = " + user.Id);
+            return tof > 0;
         }
         //Verkrijg een lijst van gebruikers
         public List<User> getUserlist()
@@ -40,9 +41,11 @@ namespace ICT4Events_Group1
             return ret;
         }
         //zoek gebruiker op RFID
-        public void getDataRFID(RFID_ rfid)
+        public  List<Dictionary<string, object>> getDataRFID(RFID_ rfid)
         {
             //string code = "SELECT * FROM GEBRUIKER WHERE RFID = " + rfid.Code + ";";
+            List<Dictionary<string, object>> data = getQuery("SELECT * FROM Gebruiker WHERE RFID = " + rfid.Code);
+            return data;
         }
         //Controleer of gebruikersnaam bestaat in de database
         public bool usernameExist(string username)
