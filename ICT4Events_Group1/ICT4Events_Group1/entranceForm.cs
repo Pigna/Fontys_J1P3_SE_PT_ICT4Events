@@ -50,7 +50,7 @@ namespace ICT4Events_Group1
                     lb_adress.Text = (string)cur["woonplaats"];
                     pb_paspoort.ImageLocation = (string)cur["paspoort"];
                     pb_profile.ImageLocation = (string)cur["foto"];
-                    if ((int)cur["betaald"] == 0)
+                    if (Convert.ToInt32(cur["betaald"]) == 0)
                     {
                         lb_payed.Text = "nog niet betaald";
                     }
@@ -72,26 +72,34 @@ namespace ICT4Events_Group1
 
         private void btn_rlink_Click(object sender, EventArgs e)
         {
-            try
+            if (tbxRFID.Text == "")
             {
-                if (endata.GetCode(Convert.ToInt32(tbxRFID.Text)))
+                MessageBox.Show("rfid niet gevonden");
+                 
+            }
+            else
+            {
+                try
                 {
-                    bool result = endata.activateCode(Convert.ToInt32(tbxSearch.Text), tbxRFID.Text);
-                    if (result)
-                    { MessageBox.Show("linken van rfid gelukt"); }
+                    if (endata.GetCode(Convert.ToString(tbxRFID.Text)) && endata.Getid(tbxSearch.Text))
+                    {
+                        bool result = endata.activateCode(Convert.ToInt32(tbxSearch.Text), tbxRFID.Text);
+                        if (result)
+                        { MessageBox.Show("linken van rfid gelukt"); }
+                        else
+                        {
+                            MessageBox.Show("linken is niet gelukt");
+                        }
+                    }
                     else
                     {
-                        MessageBox.Show("linken is niet gelukt");
+                        MessageBox.Show("rfid is al gelinkt");
                     }
                 }
-                else
+                catch
                 {
-                    MessageBox.Show("rfid is al gelinkt");
+                    MessageBox.Show("data niet goed ingevoerd");
                 }
-            }
-            catch
-            {
-                MessageBox.Show("data niet goed ingevoerd");
             }
         }
 
@@ -226,12 +234,12 @@ namespace ICT4Events_Group1
 
         private void btn_scanUit_Click(object sender, EventArgs e)
         {
-            int result = endata.diActivateCode(Convert.ToInt32(tbxRFID.Text));
+            int result = endata.diActivateCode(Convert.ToString(tbxRFID.Text));
             if (result == 0)
             { MessageBox.Show("linken niet gelukt"); }
             else if (result == 1)
             {
-                MessageBox.Show("is al uit gescant");
+                MessageBox.Show("rfid is al uit gescant");
             }
             else
             {

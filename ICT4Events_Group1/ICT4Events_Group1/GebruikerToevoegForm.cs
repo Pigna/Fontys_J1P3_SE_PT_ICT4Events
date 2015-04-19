@@ -7,17 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+//makes it posible to get path of files
 using System.IO;
 
 namespace ICT4Events_Group1
 {
     public partial class GebruikerToevoegForm : Form
     {
-        UserDatabase userDatabase;
-        EventDatabase eventDatabase;
+        UserDatabase userDatabase = new UserDatabase();
+        EventDatabase eventDatabase = new EventDatabase();
         string[] filesPaspoort;
         string[] filesProfielfoto;
-        List<Event> eventlist;
+        List<Event> eventlist = new List<Event>();
         public GebruikerToevoegForm()
         {
             InitializeComponent();

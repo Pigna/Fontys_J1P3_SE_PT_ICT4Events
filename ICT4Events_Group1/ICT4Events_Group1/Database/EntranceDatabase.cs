@@ -44,10 +44,10 @@ namespace ICT4Events_Group1
         {
             try
             {
-                List<Dictionary<string, object>> data = getQuery("SELECT avtivate FROM gebruikers WHERE rfid = " + rfid);
+                List<Dictionary<string, object>> data = getQuery("SELECT avtivate FROM gebruikers WHERE rfid = '" + rfid+ "'");
                 if (Convert.ToString(data) == "0")
                 {
-                    doQuery("UPDATE gebruiker SET activate TO 1 WHERE rfid = " + rfid);
+                    doQuery("UPDATE gebruiker SET activate = 1 WHERE rfid = '" + rfid + "'");
                     return (2);
                 }
                 else
@@ -65,14 +65,14 @@ namespace ICT4Events_Group1
 
 
                
-        public int diActivateCode(int rfid)
+        public int diActivateCode(string rfid)
         {
             try
             {
-                 List<Dictionary<string, object>> data = getQuery("SELECT activate FROM gebruikers WHERE rfid = " + rfid);
-                 if (Convert.ToString(data) == "1")
+                 List<Dictionary<string, object>> data = getQuery("SELECT rfid FROM gebruiker WHERE rfid = '" + rfid+ "'");
+                 if (data.Count != 0)
                {
-                   doQuery("UPDATE gebruiker SET activate TO 0 WHERE rfid = " + rfid);
+                   doQuery("UPDATE gebruiker SET rfid = '' WHERE rfid = '" + rfid + "'");
                    return (2);
                }
                else
@@ -91,11 +91,11 @@ namespace ICT4Events_Group1
       
             
         }
-        public bool GetCode(int code)
+        public bool GetCode(string code)
         {
-           List<Dictionary<string, object>> data = getQuery("SELECT id FROM gebruikers WHERE rfid = " + code);
+           List<Dictionary<string, object>> data = getQuery("SELECT id FROM gebruiker WHERE rfid = '"+ code+ "'");
 
-            if ( data == null)
+            if ( data.Count == 0)
             {
                 return true;
             }
@@ -104,11 +104,27 @@ namespace ICT4Events_Group1
                 return false;
             }
         }
+
+        public bool Getid(string id)
+        {
+            List<Dictionary<string, object>> data = getQuery("SELECT rfid FROM gebruiker WHERE id = '" + id + "'");
+
+            if (data.Count == 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
        public bool activateCode(int id, string rfid)
         {
             try
             {
-                doQuery("UPDATE gebruiker SET rfid TO " + rfid + "WHERE id = " + id);
+                doQuery("INSERT INTO rfid VALUES('"+ rfid +"')");
+                doQuery("UPDATE gebruiker SET rfid = '" + rfid + "'  WHERE id = " + id);
                 return true;
             }
             catch
