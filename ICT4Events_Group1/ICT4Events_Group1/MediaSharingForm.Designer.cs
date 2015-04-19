@@ -99,6 +99,7 @@
             this.lbCategorie.Name = "lbCategorie";
             this.lbCategorie.Size = new System.Drawing.Size(100, 329);
             this.lbCategorie.TabIndex = 4;
+            this.lbCategorie.SelectedValueChanged += new System.EventHandler(this.lbCategorie_SelectedValueChanged);
             // 
             // groupBox2
             // 

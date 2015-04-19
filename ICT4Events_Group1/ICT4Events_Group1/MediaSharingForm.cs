@@ -242,5 +242,10 @@ namespace ICT4Events_Group1
                 form.ShowDialog();
             }
         }
+
+        private void lbCategorie_SelectedValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
