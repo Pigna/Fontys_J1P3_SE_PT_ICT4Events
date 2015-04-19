@@ -20,12 +20,12 @@ namespace ICT4Events_Group1
 
         public EntranceForm()
         {
-            InitializeComponent();}}}
+            InitializeComponent();
 
             rfid = new RFID();
 
-         //   rfid.Attach += new AttachEventHandler(rfid_Attach);
-         //   rfid.Detach += new DetachEventHandler(rfid_Detach);
+           // rfid.Attach += new AttachEventHandler(rfid_Attach);
+          // rfid.Detach += new DetachEventHandler(rfid_Detach);
        
 
             rfid.Tag += new TagEventHandler(rfid_Tag);
@@ -99,13 +99,13 @@ namespace ICT4Events_Group1
         {
 
             MediaSharingForm msf = new MediaSharingForm();
-          msf.ShowDialog();
+         msf.ShowDialog();
 
         }
 
         private void btnRent_Click(object sender, EventArgs e)
         {
-            VerhuurForm verhuur = new VerhuurForm();
+           VerhuurForm verhuur = new VerhuurForm();
             verhuur.ShowDialog();
            
         }
@@ -118,7 +118,7 @@ namespace ICT4Events_Group1
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            MainForm mf = new MainForm();
+           MainForm mf = new MainForm();
             mf.ShowDialog();
          
             
