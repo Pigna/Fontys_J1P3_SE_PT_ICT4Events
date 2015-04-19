@@ -65,6 +65,15 @@
     <Compile Include="Database\MediaSharingDatabase.cs" />
     <Compile Include="Database\MessageDatabase.cs" />
     <Compile Include="Database\UserDatabase.cs" />
+    <Compile Include="EventBeheerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GebruikerAanpasForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GebruikerAanpasForm.Designer.cs">
+      <DependentUpon>GebruikerAanpasForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Database\VerhuurDatabase.cs" />
     <Compile Include="Reactie.cs">
       <SubType>Form</SubType>
@@ -135,6 +144,12 @@
     </Compile>
     <EmbeddedResource Include="entranceForm.resx">
       <DependentUpon>entranceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EventBeheerForm.resx">
+      <DependentUpon>EventBeheerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GebruikerAanpasForm.resx">
+      <DependentUpon>GebruikerAanpasForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reactie.resx">
       <DependentUpon>Reactie.cs</DependentUpon>

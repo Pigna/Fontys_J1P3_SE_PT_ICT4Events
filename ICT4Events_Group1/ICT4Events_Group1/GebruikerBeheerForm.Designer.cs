@@ -33,6 +33,9 @@
             this.btnNew = new System.Windows.Forms.Button();
             this.tbxSearch = new System.Windows.Forms.TextBox();
             this.btnRefresh = new System.Windows.Forms.Button();
+            this.btnDeleteUser = new System.Windows.Forms.Button();
+            this.btnEditUser = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSearch
@@ -85,11 +88,33 @@
             this.btnRefresh.UseVisualStyleBackColor = true;
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
+            // btnDeleteUser
+            // 
+            this.btnDeleteUser.Location = new System.Drawing.Point(38, 232);
+            this.btnDeleteUser.Name = "btnDeleteUser";
+            this.btnDeleteUser.Size = new System.Drawing.Size(100, 23);
+            this.btnDeleteUser.TabIndex = 22;
+            this.btnDeleteUser.Text = "Verwijder";
+            this.btnDeleteUser.UseVisualStyleBackColor = true;
+            this.btnDeleteUser.Click += new System.EventHandler(this.btnDeleteUser_Click);
+            // 
+            // btnEditUser
+            // 
+            this.btnEditUser.Location = new System.Drawing.Point(38, 203);
+            this.btnEditUser.Name = "btnEditUser";
+            this.btnEditUser.Size = new System.Drawing.Size(100, 23);
+            this.btnEditUser.TabIndex = 23;
+            this.btnEditUser.Text = "Aanpassen";
+            this.btnEditUser.UseVisualStyleBackColor = true;
+            this.btnEditUser.Click += new System.EventHandler(this.btnEditUser_Click);
+            // 
             // GebruikerBeheerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(856, 317);
+            this.ClientSize = new System.Drawing.Size(642, 357);
+            this.Controls.Add(this.btnEditUser);
+            this.Controls.Add(this.btnDeleteUser);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.lbxUsers);
             this.Controls.Add(this.btnRefresh);
@@ -110,6 +135,8 @@
         private System.Windows.Forms.Button btnNew;
         private System.Windows.Forms.TextBox tbxSearch;
         private System.Windows.Forms.Button btnRefresh;
+        private System.Windows.Forms.Button btnDeleteUser;
+        private System.Windows.Forms.Button btnEditUser;
 
     }
 }
