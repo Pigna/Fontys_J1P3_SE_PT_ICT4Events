@@ -16,6 +16,7 @@ namespace ICT4Events_Group1
         Reactie reactie = new Reactie();
         List<String> categorie = new List<String>();
         int idcount = 1;
+        bool click = false;
         public MediaSharingForm()
         {
             InitializeComponent();
@@ -128,6 +129,20 @@ namespace ICT4Events_Group1
         private void lblLike_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnHide_Click(object sender, EventArgs e)
+        {
+            if (click == false)
+            {
+                groupBox3.Visible = false;
+                click = true;
+            }
+            if (click == true)
+            {
+                groupBox3.Visible = true;
+                click = false;
+            }
         }
     }
 }
