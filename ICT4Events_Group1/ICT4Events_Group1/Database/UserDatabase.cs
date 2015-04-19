@@ -37,7 +37,7 @@ namespace ICT4Events_Group1
             List<Dictionary<string, object>> data = getQuery("SELECT Id, Username, Voornaam, Tussenvoegsel, Achternaam FROM Gebruiker");
 
             for (int c = 0; c < data.Count; c++)
-                ret.Add(new User((int)data[c]["id"], (string)data[c]["username"], (string)data[c]["voornaam"], (string)data[c]["tussenvoegsel"], (string)data[c]["achternaam"]));
+                ret.Add(new User(Convert.ToInt32(data[c]["id"]), (string)data[c]["username"], (string)data[c]["voornaam"], (string)data[c]["tussenvoegsel"], (string)data[c]["achternaam"]));
             
             return ret;
         }
