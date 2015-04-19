@@ -8,7 +8,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Collections.Generic;
 
 namespace ICT4Events_Group1
 {
@@ -20,6 +19,7 @@ namespace ICT4Events_Group1
         int idcount = 1;
         bool click = false;
         string path;
+        
         public MediaSharingForm()
         {
             InitializeComponent();
@@ -29,10 +29,11 @@ namespace ICT4Events_Group1
         {
             int i = 0;
            
-            if (e.KeyCode == Keys.Enter)
+            if (e.KeyCode == Keys.Enter)    //als er op enter gedrukt wordt dan...
             {
                 if (lbCategorie.Items.Contains(tbSearch.Text))
                 {                    
+                    //doe niets
                 }
                 else
                 {
@@ -78,7 +79,16 @@ namespace ICT4Events_Group1
 
         private void btnLike_Click(object sender, EventArgs e)
         {
-            btnLike.BackColor = Color.Green;
+            if (click == false)
+            {
+                btnLike.BackColor = Color.Green;
+                click = true;
+            }
+            else if (click == true)
+            {
+                btnLike.BackColor = Color.Transparent;
+                click = false;
+            }
         }
 
         private void btnComment_Click(object sender, EventArgs e)
@@ -136,7 +146,7 @@ namespace ICT4Events_Group1
         }
 
         private void btnHide_Click(object sender, EventArgs e)
-        {
+        {   //checkt of button hide nog niet is geklikt.
             if (click == false)
             {
                 groupBox3.Visible = false;
@@ -156,9 +166,7 @@ namespace ICT4Events_Group1
 
         private void btnUpload_Click(object sender, EventArgs e)
         {
-            OpenFileDialog openfile = new OpenFileDialog();
-            // openfile.ShowDialog();
-            // path = Directory.GetFiles(@"FilePath");         
+            OpenFileDialog openfile = new OpenFileDialog();                   
             DialogResult dr = openfile.ShowDialog();
             if (dr == System.Windows.Forms.DialogResult.OK)
             {
@@ -201,6 +209,33 @@ namespace ICT4Events_Group1
                 PictureBox pictureBox = new PictureBox();
                 pictureBox.Dock = DockStyle.Fill;
                 pictureBox.Image = Image.FromFile(path);
+                pictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
+                form.Controls.Add(pictureBox);
+
+                form.ShowDialog();
+            }
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            tbReactieTitle.Text = reactie.GetTitle();
+            tbReactieMessage.Text = reactie.GetMessage();
+        }
+
+        private void btnReactieImage_Click(object sender, EventArgs e)
+        {
+            if (reactie.GetPath() == null)
+            {
+                MessageBox.Show("No image here!");
+            }
+            else
+            {
+
+                Form form = new Form();
+
+                PictureBox pictureBox = new PictureBox();
+                pictureBox.Dock = DockStyle.Fill;
+                pictureBox.Image = Image.FromFile(reactie.GetPath());
                 pictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
                 form.Controls.Add(pictureBox);
 

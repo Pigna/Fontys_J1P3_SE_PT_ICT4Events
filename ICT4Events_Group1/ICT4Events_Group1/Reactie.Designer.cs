@@ -61,6 +61,7 @@
             this.btnUpload.TabIndex = 15;
             this.btnUpload.Text = "Upload file";
             this.btnUpload.UseVisualStyleBackColor = true;
+            this.btnUpload.Click += new System.EventHandler(this.btnUpload_Click);
             // 
             // tbMessage
             // 

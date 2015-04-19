@@ -34,10 +34,15 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lbCategorie = new System.Windows.Forms.ListBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnRefresh = new System.Windows.Forms.Button();
+            this.lblReactie = new System.Windows.Forms.Label();
+            this.tbReactieMessage = new System.Windows.Forms.TextBox();
+            this.tbReactieTitle = new System.Windows.Forms.TextBox();
             this.panelPicture = new System.Windows.Forms.Panel();
             this.btnHide = new System.Windows.Forms.Button();
             this.tbTitle = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btnImage = new System.Windows.Forms.Button();
             this.tbMessage1 = new System.Windows.Forms.TextBox();
             this.lblComment = new System.Windows.Forms.Label();
             this.pbPhoto = new System.Windows.Forms.PictureBox();
@@ -49,7 +54,7 @@
             this.btnUpload = new System.Windows.Forms.Button();
             this.tbMessage = new System.Windows.Forms.TextBox();
             this.btnProfile = new System.Windows.Forms.Button();
-            this.btnImage = new System.Windows.Forms.Button();
+            this.btnReactieImage = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -97,6 +102,11 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.btnReactieImage);
+            this.groupBox2.Controls.Add(this.btnRefresh);
+            this.groupBox2.Controls.Add(this.lblReactie);
+            this.groupBox2.Controls.Add(this.tbReactieMessage);
+            this.groupBox2.Controls.Add(this.tbReactieTitle);
             this.groupBox2.Controls.Add(this.panelPicture);
             this.groupBox2.Controls.Add(this.btnHide);
             this.groupBox2.Controls.Add(this.tbTitle);
@@ -109,6 +119,42 @@
             this.groupBox2.Size = new System.Drawing.Size(505, 398);
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
+            // 
+            // btnRefresh
+            // 
+            this.btnRefresh.Location = new System.Drawing.Point(314, 357);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(75, 23);
+            this.btnRefresh.TabIndex = 19;
+            this.btnRefresh.Text = "Refresh";
+            this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
+            // lblReactie
+            // 
+            this.lblReactie.AutoSize = true;
+            this.lblReactie.Location = new System.Drawing.Point(116, 242);
+            this.lblReactie.Name = "lblReactie";
+            this.lblReactie.Size = new System.Drawing.Size(47, 13);
+            this.lblReactie.TabIndex = 18;
+            this.lblReactie.Text = "Reactie:";
+            // 
+            // tbReactieMessage
+            // 
+            this.tbReactieMessage.Location = new System.Drawing.Point(119, 284);
+            this.tbReactieMessage.Multiline = true;
+            this.tbReactieMessage.Name = "tbReactieMessage";
+            this.tbReactieMessage.ReadOnly = true;
+            this.tbReactieMessage.Size = new System.Drawing.Size(270, 67);
+            this.tbReactieMessage.TabIndex = 17;
+            // 
+            // tbReactieTitle
+            // 
+            this.tbReactieTitle.Location = new System.Drawing.Point(119, 258);
+            this.tbReactieTitle.Name = "tbReactieTitle";
+            this.tbReactieTitle.ReadOnly = true;
+            this.tbReactieTitle.Size = new System.Drawing.Size(125, 20);
+            this.tbReactieTitle.TabIndex = 16;
             // 
             // panelPicture
             // 
@@ -152,6 +198,16 @@
             this.groupBox3.Size = new System.Drawing.Size(347, 127);
             this.groupBox3.TabIndex = 11;
             this.groupBox3.TabStop = false;
+            // 
+            // btnImage
+            // 
+            this.btnImage.Location = new System.Drawing.Point(6, 97);
+            this.btnImage.Name = "btnImage";
+            this.btnImage.Size = new System.Drawing.Size(75, 23);
+            this.btnImage.TabIndex = 15;
+            this.btnImage.Text = "Image";
+            this.btnImage.UseVisualStyleBackColor = true;
+            this.btnImage.Click += new System.EventHandler(this.btnImage_Click);
             // 
             // tbMessage1
             // 
@@ -212,12 +268,13 @@
             // 
             // btnLike
             // 
+            this.btnLike.BackColor = System.Drawing.SystemColors.Control;
             this.btnLike.Location = new System.Drawing.Point(206, 100);
             this.btnLike.Name = "btnLike";
             this.btnLike.Size = new System.Drawing.Size(21, 21);
             this.btnLike.TabIndex = 7;
             this.btnLike.Text = "+";
-            this.btnLike.UseVisualStyleBackColor = true;
+            this.btnLike.UseVisualStyleBackColor = false;
             this.btnLike.Click += new System.EventHandler(this.btnLike_Click);
             // 
             // btnPost
@@ -261,15 +318,15 @@
             this.btnProfile.UseVisualStyleBackColor = true;
             this.btnProfile.Click += new System.EventHandler(this.btnProfile_Click);
             // 
-            // btnImage
+            // btnReactieImage
             // 
-            this.btnImage.Location = new System.Drawing.Point(6, 97);
-            this.btnImage.Name = "btnImage";
-            this.btnImage.Size = new System.Drawing.Size(75, 23);
-            this.btnImage.TabIndex = 15;
-            this.btnImage.Text = "Image";
-            this.btnImage.UseVisualStyleBackColor = true;
-            this.btnImage.Click += new System.EventHandler(this.btnImage_Click);
+            this.btnReactieImage.Location = new System.Drawing.Point(119, 357);
+            this.btnReactieImage.Name = "btnReactieImage";
+            this.btnReactieImage.Size = new System.Drawing.Size(75, 23);
+            this.btnReactieImage.TabIndex = 20;
+            this.btnReactieImage.Text = "Image";
+            this.btnReactieImage.UseVisualStyleBackColor = true;
+            this.btnReactieImage.Click += new System.EventHandler(this.btnReactieImage_Click);
             // 
             // MediaSharingForm
             // 
@@ -315,5 +372,10 @@
         private System.Windows.Forms.Button btnHide;
         private System.Windows.Forms.Panel panelPicture;
         private System.Windows.Forms.Button btnImage;
+        private System.Windows.Forms.Label lblReactie;
+        private System.Windows.Forms.TextBox tbReactieMessage;
+        private System.Windows.Forms.TextBox tbReactieTitle;
+        private System.Windows.Forms.Button btnRefresh;
+        private System.Windows.Forms.Button btnReactieImage;
     }
 }
