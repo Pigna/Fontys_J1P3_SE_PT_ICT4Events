@@ -47,7 +47,9 @@ namespace ICT4Events_Group1
 
         public bool createEmployee(Employee e)
         {
-            return doQuery("INSERT INTO Employee (Id, Username, Password) VALUES (" + e.id + ", " + e.username + ", " + e.password + ")") > 0;
+            string query = "INSERT INTO Employee (Id, Username, Password) VALUES (" + e.id + ", '" + e.username + "', '" + e.password + "')";
+
+            return doQuery(query) > 0;
         }
 
 
@@ -70,7 +72,9 @@ namespace ICT4Events_Group1
         {
             List<Event> ret = new List<Event>();
 
-            List<Dictionary<string, object>> data = getQuery("SELECT Id, Naam, Startdatum, Einddatum, Beschrijving, Kosten FROM Employee WHERE Naam LIKE '%"+filter+"%' OR Beschrijving LIKE '%"+filter+"%' OR Id LIKE '%"+filter+"%'");
+            string query = "SELECT Id, Naam, Startdatum, Einddatum, Beschrijving, Kosten FROM Event WHERE Naam LIKE '%" + filter + "%' OR Beschrijving LIKE '%" + filter + "%'";
+
+            List<Dictionary<string, object>> data = getQuery(query);
 
             if (data == null)
                 return ret;
@@ -84,12 +88,14 @@ namespace ICT4Events_Group1
         public bool deleteEvent(Event e)
         {
             int dox= doQuery("DELETE FROM Event WHERE Id = " + e.id);
-            return dox > 1;
+            return dox > 0;
         }
 
         public bool createEvent(Event e)
         {
-            return doQuery("INSERT INTO Event (Id, Naam, Startdatum, Einddatum, Beschrijving, Kosten) VALUES (" + e.id + ", '" + e.Name + "', to_date('" + e.startDate + "','MM-DD-YYYY hh24:MI'),  to_date('" + e.endDate + "','MM-DD-YYYY hh24:MI'), "+e.price+")") > 0;
+            string query = "INSERT INTO Event (Id, Naam, Startdatum, Einddatum, Beschrijving, Kosten) VALUES (" + e.id + ", '" + e.Name + "', to_date('" + e.startDate.ToString("MM-dd-yyyy hh:mm") + "','MM-DD-YYYY hh24:MI'),  to_date('" + e.endDate.ToString("MM-dd-yyyy hh:mm") + "','MM-DD-YYYY hh24:MI'), '"+e.Desc+"', " + e.price + ")";
+
+            return doQuery(query) > 0;
         }
     }
 }

@@ -40,17 +40,17 @@
             this.dtpVan = new System.Windows.Forms.DateTimePicker();
             this.dtpTot = new System.Windows.Forms.DateTimePicker();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtGebruiker = new System.Windows.Forms.TextBox();
-            this.lblKosten = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.ckbBetaald = new System.Windows.Forms.CheckBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lblKosten = new System.Windows.Forms.Label();
+            this.txtGebruiker = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtItem = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.ckbBetaald_b = new System.Windows.Forms.CheckBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.txtItem = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.radAlles = new System.Windows.Forms.RadioButton();
             this.radHuurbaar = new System.Windows.Forms.RadioButton();
             this.radVerhuurd = new System.Windows.Forms.RadioButton();
@@ -189,30 +189,15 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Item uitlenen";
             // 
-            // label1
+            // ckbBetaald
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 59);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(71, 17);
-            this.label1.TabIndex = 16;
-            this.label1.Text = "Gebruiker";
-            // 
-            // txtGebruiker
-            // 
-            this.txtGebruiker.Location = new System.Drawing.Point(90, 56);
-            this.txtGebruiker.Margin = new System.Windows.Forms.Padding(4);
-            this.txtGebruiker.Name = "txtGebruiker";
-            this.txtGebruiker.Size = new System.Drawing.Size(106, 22);
-            this.txtGebruiker.TabIndex = 17;
-            // 
-            // lblKosten
-            // 
-            this.lblKosten.AutoSize = true;
-            this.lblKosten.Location = new System.Drawing.Point(676, 25);
-            this.lblKosten.Name = "lblKosten";
-            this.lblKosten.Size = new System.Drawing.Size(0, 17);
-            this.lblKosten.TabIndex = 21;
+            this.ckbBetaald.AutoSize = true;
+            this.ckbBetaald.Location = new System.Drawing.Point(572, 24);
+            this.ckbBetaald.Name = "ckbBetaald";
+            this.ckbBetaald.Size = new System.Drawing.Size(78, 21);
+            this.ckbBetaald.TabIndex = 24;
+            this.ckbBetaald.Text = "Betaald";
+            this.ckbBetaald.UseVisualStyleBackColor = true;
             // 
             // label3
             // 
@@ -223,15 +208,30 @@
             this.label3.TabIndex = 23;
             this.label3.Text = "  ";
             // 
-            // ckbBetaald
+            // lblKosten
             // 
-            this.ckbBetaald.AutoSize = true;
-            this.ckbBetaald.Location = new System.Drawing.Point(572, 24);
-            this.ckbBetaald.Name = "ckbBetaald";
-            this.ckbBetaald.Size = new System.Drawing.Size(78, 21);
-            this.ckbBetaald.TabIndex = 24;
-            this.ckbBetaald.Text = "Betaald";
-            this.ckbBetaald.UseVisualStyleBackColor = true;
+            this.lblKosten.AutoSize = true;
+            this.lblKosten.Location = new System.Drawing.Point(676, 25);
+            this.lblKosten.Name = "lblKosten";
+            this.lblKosten.Size = new System.Drawing.Size(0, 17);
+            this.lblKosten.TabIndex = 21;
+            // 
+            // txtGebruiker
+            // 
+            this.txtGebruiker.Location = new System.Drawing.Point(90, 56);
+            this.txtGebruiker.Margin = new System.Windows.Forms.Padding(4);
+            this.txtGebruiker.Name = "txtGebruiker";
+            this.txtGebruiker.Size = new System.Drawing.Size(106, 22);
+            this.txtGebruiker.TabIndex = 17;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 59);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(71, 17);
+            this.label1.TabIndex = 16;
+            this.label1.Text = "Gebruiker";
             // 
             // groupBox2
             // 
@@ -247,24 +247,16 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Item Terugbrengen";
             // 
-            // label4
+            // button1
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 28);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(51, 17);
-            this.label4.TabIndex = 23;
-            this.label4.Text = "Item ID";
-            // 
-            // txtItem
-            // 
-            this.txtItem.Location = new System.Drawing.Point(90, 25);
-            this.txtItem.Margin = new System.Windows.Forms.Padding(4);
-            this.txtItem.Name = "txtItem";
-            this.txtItem.Size = new System.Drawing.Size(106, 22);
-            this.txtItem.TabIndex = 25;
-            this.txtItem.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.button1.Location = new System.Drawing.Point(560, 22);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(89, 28);
+            this.button1.TabIndex = 25;
+            this.button1.Text = "Neem item";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // ckbBetaald_b
             // 
@@ -285,16 +277,24 @@
             this.label5.TabIndex = 26;
             this.label5.Text = "  ";
             // 
-            // button1
+            // txtItem
             // 
-            this.button1.Location = new System.Drawing.Point(560, 22);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(89, 28);
-            this.button1.TabIndex = 25;
-            this.button1.Text = "Neem item";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.txtItem.Location = new System.Drawing.Point(90, 25);
+            this.txtItem.Margin = new System.Windows.Forms.Padding(4);
+            this.txtItem.Name = "txtItem";
+            this.txtItem.Size = new System.Drawing.Size(106, 22);
+            this.txtItem.TabIndex = 25;
+            this.txtItem.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(12, 28);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(51, 17);
+            this.label4.TabIndex = 23;
+            this.label4.Text = "Item ID";
             // 
             // radAlles
             // 

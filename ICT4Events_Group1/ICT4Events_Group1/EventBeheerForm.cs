@@ -19,6 +19,7 @@ namespace ICT4Events_Group1
 
             InitializeComponent();
 
+            lbxEmployees.Items.Clear();
             lbxEmployees.Items.AddRange(db.getEmployees().ToArray());
             lbxLastEvents.Items.AddRange(db.getEvents().ToArray());
         }
@@ -60,6 +61,10 @@ namespace ICT4Events_Group1
                 lbxLastEvents.Items.Remove(lbxLastEvents.SelectedItem);
                 MessageBox.Show("Event verwijdert.");
             }
+            else
+            {
+                MessageBox.Show("Dit event kan niet verwijdert worden. (Heeft al plaatsgevonden / inschrijvingen");
+            }
         }
 
         private void btnCreateEvent_Click(object sender, EventArgs e)
@@ -86,6 +91,7 @@ namespace ICT4Events_Group1
                     txtBeschrijving.Text = "";
                     numCost.Value = new Decimal(0.00);
 
+                    lbxLastEvents.Items.Clear();
                     lbxLastEvents.Items.AddRange(db.getEvents().ToArray());
                 }
                 else
@@ -105,6 +111,7 @@ namespace ICT4Events_Group1
                 txtUsername.Text = "";
                 txtPassword.Text = "";
 
+                lbxEmployees.Items.Clear();
                 lbxEmployees.Items.AddRange(db.getEmployees().ToArray());
             }
             else
@@ -115,11 +122,13 @@ namespace ICT4Events_Group1
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
+            lbxLastEvents.Items.Clear();
             lbxLastEvents.Items.AddRange(db.getEvents(tbxSearch.Text).ToArray());
         }
 
         private void btnEmployee_Click(object sender, EventArgs e)
         {
+            lbxEmployees.Items.Clear();
             lbxEmployees.Items.AddRange(db.getEmployees(txtEmployee.Text).ToArray());
         }
 
