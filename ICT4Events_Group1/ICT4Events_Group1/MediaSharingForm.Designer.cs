@@ -34,6 +34,8 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lbCategorie = new System.Windows.Forms.ListBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.panelPicture = new System.Windows.Forms.Panel();
+            this.btnHide = new System.Windows.Forms.Button();
             this.tbTitle = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.tbMessage1 = new System.Windows.Forms.TextBox();
@@ -47,8 +49,7 @@
             this.btnUpload = new System.Windows.Forms.Button();
             this.tbMessage = new System.Windows.Forms.TextBox();
             this.btnProfile = new System.Windows.Forms.Button();
-            this.btnLogout = new System.Windows.Forms.Button();
-            this.btnHide = new System.Windows.Forms.Button();
+            this.btnImage = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -96,6 +97,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.panelPicture);
             this.groupBox2.Controls.Add(this.btnHide);
             this.groupBox2.Controls.Add(this.tbTitle);
             this.groupBox2.Controls.Add(this.groupBox3);
@@ -107,6 +109,23 @@
             this.groupBox2.Size = new System.Drawing.Size(505, 398);
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
+            // 
+            // panelPicture
+            // 
+            this.panelPicture.Location = new System.Drawing.Point(310, 9);
+            this.panelPicture.Name = "panelPicture";
+            this.panelPicture.Size = new System.Drawing.Size(79, 92);
+            this.panelPicture.TabIndex = 15;
+            // 
+            // btnHide
+            // 
+            this.btnHide.Location = new System.Drawing.Point(357, 107);
+            this.btnHide.Name = "btnHide";
+            this.btnHide.Size = new System.Drawing.Size(20, 20);
+            this.btnHide.TabIndex = 14;
+            this.btnHide.Text = "-";
+            this.btnHide.UseVisualStyleBackColor = true;
+            this.btnHide.Click += new System.EventHandler(this.btnHide_Click);
             // 
             // tbTitle
             // 
@@ -120,6 +139,7 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.btnImage);
             this.groupBox3.Controls.Add(this.tbMessage1);
             this.groupBox3.Controls.Add(this.lblComment);
             this.groupBox3.Controls.Add(this.pbPhoto);
@@ -138,7 +158,8 @@
             this.tbMessage1.Location = new System.Drawing.Point(44, 24);
             this.tbMessage1.Multiline = true;
             this.tbMessage1.Name = "tbMessage1";
-            this.tbMessage1.Size = new System.Drawing.Size(286, 69);
+            this.tbMessage1.ReadOnly = true;
+            this.tbMessage1.Size = new System.Drawing.Size(288, 69);
             this.tbMessage1.TabIndex = 14;
             // 
             // lblComment
@@ -217,6 +238,7 @@
             this.btnUpload.TabIndex = 1;
             this.btnUpload.Text = "Upload file";
             this.btnUpload.UseVisualStyleBackColor = true;
+            this.btnUpload.Click += new System.EventHandler(this.btnUpload_Click);
             // 
             // tbMessage
             // 
@@ -239,31 +261,21 @@
             this.btnProfile.UseVisualStyleBackColor = true;
             this.btnProfile.Click += new System.EventHandler(this.btnProfile_Click);
             // 
-            // btnLogout
+            // btnImage
             // 
-            this.btnLogout.Location = new System.Drawing.Point(536, 12);
-            this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(75, 23);
-            this.btnLogout.TabIndex = 6;
-            this.btnLogout.Text = "Logout";
-            this.btnLogout.UseVisualStyleBackColor = true;
-            // 
-            // btnHide
-            // 
-            this.btnHide.Location = new System.Drawing.Point(357, 107);
-            this.btnHide.Name = "btnHide";
-            this.btnHide.Size = new System.Drawing.Size(20, 20);
-            this.btnHide.TabIndex = 14;
-            this.btnHide.Text = "-";
-            this.btnHide.UseVisualStyleBackColor = true;
-            this.btnHide.Click += new System.EventHandler(this.btnHide_Click);
+            this.btnImage.Location = new System.Drawing.Point(6, 97);
+            this.btnImage.Name = "btnImage";
+            this.btnImage.Size = new System.Drawing.Size(75, 23);
+            this.btnImage.TabIndex = 15;
+            this.btnImage.Text = "Image";
+            this.btnImage.UseVisualStyleBackColor = true;
+            this.btnImage.Click += new System.EventHandler(this.btnImage_Click);
             // 
             // MediaSharingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(764, 454);
-            this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.btnProfile);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -297,10 +309,11 @@
         private System.Windows.Forms.Button btnUpload;
         private System.Windows.Forms.TextBox tbMessage;
         private System.Windows.Forms.Button btnProfile;
-        private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.ListBox lbCategorie;
         private System.Windows.Forms.TextBox tbTitle;
         private System.Windows.Forms.TextBox tbMessage1;
         private System.Windows.Forms.Button btnHide;
+        private System.Windows.Forms.Panel panelPicture;
+        private System.Windows.Forms.Button btnImage;
     }
 }
