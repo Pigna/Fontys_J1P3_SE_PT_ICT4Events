@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace ICT4Events_Group1
 {
-    public partial class EventToevoegForm : Form
+    public partial class BerichtBeheerForm : Form
     {
-        public EventToevoegForm()
+        public BerichtBeheerForm()
         {
             InitializeComponent();
-        }
-
-        private void tbEinddatum_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

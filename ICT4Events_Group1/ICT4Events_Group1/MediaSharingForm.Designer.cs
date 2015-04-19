@@ -59,7 +59,6 @@
             this.btnUpload = new System.Windows.Forms.Button();
             this.tbMessage = new System.Windows.Forms.TextBox();
             this.btnProfile = new System.Windows.Forms.Button();
-            this.btnLogout = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -70,9 +69,10 @@
             // 
             // tbSearch
             // 
-            this.tbSearch.Location = new System.Drawing.Point(6, 32);
+            this.tbSearch.Location = new System.Drawing.Point(8, 39);
+            this.tbSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbSearch.Name = "tbSearch";
-            this.tbSearch.Size = new System.Drawing.Size(100, 20);
+            this.tbSearch.Size = new System.Drawing.Size(132, 22);
             this.tbSearch.TabIndex = 0;
             this.tbSearch.Text = "Search";
             this.tbSearch.Enter += new System.EventHandler(this.tbSearch_Enter);
@@ -82,9 +82,10 @@
             // lblCategorie
             // 
             this.lblCategorie.AutoSize = true;
-            this.lblCategorie.Location = new System.Drawing.Point(6, 16);
+            this.lblCategorie.Location = new System.Drawing.Point(8, 20);
+            this.lblCategorie.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCategorie.Name = "lblCategorie";
-            this.lblCategorie.Size = new System.Drawing.Size(64, 13);
+            this.lblCategorie.Size = new System.Drawing.Size(85, 17);
             this.lblCategorie.TabIndex = 1;
             this.lblCategorie.Text = "Categorieën";
             // 
@@ -93,18 +94,22 @@
             this.groupBox1.Controls.Add(this.lbCategorie);
             this.groupBox1.Controls.Add(this.lblCategorie);
             this.groupBox1.Controls.Add(this.tbSearch);
-            this.groupBox1.Location = new System.Drawing.Point(12, 44);
+            this.groupBox1.Location = new System.Drawing.Point(16, 54);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(200, 398);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(267, 490);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             // 
             // lbCategorie
             // 
             this.lbCategorie.FormattingEnabled = true;
-            this.lbCategorie.Location = new System.Drawing.Point(6, 58);
+            this.lbCategorie.ItemHeight = 16;
+            this.lbCategorie.Location = new System.Drawing.Point(8, 71);
+            this.lbCategorie.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lbCategorie.Name = "lbCategorie";
-            this.lbCategorie.Size = new System.Drawing.Size(100, 329);
+            this.lbCategorie.Size = new System.Drawing.Size(132, 404);
             this.lbCategorie.TabIndex = 4;
             // 
             // groupBox2
@@ -115,17 +120,20 @@
             this.groupBox2.Controls.Add(this.btnPost);
             this.groupBox2.Controls.Add(this.btnUpload);
             this.groupBox2.Controls.Add(this.tbMessage);
-            this.groupBox2.Location = new System.Drawing.Point(247, 44);
+            this.groupBox2.Location = new System.Drawing.Point(329, 54);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(505, 398);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Size = new System.Drawing.Size(673, 490);
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
             // 
             // tbTitle
             // 
-            this.tbTitle.Location = new System.Drawing.Point(16, 6);
+            this.tbTitle.Location = new System.Drawing.Point(21, 7);
+            this.tbTitle.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbTitle.Name = "tbTitle";
-            this.tbTitle.Size = new System.Drawing.Size(129, 20);
+            this.tbTitle.Size = new System.Drawing.Size(171, 22);
             this.tbTitle.TabIndex = 13;
             this.tbTitle.Text = "Title";
             this.tbTitle.Enter += new System.EventHandler(this.tbTitle_Enter);
@@ -142,44 +150,50 @@
             this.groupBox4.Controls.Add(this.lblTekst2);
             this.groupBox4.Controls.Add(this.btnLike2);
             this.groupBox4.Controls.Add(this.lblTekstLink2);
-            this.groupBox4.Location = new System.Drawing.Point(17, 213);
+            this.groupBox4.Location = new System.Drawing.Point(23, 262);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(347, 100);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox4.Size = new System.Drawing.Size(463, 123);
             this.groupBox4.TabIndex = 12;
             this.groupBox4.TabStop = false;
             // 
             // pbPhoto2
             // 
             this.pbPhoto2.Image = ((System.Drawing.Image)(resources.GetObject("pbPhoto2.Image")));
-            this.pbPhoto2.Location = new System.Drawing.Point(6, 8);
+            this.pbPhoto2.Location = new System.Drawing.Point(8, 10);
+            this.pbPhoto2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pbPhoto2.Name = "pbPhoto2";
-            this.pbPhoto2.Size = new System.Drawing.Size(30, 26);
+            this.pbPhoto2.Size = new System.Drawing.Size(40, 32);
             this.pbPhoto2.TabIndex = 3;
             this.pbPhoto2.TabStop = false;
             // 
             // lblComment2
             // 
             this.lblComment2.AutoSize = true;
-            this.lblComment2.Location = new System.Drawing.Point(270, 66);
+            this.lblComment2.Location = new System.Drawing.Point(360, 81);
+            this.lblComment2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblComment2.Name = "lblComment2";
-            this.lblComment2.Size = new System.Drawing.Size(51, 13);
+            this.lblComment2.Size = new System.Drawing.Size(67, 17);
             this.lblComment2.TabIndex = 10;
             this.lblComment2.Text = "Comment";
             // 
             // lblBericht2
             // 
             this.lblBericht2.AutoSize = true;
-            this.lblBericht2.Location = new System.Drawing.Point(42, 8);
+            this.lblBericht2.Location = new System.Drawing.Point(56, 10);
+            this.lblBericht2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblBericht2.Name = "lblBericht2";
-            this.lblBericht2.Size = new System.Drawing.Size(63, 13);
+            this.lblBericht2.Size = new System.Drawing.Size(83, 17);
             this.lblBericht2.TabIndex = 4;
             this.lblBericht2.Text = "Bericht Titel";
             // 
             // btnComment2
             // 
-            this.btnComment2.Location = new System.Drawing.Point(243, 62);
+            this.btnComment2.Location = new System.Drawing.Point(324, 76);
+            this.btnComment2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnComment2.Name = "btnComment2";
-            this.btnComment2.Size = new System.Drawing.Size(21, 21);
+            this.btnComment2.Size = new System.Drawing.Size(28, 26);
             this.btnComment2.TabIndex = 9;
             this.btnComment2.Text = ">";
             this.btnComment2.UseVisualStyleBackColor = true;
@@ -188,35 +202,39 @@
             // 
             this.lblNaam2.AutoSize = true;
             this.lblNaam2.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.5F);
-            this.lblNaam2.Location = new System.Drawing.Point(42, 21);
+            this.lblNaam2.Location = new System.Drawing.Point(56, 26);
+            this.lblNaam2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNaam2.Name = "lblNaam2";
-            this.lblNaam2.Size = new System.Drawing.Size(58, 12);
+            this.lblNaam2.Size = new System.Drawing.Size(67, 13);
             this.lblNaam2.TabIndex = 5;
             this.lblNaam2.Text = "Naam poster";
             // 
             // lblLike2
             // 
             this.lblLike2.AutoSize = true;
-            this.lblLike2.Location = new System.Drawing.Point(210, 66);
+            this.lblLike2.Location = new System.Drawing.Point(280, 81);
+            this.lblLike2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblLike2.Name = "lblLike2";
-            this.lblLike2.Size = new System.Drawing.Size(27, 13);
+            this.lblLike2.Size = new System.Drawing.Size(34, 17);
             this.lblLike2.TabIndex = 8;
             this.lblLike2.Text = "Like";
             // 
             // lblTekst2
             // 
             this.lblTekst2.AutoSize = true;
-            this.lblTekst2.Location = new System.Drawing.Point(42, 33);
+            this.lblTekst2.Location = new System.Drawing.Point(56, 41);
+            this.lblTekst2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTekst2.Name = "lblTekst2";
-            this.lblTekst2.Size = new System.Drawing.Size(129, 13);
+            this.lblTekst2.Size = new System.Drawing.Size(170, 17);
             this.lblTekst2.TabIndex = 6;
             this.lblTekst2.Text = "Een stuk tekst zonder link";
             // 
             // btnLike2
             // 
-            this.btnLike2.Location = new System.Drawing.Point(185, 62);
+            this.btnLike2.Location = new System.Drawing.Point(247, 76);
+            this.btnLike2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnLike2.Name = "btnLike2";
-            this.btnLike2.Size = new System.Drawing.Size(21, 21);
+            this.btnLike2.Size = new System.Drawing.Size(28, 26);
             this.btnLike2.TabIndex = 7;
             this.btnLike2.Text = "+";
             this.btnLike2.UseVisualStyleBackColor = true;
@@ -224,9 +242,10 @@
             // lblTekstLink2
             // 
             this.lblTekstLink2.AutoSize = true;
-            this.lblTekstLink2.Location = new System.Drawing.Point(42, 46);
+            this.lblTekstLink2.Location = new System.Drawing.Point(56, 57);
+            this.lblTekstLink2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTekstLink2.Name = "lblTekstLink2";
-            this.lblTekstLink2.Size = new System.Drawing.Size(164, 13);
+            this.lblTekstLink2.Size = new System.Drawing.Size(215, 17);
             this.lblTekstLink2.TabIndex = 7;
             this.lblTekstLink2.Text = "Een stuk tekst eventueel met link";
             // 
@@ -241,44 +260,50 @@
             this.groupBox3.Controls.Add(this.lblTekst);
             this.groupBox3.Controls.Add(this.btnLike);
             this.groupBox3.Controls.Add(this.lblTesktLink);
-            this.groupBox3.Location = new System.Drawing.Point(17, 107);
+            this.groupBox3.Location = new System.Drawing.Point(23, 132);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(347, 100);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Size = new System.Drawing.Size(463, 123);
             this.groupBox3.TabIndex = 11;
             this.groupBox3.TabStop = false;
             // 
             // pbPhoto
             // 
             this.pbPhoto.Image = ((System.Drawing.Image)(resources.GetObject("pbPhoto.Image")));
-            this.pbPhoto.Location = new System.Drawing.Point(6, 8);
+            this.pbPhoto.Location = new System.Drawing.Point(8, 10);
+            this.pbPhoto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pbPhoto.Name = "pbPhoto";
-            this.pbPhoto.Size = new System.Drawing.Size(30, 26);
+            this.pbPhoto.Size = new System.Drawing.Size(40, 32);
             this.pbPhoto.TabIndex = 3;
             this.pbPhoto.TabStop = false;
             // 
             // lblComment
             // 
             this.lblComment.AutoSize = true;
-            this.lblComment.Location = new System.Drawing.Point(270, 66);
+            this.lblComment.Location = new System.Drawing.Point(360, 81);
+            this.lblComment.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblComment.Name = "lblComment";
-            this.lblComment.Size = new System.Drawing.Size(51, 13);
+            this.lblComment.Size = new System.Drawing.Size(67, 17);
             this.lblComment.TabIndex = 10;
             this.lblComment.Text = "Comment";
             // 
             // lblTitel
             // 
             this.lblTitel.AutoSize = true;
-            this.lblTitel.Location = new System.Drawing.Point(42, 8);
+            this.lblTitel.Location = new System.Drawing.Point(56, 10);
+            this.lblTitel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTitel.Name = "lblTitel";
-            this.lblTitel.Size = new System.Drawing.Size(63, 13);
+            this.lblTitel.Size = new System.Drawing.Size(83, 17);
             this.lblTitel.TabIndex = 4;
             this.lblTitel.Text = "Bericht Titel";
             // 
             // btnComment
             // 
-            this.btnComment.Location = new System.Drawing.Point(243, 62);
+            this.btnComment.Location = new System.Drawing.Point(324, 76);
+            this.btnComment.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnComment.Name = "btnComment";
-            this.btnComment.Size = new System.Drawing.Size(21, 21);
+            this.btnComment.Size = new System.Drawing.Size(28, 26);
             this.btnComment.TabIndex = 9;
             this.btnComment.Text = ">";
             this.btnComment.UseVisualStyleBackColor = true;
@@ -288,35 +313,39 @@
             // 
             this.lblPoster.AutoSize = true;
             this.lblPoster.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.5F);
-            this.lblPoster.Location = new System.Drawing.Point(42, 21);
+            this.lblPoster.Location = new System.Drawing.Point(56, 26);
+            this.lblPoster.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPoster.Name = "lblPoster";
-            this.lblPoster.Size = new System.Drawing.Size(58, 12);
+            this.lblPoster.Size = new System.Drawing.Size(67, 13);
             this.lblPoster.TabIndex = 5;
             this.lblPoster.Text = "Naam poster";
             // 
             // lblLike
             // 
             this.lblLike.AutoSize = true;
-            this.lblLike.Location = new System.Drawing.Point(210, 66);
+            this.lblLike.Location = new System.Drawing.Point(280, 81);
+            this.lblLike.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblLike.Name = "lblLike";
-            this.lblLike.Size = new System.Drawing.Size(27, 13);
+            this.lblLike.Size = new System.Drawing.Size(34, 17);
             this.lblLike.TabIndex = 8;
             this.lblLike.Text = "Like";
             // 
             // lblTekst
             // 
             this.lblTekst.AutoSize = true;
-            this.lblTekst.Location = new System.Drawing.Point(42, 33);
+            this.lblTekst.Location = new System.Drawing.Point(56, 41);
+            this.lblTekst.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTekst.Name = "lblTekst";
-            this.lblTekst.Size = new System.Drawing.Size(129, 13);
+            this.lblTekst.Size = new System.Drawing.Size(170, 17);
             this.lblTekst.TabIndex = 6;
             this.lblTekst.Text = "Een stuk tekst zonder link";
             // 
             // btnLike
             // 
-            this.btnLike.Location = new System.Drawing.Point(185, 62);
+            this.btnLike.Location = new System.Drawing.Point(247, 76);
+            this.btnLike.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnLike.Name = "btnLike";
-            this.btnLike.Size = new System.Drawing.Size(21, 21);
+            this.btnLike.Size = new System.Drawing.Size(28, 26);
             this.btnLike.TabIndex = 7;
             this.btnLike.Text = "+";
             this.btnLike.UseVisualStyleBackColor = true;
@@ -325,17 +354,19 @@
             // lblTesktLink
             // 
             this.lblTesktLink.AutoSize = true;
-            this.lblTesktLink.Location = new System.Drawing.Point(42, 46);
+            this.lblTesktLink.Location = new System.Drawing.Point(56, 57);
+            this.lblTesktLink.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTesktLink.Name = "lblTesktLink";
-            this.lblTesktLink.Size = new System.Drawing.Size(164, 13);
+            this.lblTesktLink.Size = new System.Drawing.Size(215, 17);
             this.lblTesktLink.TabIndex = 7;
             this.lblTesktLink.Text = "Een stuk tekst eventueel met link";
             // 
             // btnPost
             // 
-            this.btnPost.Location = new System.Drawing.Point(223, 68);
+            this.btnPost.Location = new System.Drawing.Point(297, 84);
+            this.btnPost.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnPost.Name = "btnPost";
-            this.btnPost.Size = new System.Drawing.Size(75, 23);
+            this.btnPost.Size = new System.Drawing.Size(100, 28);
             this.btnPost.TabIndex = 2;
             this.btnPost.Text = "Post";
             this.btnPost.UseVisualStyleBackColor = true;
@@ -343,19 +374,21 @@
             // 
             // btnUpload
             // 
-            this.btnUpload.Location = new System.Drawing.Point(142, 68);
+            this.btnUpload.Location = new System.Drawing.Point(189, 84);
+            this.btnUpload.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnUpload.Name = "btnUpload";
-            this.btnUpload.Size = new System.Drawing.Size(75, 23);
+            this.btnUpload.Size = new System.Drawing.Size(100, 28);
             this.btnUpload.TabIndex = 1;
             this.btnUpload.Text = "Upload file";
             this.btnUpload.UseVisualStyleBackColor = true;
             // 
             // tbMessage
             // 
-            this.tbMessage.Location = new System.Drawing.Point(16, 32);
+            this.tbMessage.Location = new System.Drawing.Point(21, 39);
+            this.tbMessage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbMessage.Multiline = true;
             this.tbMessage.Name = "tbMessage";
-            this.tbMessage.Size = new System.Drawing.Size(286, 69);
+            this.tbMessage.Size = new System.Drawing.Size(380, 84);
             this.tbMessage.TabIndex = 0;
             this.tbMessage.Text = "New Message\r\n";
             this.tbMessage.Enter += new System.EventHandler(this.tbMessage_Enter);
@@ -363,32 +396,24 @@
             // 
             // btnProfile
             // 
-            this.btnProfile.Location = new System.Drawing.Point(455, 12);
+            this.btnProfile.Location = new System.Drawing.Point(793, 18);
+            this.btnProfile.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnProfile.Name = "btnProfile";
-            this.btnProfile.Size = new System.Drawing.Size(75, 23);
+            this.btnProfile.Size = new System.Drawing.Size(100, 28);
             this.btnProfile.TabIndex = 3;
             this.btnProfile.Text = "Profile";
             this.btnProfile.UseVisualStyleBackColor = true;
             this.btnProfile.Click += new System.EventHandler(this.btnProfile_Click);
             // 
-            // btnLogout
-            // 
-            this.btnLogout.Location = new System.Drawing.Point(536, 12);
-            this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(75, 23);
-            this.btnLogout.TabIndex = 6;
-            this.btnLogout.Text = "Logout";
-            this.btnLogout.UseVisualStyleBackColor = true;
-            // 
             // MediaSharingForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(764, 454);
-            this.Controls.Add(this.btnLogout);
+            this.ClientSize = new System.Drawing.Size(1019, 559);
             this.Controls.Add(this.btnProfile);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "MediaSharingForm";
             this.Text = "MediaSharingForm";
             this.groupBox1.ResumeLayout(false);
@@ -435,7 +460,6 @@
         private System.Windows.Forms.Button btnUpload;
         private System.Windows.Forms.TextBox tbMessage;
         private System.Windows.Forms.Button btnProfile;
-        private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.ListBox lbCategorie;
         private System.Windows.Forms.TextBox tbTitle;
     }
