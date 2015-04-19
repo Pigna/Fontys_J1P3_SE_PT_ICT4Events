@@ -81,9 +81,6 @@
     <Compile Include="Reactie.Designer.cs">
       <DependentUpon>Reactie.cs</DependentUpon>
     </Compile>
-    <Compile Include="EventBeheerForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="EventBeheerForm.Designer.cs">
       <DependentUpon>EventBeheerForm.cs</DependentUpon>
     </Compile>
