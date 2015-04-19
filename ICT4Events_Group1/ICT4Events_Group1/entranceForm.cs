@@ -253,7 +253,7 @@ namespace ICT4Events_Group1
             string aanwezig = "";
             for (int c = 0; c < data.Count; c++)
             {
-                aanwezig = "/n" + (string)data[c]["voornaam"] + " " + (string)data[c]["tussenvoegsel"] + " " + (string)data[c]["achternaam"];
+                aanwezig = "\n" + (string)data[c]["voornaam"] + " " + (string)data[c]["tussenvoegsel"] + " " + (string)data[c]["achternaam"];
                 MessageBox.Show(aanwezig);
             }
         }
