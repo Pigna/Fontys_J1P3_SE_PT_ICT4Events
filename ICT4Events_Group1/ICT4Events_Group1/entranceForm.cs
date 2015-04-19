@@ -8,30 +8,30 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Oracle.DataAccess.Client;
-//using Phidgets.Events;
-//using Phidgets;
+using Phidgets.Events;
+using Phidgets;
 
 namespace ICT4Events_Group1
 {
     public partial class EntranceForm : Form
     {
         EntranceDatabase endata = new EntranceDatabase();
-        //private RFID rfid;
+        private RFID rfid;
 
         public EntranceForm()
         {
             InitializeComponent();
 
-            //rfid = new RFID();
+            rfid = new RFID();
 
-         //   rfid.Attach += new AttachEventHandler(rfid_Attach);
-         //   rfid.Detach += new DetachEventHandler(rfid_Detach);
+           // rfid.Attach += new AttachEventHandler(rfid_Attach);
+          // rfid.Detach += new DetachEventHandler(rfid_Detach);
        
 
-            /*rfid.Tag += new TagEventHandler(rfid_Tag);
-            rfid.TagLost += new TagEventHandler(rfid_TagLost);*/
+            rfid.Tag += new TagEventHandler(rfid_Tag);
+            rfid.TagLost += new TagEventHandler(rfid_TagLost);
 
-            //openCmdLine(rfid);
+            openCmdLine(rfid);
 
         }
 
@@ -99,33 +99,33 @@ namespace ICT4Events_Group1
         {
 
             MediaSharingForm msf = new MediaSharingForm();
-          msf.ShowDialog();
+         msf.ShowDialog();
 
         }
 
         private void btnRent_Click(object sender, EventArgs e)
         {
-            VerhuurForm verhuur = new VerhuurForm();
+           VerhuurForm verhuur = new VerhuurForm();
             verhuur.ShowDialog();
            
         }
 
         private void btnevent_Click(object sender, EventArgs e)
         {
-            EventBeheerForm ev = new EventBeheerForm();
+            EventManagement ev = new EventManagement();
             ev.ShowDialog();
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            //MenuForm mf = new MenuForm();
-            //mf.ShowDialog();
+           MainForm mf = new MainForm();
+            mf.ShowDialog();
          
             
         }
 
         //Tag event handler...we'll display the tag code in the field on the GUI
-        /*void rfid_Tag(object sender, TagEventArgs e)
+        void rfid_Tag(object sender, TagEventArgs e)
         {
             tbxRFID.Text = e.Tag;
             tb_proto.Text = e.protocol.ToString();
@@ -138,12 +138,12 @@ namespace ICT4Events_Group1
         {
             tbxRFID.Text = "";
             tb_proto.Text = "";
-        }*/
+        }
 
 
 
         #region Command line open functions
-        /*private void openCmdLine(Phidget p)
+        private void openCmdLine(Phidget p)
         {
             openCmdLine(p, null);
         }
@@ -224,7 +224,7 @@ namespace ICT4Events_Group1
             MessageBox.Show(sb.ToString(), "Argument Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             Application.Exit();
-        }*/
+        }
         #endregion
 
 
