@@ -42,11 +42,5 @@ namespace ICT4Events_Group1
         {
             return true;
         }
-        public string toString()
-        {
-            userdatabase.getDataRFID(RFID);
-            return "asd";
-        }
-
     }
 }
