@@ -18,9 +18,10 @@ namespace ICT4Events_Group1
                            "VALUES (" + id + ", " + evnt.id + ", " + voornaam + ", " + tussenvoegsel + ", " + achternaam + ", " + straat + ", " + huisnummer + ", " + postcode + ", " + woonplaats + ", " + paspoort + ", " + rekeningnr + ", " + foto + ", " + email + ", " + telefoon + ", " + mobiel + ", " + username + ", " + password + ", NULL, " + date1 + ", " + date2 + ", " + betaald +")") > 0;
         }
         //pas gebruiker aan
-        public bool modifyUser(User newuser, User olduser)
+        public bool modifyUser(int id, Event evnt, string voornaam, string tussenvoegsel, string achternaam, string straat, string huisnummer, string postcode, string woonplaats, string paspoort, string rekeningnr, string foto, string email, string telefoon, string mobiel, string username, string password, DateTime date1, DateTime date2, bool betaald)
         {
-            return true;
+            //connect!
+            return doQuery("UPDATE Gebruiker (Id = " + id + ", Event = " + evnt + ", Voornaam = " + voornaam + ", Tussenvoegsel = " + tussenvoegsel + ", Achternaam = " + achternaam + ", Straat = " + straat + ", Huisnummer = " + huisnummer + ", Postcode = " + postcode + ", Woonplaats = " + woonplaats + ", Paspoort = " + paspoort + ", Rekeningnr = " + rekeningnr + ", Foto = " + foto + ", Email = " + email + ", Telefoon = " + telefoon + ", Mobiel = " + mobiel + ", Username = " + username + ", Password = " + paspoort + ", Startdatum = " + date1 + ", Einddatum = " + date2 + ", Betaald = " + betaald + ")") > 0;
         }
         //verwijder gebruiker
         public bool deleteUser(User user)
@@ -36,15 +37,15 @@ namespace ICT4Events_Group1
             List<Dictionary<string, object>> data = getQuery("SELECT Id, Username, Voornaam, Tussenvoegsel, Achternaam FROM Gebruiker");
 
             for (int c = 0; c < data.Count; c++)
-                ret.Add(new User((int)data[c]["id"], (string)data[c]["username"], (string)data[c]["voornaam"], (string)data[c]["tussenvoegsel"], (string)data[c]["achternaam"]));
+                ret.Add(new User(Convert.ToInt32(data[c]["id"]), (string)data[c]["username"], (string)data[c]["voornaam"], (string)data[c]["tussenvoegsel"], (string)data[c]["achternaam"]));
             
             return ret;
         }
         //zoek gebruiker op RFID
-        public  List<Dictionary<string, object>> getDataRFID(RFID_ rfid)
+        public  List<Dictionary<string, object>> getDataID(int id)
         {
             //string code = "SELECT * FROM GEBRUIKER WHERE RFID = " + rfid.Code + ";";
-            List<Dictionary<string, object>> data = getQuery("SELECT * FROM Gebruiker WHERE RFID = " + rfid.Code);
+            List<Dictionary<string, object>> data = getQuery("SELECT * FROM Gebruiker WHERE Id = " + id);
             return data;
         }
         //Controleer of gebruikersnaam bestaat in de database

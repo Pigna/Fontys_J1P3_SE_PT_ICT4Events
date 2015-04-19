@@ -21,10 +21,12 @@ namespace ICT4Events_Group1
         public GebruikerAanpasForm(/*User user*/)
         {
             InitializeComponent();
-            /*this.selectedUser = user;
+            /*
+            this.selectedUser = user;
 
             //getuser data | Put data into a array?
             dataList = userdb.getDataRFID(selectedUser.rfid);
+            
             cbEvent.SelectedValue = (Event)dataList[0]["event"];
             tbVoornaam.Text = (string)dataList[0]["voornaam"];
             tbTussenvoegsel.Text = (string)dataList[0]["tussenvoegsel"];

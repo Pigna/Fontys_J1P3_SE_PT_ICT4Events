@@ -81,7 +81,7 @@ namespace ICT4Events_Group1
             {
                 try
                 {
-                    if (endata.GetCode(Convert.ToString(tbxRFID.Text)) && endata.Getid(tbxSearch.Text))
+                    if (endata.GetCode(Convert.ToString(tbxRFID.Text)))
                     {
                         bool result = endata.activateCode(Convert.ToInt32(tbxSearch.Text), tbxRFID.Text);
                         if (result)
@@ -244,6 +244,17 @@ namespace ICT4Events_Group1
             else
             {
                 MessageBox.Show("rfid is uitgescant");
+            }
+        }
+
+        private void btn_aanw_Click(object sender, EventArgs e)
+        {
+            List<Dictionary<string, object>> data = endata.GenerateList();
+            string aanwezig = "";
+            for (int c = 0; c < data.Count; c++)
+            {
+                aanwezig = "\n" + (string)data[c]["voornaam"] + " " + (string)data[c]["tussenvoegsel"] + " " + (string)data[c]["achternaam"];
+                MessageBox.Show(aanwezig);
             }
         }
 

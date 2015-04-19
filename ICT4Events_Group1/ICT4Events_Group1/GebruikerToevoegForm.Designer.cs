@@ -69,6 +69,7 @@
             this.btnFotoLocation = new System.Windows.Forms.Button();
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
+            this.btnAanpassen = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnAanmaken
@@ -79,6 +80,7 @@
             this.btnAanmaken.TabIndex = 28;
             this.btnAanmaken.Text = "Aanmaken";
             this.btnAanmaken.UseVisualStyleBackColor = true;
+            this.btnAanmaken.Visible = false;
             this.btnAanmaken.Click += new System.EventHandler(this.btnAanmaken_Click);
             // 
             // btnAnnuleren
@@ -416,11 +418,23 @@
             this.label19.TabIndex = 71;
             this.label19.Text = "Profiel foto";
             // 
+            // btnAanpassen
+            // 
+            this.btnAanpassen.Location = new System.Drawing.Point(38, 25);
+            this.btnAanpassen.Name = "btnAanpassen";
+            this.btnAanpassen.Size = new System.Drawing.Size(100, 23);
+            this.btnAanpassen.TabIndex = 72;
+            this.btnAanpassen.Text = "Aanpassen";
+            this.btnAanpassen.UseVisualStyleBackColor = true;
+            this.btnAanpassen.Visible = false;
+            this.btnAanpassen.Click += new System.EventHandler(this.btnAanpassen_Click);
+            // 
             // GebruikerToevoegForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(642, 481);
+            this.Controls.Add(this.btnAanpassen);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.btnFotoLocation);
@@ -512,5 +526,6 @@
         private System.Windows.Forms.Button btnFotoLocation;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Button btnAanpassen;
     }
 }

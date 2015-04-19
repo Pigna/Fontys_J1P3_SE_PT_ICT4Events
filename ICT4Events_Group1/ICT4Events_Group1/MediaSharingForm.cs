@@ -142,7 +142,10 @@ namespace ICT4Events_Group1
 
         private void lblLike_Click(object sender, EventArgs e)
         {
-
+            Message bericht = new Message(idcount, tbMessage.Text);
+            User gebruiker = new User(idcount, "Nick", "Nick", "", "Liebregts");
+            mediasharing.sendLike(bericht, gebruiker, idcount);
+            idcount++;
         }
 
         private void btnHide_Click(object sender, EventArgs e)

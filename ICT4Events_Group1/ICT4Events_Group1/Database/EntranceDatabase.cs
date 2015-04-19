@@ -17,9 +17,11 @@ namespace ICT4Events_Group1
         {
             return true;
         }
-        public List<User> GenerateList()
+        public List<Dictionary<string, object>> GenerateList()
         {
-            return null;
+            List<Dictionary<string, object>> data = getQuery("SELECT voornaam, tussenvoegsel, achternaam FROM gebruiker WHERE rfid IS NOT null");
+            
+            return data;
         }
         public List<Dictionary<string, object>> GetContact(int id)
         {
@@ -109,7 +111,7 @@ namespace ICT4Events_Group1
         {
             List<Dictionary<string, object>> data = getQuery("SELECT rfid FROM gebruiker WHERE id = '" + id + "'");
 
-            if (data.Count == 0)
+            if (data == null)
             {
                 return true;
             }

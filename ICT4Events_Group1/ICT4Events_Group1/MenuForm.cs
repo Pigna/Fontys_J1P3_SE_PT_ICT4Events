@@ -63,7 +63,7 @@ namespace ICT4Events_Group1
         {
             Open(new EntranceForm());
         }
-
+        //berichten
         private void button1_Click(object sender, EventArgs e)
         {
             Open(new BerichtBeheerForm());
