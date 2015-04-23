@@ -77,7 +77,7 @@ namespace ICT4Events_Group1
         }
         private void btnAanpassen_Click(object sender, EventArgs e)
         {
-            string selectedEvent = (string)cbEvent.SelectedValue;
+            Event selectedEvent =  (Event) cbEvent.SelectedItem;
             string voornaam = tbVoornaam.Text;
             string tussenvoegsel = tbTussenvoegsel.Text; //niet verplicht
             string achternaam = tbAchternaam.Text;
@@ -100,21 +100,21 @@ namespace ICT4Events_Group1
             //Check of verplichte velden niet leeg zijn.
             if
             (
-            selectedEvent != "" &
-            voornaam != "" &
-            achternaam != "" &
-            straat != "" &
-            huisnummer != "" &
-            postcode != "" &
-            woonplaats != "" &
-            rekeningnr != "" &
-            email != "" &
-            username != "" &
-            password != "" &
-            passwordcheck != "" &
-            startdatum != null &
-            einddatum != null &
-            Paspoort != "" &
+            selectedEvent != null &&
+            voornaam != "" &&
+            achternaam != "" &&
+            straat != "" &&
+            huisnummer != "" &&
+            postcode != "" &&
+            woonplaats != "" &&
+            rekeningnr != "" &&
+            email != "" &&
+            username != "" &&
+            password != "" &&
+            passwordcheck != "" &&
+            startdatum != null &&
+            einddatum != null &&
+            Paspoort != "" &&
             Profielfoto != ""
             )
             {
@@ -128,7 +128,7 @@ namespace ICT4Events_Group1
                         //check password
                         if (CheckPasswordFormat(password) && password == passwordcheck)
                         {
-                            userdb.adduser(1, GetEvent(selectedEvent), voornaam, tussenvoegsel, achternaam, straat, huisnummer, postcode, woonplaats, Paspoort, rekeningnr, Profielfoto, email, vastnr, mobielnr, username, password, startdatum, einddatum, betaald);
+                            userdb.adduser(1, selectedEvent, voornaam, tussenvoegsel, achternaam, straat, huisnummer, postcode, woonplaats, Paspoort, rekeningnr, Profielfoto, email, vastnr, mobielnr, username, password, startdatum, einddatum, betaald);
                             User user = new User(1, username, voornaam, tussenvoegsel, achternaam);
                             tbVoornaam.Clear();
                             tbTussenvoegsel.Clear(); //niet verplicht

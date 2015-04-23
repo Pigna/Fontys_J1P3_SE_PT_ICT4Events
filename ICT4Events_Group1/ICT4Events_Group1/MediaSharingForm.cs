@@ -66,10 +66,10 @@ namespace ICT4Events_Group1
             if (tbTitle.Text != "" || tbMessage.Text != "")
             {
                 Message bericht = new Message(idcount, tbMessage.Text);
-                mediasharing.sendMessage(bericht, idcount, tbMessage.Text);
+                mediasharing.sendMessage(bericht, ((User)mediasharing.Logged).Id, tbMessage.Text);
                 tbMessage1.Text = tbTitle.Text + Environment.NewLine + tbMessage.Text;
                 panelPicture.Controls.Clear();
-                lblPoster.Text = "Nick"; //hier moet de naam opgevraagd worden uit de database.
+                lblPoster.Text = ((User)mediasharing.Logged).Username; //hier moet de naam opgevraagd worden uit de database.
             }
             else
             {
@@ -143,8 +143,7 @@ namespace ICT4Events_Group1
         private void lblLike_Click(object sender, EventArgs e)
         {
             Message bericht = new Message(idcount, tbMessage.Text);
-            User gebruiker = new User(idcount, "Nick", "Nick", "", "Liebregts");
-            mediasharing.sendLike(bericht, gebruiker, idcount);
+            mediasharing.sendLike(bericht, (User)mediasharing.Logged, idcount);
             idcount++;
         }
 

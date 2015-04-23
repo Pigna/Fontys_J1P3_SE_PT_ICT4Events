@@ -57,7 +57,10 @@ namespace ICT4Events_Group1
                 cmd.Connection = con;
                 cmd.CommandText = query;
                 cmd.CommandType = System.Data.CommandType.Text;
+                OracleTransaction transact = cmd.Connection.BeginTransaction();
+                cmd.Transaction = transact;
                 int ret = cmd.ExecuteNonQuery();
+                transact.Commit();
             Disconnect();
                 return ret;
 
