@@ -98,7 +98,7 @@ namespace ICT4Events_Group1
 
         private void btnProfile_Click(object sender, EventArgs e)
         {
-            // gegevens uit de database
+           // gegevens uit de database
         }
 
         private void tbTitle_Enter(object sender, EventArgs e)
