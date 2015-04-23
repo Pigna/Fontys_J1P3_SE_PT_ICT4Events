@@ -37,18 +37,21 @@ namespace ICT4Events_Group1
 
         private void btnDeleteUser_Click(object sender, EventArgs e)
         {
-            if (userdb.deleteUser((User)lbxUsers.SelectedItem))
+            if (lbxUsers.SelectedItem != null)
             {
-                lbxUsers.Items.Remove(lbxUsers.SelectedItem);
+                if (userdb.deleteUser((User)lbxUsers.SelectedItem))
+                {
+                    lbxUsers.Items.Remove(lbxUsers.SelectedItem);
                     userlist.Clear();
                     userlist = userdb.getUserlist();
-                MessageBox.Show("Employee verwijdert.");
+                    MessageBox.Show("Gebruiker verwijdert.");
+                }
             }
         }
 
         private void btnEditUser_Click(object sender, EventArgs e)
         {
-            if (!(lbxUsers.SelectedItem == null || lbxUsers.SelectedItem == ""))
+            if (!(lbxUsers.SelectedItem == null))
             {
                 User asd = (User)lbxUsers.SelectedItem;
                 GebruikerToevoegForm editUser = new GebruikerToevoegForm(asd.Id);

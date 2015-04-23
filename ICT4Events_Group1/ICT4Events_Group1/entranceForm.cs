@@ -41,7 +41,7 @@ namespace ICT4Events_Group1
             {
                 try
                 {
-                    //  current = new User(Convert.ToInt16(cur["ID"]), (string) cur["USERNAME"], (string) cur["VOORNAAM"], (string) cur["TUSSENVOEGSEL"], (string) cur["ACHTERNAAM"]);
+                 
             
                     List<Dictionary<string, object>> data = endata.GetContact(Convert.ToInt32(tbxSearch.Text));
                     Dictionary<string, object> cur = data[0];
@@ -253,7 +253,7 @@ namespace ICT4Events_Group1
             string aanwezig = "";
             for (int c = 0; c < data.Count; c++)
             {
-                  aanwezig = "/n" + (string)data[c]["voornaam"] + " " + (string)data[c]["tussenvoegsel"] + " " + (string)data[c]["achternaam"];
+                  aanwezig = "\n" + (string)data[c]["voornaam"] + " " + (string)data[c]["tussenvoegsel"] + " " + (string)data[c]["achternaam"];
                  MessageBox.Show(aanwezig);
             }
         }

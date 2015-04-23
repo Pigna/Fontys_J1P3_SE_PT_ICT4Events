@@ -19,45 +19,45 @@ namespace ICT4Events_Group1
         int idcount = 1;
         bool click = false;
         string path;
-        
+
         public MediaSharingForm()
         {
             InitializeComponent();
         }
-              
+
         private void tbSearch_KeyDown(object sender, KeyEventArgs e)
         {
             int i = 0;
-           
+
             if (e.KeyCode == Keys.Enter)    //als er op enter gedrukt wordt dan...
             {
                 if (lbCategorie.Items.Contains(tbSearch.Text))
-                {                    
+                {
                     //doe niets
                 }
                 else
                 {
-                        foreach (String text in categorie)
-                    {                    
+                    foreach (String text in categorie)
+                    {
                         if (tbSearch.Text == text)
                         {
-                            tbSearch.Font = new Font(DefaultFont.FontFamily, DefaultFont.Size, FontStyle.Bold);                         
+                            tbSearch.Font = new Font(DefaultFont.FontFamily, DefaultFont.Size, FontStyle.Bold);
                         }
-                        else if(i==0)
-                        {                        
+                        else if (i == 0)
+                        {
                             lbCategorie.Items.Add(tbSearch.Text);
                             i++;
-                        }                        
-                    }
-                        if (i == 0)
-                        {
-                            categorie.Add(tbSearch.Text);
-                            lbCategorie.Items.Add(tbSearch.Text);
                         }
-                        i = 0;
+                    }
+                    if (i == 0)
+                    {
+                        categorie.Add(tbSearch.Text);
+                        lbCategorie.Items.Add(tbSearch.Text);
+                    }
+                    i = 0;
                 }
-                         
-                
+
+
             }
         }
 
@@ -110,8 +110,8 @@ namespace ICT4Events_Group1
         }
 
         private void tbMessage_Enter(object sender, EventArgs e)
-        {            
-                tbMessage.Clear();            
+        {
+            tbMessage.Clear();
         }
 
         private void tbSearch_Enter(object sender, EventArgs e)
@@ -163,12 +163,12 @@ namespace ICT4Events_Group1
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-           
+
         }
 
         private void btnUpload_Click(object sender, EventArgs e)
         {
-            OpenFileDialog openfile = new OpenFileDialog();                   
+            OpenFileDialog openfile = new OpenFileDialog();
             DialogResult dr = openfile.ShowDialog();
             if (dr == System.Windows.Forms.DialogResult.OK)
             {
@@ -184,7 +184,7 @@ namespace ICT4Events_Group1
                         pb.Width = loadedImage.Width;
                         pb.Image = loadedImage;
                         panelPicture.Controls.Add(pb);
-                    }                    
+                    }
                     catch (Exception ex)
                     {
                         // Could not load the image - probably related to Windows file system permissions.
@@ -195,7 +195,7 @@ namespace ICT4Events_Group1
                 }
             }
             path = openfile.FileName;
-        }        
+        }
 
         private void btnImage_Click(object sender, EventArgs e)
         {
