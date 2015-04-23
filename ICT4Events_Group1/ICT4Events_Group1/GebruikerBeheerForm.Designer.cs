@@ -46,6 +46,7 @@
             this.btnSearch.TabIndex = 21;
             this.btnSearch.Text = "Zoeken";
             this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // lbxUsers
             // 

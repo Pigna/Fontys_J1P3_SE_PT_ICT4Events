@@ -135,7 +135,7 @@ namespace ICT4Events_Group1
         {
             int Id = getLatestId("Rented");
 
-            if (doQuery("INSERT INTO Rented (Id, Gebruiker, Rentable, AfstaanEmployee, AfstaanDatum, TerugkomDatum) VALUES (" + Id + ", " + user + ", " + item + ", " + ((Employee)Logged).id + ", to_date('" + start.ToString("MM-dd-yyyy hh:m") + "','MM-DD-YYYY hh24:MI'), to_date('" + back.ToString("MM-dd-yyyy hh:m") + "','MM-DD-YYYY hh24:MI'))") > 0)
+            if (doQuery("INSERT INTO Rented (Id, Gebruiker, Rentable, AfstaanEmployee, AfstaanDatum, TerugkomDatum) VALUES (" + Id + ", " + user + ", " + item + ", " + ((Employee)Logged).id + ", to_date('" + start.ToString("MM-dd-yyyy hh:mm") + "','MM-DD-YYYY hh24:MI'), to_date('" + back.ToString("MM-dd-yyyy hh:mm") + "','MM-DD-YYYY hh24:MI'))") > 0)
                 return doQuery("UPDATE Rentable SET Aanwezig = 0 WHERE Id = " + item) > 0;
 
             return false;

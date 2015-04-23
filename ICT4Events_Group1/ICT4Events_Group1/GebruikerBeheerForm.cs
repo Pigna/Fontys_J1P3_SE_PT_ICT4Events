@@ -32,10 +32,7 @@ namespace ICT4Events_Group1
         private void btnRefresh_Click(object sender, EventArgs e)
         {
             lbxUsers.Items.Clear();
-            foreach (User user in userlist)
-            {
-                lbxUsers.Items.Add(user);
-            }
+            lbxUsers.Items.AddRange(userdb.getUserlist().ToArray());
         }
 
         private void btnDeleteUser_Click(object sender, EventArgs e)
@@ -43,20 +40,26 @@ namespace ICT4Events_Group1
             if (userdb.deleteUser((User)lbxUsers.SelectedItem))
             {
                 lbxUsers.Items.Remove(lbxUsers.SelectedItem);
-                foreach (User user in userlist)
-                {
                     userlist.Clear();
                     userlist = userdb.getUserlist();
-                }
                 MessageBox.Show("Employee verwijdert.");
             }
         }
 
         private void btnEditUser_Click(object sender, EventArgs e)
         {
-            User asd = (User)lbxUsers.SelectedItem;
-            GebruikerToevoegForm editUser = new GebruikerToevoegForm(asd.Id);
-            editUser.ShowDialog();
+            if (!(lbxUsers.SelectedItem == null || lbxUsers.SelectedItem == ""))
+            {
+                User asd = (User)lbxUsers.SelectedItem;
+                GebruikerToevoegForm editUser = new GebruikerToevoegForm(asd.Id);
+                editUser.ShowDialog();
+            }
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            lbxUsers.Items.Clear();
+            lbxUsers.Items.AddRange(userdb.getUserList(tbxSearch.Text).ToArray());
         }
     }
 }

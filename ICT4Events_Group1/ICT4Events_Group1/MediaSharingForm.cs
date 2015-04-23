@@ -16,7 +16,6 @@ namespace ICT4Events_Group1
         MediaSharingDatabase mediasharing = new MediaSharingDatabase();
         Reactie reactie = new Reactie();
         List<String> categorie = new List<String>();
-        UserDatabase userdatabase = new UserDatabase();        
         int idcount = 1;
         bool click = false;
         string path;
@@ -67,12 +66,10 @@ namespace ICT4Events_Group1
             if (tbTitle.Text != "" || tbMessage.Text != "")
             {
                 Message bericht = new Message(idcount, tbMessage.Text);
-                mediasharing.sendMessage(bericht, idcount, tbMessage.Text);
+                mediasharing.sendMessage(bericht, ((User)mediasharing.Logged).Id, tbMessage.Text);
                 tbMessage1.Text = tbTitle.Text + Environment.NewLine + tbMessage.Text;
                 panelPicture.Controls.Clear();
-                lblPoster.Text = "Nick"; //hier moet de naam opgevraagd worden uit de database.
-                mediasharing.sendMessage(bericht, idcount, tbTitle.Text + tbMessage.Text);
-                idcount++;
+                lblPoster.Text = ((User)mediasharing.Logged).Username; //hier moet de naam opgevraagd worden uit de database.
             }
             else
             {
@@ -82,11 +79,6 @@ namespace ICT4Events_Group1
 
         private void btnLike_Click(object sender, EventArgs e)
         {
-            Message likeMessage = new Message(idcount, tbTitle.Text + tbMessage.Text);
-            idcount++;
-            User user = new User(idcount, "Nick", "Nick", "", "Liebregts");
-            idcount++;
-            
             if (click == false)
             {
                 btnLike.BackColor = Color.Green;
@@ -95,7 +87,6 @@ namespace ICT4Events_Group1
             else if (click == true)
             {
                 btnLike.BackColor = Color.Transparent;
-                mediasharing.sendLike(likeMessage, user, idcount);
                 click = false;
             }
         }
@@ -152,8 +143,7 @@ namespace ICT4Events_Group1
         private void lblLike_Click(object sender, EventArgs e)
         {
             Message bericht = new Message(idcount, tbMessage.Text);
-            User gebruiker = new User(idcount, "Nick", "Nick", "", "Liebregts");
-            mediasharing.sendLike(bericht, gebruiker, idcount);
+            mediasharing.sendLike(bericht, (User)mediasharing.Logged, idcount);
             idcount++;
         }
 
