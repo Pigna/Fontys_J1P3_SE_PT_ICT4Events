@@ -12,6 +12,8 @@ namespace ICT4Events_Group1
 {
     public partial class Reactie : Form
     {
+        MediaSharingDatabase mediasharing = new MediaSharingDatabase();
+       int idcount = 101;
 
         string path;
 
@@ -21,7 +23,10 @@ namespace ICT4Events_Group1
         }
 
         private void btnPost_Click(object sender, EventArgs e)
-        {             
+        {
+            Message bericht = new Message(idcount, tbTitle.Text + tbMessage.Text);
+            mediasharing.sendMessage(bericht, idcount, tbTitle.Text + tbMessage.Text);
+            idcount++;
             this.Close();
         }
 

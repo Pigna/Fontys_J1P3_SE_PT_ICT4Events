@@ -16,6 +16,7 @@ namespace ICT4Events_Group1
         MediaSharingDatabase mediasharing = new MediaSharingDatabase();
         Reactie reactie = new Reactie();
         List<String> categorie = new List<String>();
+        UserDatabase userdatabase = new UserDatabase();        
         int idcount = 1;
         bool click = false;
         string path;
@@ -70,6 +71,8 @@ namespace ICT4Events_Group1
                 tbMessage1.Text = tbTitle.Text + Environment.NewLine + tbMessage.Text;
                 panelPicture.Controls.Clear();
                 lblPoster.Text = "Nick"; //hier moet de naam opgevraagd worden uit de database.
+                mediasharing.sendMessage(bericht, idcount, tbTitle.Text + tbMessage.Text);
+                idcount++;
             }
             else
             {
@@ -79,6 +82,11 @@ namespace ICT4Events_Group1
 
         private void btnLike_Click(object sender, EventArgs e)
         {
+            Message likeMessage = new Message(idcount, tbTitle.Text + tbMessage.Text);
+            idcount++;
+            User user = new User(idcount, "Nick", "Nick", "", "Liebregts");
+            idcount++;
+            
             if (click == false)
             {
                 btnLike.BackColor = Color.Green;
@@ -87,6 +95,7 @@ namespace ICT4Events_Group1
             else if (click == true)
             {
                 btnLike.BackColor = Color.Transparent;
+                mediasharing.sendLike(likeMessage, user, idcount);
                 click = false;
             }
         }
