@@ -109,13 +109,13 @@ namespace ICT4Events_Group1
             switch (soort)
             {
                 case Soort.Alles:
-                    query = "SELECT ID, RFID, PRIJSPERDAG, NAAM, BESCHRIJVING, AANWEZIG FROM (SELECT r.*, i.TYPE AS CATEGORIE FROM RENTABLE r JOIN ITEM i ON i.SOORT = r.ID UNION ALL SELECT ID, RFID, PRIJSPERDAG, NAAM, BESCHRIJVING || ' | ' || OMGEVING || ' | Personen: ' || PERSONEN as BESCHRIJVING, AANWEZIG, 'Spot' AS CATEGORIE FROM RENTABLE r JOIN SPOT s ON s.SOORT = r.ID ) WHERE CATEGORIE = '" + cat + "' AND NAAM LIKE '%" + find + "%' OR BESCHRIJVING LIKE '%" + find + "%'";
+                    query = "SELECT ID,  PRIJSPERDAG, NAAM, BESCHRIJVING, AANWEZIG FROM (SELECT r.*, i.TYPE AS CATEGORIE FROM RENTABLE r JOIN ITEM i ON i.SOORT = r.ID UNION ALL SELECT ID,  PRIJSPERDAG, NAAM, BESCHRIJVING || ' | ' || OMGEVING || ' | Personen: ' || PERSONEN as BESCHRIJVING, AANWEZIG, 'Spot' AS CATEGORIE FROM RENTABLE r JOIN SPOT s ON s.SOORT = r.ID ) WHERE CATEGORIE = '" + cat + "' AND NAAM LIKE '%" + find + "%' OR BESCHRIJVING LIKE '%" + find + "%'";
                     break;
                 case Soort.Huurbaar:
-                    query = "SELECT ID, RFID, PRIJSPERDAG, NAAM, BESCHRIJVING, AANWEZIG FROM (SELECT r.*, i.TYPE AS CATEGORIE FROM RENTABLE r JOIN ITEM i ON i.SOORT = r.ID UNION ALL SELECT ID, RFID, PRIJSPERDAG, NAAM, BESCHRIJVING || ' | ' || OMGEVING || ' | Personen: ' || PERSONEN as BESCHRIJVING, AANWEZIG, 'Spot' AS CATEGORIE FROM RENTABLE r JOIN SPOT s ON s.SOORT = r.ID ) WHERE CATEGORIE = '" + cat + "' AND AANWEZIG = 1 AND NAAM LIKE '%" + find + "%' OR BESCHRIJVING LIKE '%" + find + "%'";
+                    query = "SELECT ID,  PRIJSPERDAG, NAAM, BESCHRIJVING, AANWEZIG FROM (SELECT r.*, i.TYPE AS CATEGORIE FROM RENTABLE r JOIN ITEM i ON i.SOORT = r.ID UNION ALL SELECT ID,  PRIJSPERDAG, NAAM, BESCHRIJVING || ' | ' || OMGEVING || ' | Personen: ' || PERSONEN as BESCHRIJVING, AANWEZIG, 'Spot' AS CATEGORIE FROM RENTABLE r JOIN SPOT s ON s.SOORT = r.ID ) WHERE CATEGORIE = '" + cat + "' AND AANWEZIG = 1 AND NAAM LIKE '%" + find + "%' OR BESCHRIJVING LIKE '%" + find + "%'";
                     break;
                 default:
-                    query = "SELECT ID, RFID, PRIJSPERDAG, NAAM, BESCHRIJVING, AANWEZIG FROM (SELECT r.*, i.TYPE AS CATEGORIE FROM RENTABLE r JOIN ITEM i ON i.SOORT = r.ID UNION ALL SELECT ID, RFID, PRIJSPERDAG, NAAM, BESCHRIJVING || ' | ' || OMGEVING || ' | Personen: ' || PERSONEN as BESCHRIJVING, AANWEZIG, 'Spot' AS CATEGORIE FROM RENTABLE r JOIN SPOT s ON s.SOORT = r.ID ) WHERE CATEGORIE = '" + cat + "' AND AANWEZIG = 0 AND NAAM LIKE '%" + find + "%' OR BESCHRIJVING LIKE '%" + find + "%'";
+                    query = "SELECT ID,  PRIJSPERDAG, NAAM, BESCHRIJVING, AANWEZIG FROM (SELECT r.*, i.TYPE AS CATEGORIE FROM RENTABLE r JOIN ITEM i ON i.SOORT = r.ID UNION ALL SELECT ID,  PRIJSPERDAG, NAAM, BESCHRIJVING || ' | ' || OMGEVING || ' | Personen: ' || PERSONEN as BESCHRIJVING, AANWEZIG, 'Spot' AS CATEGORIE FROM RENTABLE r JOIN SPOT s ON s.SOORT = r.ID ) WHERE CATEGORIE = '" + cat + "' AND AANWEZIG = 0 AND NAAM LIKE '%" + find + "%' OR BESCHRIJVING LIKE '%" + find + "%'";
                     break;
             }
 
@@ -164,10 +164,10 @@ namespace ICT4Events_Group1
         public bool checkrfid(string rfid)
         {
             List<Dictionary<string, object>> data = getQuery("SELECT id FROM gebruiker WHERE rfid ='" + rfid + "'");
-            if( data == null)
-            {  return false; }
+            if( data[0]["id"] == null)
+            {  return true; }
             else 
-            { return true;}
+            { return false;}
         }
     }
 }
