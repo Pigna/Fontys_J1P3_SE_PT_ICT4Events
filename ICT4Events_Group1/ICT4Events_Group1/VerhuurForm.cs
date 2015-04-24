@@ -16,7 +16,7 @@ namespace ICT4Events_Group1
     {
         VerhuurDatabase db = new VerhuurDatabase();
         string cat = null;
-        RFID rfid = new RFID();
+         RFID rfid = new RFID();
 
         public VerhuurForm()
         {
@@ -196,12 +196,12 @@ namespace ICT4Events_Group1
         }
         void rfid_Attach(object sender, AttachEventArgs e)
         {
-            rfid.Antenna = true;
+         
         }
 
         void rfid_Detach(object sender, DetachEventArgs e)
         {
-            rfid.Antenna = false;
+
         }
 
 
