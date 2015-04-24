@@ -16,16 +16,18 @@ namespace ICT4Events_Group1
     public partial class EntranceForm : Form
     {
         EntranceDatabase endata = new EntranceDatabase();
-        private RFID rfid;
+       // private RFID rfid;
+       RFID rfid = new RFID();
 
         public EntranceForm()
         {
             InitializeComponent();
+           
 
-            rfid = new RFID();
+            
 
-           // rfid.Attach += new AttachEventHandler(rfid_Attach);
-          // rfid.Detach += new DetachEventHandler(rfid_Detach);
+            rfid.Attach += new AttachEventHandler(rfid_Attach);
+           rfid.Detach += new DetachEventHandler(rfid_Detach);
        
 
             rfid.Tag += new TagEventHandler(rfid_Tag);
@@ -128,6 +130,22 @@ namespace ICT4Events_Group1
         {
             tbxRFID.Text = "";
             tb_proto.Text = "";
+        }
+
+         
+        void rfid_Attach(object sender, AttachEventArgs e)
+        {
+            rfid.Antenna = true;
+        }
+
+        void rfid_Detach(object sender, DetachEventArgs e)
+        {
+            rfid.Antenna = false;
+        }
+
+        public void form_close()
+        {
+            rfid.Antenna = false;
         }
 
 
@@ -257,6 +275,8 @@ namespace ICT4Events_Group1
                  MessageBox.Show(aanwezig);
             }
         }
+
+
 
 
     }

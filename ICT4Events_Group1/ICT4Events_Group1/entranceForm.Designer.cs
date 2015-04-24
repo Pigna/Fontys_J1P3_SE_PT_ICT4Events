@@ -212,6 +212,7 @@
             this.Controls.Add(this.tbxSearch);
             this.Name = "EntranceForm";
             this.Text = "entranceForm";
+           // this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.EntranceForm_FormClosing);
             this.profile.ResumeLayout(false);
             this.profile.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_profile)).EndInit();
