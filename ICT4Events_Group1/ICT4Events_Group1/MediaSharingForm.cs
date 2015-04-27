@@ -16,15 +16,33 @@ namespace ICT4Events_Group1
         MediaSharingDatabase mediasharing = new MediaSharingDatabase();
         Reactie reactie = new Reactie();
         List<String> categorie = new List<String>();
-        int idcount = 1;
+        List<Message> messagelist = new List<Message>();
+        List<Message> commentlist = new List<Message>();
+        Event event_;
         bool click = false;
         string path;
 
         public MediaSharingForm()
         {
             InitializeComponent();
+            //get event from the userdb
+            event_ = mediasharing.getEvent((User)mediasharing.Logged);
+            //get list of last 100 messages
+            getListMessages();
         }
-
+        //get list of last 100 messages
+        private void getListMessages()
+        {
+            messagelist.Clear();
+            messagelist = mediasharing.getMessages(event_);
+            lbPosts.Items.AddRange(messagelist.ToArray());
+        }
+        private void getListComments()
+        {
+            commentlist.Clear();
+            commentlist = mediasharing.getMessages(event_);
+            lbComments.Items.AddRange(commentlist.ToArray());
+        }
         private void tbSearch_KeyDown(object sender, KeyEventArgs e)
         {
             int i = 0;
@@ -65,10 +83,13 @@ namespace ICT4Events_Group1
         {
             if (tbTitle.Text != "" || tbMessage.Text != "")
             {
-                Message bericht = new Message(idcount, tbMessage.Text);
-                mediasharing.sendMessage(bericht, ((User)mediasharing.Logged).Id, tbMessage.Text);
-                tbMessage1.Text = tbTitle.Text + Environment.NewLine + tbMessage.Text;
-                panelPicture.Controls.Clear();
+                DateTime.Now.ToString("M/d/yyyy");
+                Message bericht = new Message(mediasharing.getLatestId("message"), tbTitle.Text, tbMessage.Text, (User)mediasharing.Logged);
+                if (mediasharing.sendMessage(bericht)) { MessageBox.Show("goed"); }
+                else { MessageBox.Show("Fout"); }
+                getListMessages();
+                //tbMessage1.Text = tbTitle.Text + Environment.NewLine + tbMessage.Text;
+                //panelPicture.Controls.Clear();
                 lblPoster.Text = ((User)mediasharing.Logged).Username; //hier moet de naam opgevraagd worden uit de database.
             }
             else
@@ -82,11 +103,13 @@ namespace ICT4Events_Group1
             if (click == false)
             {
                 btnLike.BackColor = Color.Green;
+                mediasharing.sendLike((Message)lbPosts.SelectedItem, (User)mediasharing.Logged, mediasharing.getLatestId("Leuk"));
                 click = true;
             }
             else if (click == true)
             {
                 btnLike.BackColor = Color.Transparent;
+                mediasharing.sendDislike((Message)lbPosts.SelectedItem, (User)mediasharing.Logged);
                 click = false;
             }
         }
@@ -142,9 +165,9 @@ namespace ICT4Events_Group1
 
         private void lblLike_Click(object sender, EventArgs e)
         {
-            Message bericht = new Message(idcount, tbMessage.Text);
+            /*Message bericht = new Message(idcount, tbMessage.Text);
             mediasharing.sendLike(bericht, (User)mediasharing.Logged, idcount);
-            idcount++;
+            idcount++;*/
         }
 
         private void btnHide_Click(object sender, EventArgs e)
