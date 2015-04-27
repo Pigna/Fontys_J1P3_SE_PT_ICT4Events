@@ -14,10 +14,13 @@ namespace ICT4Events_Group1
     {
         private Database db;
         private Dictionary<string, bool> opened;
+        private UserLogin login;
 
-        public MenuForm()
+        public MenuForm(UserLogin log)
         {
             InitializeComponent();
+
+            login = log;
 
             db = new Database();
             opened = new Dictionary<string, bool>();
@@ -67,6 +70,13 @@ namespace ICT4Events_Group1
         private void button1_Click(object sender, EventArgs e)
         {
             Open(new BerichtBeheerForm());
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            db.logOut();
+            login.Show();
+            this.Hide();
         }
     }
 }

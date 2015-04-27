@@ -35,7 +35,7 @@ namespace ICT4Events_Group1
             else
             {
                 this.Hide();
-                Form open = new MediaSharingForm();
+                Form open = new MediaSharingForm(this);
                 open.Closed += (s, args) => this.Close();
                 open.Show();
             }
@@ -53,7 +53,7 @@ namespace ICT4Events_Group1
             else
             {
                 this.Hide();
-                Form open = new MenuForm();
+                Form open = new MenuForm(this);
                 open.Closed += (s, args) => this.Close();
                 open.Show();
             }

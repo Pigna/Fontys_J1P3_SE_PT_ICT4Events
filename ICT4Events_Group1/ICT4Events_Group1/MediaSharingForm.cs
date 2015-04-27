@@ -21,10 +21,14 @@ namespace ICT4Events_Group1
         Event event_;
         bool click = false;
         string path;
+        UserLogin login;
 
-        public MediaSharingForm()
+        public MediaSharingForm(UserLogin log)
         {
             InitializeComponent();
+
+            login = log;
+
             //get event from the userdb
             event_ = mediasharing.getEvent((User)mediasharing.Logged);
             //get list of last 100 messages
@@ -270,7 +274,14 @@ namespace ICT4Events_Group1
 
         private void lbCategorie_SelectedValueChanged(object sender, EventArgs e)
         {
+            mediasharing.logOut();
+            login.Show();
+            this.Hide();
+        }
 
+        private void btnLogout_Click_1(object sender, EventArgs e)
+        {
+            
         }
     }
 }
