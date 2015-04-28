@@ -16,7 +16,7 @@ namespace ICT4Events_Group1
     public partial class EntranceForm : Form
     {
         EntranceDatabase endata = new EntranceDatabase();
-      
+
 
         public EntranceForm()
         {
@@ -30,8 +30,8 @@ namespace ICT4Events_Group1
             {
                 try
                 {
-                 
-            
+
+
                     List<Dictionary<string, object>> data = endata.GetContact(Convert.ToInt32(tbxSearch.Text));
                     Dictionary<string, object> cur = data[0];
 
@@ -64,7 +64,7 @@ namespace ICT4Events_Group1
             if (tbxRFID.Text == "")
             {
                 MessageBox.Show("rfid niet gevonden");
-                 
+
             }
             else
             {
@@ -93,24 +93,13 @@ namespace ICT4Events_Group1
         }
 
 
-        
-
-
-
-
-
-       
-         
-            
-        
-       
 
         private void btn_scanIn_Click(object sender, EventArgs e)
         {
             int result = endata.activateCode(Convert.ToInt32(tbxRFID.Text));
-            if(result == 0)
+            if (result == 0)
             { MessageBox.Show("linken niet gelukt"); }
-            else if ( result == 1)
+            else if (result == 1)
             {
                 MessageBox.Show("is al in gescant");
             }
@@ -141,8 +130,8 @@ namespace ICT4Events_Group1
             string aanwezig = "";
             for (int c = 0; c < data.Count; c++)
             {
-                  aanwezig = "\n" + (string)data[c]["voornaam"] + " " + (string)data[c]["tussenvoegsel"] + " " + (string)data[c]["achternaam"];
-                 MessageBox.Show(aanwezig);
+                aanwezig = "\n" + (string)data[c]["voornaam"] + " " + (string)data[c]["tussenvoegsel"] + " " + (string)data[c]["achternaam"];
+                MessageBox.Show(aanwezig);
             }
         }
 
