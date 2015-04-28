@@ -45,11 +45,13 @@
             this.tbReactieMessage = new System.Windows.Forms.TextBox();
             this.tbReactieTitle = new System.Windows.Forms.TextBox();
             this.panelPicture = new System.Windows.Forms.Panel();
+            this.btnHide = new System.Windows.Forms.Button();
             this.tbTitle = new System.Windows.Forms.TextBox();
             this.btnPost = new System.Windows.Forms.Button();
             this.btnUpload = new System.Windows.Forms.Button();
             this.tbMessage = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btnImage = new System.Windows.Forms.Button();
             this.tbMessage1 = new System.Windows.Forms.TextBox();
             this.lblComment = new System.Windows.Forms.Label();
             this.pbPhoto = new System.Windows.Forms.PictureBox();

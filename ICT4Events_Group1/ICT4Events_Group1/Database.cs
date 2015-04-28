@@ -147,5 +147,11 @@ namespace ICT4Events_Group1
                 return Convert.ToInt16(data[0]["id"]);
             return -1;
         }
+
+        public void logOut()
+        {
+            current = null;
+            loggedInEmployee = null;
+        }
     }
 }

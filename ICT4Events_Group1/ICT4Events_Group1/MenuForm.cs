@@ -8,16 +8,23 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace ICT4Events_Group1
 {
     public partial class MenuForm : Form
     {
         private Database db;
         private Dictionary<string, bool> opened;
-
-        public MenuForm()
+        private UserLogin login;
+        EntranceForm EF;
+        VerhuurForm VF;
+        public MenuForm(UserLogin log)
         {
             InitializeComponent();
+
+      
+
+            login = log;
 
             db = new Database();
             opened = new Dictionary<string, bool>();
@@ -30,6 +37,7 @@ namespace ICT4Events_Group1
         private void Open(Form open)
         {
             //this.Hide();
+            
             open.Closed += (s, args) => this.opened[open.Name] = false;
 
             if (opened.ContainsKey(open.Name) && opened[open.Name] == false)
@@ -46,7 +54,8 @@ namespace ICT4Events_Group1
 
         private void btnVerhuur_Click(object sender, EventArgs e)
         {
-            Open(new VerhuurForm());
+            VF = new VerhuurForm();
+            Open(VF);
         }
 
         private void btnBeheer_Click(object sender, EventArgs e)
@@ -61,12 +70,38 @@ namespace ICT4Events_Group1
 
         private void btn_Entrance_Click(object sender, EventArgs e)
         {
-            Open(new EntranceForm());
+            EF = new EntranceForm();
+            Open(EF);
         }
         //berichten
         private void button1_Click(object sender, EventArgs e)
         {
             Open(new BerichtBeheerForm());
+        }
+
+
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            db.logOut();
+            login.Show();
+            this.Hide();
+        }
+
+        public void rfidLost()
+        {
+           if(opened.ContainsKey("EntranceForm") && opened["EntranceForm"])
+                EF.rfidLost();
+           if (opened.ContainsKey("VerhuurForm") && opened["VerhuurForm"])
+               VF.rfidLost();
+        }
+
+        public void RfidGet(string tag)
+        {
+            if (opened.ContainsKey("EntranceForm") && opened["EntranceForm"])
+                EF.RfidGet(tag);
+            if (opened.ContainsKey("VerhuurForm") && opened["VerhuurForm"])
+                VF.rfidget(tag);
         }
     }
 }
