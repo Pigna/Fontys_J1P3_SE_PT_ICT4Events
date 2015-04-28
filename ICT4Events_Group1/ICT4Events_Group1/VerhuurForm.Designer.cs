@@ -82,7 +82,7 @@
             // 
             this.btnSearch.Location = new System.Drawing.Point(26, 45);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(99, 18);
+            this.btnSearch.Size = new System.Drawing.Size(99, 23);
             this.btnSearch.TabIndex = 10;
             this.btnSearch.Text = "Zoeken";
             this.btnSearch.UseVisualStyleBackColor = true;
@@ -171,9 +171,9 @@
             this.groupBox1.Controls.Add(this.lblItemID);
             this.groupBox1.Controls.Add(this.lblDate1);
             this.groupBox1.Location = new System.Drawing.Point(26, 167);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(492, 73);
             this.groupBox1.TabIndex = 21;
             this.groupBox1.TabStop = false;
@@ -183,7 +183,7 @@
             // 
             this.ckbBetaald.AutoSize = true;
             this.ckbBetaald.Location = new System.Drawing.Point(429, 20);
-            this.ckbBetaald.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ckbBetaald.Margin = new System.Windows.Forms.Padding(2);
             this.ckbBetaald.Name = "ckbBetaald";
             this.ckbBetaald.Size = new System.Drawing.Size(62, 17);
             this.ckbBetaald.TabIndex = 24;
@@ -234,9 +234,9 @@
             this.groupBox2.Controls.Add(this.txtItem);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Location = new System.Drawing.Point(26, 257);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox2.Size = new System.Drawing.Size(492, 54);
             this.groupBox2.TabIndex = 22;
             this.groupBox2.TabStop = false;
@@ -256,7 +256,7 @@
             // 
             this.ckbBetaald_b.AutoSize = true;
             this.ckbBetaald_b.Location = new System.Drawing.Point(173, 20);
-            this.ckbBetaald_b.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ckbBetaald_b.Margin = new System.Windows.Forms.Padding(2);
             this.ckbBetaald_b.Name = "ckbBetaald_b";
             this.ckbBetaald_b.Size = new System.Drawing.Size(62, 17);
             this.ckbBetaald_b.TabIndex = 27;
@@ -295,7 +295,7 @@
             this.radAlles.AutoSize = true;
             this.radAlles.Checked = true;
             this.radAlles.Location = new System.Drawing.Point(11, 20);
-            this.radAlles.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.radAlles.Margin = new System.Windows.Forms.Padding(2);
             this.radAlles.Name = "radAlles";
             this.radAlles.Size = new System.Drawing.Size(47, 17);
             this.radAlles.TabIndex = 23;
@@ -308,7 +308,7 @@
             // 
             this.radHuurbaar.AutoSize = true;
             this.radHuurbaar.Location = new System.Drawing.Point(11, 43);
-            this.radHuurbaar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.radHuurbaar.Margin = new System.Windows.Forms.Padding(2);
             this.radHuurbaar.Name = "radHuurbaar";
             this.radHuurbaar.Size = new System.Drawing.Size(69, 17);
             this.radHuurbaar.TabIndex = 24;
@@ -320,7 +320,7 @@
             // 
             this.radVerhuurd.AutoSize = true;
             this.radVerhuurd.Location = new System.Drawing.Point(11, 66);
-            this.radVerhuurd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.radVerhuurd.Margin = new System.Windows.Forms.Padding(2);
             this.radVerhuurd.Name = "radVerhuurd";
             this.radVerhuurd.Size = new System.Drawing.Size(68, 17);
             this.radVerhuurd.TabIndex = 25;
@@ -334,9 +334,9 @@
             this.groupBox3.Controls.Add(this.radVerhuurd);
             this.groupBox3.Controls.Add(this.radHuurbaar);
             this.groupBox3.Location = new System.Drawing.Point(418, 20);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox3.Size = new System.Drawing.Size(99, 93);
             this.groupBox3.TabIndex = 26;
             this.groupBox3.TabStop = false;
@@ -344,9 +344,9 @@
             // 
             // btnReset
             // 
-            this.btnReset.Location = new System.Drawing.Point(26, 136);
+            this.btnReset.Location = new System.Drawing.Point(26, 133);
             this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(99, 18);
+            this.btnReset.Size = new System.Drawing.Size(99, 21);
             this.btnReset.TabIndex = 27;
             this.btnReset.Text = "Terug";
             this.btnReset.UseVisualStyleBackColor = true;

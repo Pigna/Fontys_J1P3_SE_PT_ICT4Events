@@ -41,8 +41,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btn_rlink = new System.Windows.Forms.Button();
-            this.tb_proto = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.btn_aanw = new System.Windows.Forms.Button();
             this.profile.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_profile)).BeginInit();
@@ -115,7 +113,7 @@
             // 
             // btn_scanUit
             // 
-            this.btn_scanUit.Location = new System.Drawing.Point(210, 95);
+            this.btn_scanUit.Location = new System.Drawing.Point(104, 90);
             this.btn_scanUit.Name = "btn_scanUit";
             this.btn_scanUit.Size = new System.Drawing.Size(100, 23);
             this.btn_scanUit.TabIndex = 30;
@@ -168,22 +166,6 @@
             this.btn_rlink.UseVisualStyleBackColor = true;
             this.btn_rlink.Click += new System.EventHandler(this.btn_rlink_Click);
             // 
-            // tb_proto
-            // 
-            this.tb_proto.Location = new System.Drawing.Point(104, 97);
-            this.tb_proto.Name = "tb_proto";
-            this.tb_proto.Size = new System.Drawing.Size(100, 20);
-            this.tb_proto.TabIndex = 37;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(60, 97);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(25, 13);
-            this.label3.TabIndex = 38;
-            this.label3.Text = "prot";
-            // 
             // btn_aanw
             // 
             this.btn_aanw.Location = new System.Drawing.Point(63, 291);
@@ -200,8 +182,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(901, 350);
             this.Controls.Add(this.btn_aanw);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.tb_proto);
             this.Controls.Add(this.btn_rlink);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -212,7 +192,6 @@
             this.Controls.Add(this.tbxSearch);
             this.Name = "EntranceForm";
             this.Text = "entranceForm";
-           // this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.EntranceForm_FormClosing);
             this.profile.ResumeLayout(false);
             this.profile.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_profile)).EndInit();
@@ -237,8 +216,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btn_rlink;
-        private System.Windows.Forms.TextBox tb_proto;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btn_aanw;
     }
 }
