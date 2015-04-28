@@ -35,12 +35,14 @@ namespace ICT4Events_Group1
         {
             messagelist.Clear();
             messagelist = mediasharing.getMessages(event_);
+            lbPosts.Items.Clear();
             lbPosts.Items.AddRange(messagelist.ToArray());
         }
-        private void getListComments()
+        private void getListComments(Message selectedItem)
         {
             commentlist.Clear();
-            commentlist = mediasharing.getMessages(event_);
+            commentlist = mediasharing.getMessages(event_, selectedItem);
+            lbComments.Items.Clear();
             lbComments.Items.AddRange(commentlist.ToArray());
         }
         private void tbSearch_KeyDown(object sender, KeyEventArgs e)
@@ -100,18 +102,17 @@ namespace ICT4Events_Group1
 
         private void btnLike_Click(object sender, EventArgs e)
         {
-            if (click == false)
+            if (!click)
             {
                 btnLike.BackColor = Color.Green;
                 mediasharing.sendLike((Message)lbPosts.SelectedItem, (User)mediasharing.Logged, mediasharing.getLatestId("Leuk"));
-                click = true;
             }
-            else if (click == true)
+            else
             {
                 btnLike.BackColor = Color.Transparent;
                 mediasharing.sendDislike((Message)lbPosts.SelectedItem, (User)mediasharing.Logged);
-                click = false;
             }
+            click = !click;
         }
 
         private void btnComment_Click(object sender, EventArgs e)
@@ -271,6 +272,22 @@ namespace ICT4Events_Group1
         private void lbCategorie_SelectedValueChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void lbPosts_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Message message = (Message)lbPosts.SelectedItem;
+            getListComments(message);
+            if (mediasharing.checkLike(message, (User)mediasharing.Logged))
+            {
+                btnLike.BackColor = Color.Green;
+                click = true;
+            }
+            else
+            {
+                btnLike.BackColor = Color.Transparent;
+                click = false;
+            }
         }
     }
 }

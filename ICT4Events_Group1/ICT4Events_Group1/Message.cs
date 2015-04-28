@@ -15,12 +15,14 @@ namespace ICT4Events_Group1
         private int id;
         private string title;
         private string content;
+        private int reactieOp;
         private string attachment; // file
         public int Id { get { return id; } }
         public string Inhoud { get { return content; } }
         public string Title { get { return title; } }
         public string Attachment { get { return attachment; } }
         public User Auteur { get { return auteur; } }
+        public int ReactieOp { get { return reactieOp; } }
         public Message(int id, string titel, string inhoud, User auteur)
         {
             this.id = id;
@@ -28,11 +30,12 @@ namespace ICT4Events_Group1
             this.content = inhoud;
             this.auteur = auteur;
         }
-        public Message (int id, string inhoud, User auteur)
+        public Message (int id, string inhoud, User auteur, int reactieOp)
         {
             this.id = id;
             this.content = inhoud;
             this.auteur = auteur;
+            this.reactieOp = reactieOp;
         }
         public void addReactie(Message reactie)
         {
@@ -42,6 +45,17 @@ namespace ICT4Events_Group1
         public void addReacties(List<Message> reacties)
         {
             commentlist.AddRange(reacties);
+        }
+        public override string ToString()
+        {
+            string str = Auteur.Username + " ";
+            if (Title != "")
+            {
+                str += Title;
+            }
+            str += " " + Inhoud;
+
+            return str;
         }
     }
 }

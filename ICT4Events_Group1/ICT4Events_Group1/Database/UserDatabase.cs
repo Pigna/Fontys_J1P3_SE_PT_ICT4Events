@@ -85,7 +85,7 @@ namespace ICT4Events_Group1
         public bool emailExist(string email)
         {
             List<Dictionary<string, object>> data = getQuery("SELECT Id FROM Gebruiker WHERE Email = '" + email + "'");
-            if ((data.Count > 0) || (data.Count == null))
+            if (data.Count > 0)
             {
                 return true;
             }
