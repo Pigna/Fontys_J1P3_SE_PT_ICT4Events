@@ -83,9 +83,14 @@ namespace ICT4Events_Group1
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            db.logOut();
-            login.Show();
-            this.Hide();
+            if (opened.ContainsValue(true))
+                MessageBox.Show("Sluit eerst alle geopende schermen.");
+            else
+            {
+                db.logOut();
+                login.Show();
+                this.Hide();
+            }
         }
 
         public void rfidLost()
