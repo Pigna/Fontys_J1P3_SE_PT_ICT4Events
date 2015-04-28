@@ -96,7 +96,7 @@ namespace ICT4Events_Group1
                 getListMessages();
                 //tbMessage1.Text = tbTitle.Text + Environment.NewLine + tbMessage.Text;
                 //panelPicture.Controls.Clear();
-                lblPoster.Text = ((User)mediasharing.Logged).Username; //hier moet de naam opgevraagd worden uit de database.
+                //lblPoster.Text = ((User)mediasharing.Logged).Username; //hier moet de naam opgevraagd worden uit de database.
             }
             else
             {
@@ -177,6 +177,7 @@ namespace ICT4Events_Group1
 
         private void btnHide_Click(object sender, EventArgs e)
         {   //checkt of button hide nog niet is geklikt.
+            /*
             if (click == false)
             {
                 groupBox3.Visible = false;
@@ -187,6 +188,7 @@ namespace ICT4Events_Group1
                 groupBox3.Visible = true;
                 click = false;
             }
+             */
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
@@ -248,7 +250,7 @@ namespace ICT4Events_Group1
 
         private void btnRefresh_Click(object sender, EventArgs e)
         {
-            tbReactieTitle.Text = reactie.GetTitle();
+            //tbReactieTitle.Text = reactie.GetTitle();
             tbReactieMessage.Text = reactie.GetMessage();
         }
 
@@ -289,6 +291,7 @@ namespace ICT4Events_Group1
         {
             Message message = (Message)lbPosts.SelectedItem;
             getListComments(message);
+            tbReactieMessage.
             if (mediasharing.checkLike(message, (User)mediasharing.Logged))
             {
                 btnLike.BackColor = Color.Green;
