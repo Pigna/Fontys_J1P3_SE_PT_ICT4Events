@@ -34,27 +34,30 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lbCategorie = new System.Windows.Forms.ListBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnImage = new System.Windows.Forms.Button();
+            this.lbComments = new System.Windows.Forms.ListBox();
+            this.lbPosts = new System.Windows.Forms.ListBox();
+            this.btnReactieImage = new System.Windows.Forms.Button();
             this.btnRefresh = new System.Windows.Forms.Button();
+            this.btnHide = new System.Windows.Forms.Button();
+            this.btnLike = new System.Windows.Forms.Button();
             this.lblReactie = new System.Windows.Forms.Label();
             this.tbReactieMessage = new System.Windows.Forms.TextBox();
             this.tbReactieTitle = new System.Windows.Forms.TextBox();
             this.panelPicture = new System.Windows.Forms.Panel();
-            this.btnHide = new System.Windows.Forms.Button();
             this.tbTitle = new System.Windows.Forms.TextBox();
+            this.btnPost = new System.Windows.Forms.Button();
+            this.btnUpload = new System.Windows.Forms.Button();
+            this.tbMessage = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.btnImage = new System.Windows.Forms.Button();
             this.tbMessage1 = new System.Windows.Forms.TextBox();
             this.lblComment = new System.Windows.Forms.Label();
             this.pbPhoto = new System.Windows.Forms.PictureBox();
             this.lblLike = new System.Windows.Forms.Label();
             this.btnComment = new System.Windows.Forms.Button();
             this.lblPoster = new System.Windows.Forms.Label();
-            this.btnLike = new System.Windows.Forms.Button();
-            this.btnPost = new System.Windows.Forms.Button();
-            this.btnUpload = new System.Windows.Forms.Button();
-            this.tbMessage = new System.Windows.Forms.TextBox();
             this.btnProfile = new System.Windows.Forms.Button();
-            this.btnReactieImage = new System.Windows.Forms.Button();
+            this.btnLogout = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -103,15 +106,18 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.btnImage);
+            this.groupBox2.Controls.Add(this.lbComments);
+            this.groupBox2.Controls.Add(this.lbPosts);
             this.groupBox2.Controls.Add(this.btnReactieImage);
             this.groupBox2.Controls.Add(this.btnRefresh);
+            this.groupBox2.Controls.Add(this.btnHide);
+            this.groupBox2.Controls.Add(this.btnLike);
             this.groupBox2.Controls.Add(this.lblReactie);
             this.groupBox2.Controls.Add(this.tbReactieMessage);
             this.groupBox2.Controls.Add(this.tbReactieTitle);
             this.groupBox2.Controls.Add(this.panelPicture);
-            this.groupBox2.Controls.Add(this.btnHide);
             this.groupBox2.Controls.Add(this.tbTitle);
-            this.groupBox2.Controls.Add(this.groupBox3);
             this.groupBox2.Controls.Add(this.btnPost);
             this.groupBox2.Controls.Add(this.btnUpload);
             this.groupBox2.Controls.Add(this.tbMessage);
@@ -120,6 +126,42 @@
             this.groupBox2.Size = new System.Drawing.Size(505, 398);
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
+            // 
+            // btnImage
+            // 
+            this.btnImage.Location = new System.Drawing.Point(6, 108);
+            this.btnImage.Name = "btnImage";
+            this.btnImage.Size = new System.Drawing.Size(75, 23);
+            this.btnImage.TabIndex = 15;
+            this.btnImage.Text = "View image";
+            this.btnImage.UseVisualStyleBackColor = true;
+            this.btnImage.Click += new System.EventHandler(this.btnImage_Click);
+            // 
+            // lbComments
+            // 
+            this.lbComments.FormattingEnabled = true;
+            this.lbComments.Location = new System.Drawing.Point(310, 134);
+            this.lbComments.Name = "lbComments";
+            this.lbComments.Size = new System.Drawing.Size(189, 95);
+            this.lbComments.TabIndex = 22;
+            // 
+            // lbPosts
+            // 
+            this.lbPosts.FormattingEnabled = true;
+            this.lbPosts.Location = new System.Drawing.Point(6, 134);
+            this.lbPosts.Name = "lbPosts";
+            this.lbPosts.Size = new System.Drawing.Size(296, 95);
+            this.lbPosts.TabIndex = 21;
+            // 
+            // btnReactieImage
+            // 
+            this.btnReactieImage.Location = new System.Drawing.Point(119, 357);
+            this.btnReactieImage.Name = "btnReactieImage";
+            this.btnReactieImage.Size = new System.Drawing.Size(75, 23);
+            this.btnReactieImage.TabIndex = 20;
+            this.btnReactieImage.Text = "Image";
+            this.btnReactieImage.UseVisualStyleBackColor = true;
+            this.btnReactieImage.Click += new System.EventHandler(this.btnReactieImage_Click);
             // 
             // btnRefresh
             // 
@@ -130,6 +172,27 @@
             this.btnRefresh.Text = "Refresh";
             this.btnRefresh.UseVisualStyleBackColor = true;
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
+            // btnHide
+            // 
+            this.btnHide.Location = new System.Drawing.Point(479, 108);
+            this.btnHide.Name = "btnHide";
+            this.btnHide.Size = new System.Drawing.Size(20, 20);
+            this.btnHide.TabIndex = 14;
+            this.btnHide.Text = "-";
+            this.btnHide.UseVisualStyleBackColor = true;
+            this.btnHide.Click += new System.EventHandler(this.btnHide_Click);
+            // 
+            // btnLike
+            // 
+            this.btnLike.BackColor = System.Drawing.SystemColors.Control;
+            this.btnLike.Location = new System.Drawing.Point(82, 108);
+            this.btnLike.Name = "btnLike";
+            this.btnLike.Size = new System.Drawing.Size(44, 23);
+            this.btnLike.TabIndex = 7;
+            this.btnLike.Text = "Like";
+            this.btnLike.UseVisualStyleBackColor = false;
+            this.btnLike.Click += new System.EventHandler(this.btnLike_Click);
             // 
             // lblReactie
             // 
@@ -161,54 +224,63 @@
             // 
             this.panelPicture.Location = new System.Drawing.Point(310, 9);
             this.panelPicture.Name = "panelPicture";
-            this.panelPicture.Size = new System.Drawing.Size(79, 92);
+            this.panelPicture.Size = new System.Drawing.Size(189, 92);
             this.panelPicture.TabIndex = 15;
-            // 
-            // btnHide
-            // 
-            this.btnHide.Location = new System.Drawing.Point(357, 107);
-            this.btnHide.Name = "btnHide";
-            this.btnHide.Size = new System.Drawing.Size(20, 20);
-            this.btnHide.TabIndex = 14;
-            this.btnHide.Text = "-";
-            this.btnHide.UseVisualStyleBackColor = true;
-            this.btnHide.Click += new System.EventHandler(this.btnHide_Click);
             // 
             // tbTitle
             // 
-            this.tbTitle.Location = new System.Drawing.Point(16, 6);
+            this.tbTitle.Location = new System.Drawing.Point(6, 6);
             this.tbTitle.Name = "tbTitle";
-            this.tbTitle.Size = new System.Drawing.Size(129, 20);
+            this.tbTitle.Size = new System.Drawing.Size(139, 20);
             this.tbTitle.TabIndex = 13;
             this.tbTitle.Text = "Title";
             this.tbTitle.Enter += new System.EventHandler(this.tbTitle_Enter);
             this.tbTitle.Leave += new System.EventHandler(this.tbTitle_Leave);
             // 
+            // btnPost
+            // 
+            this.btnPost.Location = new System.Drawing.Point(224, 75);
+            this.btnPost.Name = "btnPost";
+            this.btnPost.Size = new System.Drawing.Size(75, 23);
+            this.btnPost.TabIndex = 2;
+            this.btnPost.Text = "Post";
+            this.btnPost.UseVisualStyleBackColor = true;
+            this.btnPost.Click += new System.EventHandler(this.btnPost_Click);
+            // 
+            // btnUpload
+            // 
+            this.btnUpload.Location = new System.Drawing.Point(148, 75);
+            this.btnUpload.Name = "btnUpload";
+            this.btnUpload.Size = new System.Drawing.Size(75, 23);
+            this.btnUpload.TabIndex = 1;
+            this.btnUpload.Text = "Upload file";
+            this.btnUpload.UseVisualStyleBackColor = true;
+            this.btnUpload.Click += new System.EventHandler(this.btnUpload_Click);
+            // 
+            // tbMessage
+            // 
+            this.tbMessage.Location = new System.Drawing.Point(6, 32);
+            this.tbMessage.Multiline = true;
+            this.tbMessage.Name = "tbMessage";
+            this.tbMessage.Size = new System.Drawing.Size(296, 69);
+            this.tbMessage.TabIndex = 0;
+            this.tbMessage.Text = "New Message\r\n";
+            this.tbMessage.Enter += new System.EventHandler(this.tbMessage_Enter);
+            this.tbMessage.Leave += new System.EventHandler(this.tbMessage_Leave);
+            // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.btnImage);
             this.groupBox3.Controls.Add(this.tbMessage1);
             this.groupBox3.Controls.Add(this.lblComment);
             this.groupBox3.Controls.Add(this.pbPhoto);
             this.groupBox3.Controls.Add(this.lblLike);
             this.groupBox3.Controls.Add(this.btnComment);
             this.groupBox3.Controls.Add(this.lblPoster);
-            this.groupBox3.Controls.Add(this.btnLike);
-            this.groupBox3.Location = new System.Drawing.Point(17, 107);
+            this.groupBox3.Location = new System.Drawing.Point(10, 297);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(347, 127);
             this.groupBox3.TabIndex = 11;
             this.groupBox3.TabStop = false;
-            // 
-            // btnImage
-            // 
-            this.btnImage.Location = new System.Drawing.Point(6, 97);
-            this.btnImage.Name = "btnImage";
-            this.btnImage.Size = new System.Drawing.Size(75, 23);
-            this.btnImage.TabIndex = 15;
-            this.btnImage.Text = "Image";
-            this.btnImage.UseVisualStyleBackColor = true;
-            this.btnImage.Click += new System.EventHandler(this.btnImage_Click);
             // 
             // tbMessage1
             // 
@@ -249,7 +321,7 @@
             // 
             // btnComment
             // 
-            this.btnComment.Location = new System.Drawing.Point(266, 99);
+            this.btnComment.Location = new System.Drawing.Point(266, 100);
             this.btnComment.Name = "btnComment";
             this.btnComment.Size = new System.Drawing.Size(21, 21);
             this.btnComment.TabIndex = 9;
@@ -267,48 +339,6 @@
             this.lblPoster.TabIndex = 5;
             this.lblPoster.Text = "Naam poster";
             // 
-            // btnLike
-            // 
-            this.btnLike.BackColor = System.Drawing.SystemColors.Control;
-            this.btnLike.Location = new System.Drawing.Point(206, 100);
-            this.btnLike.Name = "btnLike";
-            this.btnLike.Size = new System.Drawing.Size(21, 21);
-            this.btnLike.TabIndex = 7;
-            this.btnLike.Text = "+";
-            this.btnLike.UseVisualStyleBackColor = false;
-            this.btnLike.Click += new System.EventHandler(this.btnLike_Click);
-            // 
-            // btnPost
-            // 
-            this.btnPost.Location = new System.Drawing.Point(223, 68);
-            this.btnPost.Name = "btnPost";
-            this.btnPost.Size = new System.Drawing.Size(75, 23);
-            this.btnPost.TabIndex = 2;
-            this.btnPost.Text = "Post";
-            this.btnPost.UseVisualStyleBackColor = true;
-            this.btnPost.Click += new System.EventHandler(this.btnPost_Click);
-            // 
-            // btnUpload
-            // 
-            this.btnUpload.Location = new System.Drawing.Point(142, 68);
-            this.btnUpload.Name = "btnUpload";
-            this.btnUpload.Size = new System.Drawing.Size(75, 23);
-            this.btnUpload.TabIndex = 1;
-            this.btnUpload.Text = "Upload file";
-            this.btnUpload.UseVisualStyleBackColor = true;
-            this.btnUpload.Click += new System.EventHandler(this.btnUpload_Click);
-            // 
-            // tbMessage
-            // 
-            this.tbMessage.Location = new System.Drawing.Point(16, 32);
-            this.tbMessage.Multiline = true;
-            this.tbMessage.Name = "tbMessage";
-            this.tbMessage.Size = new System.Drawing.Size(286, 69);
-            this.tbMessage.TabIndex = 0;
-            this.tbMessage.Text = "New Message\r\n";
-            this.tbMessage.Enter += new System.EventHandler(this.tbMessage_Enter);
-            this.tbMessage.Leave += new System.EventHandler(this.tbMessage_Leave);
-            // 
             // btnProfile
             // 
             this.btnProfile.Location = new System.Drawing.Point(455, 12);
@@ -319,21 +349,23 @@
             this.btnProfile.UseVisualStyleBackColor = true;
             this.btnProfile.Click += new System.EventHandler(this.btnProfile_Click);
             // 
-            // btnReactieImage
+            // btnLogout
             // 
-            this.btnReactieImage.Location = new System.Drawing.Point(119, 357);
-            this.btnReactieImage.Name = "btnReactieImage";
-            this.btnReactieImage.Size = new System.Drawing.Size(75, 23);
-            this.btnReactieImage.TabIndex = 20;
-            this.btnReactieImage.Text = "Image";
-            this.btnReactieImage.UseVisualStyleBackColor = true;
-            this.btnReactieImage.Click += new System.EventHandler(this.btnReactieImage_Click);
+            this.btnLogout.Location = new System.Drawing.Point(536, 12);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(75, 23);
+            this.btnLogout.TabIndex = 12;
+            this.btnLogout.Text = "Logout";
+            this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click_1);
             // 
             // MediaSharingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(764, 454);
+            this.Controls.Add(this.btnLogout);
+            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.btnProfile);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -378,5 +410,8 @@
         private System.Windows.Forms.TextBox tbReactieTitle;
         private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.Button btnReactieImage;
+        private System.Windows.Forms.ListBox lbComments;
+        private System.Windows.Forms.ListBox lbPosts;
+        private System.Windows.Forms.Button btnLogout;
     }
 }

@@ -19,9 +19,9 @@ namespace ICT4Events_Group1
         RFID rfid = new RFID();
         EntranceForm EF;
         VerhuurForm VF;
-        
+        private UserLogin login;
 
-        public MenuForm()
+        public MenuForm(UserLogin log)
         {
             InitializeComponent();
 
@@ -33,6 +33,8 @@ namespace ICT4Events_Group1
             rfid.TagLost += new TagEventHandler(rfid_TagLost);
 
             openCmdLine(rfid);
+
+            login = log;
 
             db = new Database();
             opened = new Dictionary<string, bool>();
@@ -222,5 +224,12 @@ namespace ICT4Events_Group1
             Application.Exit();
         }
         #endregion
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            db.logOut();
+            login.Show();
+            this.Hide();
+        }
     }
 }

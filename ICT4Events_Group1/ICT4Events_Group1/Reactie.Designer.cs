@@ -51,7 +51,7 @@
             this.btnPost.TabIndex = 16;
             this.btnPost.Text = "Post";
             this.btnPost.UseVisualStyleBackColor = true;
-            this.btnPost.Click += new System.EventHandler(this.btnPost_Click);
+            //this.btnPost.Click += new System.EventHandler(this.btnPost_Click);
             // 
             // btnUpload
             // 

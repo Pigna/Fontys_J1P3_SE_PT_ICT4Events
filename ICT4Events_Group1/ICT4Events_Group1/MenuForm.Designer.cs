@@ -33,14 +33,14 @@
             this.btnEvent = new System.Windows.Forms.Button();
             this.lblCur = new System.Windows.Forms.Label();
             this.btn_Entrance = new System.Windows.Forms.Button();
+            this.btnLogout = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnVerhuur
             // 
-            this.btnVerhuur.Location = new System.Drawing.Point(13, 49);
-            this.btnVerhuur.Margin = new System.Windows.Forms.Padding(4);
+            this.btnVerhuur.Location = new System.Drawing.Point(12, 41);
             this.btnVerhuur.Name = "btnVerhuur";
-            this.btnVerhuur.Size = new System.Drawing.Size(188, 28);
+            this.btnVerhuur.Size = new System.Drawing.Size(141, 23);
             this.btnVerhuur.TabIndex = 1;
             this.btnVerhuur.Text = "Verhuur";
             this.btnVerhuur.UseVisualStyleBackColor = true;
@@ -48,10 +48,9 @@
             // 
             // btnBeheer
             // 
-            this.btnBeheer.Location = new System.Drawing.Point(13, 85);
-            this.btnBeheer.Margin = new System.Windows.Forms.Padding(4);
+            this.btnBeheer.Location = new System.Drawing.Point(10, 70);
             this.btnBeheer.Name = "btnBeheer";
-            this.btnBeheer.Size = new System.Drawing.Size(188, 28);
+            this.btnBeheer.Size = new System.Drawing.Size(141, 23);
             this.btnBeheer.TabIndex = 2;
             this.btnBeheer.Text = "Gebruikers";
             this.btnBeheer.UseVisualStyleBackColor = true;
@@ -59,10 +58,9 @@
             // 
             // btnEvent
             // 
-            this.btnEvent.Location = new System.Drawing.Point(13, 121);
-            this.btnEvent.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEvent.Location = new System.Drawing.Point(10, 99);
             this.btnEvent.Name = "btnEvent";
-            this.btnEvent.Size = new System.Drawing.Size(188, 28);
+            this.btnEvent.Size = new System.Drawing.Size(141, 23);
             this.btnEvent.TabIndex = 4;
             this.btnEvent.Text = "Event";
             this.btnEvent.UseVisualStyleBackColor = true;
@@ -71,33 +69,43 @@
             // lblCur
             // 
             this.lblCur.AutoSize = true;
-            this.lblCur.Location = new System.Drawing.Point(460, 187);
+            this.lblCur.Location = new System.Drawing.Point(343, 117);
+            this.lblCur.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCur.Name = "lblCur";
-            this.lblCur.Size = new System.Drawing.Size(0, 17);
+            this.lblCur.Size = new System.Drawing.Size(0, 13);
             this.lblCur.TabIndex = 7;
             // 
             // btn_Entrance
             // 
-            this.btn_Entrance.Location = new System.Drawing.Point(13, 13);
-            this.btn_Entrance.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Entrance.Location = new System.Drawing.Point(12, 12);
             this.btn_Entrance.Name = "btn_Entrance";
-            this.btn_Entrance.Size = new System.Drawing.Size(188, 28);
+            this.btn_Entrance.Size = new System.Drawing.Size(141, 23);
             this.btn_Entrance.TabIndex = 0;
             this.btn_Entrance.Text = "Entrance";
             this.btn_Entrance.UseVisualStyleBackColor = true;
             this.btn_Entrance.Click += new System.EventHandler(this.btn_Entrance_Click);
             // 
+            // btnLogout
+            // 
+            this.btnLogout.Location = new System.Drawing.Point(12, 142);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(141, 23);
+            this.btnLogout.TabIndex = 9;
+            this.btnLogout.Text = "Logout";
+            this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            // 
             // MenuForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(214, 160);
+            this.ClientSize = new System.Drawing.Size(160, 177);
+            this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.btn_Entrance);
             this.Controls.Add(this.lblCur);
             this.Controls.Add(this.btnEvent);
             this.Controls.Add(this.btnBeheer);
             this.Controls.Add(this.btnVerhuur);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MenuForm";
             this.Text = "Menu";
             this.ResumeLayout(false);
@@ -112,5 +120,6 @@
         private System.Windows.Forms.Button btnEvent;
         private System.Windows.Forms.Label lblCur;
         private System.Windows.Forms.Button btn_Entrance;
+        private System.Windows.Forms.Button btnLogout;
     }
 }
