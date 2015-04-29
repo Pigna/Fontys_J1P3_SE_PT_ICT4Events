@@ -47,6 +47,7 @@
             this.btnUpload = new System.Windows.Forms.Button();
             this.tbMessage = new System.Windows.Forms.TextBox();
             this.btnProfile = new System.Windows.Forms.Button();
+            this.btnReact = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -93,6 +94,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.btnReact);
             this.groupBox2.Controls.Add(this.btnImage);
             this.groupBox2.Controls.Add(this.lbComments);
             this.groupBox2.Controls.Add(this.lbPosts);
@@ -114,7 +116,7 @@
             // 
             // btnImage
             // 
-            this.btnImage.Location = new System.Drawing.Point(182, 234);
+            this.btnImage.Location = new System.Drawing.Point(5, 350);
             this.btnImage.Name = "btnImage";
             this.btnImage.Size = new System.Drawing.Size(75, 23);
             this.btnImage.TabIndex = 15;
@@ -135,7 +137,7 @@
             this.lbPosts.FormattingEnabled = true;
             this.lbPosts.Location = new System.Drawing.Point(6, 134);
             this.lbPosts.Name = "lbPosts";
-            this.lbPosts.Size = new System.Drawing.Size(296, 95);
+            this.lbPosts.Size = new System.Drawing.Size(296, 212);
             this.lbPosts.TabIndex = 21;
             this.lbPosts.SelectedIndexChanged += new System.EventHandler(this.lbPosts_SelectedIndexChanged);
             // 
@@ -162,7 +164,7 @@
             // btnLike
             // 
             this.btnLike.BackColor = System.Drawing.SystemColors.Control;
-            this.btnLike.Location = new System.Drawing.Point(258, 234);
+            this.btnLike.Location = new System.Drawing.Point(81, 350);
             this.btnLike.Name = "btnLike";
             this.btnLike.Size = new System.Drawing.Size(44, 23);
             this.btnLike.TabIndex = 7;
@@ -184,7 +186,6 @@
             this.tbReactieMessage.Location = new System.Drawing.Point(310, 36);
             this.tbReactieMessage.Multiline = true;
             this.tbReactieMessage.Name = "tbReactieMessage";
-            this.tbReactieMessage.ReadOnly = true;
             this.tbReactieMessage.Size = new System.Drawing.Size(189, 67);
             this.tbReactieMessage.TabIndex = 17;
             // 
@@ -192,7 +193,7 @@
             // 
             this.panelPicture.Location = new System.Drawing.Point(310, 235);
             this.panelPicture.Name = "panelPicture";
-            this.panelPicture.Size = new System.Drawing.Size(189, 92);
+            this.panelPicture.Size = new System.Drawing.Size(189, 111);
             this.panelPicture.TabIndex = 15;
             // 
             // tbTitle
@@ -207,7 +208,7 @@
             // 
             // btnPost
             // 
-            this.btnPost.Location = new System.Drawing.Point(224, 79);
+            this.btnPost.Location = new System.Drawing.Point(227, 107);
             this.btnPost.Name = "btnPost";
             this.btnPost.Size = new System.Drawing.Size(75, 23);
             this.btnPost.TabIndex = 2;
@@ -217,7 +218,7 @@
             // 
             // btnUpload
             // 
-            this.btnUpload.Location = new System.Drawing.Point(148, 79);
+            this.btnUpload.Location = new System.Drawing.Point(151, 107);
             this.btnUpload.Name = "btnUpload";
             this.btnUpload.Size = new System.Drawing.Size(75, 23);
             this.btnUpload.TabIndex = 1;
@@ -245,6 +246,16 @@
             this.btnProfile.Text = "Profile";
             this.btnProfile.UseVisualStyleBackColor = true;
             this.btnProfile.Click += new System.EventHandler(this.btnProfile_Click);
+            // 
+            // btnReact
+            // 
+            this.btnReact.Location = new System.Drawing.Point(310, 107);
+            this.btnReact.Name = "btnReact";
+            this.btnReact.Size = new System.Drawing.Size(75, 23);
+            this.btnReact.TabIndex = 23;
+            this.btnReact.Text = "React";
+            this.btnReact.UseVisualStyleBackColor = true;
+            this.btnReact.Click += new System.EventHandler(this.btnReact_Click);
             // 
             // MediaSharingForm
             // 
@@ -285,5 +296,6 @@
         private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.ListBox lbComments;
         private System.Windows.Forms.ListBox lbPosts;
+        private System.Windows.Forms.Button btnReact;
     }
 }

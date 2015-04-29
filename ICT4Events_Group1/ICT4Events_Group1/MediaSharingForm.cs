@@ -291,7 +291,6 @@ namespace ICT4Events_Group1
         {
             Message message = (Message)lbPosts.SelectedItem;
             getListComments(message);
-            tbReactieMessage.
             if (mediasharing.checkLike(message, (User)mediasharing.Logged))
             {
                 btnLike.BackColor = Color.Green;
@@ -301,6 +300,28 @@ namespace ICT4Events_Group1
             {
                 btnLike.BackColor = Color.Transparent;
                 click = false;
+            }
+        }
+
+        private void btnReact_Click(object sender, EventArgs e)
+        {
+            string deReactie = tbReactieMessage.Text;
+            if(lbPosts.SelectedItem != null && deReactie != "")
+            {
+                Message selBericht = (Message)lbPosts.SelectedItem;
+                DateTime.Now.ToString("M/d/yyyy");
+                Message bericht = new Message(mediasharing.getLatestId("message"), deReactie, (User)mediasharing.Logged, selBericht.Id);
+                if (mediasharing.sendMessage(bericht)) { MessageBox.Show("goed"); }
+                else { MessageBox.Show("Fout"); }
+                getListComments(selBericht);
+                //tbMessage1.Text = tbTitle.Text + Environment.NewLine + tbMessage.Text;
+                //panelPicture.Controls.Clear();
+                //lblPoster.Text = ((User)mediasharing.Logged).Username; //hier moet de naam opgevraagd worden uit de database.
+                
+            }
+            else
+            {
+                MessageBox.Show("Selecteer eerst een bericht en maak een reactie");
             }
         }
     }
