@@ -1,14 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
-  <Class Name="ICT4Events_Group1.BerichtBeheerForm">
-    <Position X="26.75" Y="0.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAACAAAAAAAACAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>BerichtBeheerForm.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="ICT4Events_Group1.EntranceDatabase">
-    <Position X="10.25" Y="5.25" Width="3.25" />
+    <Position X="3.5" Y="5.25" Width="3.25" />
     <TypeIdentifier>
       <HashCode>AwAAAAAAAAAAAAEAAEAAAAAAAAAACAAAgAAAAACAAAA=</HashCode>
       <FileName>Database\EntranceDatabase.cs</FileName>
@@ -17,33 +10,37 @@
   <Class Name="ICT4Events_Group1.EventDatabase">
     <Position X="24.75" Y="5.25" Width="3.25" />
     <TypeIdentifier>
-      <HashCode>AAAIAAAAAAAAAAAAAIAAAAAAAAIAAAAAAAAAAAgAAIA=</HashCode>
+      <HashCode>AAAIAAAAAAAAAAAAAIAAAAAACgIAAAAAAAAAAAgAAIA=</HashCode>
       <FileName>Database\EventDatabase.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Employee" />
+      <Property Name="Event" />
+    </ShowAsAssociation>
   </Class>
   <Class Name="ICT4Events_Group1.MediaSharingDatabase">
-    <Position X="18.75" Y="5.25" Width="2.5" />
+    <Position X="17.75" Y="5.25" Width="2.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAQAAAAAAAAAAAAwAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAIAAAoAAQAAAAAAAAAAAAwAAAAAAAAAAAAAAAAQAA=</HashCode>
       <FileName>Database\MediaSharingDatabase.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ICT4Events_Group1.MessageDatabase">
-    <Position X="22" Y="5.25" Width="2" />
+    <Position X="20.5" Y="5.25" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAIAAAAAAAAA=</HashCode>
       <FileName>Database\MessageDatabase.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ICT4Events_Group1.UserDatabase">
-    <Position X="28.75" Y="5.25" Width="3.25" />
+    <Position X="33.5" Y="5.25" Width="3.25" />
     <TypeIdentifier>
-      <HashCode>AAAAAAIAAAAAAAACAAAIAAAAAAAAAAAgAAAAAAAAAgQ=</HashCode>
+      <HashCode>AAAAAAIAAAAAAAECAAAIAAAAAAAAAAAgAAAIAAAAAgQ=</HashCode>
       <FileName>Database\UserDatabase.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ICT4Events_Group1.VerhuurDatabase">
-    <Position X="14.25" Y="5.25" Width="3.75" />
+    <Position X="10.25" Y="5.25" Width="3.75" />
     <NestedTypes>
       <Enum Name="ICT4Events_Group1.VerhuurDatabase.Soort" Collapsed="true">
         <TypeIdentifier>
@@ -52,175 +49,414 @@
       </Enum>
     </NestedTypes>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAACAACAAAAgAAAAAAAAAAAAIAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAACAACAAAAgAEAAAAAAAAAAIAAABAAAA=</HashCode>
       <FileName>Database\VerhuurDatabase.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Item" />
+    </ShowAsAssociation>
   </Class>
   <Class Name="ICT4Events_Group1.Database">
     <Position X="19.5" Y="0.75" Width="3.25" />
     <TypeIdentifier>
-      <HashCode>AAQQIAAABAMAAAAAAAAAAYAAgAAAAAEAAAAAAAABAAA=</HashCode>
+      <HashCode>AAQQIAAABAMAAAAAAAAAAYAAiAAAAAEAAgAAAAABAAA=</HashCode>
       <FileName>Database.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Employee" />
+    </ShowAsAssociation>
   </Class>
   <Class Name="ICT4Events_Group1.Employee">
-    <Position X="16.75" Y="8.5" Width="1.5" />
+    <Position X="24" Y="1.75" Width="2.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAEAAAAAAEAAAEAAAAAAAAAAgAAAgA=</HashCode>
       <FileName>Employee.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="ICT4Events_Group1.Entrance">
-    <Position X="25.5" Y="8.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAgAAAAAQgBAAAAAIIAAAgIAAAIAAAAABAAAAAAAA=</HashCode>
-      <FileName>Entrance.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="ICT4Events_Group1.EntranceForm">
-    <Position X="41.25" Y="0.75" Width="1.5" />
+    <Position X="3.25" Y="8.5" Width="3.5" />
+    <Members>
+      <Field Name="btn_aanw" Hidden="true" />
+      <Field Name="btn_rlink" Hidden="true" />
+      <Field Name="btn_scanUit" Hidden="true" />
+      <Field Name="btnSearch" Hidden="true" />
+      <Field Name="components" Hidden="true" />
+      <Field Name="label1" Hidden="true" />
+      <Field Name="label2" Hidden="true" />
+      <Field Name="lb_adress" Hidden="true" />
+      <Field Name="lb_naam" Hidden="true" />
+      <Field Name="lb_payed" Hidden="true" />
+      <Field Name="profile" Hidden="true" />
+      <Field Name="tbxRFID" Hidden="true" />
+      <Field Name="tbxSearch" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
     <TypeIdentifier>
-      <HashCode>AAAAEAAJBGCABBAIAACAAYgKAAAAUwQgAAAAAQACEAY=</HashCode>
+      <HashCode>AAAAEAAJBCCABBAAAACAAYgKAAIAEAQgAAAACQAAEAY=</HashCode>
       <FileName>entranceForm.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="EntranceDatabase" />
+    </ShowAsAssociation>
   </Class>
   <Class Name="ICT4Events_Group1.Event">
-    <Position X="29" Y="8.5" Width="1.5" />
+    <Position X="22" Y="8.5" Width="2.25" />
     <TypeIdentifier>
-      <HashCode>QAABAAAAAAAAAAAAACAAAAQAAAAAAAAAAAAAQAAAAgA=</HashCode>
+      <HashCode>QAABAAAAAAAAAAAEACAAAAQAAAAAAAAAAAAAQAAAAgA=</HashCode>
       <FileName>Event.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="ICT4Events_Group1.EventBeheerForm">
-    <Position X="32.5" Y="0.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>EAgEpIAZACARABgBAACAAAAKAAQAAAYhADAgABQGIQo=</HashCode>
-      <FileName>EventBeheerForm.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="ICT4Events_Group1.GebruikerAanpasForm">
-    <Position X="39.5" Y="0.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>/0gAkAAMACgAAJBAKgDEAAACAAAAAYAACgAIgUCESbA=</HashCode>
-      <FileName>GebruikerAanpasForm.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="ICT4Events_Group1.GebruikerBeheerForm">
-    <Position X="23.75" Y="8.5" Width="1.5" />
+    <Position X="33.5" Y="8.5" Width="3.25" />
+    <Members>
+      <Field Name="btnDeleteUser" Hidden="true" />
+      <Field Name="btnEditUser" Hidden="true" />
+      <Field Name="btnNew" Hidden="true" />
+      <Field Name="btnRefresh" Hidden="true" />
+      <Field Name="btnSearch" Hidden="true" />
+      <Field Name="components" Hidden="true" />
+      <Method Name="Dispose" Hidden="true" />
+      <Method Name="InitializeComponent" Hidden="true" />
+      <Field Name="lbxUsers" Hidden="true" />
+      <Field Name="tbxSearch" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
     <TypeIdentifier>
-      <HashCode>AAAAEAEIACAQCIAAAgCIAAACAAAIAAoQAAAAAAAAAAI=</HashCode>
+      <HashCode>AAABEAEIgCAQCIAAAgCIAAACAAAIAAowAAAAAAAAAAI=</HashCode>
       <FileName>GebruikerBeheerForm.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="UserDatabase" />
+      <Property Name="User" />
+    </ShowAsAssociation>
   </Class>
   <Class Name="ICT4Events_Group1.GebruikerToevoegForm">
-    <Position X="37.75" Y="0.75" Width="1.5" />
+    <Position X="33.5" Y="10.5" Width="3" />
+    <Members>
+      <Field Name="btnAanmaken" Hidden="true" />
+      <Field Name="btnAanpassen" Hidden="true" />
+      <Field Name="btnAnnuleren" Hidden="true" />
+      <Field Name="btnFotoLocation" Hidden="true" />
+      <Field Name="btnPaspoortLocation" Hidden="true" />
+      <Field Name="cbBetaald" Hidden="true" />
+      <Field Name="cbEvent" Hidden="true" />
+      <Field Name="components" Hidden="true" />
+      <Field Name="dtpEinddatum" Hidden="true" />
+      <Field Name="dtpStartdatum" Hidden="true" />
+      <Field Name="label1" Hidden="true" />
+      <Field Name="label10" Hidden="true" />
+      <Field Name="label11" Hidden="true" />
+      <Field Name="label12" Hidden="true" />
+      <Field Name="label13" Hidden="true" />
+      <Field Name="label14" Hidden="true" />
+      <Field Name="label15" Hidden="true" />
+      <Field Name="label16" Hidden="true" />
+      <Field Name="label17" Hidden="true" />
+      <Field Name="label18" Hidden="true" />
+      <Field Name="label19" Hidden="true" />
+      <Field Name="label2" Hidden="true" />
+      <Field Name="label3" Hidden="true" />
+      <Field Name="label4" Hidden="true" />
+      <Field Name="label5" Hidden="true" />
+      <Field Name="label6" Hidden="true" />
+      <Field Name="label7" Hidden="true" />
+      <Field Name="label8" Hidden="true" />
+      <Field Name="label9" Hidden="true" />
+      <Field Name="tbAchternaam" Hidden="true" />
+      <Field Name="tbEmail" Hidden="true" />
+      <Field Name="tbHuisnummer" Hidden="true" />
+      <Field Name="tbMobielnr" Hidden="true" />
+      <Field Name="tbPassword" Hidden="true" />
+      <Field Name="tbPasswordCheck" Hidden="true" />
+      <Field Name="tbPostcode" Hidden="true" />
+      <Field Name="tbRekeningnr" Hidden="true" />
+      <Field Name="tbStraat" Hidden="true" />
+      <Field Name="tbTussenvoegsel" Hidden="true" />
+      <Field Name="tbUsername" Hidden="true" />
+      <Field Name="tbVastnr" Hidden="true" />
+      <Field Name="tbVoornaam" Hidden="true" />
+      <Field Name="tbWoonplaats" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <AssociationLine Name="UserDatabase" Type="ICT4Events_Group1.UserDatabase" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="36.5" Y="12.25" />
+        <Point X="37.366" Y="12.25" />
+        <Point X="37.366" Y="7.688" />
+        <Point X="36.75" Y="7.688" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="Event" Type="ICT4Events_Group1.Event" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="33.5" Y="12.875" />
+        <Point X="25.257" Y="12.875" />
+        <Point X="25.257" Y="10.854" />
+        <Point X="24.25" Y="10.854" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="EventDatabase" Type="ICT4Events_Group1.EventDatabase" ManuallyRouted="true">
+      <Path>
+        <Point X="33.5" Y="11.472" />
+        <Point X="29.327" Y="11.472" />
+        <Point X="29.327" Y="7.819" />
+        <Point X="27.219" Y="7.819" />
+        <Point X="27.219" Y="7.444" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-1.291" Y="0.06" />
+      </MemberNameLabel>
+    </AssociationLine>
     <TypeIdentifier>
-      <HashCode>/0gAgAQMACwQAJBAKgDECAACgAQAAYBACgAIgUCESbA=</HashCode>
+      <HashCode>/0gAgAQMgCwEAJBAKgDECAACggQAAYBACgAIgUCESbA=</HashCode>
       <FileName>GebruikerToevoegForm.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="UserDatabase" />
+      <Property Name="Event" />
+      <Property Name="EventDatabase" />
+    </ShowAsAssociation>
   </Class>
   <Class Name="ICT4Events_Group1.Item">
-    <Position X="27.25" Y="8.5" Width="1.5" />
+    <Position X="7.5" Y="5.25" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAEAAAAAAAgAAQAAAAAAQAAAAAAAgA=</HashCode>
       <FileName>Item.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="ICT4Events_Group1.MediaSharing">
-    <Position X="25" Y="0.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAIAQAAAACCAIAAAAAAAAgAABAAAUAgAAAAA=</HashCode>
-      <FileName>MediaSharing.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="ICT4Events_Group1.MediaSharingForm">
-    <Position X="34.25" Y="0.75" Width="1.5" />
+    <Position X="18.5" Y="8.5" Width="2.5" />
+    <Members>
+      <Field Name="btnHide" Hidden="true" />
+      <Field Name="btnImage" Hidden="true" />
+      <Field Name="btnLike" Hidden="true" />
+      <Field Name="btnPost" Hidden="true" />
+      <Field Name="btnProfile" Hidden="true" />
+      <Field Name="btnReact" Hidden="true" />
+      <Field Name="btnRefresh" Hidden="true" />
+      <Field Name="btnUpload" Hidden="true" />
+      <Field Name="components" Hidden="true" />
+      <Method Name="Dispose" Hidden="true" />
+      <Field Name="groupBox1" Hidden="true" />
+      <Field Name="groupBox2" Hidden="true" />
+      <Method Name="InitializeComponent" Hidden="true" />
+      <Field Name="lbCategorie" Hidden="true" />
+      <Field Name="lbComments" Hidden="true" />
+      <Field Name="lblCategorie" Hidden="true" />
+      <Field Name="lblReactie" Hidden="true" />
+      <Field Name="lbPosts" Hidden="true" />
+      <Field Name="panelPicture" Hidden="true" />
+      <Field Name="tbMessage" Hidden="true" />
+      <Field Name="tbReactieMessage" Hidden="true" />
+      <Field Name="tbSearch" Hidden="true" />
+      <Field Name="tbTitle" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <AssociationLine Name="UserLogin" Type="ICT4Events_Group1.UserLogin" ManuallyRouted="true">
+      <Path>
+        <Point X="21" Y="10.015" />
+        <Point X="21.75" Y="10.015" />
+        <Point X="21.75" Y="14.711" />
+        <Point X="38.5" Y="14.711" />
+        <Point X="38.5" Y="7.127" />
+      </Path>
+    </AssociationLine>
     <TypeIdentifier>
-      <HashCode>gEgEAkgkAHAYCKAoIBDKoUCaAIQUEACEACkCDEiAAAI=</HashCode>
+      <HashCode>kMgAAsgkQHAQCaAgIBDK4ECaApAEAAKAACkCrEiAUAA=</HashCode>
       <FileName>MediaSharingForm.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Message" />
+      <Property Name="MediaSharingDatabase" />
+      <Property Name="UserLogin" />
+      <Property Name="Event" />
+    </ShowAsAssociation>
   </Class>
   <Class Name="ICT4Events_Group1.MenuForm">
-    <Position X="22" Y="8.5" Width="1.5" />
+    <Position X="40.5" Y="5.25" Width="2.75" />
+    <Members>
+      <Field Name="btn_Entrance" Hidden="true" />
+      <Field Name="btnBeheer" Hidden="true" />
+      <Field Name="btnEvent" Hidden="true" />
+      <Field Name="btnLogout" Hidden="true" />
+      <Field Name="btnVerhuur" Hidden="true" />
+      <Field Name="components" Hidden="true" />
+      <Method Name="Dispose" Hidden="true" />
+      <Method Name="InitializeComponent" Hidden="true" />
+      <Field Name="lblCur" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <AssociationLine Name="Database" Type="ICT4Events_Group1.Database" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="41.875" Y="5.25" />
+        <Point X="41.875" Y="1.25" />
+        <Point X="22.75" Y="1.25" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="VerhuurForm" Type="ICT4Events_Group1.VerhuurForm" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="41.875" Y="7.511" />
+        <Point X="41.875" Y="15.717" />
+        <Point X="12.188" Y="15.717" />
+        <Point X="12.188" Y="10.184" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="EntranceForm" Type="ICT4Events_Group1.EntranceForm" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="42.562" Y="7.511" />
+        <Point X="42.562" Y="17.084" />
+        <Point X="4.938" Y="17.084" />
+        <Point X="4.938" Y="9.992" />
+      </Path>
+    </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAAAAAIAACAQIAAAAACAABAKAAAIABAAIGgJAAAAAAA=</HashCode>
+      <HashCode>EAAAAAIAAGAQoIIAAICAAJQKAAAAABAAIGgJCCAAEAA=</HashCode>
       <FileName>MenuForm.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Database" />
+      <Property Name="UserLogin" />
+      <Property Name="VerhuurForm" />
+      <Property Name="EntranceForm" />
+    </ShowAsAssociation>
   </Class>
   <Class Name="ICT4Events_Group1.Message">
-    <Position X="30.75" Y="8.5" Width="1.5" />
+    <Position X="14.75" Y="5.25" Width="2.25" />
     <TypeIdentifier>
-      <HashCode>AAAiAgAAQAAAABBAAAAAAAAAAAAAAAAAAAAAgAAAAgA=</HashCode>
+      <HashCode>AAAiBgAAQAQAAFAEAAAAAAAAAAADAAABAAAAgQAAAgA=</HashCode>
       <FileName>Message.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="ICT4Events_Group1.Program">
-    <Position X="20.25" Y="11.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
-      <FileName>Program.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="ICT4Events_Group1.Reactie">
-    <Position X="11.5" Y="8.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>gCgAAggAQDAAAAAAABCCAAASAQACAAAAAAAAAAgAAAA=</HashCode>
-      <FileName>Reactie.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="ICT4Events_Group1.Report">
-    <Position X="15" Y="8.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAABAAAAAgAAQAIAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Report.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="ICT4Events_Group1.Reservation">
-    <Position X="20.25" Y="8.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AgAAAAAAAQAAAAAAQAAIAAAACAAAAAAgAAAAAIAAAAA=</HashCode>
-      <FileName>Reservation.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="ICT4Events_Group1.RFID_">
-    <Position X="16.75" Y="11" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAACAAAAAgAAAIAAgAAAAIAAAAAAAAAAAIAAAAAA=</HashCode>
-      <FileName>RFID.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="ICT4Events_Group1.User">
-    <Position X="13.25" Y="8.5" Width="1.5" />
+    <Position X="30" Y="5.25" Width="2.25" />
     <TypeIdentifier>
-      <HashCode>AgACAAQABEAAAAAAAQAAAAEAgAQAAAAAAAAAAAAAggA=</HashCode>
+      <HashCode>AgACAAAAhAAAAAAEAQAAAAEAgAQAAAAAAAAAAAAAggA=</HashCode>
       <FileName>User.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="UserDatabase" />
+    </ShowAsAssociation>
   </Class>
   <Class Name="ICT4Events_Group1.UserLogin">
-    <Position X="18.5" Y="8.5" Width="1.5" />
+    <Position X="37.75" Y="5.25" Width="1.5" />
+    <Members>
+      <Field Name="btLogin" Hidden="true" />
+      <Field Name="btnEmpLogin" Hidden="true" />
+      <Field Name="components" Hidden="true" />
+      <Field Name="label1" Hidden="true" />
+      <Field Name="label2" Hidden="true" />
+      <Field Name="lblMsg" Hidden="true" />
+      <Field Name="txtPassword" Hidden="true" />
+      <Field Name="txtUsername" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
     <TypeIdentifier>
-      <HashCode>AAgAAAAQACAQABAAAgCAAAACAAAAAAABAFAAAQAAAAA=</HashCode>
+      <HashCode>AAgAAAAQAGAQABAIAgCAAIACAAAQAgAFAFAgAQAAAAA=</HashCode>
       <FileName>UserLogin.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="MenuForm" />
+      <Property Name="Database" />
+    </ShowAsAssociation>
   </Class>
   <Class Name="ICT4Events_Group1.VerhuurForm">
-    <Position X="36" Y="0.75" Width="1.5" />
+    <Position X="10" Y="8.5" Width="4" />
+    <Members>
+      <Field Name="btnRentItem" Hidden="true" />
+      <Field Name="btnReset" Hidden="true" />
+      <Field Name="btnSearch" Hidden="true" />
+      <Field Name="button1" Hidden="true" />
+      <Field Name="ckbBetaald" Hidden="true" />
+      <Field Name="ckbBetaald_b" Hidden="true" />
+      <Field Name="components" Hidden="true" />
+      <Field Name="dtpTot" Hidden="true" />
+      <Field Name="dtpVan" Hidden="true" />
+      <Field Name="groupBox1" Hidden="true" />
+      <Field Name="groupBox2" Hidden="true" />
+      <Field Name="groupBox3" Hidden="true" />
+      <Field Name="label1" Hidden="true" />
+      <Field Name="label3" Hidden="true" />
+      <Field Name="label4" Hidden="true" />
+      <Field Name="label5" Hidden="true" />
+      <Field Name="lblDate1" Hidden="true" />
+      <Field Name="lblDate2" Hidden="true" />
+      <Field Name="lblDesc" Hidden="true" />
+      <Field Name="lblItemID" Hidden="true" />
+      <Field Name="lblKosten" Hidden="true" />
+      <Field Name="lbxRentList" Hidden="true" />
+      <Field Name="radAlles" Hidden="true" />
+      <Field Name="radHuurbaar" Hidden="true" />
+      <Field Name="radVerhuurd" Hidden="true" />
+      <Field Name="tbxItemID" Hidden="true" />
+      <Field Name="tbxRFID" Hidden="true" />
+      <Field Name="tbxSearch" Hidden="true" />
+      <Field Name="txtItem" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
     <TypeIdentifier>
-      <HashCode>QAoCBAQaGSBQABAIAADAAIASCEAMAQAhAGABAAAhwgI=</HashCode>
+      <HashCode>QAoCDAQaGSBQCBAIAADAAIASCEAMAQAhAGABAAAh0gI=</HashCode>
       <FileName>VerhuurForm.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="VerhuurDatabase" />
+    </ShowAsAssociation>
   </Class>
-  <Class Name="ICT4Events_Group1.Properties.Resources">
-    <Position X="15" Y="11" Width="1.5" />
+  <Class Name="ICT4Events_Group1.EventBeheerForm">
+    <Position X="24.75" Y="8.5" Width="3.25" />
+    <Members>
+      <Field Name="btnCreateEmployee" Hidden="true" />
+      <Field Name="btnCreateEvent" Hidden="true" />
+      <Field Name="btnSearch" Hidden="true" />
+      <Field Name="btnSearchEmployee" Hidden="true" />
+      <Field Name="btnVerwijderEvent" Hidden="true" />
+      <Field Name="btnVerwijderMedewerker" Hidden="true" />
+      <Field Name="components" Hidden="true" />
+      <Field Name="datTimeEnd" Hidden="true" />
+      <Field Name="datTimeStart" Hidden="true" />
+      <Field Name="groupBox1" Hidden="true" />
+      <Field Name="grpEvent" Hidden="true" />
+      <Field Name="label1" Hidden="true" />
+      <Field Name="label2" Hidden="true" />
+      <Field Name="label3" Hidden="true" />
+      <Field Name="label4" Hidden="true" />
+      <Field Name="label5" Hidden="true" />
+      <Field Name="label6" Hidden="true" />
+      <Field Name="label7" Hidden="true" />
+      <Field Name="lblDesc" Hidden="true" />
+      <Field Name="lblEuro" Hidden="true" />
+      <Field Name="lbxEmployees" Hidden="true" />
+      <Field Name="lbxLastEvents" Hidden="true" />
+      <Field Name="numCost" Hidden="true" />
+      <Field Name="tbxNaam" Hidden="true" />
+      <Field Name="tbxSearch" Hidden="true" />
+      <Field Name="txtBeschrijving" Hidden="true" />
+      <Field Name="txtEmployee" Hidden="true" />
+      <Field Name="txtPassword" Hidden="true" />
+      <Field Name="txtUsername" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+      <HashCode>EAgEpIAZACAVABgBAACAAAAKAAQAAAYhADAgABQGIQo=</HashCode>
+      <FileName>EventBeheerForm.cs</FileName>
     </TypeIdentifier>
-  </Class>
-  <Class Name="ICT4Events_Group1.Properties.Settings">
-    <Position X="23.25" Y="0.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
-    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="EventDatabase" />
+    </ShowAsAssociation>
   </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

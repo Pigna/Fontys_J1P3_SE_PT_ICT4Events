@@ -34,6 +34,50 @@ namespace ICT4Events_Group1
                 btnEvent.Visible = false;
         }
 
+        internal Database Database
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public UserLogin UserLogin
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public VerhuurForm VerhuurForm
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public EntranceForm EntranceForm
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
         private void Open(Form open)
         {
             //this.Hide();

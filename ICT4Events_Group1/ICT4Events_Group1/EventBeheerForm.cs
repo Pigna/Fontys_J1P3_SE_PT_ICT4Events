@@ -24,6 +24,17 @@ namespace ICT4Events_Group1
             lbxLastEvents.Items.AddRange(db.getEvents().ToArray());
         }
 
+        internal EventDatabase EventDatabase
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
         private void lblEuro_Click(object sender, EventArgs e)
         {
 

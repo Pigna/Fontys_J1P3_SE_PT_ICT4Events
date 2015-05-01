@@ -14,7 +14,6 @@ namespace ICT4Events_Group1
 {
     public partial class GebruikerToevoegForm : Form
     {
-        Database db = new Database();
         UserDatabase userDatabase = new UserDatabase();
         EventDatabase eventDatabase = new EventDatabase();
         string[] filesPaspoort;
@@ -69,6 +68,40 @@ namespace ICT4Events_Group1
             //filesProfielfoto[0] = (string)dataList[0]["event"];
 
         }
+
+        internal UserDatabase UserDatabase
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        internal Event Event
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        internal EventDatabase EventDatabase
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+    
         private bool CheckEmailFormat(string email)
         {
             //nog te maken! checken of email wel een email format is
@@ -122,9 +155,9 @@ namespace ICT4Events_Group1
             if (selectedEvent == null)
                 return;
 
-            if (userDatabase.adduser(db.getLatestId("Gebruiker"), selectedEvent, voornaam, tussenvoegsel, achternaam, straat, huisnummer, postcode, woonplaats, Paspoort, rekeningnr, Profielfoto, email, vastnr, mobielnr, username, password, startdatum, einddatum, betaald))
+            if (userDatabase.adduser(userDatabase.getLatestId("Gebruiker"), selectedEvent, voornaam, tussenvoegsel, achternaam, straat, huisnummer, postcode, woonplaats, Paspoort, rekeningnr, Profielfoto, email, vastnr, mobielnr, username, password, startdatum, einddatum, betaald))
                 MessageBox.Show(username + " aangemaakt!");
-            User user = new User(db.getLatestId("Gebruiker"), username, voornaam, tussenvoegsel, achternaam);
+            User user = new User(userDatabase.getLatestId("Gebruiker"), username, voornaam, tussenvoegsel, achternaam);
             tbVoornaam.Clear();
             tbTussenvoegsel.Clear(); //niet verplicht
             tbAchternaam.Clear();

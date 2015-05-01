@@ -12,15 +12,23 @@ namespace ICT4Events_Group1
         private string username;
         private int id;
         private string naam;
-
-        private RFID_ RFID;
         List<Item> itemlist = new List<Item>();
         UserDatabase userdatabase = new UserDatabase();
 
         //properties
         public string Username { get { return username; } }
         public int Id { get { return id; } }
-        public RFID_ rfid { get; set; }
+
+        internal UserDatabase UserDatabase
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
 
         //constructors
         public User ( int id, string username, string voornaam, string tussenvoegsel, string achternaam)

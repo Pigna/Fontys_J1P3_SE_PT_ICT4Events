@@ -24,6 +24,17 @@ namespace ICT4Events_Group1
 
         }
 
+        internal EntranceDatabase EntranceDatabase
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
         private void btnSearch_Click(object sender, EventArgs e)
         {
             try

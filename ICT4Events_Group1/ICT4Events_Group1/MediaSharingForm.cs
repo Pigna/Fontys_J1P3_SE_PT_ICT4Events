@@ -34,6 +34,50 @@ namespace ICT4Events_Group1
             //get list of last 100 messages
             getListMessages();
         }
+
+        internal Message Message
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        internal MediaSharingDatabase MediaSharingDatabase
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public UserLogin UserLogin
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        internal Event Event
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
         //get list of last 100 messages
         private void getListMessages()
         {

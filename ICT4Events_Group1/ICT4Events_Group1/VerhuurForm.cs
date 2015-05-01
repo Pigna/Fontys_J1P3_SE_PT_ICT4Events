@@ -27,6 +27,17 @@ namespace ICT4Events_Group1
             printList(db.getCatAantal(VerhuurDatabase.Soort.Alles));
         }
 
+        internal VerhuurDatabase VerhuurDatabase
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
         private void printList(Dictionary<string, int> list)
         {
             lbxRentList.Items.Clear();

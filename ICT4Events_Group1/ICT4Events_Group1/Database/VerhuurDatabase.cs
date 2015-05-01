@@ -8,6 +8,17 @@ namespace ICT4Events_Group1
 {
     class VerhuurDatabase : Database
     {
+        internal Item Item
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+    
         public enum Soort { Alles, Huurbaar, Verhuurd };
 
         public Dictionary<string, int> getCatAantal(Soort soort)

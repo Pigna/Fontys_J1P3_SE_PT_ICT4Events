@@ -9,6 +9,28 @@ namespace ICT4Events_Group1
 {
     class EventDatabase : Database
     {
+        internal Employee Employee
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        internal Event Event
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+    
         public List<Employee> getEmployees()
         {
             List<Employee> ret = new List<Employee>();

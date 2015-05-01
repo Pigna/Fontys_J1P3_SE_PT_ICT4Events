@@ -23,6 +23,29 @@ namespace ICT4Events_Group1
                 lbxUsers.Items.Add(user);
             }
         }
+
+        internal UserDatabase UserDatabase
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        internal User User
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+    
         private void btnNew_Click(object sender, EventArgs e)
         {
             GebruikerToevoegForm adduser = new GebruikerToevoegForm();

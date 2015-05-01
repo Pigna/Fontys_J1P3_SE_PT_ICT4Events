@@ -33,6 +33,28 @@ namespace ICT4Events_Group1
 
         }
 
+        public MenuForm MenuForm
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        internal Database Database
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
         private void btLogin_Click(object sender, EventArgs e)
         {
             lblMsg.Text = "";

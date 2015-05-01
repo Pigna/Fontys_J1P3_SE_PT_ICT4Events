@@ -25,6 +25,17 @@ namespace ICT4Events_Group1
         private static Employee loggedInEmployee;
         public Object Logged { get { if (loggedInEmployee == null) return current; return loggedInEmployee; } }
 
+        internal Employee Employee
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
         //properties
 
         //constructor
