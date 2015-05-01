@@ -111,7 +111,7 @@ namespace ICT4Events_Group1
             }
             catch (Exception e) { 
                 Console.WriteLine(e.ToString()); 
-                return null; 
+                return new List<Dictionary<string,object>>(); 
             }
             finally { Disconnect(); }
         }

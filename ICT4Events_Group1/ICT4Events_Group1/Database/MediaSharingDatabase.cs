@@ -64,6 +64,43 @@ namespace ICT4Events_Group1
             return mes;
 
         }
+        //GET MESSAGES FROM CAT
+        public List<Message> getMessagesFromCat(Event eventnaam, string catagory)
+        {
+            List<Message> mes = new List<Message>();
+
+            List<Dictionary<string, object>> messages = getQuery("SELECT m.id as id, Titel, Inhoud, g.id as gebruiker, username, voornaam, tussenvoegsel, achternaam FROM Message m JOIN Gebruiker g ON m.Gebruiker = g.id JOIN MESINCAT mes ON mes.MESSAGE = m.id WHERE reaction IS NULL AND zichtbaar = 1 AND mes.category = '" + catagory + "' ORDER BY id DESC");
+            if (messages == null)
+            {
+                return null;
+            }
+
+            int count = messages.Count;
+
+            if (count > 100)
+                count = 100;
+
+            Dictionary<int, User> users = new Dictionary<int, User>();
+
+            for (int i = 0; i < count; i++)
+            {
+                Dictionary<string, object> data = messages[i];
+                User auteur;
+                int id = Convert.ToInt32(data["gebruiker"]);
+                if (users.ContainsKey(id))
+                    auteur = users[id];
+                else
+                {
+                    auteur = new User(Convert.ToInt32(data["gebruiker"]), (string)data["username"], (string)data["voornaam"], (string)data["tussenvoegsel"], (string)data["achternaam"]);
+                    users.Add(Convert.ToInt32(id), auteur);
+                }
+
+                Dictionary<string, object> cur = messages[i];
+                mes.Add(new Message(Convert.ToInt16(cur["id"]), (string)cur["titel"], (string)cur["inhoud"], auteur));
+            }
+            return mes;
+
+        }
         //Get reactions on a messages
         public List<Message> getMessages(Event eventnaam, Message bericht)
         {
@@ -157,6 +194,30 @@ namespace ICT4Events_Group1
                 Event e = new Event(Convert.ToInt16(data["id"]), (string)data["naam"], (string)data["beschrijving"], Convert.ToDateTime(data["startdatum"]), Convert.ToDateTime(data["einddatum"]), (float)data["kosten"]);
 
             return e;
+        }
+        public List<string> getCategories()
+        {
+            List<string> catres = new List<string>();
+
+            List<Dictionary<string, object>> categories = getQuery("SELECT c.Naam FROM CATEGORY c LEFT JOIN MESINCAT m ON c.Naam = m.Category GROUP BY c.Naam ORDER BY COUNT(m.Message) DESC");
+            if (categories == null)
+            {
+                return null;
+            }
+            for (int i = 0; i < categories.Count; i++)
+            {
+                Dictionary<string, object> data = categories[i];
+                catres.Add((string)data["naam"]);
+            }
+            return catres;
+        }
+        public bool newCategorie(string cat)
+        {
+            return doQuery("INSERT INTO Category(naam) VALUES('" + cat + "')") > 0;
+        }
+        public bool newCatinMsg(Message message, string cat)
+        {
+            return doQuery("INSERT INTO Mesincat(message, category) VALUES('" + message.Id + "', '" + cat + "')") > 0;
         }
     }
 }

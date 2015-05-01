@@ -33,11 +33,11 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lbCategorie = new System.Windows.Forms.ListBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnReact = new System.Windows.Forms.Button();
             this.btnImage = new System.Windows.Forms.Button();
             this.lbComments = new System.Windows.Forms.ListBox();
             this.lbPosts = new System.Windows.Forms.ListBox();
             this.btnRefresh = new System.Windows.Forms.Button();
-            this.btnHide = new System.Windows.Forms.Button();
             this.btnLike = new System.Windows.Forms.Button();
             this.lblReactie = new System.Windows.Forms.Label();
             this.tbReactieMessage = new System.Windows.Forms.TextBox();
@@ -46,8 +46,7 @@
             this.btnPost = new System.Windows.Forms.Button();
             this.btnUpload = new System.Windows.Forms.Button();
             this.tbMessage = new System.Windows.Forms.TextBox();
-            this.btnProfile = new System.Windows.Forms.Button();
-            this.btnReact = new System.Windows.Forms.Button();
+            this.btnLogout = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -77,6 +76,7 @@
             this.groupBox1.Controls.Add(this.lbCategorie);
             this.groupBox1.Controls.Add(this.lblCategorie);
             this.groupBox1.Controls.Add(this.tbSearch);
+            this.groupBox1.Controls.Add(this.btnRefresh);
             this.groupBox1.Location = new System.Drawing.Point(12, 44);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(200, 398);
@@ -88,7 +88,7 @@
             this.lbCategorie.FormattingEnabled = true;
             this.lbCategorie.Location = new System.Drawing.Point(6, 58);
             this.lbCategorie.Name = "lbCategorie";
-            this.lbCategorie.Size = new System.Drawing.Size(100, 329);
+            this.lbCategorie.Size = new System.Drawing.Size(100, 290);
             this.lbCategorie.TabIndex = 4;
             this.lbCategorie.SelectedValueChanged += new System.EventHandler(this.lbCategorie_SelectedValueChanged);
             // 
@@ -98,8 +98,6 @@
             this.groupBox2.Controls.Add(this.btnImage);
             this.groupBox2.Controls.Add(this.lbComments);
             this.groupBox2.Controls.Add(this.lbPosts);
-            this.groupBox2.Controls.Add(this.btnRefresh);
-            this.groupBox2.Controls.Add(this.btnHide);
             this.groupBox2.Controls.Add(this.btnLike);
             this.groupBox2.Controls.Add(this.lblReactie);
             this.groupBox2.Controls.Add(this.tbReactieMessage);
@@ -113,6 +111,16 @@
             this.groupBox2.Size = new System.Drawing.Size(505, 398);
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
+            // 
+            // btnReact
+            // 
+            this.btnReact.Location = new System.Drawing.Point(424, 107);
+            this.btnReact.Name = "btnReact";
+            this.btnReact.Size = new System.Drawing.Size(75, 23);
+            this.btnReact.TabIndex = 23;
+            this.btnReact.Text = "React";
+            this.btnReact.UseVisualStyleBackColor = true;
+            this.btnReact.Click += new System.EventHandler(this.btnReact_Click);
             // 
             // btnImage
             // 
@@ -143,23 +151,13 @@
             // 
             // btnRefresh
             // 
-            this.btnRefresh.Location = new System.Drawing.Point(6, 108);
+            this.btnRefresh.Location = new System.Drawing.Point(6, 350);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(75, 23);
             this.btnRefresh.TabIndex = 19;
             this.btnRefresh.Text = "Refresh";
             this.btnRefresh.UseVisualStyleBackColor = true;
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
-            // 
-            // btnHide
-            // 
-            this.btnHide.Location = new System.Drawing.Point(479, 108);
-            this.btnHide.Name = "btnHide";
-            this.btnHide.Size = new System.Drawing.Size(20, 20);
-            this.btnHide.TabIndex = 14;
-            this.btnHide.Text = "-";
-            this.btnHide.UseVisualStyleBackColor = true;
-            this.btnHide.Click += new System.EventHandler(this.btnHide_Click);
             // 
             // btnLike
             // 
@@ -237,32 +235,22 @@
             this.tbMessage.Enter += new System.EventHandler(this.tbMessage_Enter);
             this.tbMessage.Leave += new System.EventHandler(this.tbMessage_Leave);
             // 
-            // btnProfile
+            // btnLogout
             // 
-            this.btnProfile.Location = new System.Drawing.Point(455, 12);
-            this.btnProfile.Name = "btnProfile";
-            this.btnProfile.Size = new System.Drawing.Size(75, 23);
-            this.btnProfile.TabIndex = 3;
-            this.btnProfile.Text = "Profile";
-            this.btnProfile.UseVisualStyleBackColor = true;
-            this.btnProfile.Click += new System.EventHandler(this.btnProfile_Click);
-            // 
-            // btnReact
-            // 
-            this.btnReact.Location = new System.Drawing.Point(310, 107);
-            this.btnReact.Name = "btnReact";
-            this.btnReact.Size = new System.Drawing.Size(75, 23);
-            this.btnReact.TabIndex = 23;
-            this.btnReact.Text = "React";
-            this.btnReact.UseVisualStyleBackColor = true;
-            this.btnReact.Click += new System.EventHandler(this.btnReact_Click);
+            this.btnLogout.Location = new System.Drawing.Point(557, 12);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(75, 23);
+            this.btnLogout.TabIndex = 6;
+            this.btnLogout.Text = "Logout";
+            this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click_1);
             // 
             // MediaSharingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(764, 454);
-            this.Controls.Add(this.btnProfile);
+            this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "MediaSharingForm";
@@ -285,10 +273,8 @@
         private System.Windows.Forms.Button btnPost;
         private System.Windows.Forms.Button btnUpload;
         private System.Windows.Forms.TextBox tbMessage;
-        private System.Windows.Forms.Button btnProfile;
         private System.Windows.Forms.ListBox lbCategorie;
         private System.Windows.Forms.TextBox tbTitle;
-        private System.Windows.Forms.Button btnHide;
         private System.Windows.Forms.Panel panelPicture;
         private System.Windows.Forms.Button btnImage;
         private System.Windows.Forms.Label lblReactie;
@@ -297,5 +283,6 @@
         private System.Windows.Forms.ListBox lbComments;
         private System.Windows.Forms.ListBox lbPosts;
         private System.Windows.Forms.Button btnReact;
+        private System.Windows.Forms.Button btnLogout;
     }
 }

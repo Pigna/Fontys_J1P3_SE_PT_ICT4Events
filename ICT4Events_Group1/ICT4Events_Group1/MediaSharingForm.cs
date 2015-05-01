@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
 
 namespace ICT4Events_Group1
 {
@@ -33,6 +34,7 @@ namespace ICT4Events_Group1
             event_ = mediasharing.getEvent((User)mediasharing.Logged);
             //get list of last 100 messages
             getListMessages();
+            getListCategories();
         }
 
         internal Message Message
@@ -86,6 +88,13 @@ namespace ICT4Events_Group1
             lbPosts.Items.Clear();
             lbPosts.Items.AddRange(messagelist.ToArray());
         }
+        private void getListMessagesFromCat(string cat)
+        {
+            messagelist.Clear();
+            messagelist = mediasharing.getMessagesFromCat(event_, cat);
+            lbPosts.Items.Clear();
+            lbPosts.Items.AddRange(messagelist.ToArray());
+        }
         private void getListComments(Message selectedItem)
         {
             commentlist.Clear();
@@ -93,39 +102,18 @@ namespace ICT4Events_Group1
             lbComments.Items.Clear();
             lbComments.Items.AddRange(commentlist.ToArray());
         }
+        private void getListCategories()
+        {
+            categorie.Clear();
+            categorie = mediasharing.getCategories();
+            lbCategorie.Items.Clear();
+            lbCategorie.Items.AddRange(categorie.ToArray());
+        }
         private void tbSearch_KeyDown(object sender, KeyEventArgs e)
         {
-            int i = 0;
-
             if (e.KeyCode == Keys.Enter)    //als er op enter gedrukt wordt dan...
             {
-                if (lbCategorie.Items.Contains(tbSearch.Text))
-                {
-                    //doe niets
-                }
-                else
-                {
-                    foreach (String text in categorie)
-                    {
-                        if (tbSearch.Text == text)
-                        {
-                            tbSearch.Font = new Font(DefaultFont.FontFamily, DefaultFont.Size, FontStyle.Bold);
-                        }
-                        else if (i == 0)
-                        {
-                            lbCategorie.Items.Add(tbSearch.Text);
-                            i++;
-                        }
-                    }
-                    if (i == 0)
-                    {
-                        categorie.Add(tbSearch.Text);
-                        lbCategorie.Items.Add(tbSearch.Text);
-                    }
-                    i = 0;
-                }
-
-
+                getListMessagesFromCat(tbSearch.Text);
             }
         }
 
@@ -141,6 +129,15 @@ namespace ICT4Events_Group1
                 //tbMessage1.Text = tbTitle.Text + Environment.NewLine + tbMessage.Text;
                 //panelPicture.Controls.Clear();
                 //lblPoster.Text = ((User)mediasharing.Logged).Username; //hier moet de naam opgevraagd worden uit de database.
+                //Search #hashtags
+                Regex regex = new Regex(@"#(\w+)(?=#|\s|$)");
+
+                foreach (Match match in regex.Matches(tbMessage.Text))
+                {
+                    string result = match.Value.Substring(1, match.Value.Length-1);
+                    mediasharing.newCategorie(result);
+                    mediasharing.newCatinMsg(bericht, result);
+                }
             }
             else
             {
@@ -161,11 +158,6 @@ namespace ICT4Events_Group1
                 mediasharing.sendDislike((Message)lbPosts.SelectedItem, (User)mediasharing.Logged);
             }
             click = !click;
-        }
-
-        private void btnComment_Click(object sender, EventArgs e)
-        {
-            reactie.ShowDialog();
         }
 
         private void btnProfile_Click(object sender, EventArgs e)
@@ -210,34 +202,6 @@ namespace ICT4Events_Group1
         private void tbSearch_Leave(object sender, EventArgs e)
         {
             tbSearch.Text = "Search";
-        }
-
-        private void lblLike_Click(object sender, EventArgs e)
-        {
-            /*Message bericht = new Message(idcount, tbMessage.Text);
-            mediasharing.sendLike(bericht, (User)mediasharing.Logged, idcount);
-            idcount++;*/
-        }
-
-        private void btnHide_Click(object sender, EventArgs e)
-        {   //checkt of button hide nog niet is geklikt.
-            /*
-            if (click == false)
-            {
-                groupBox3.Visible = false;
-                click = true;
-            }
-            else if (click == true)
-            {
-                groupBox3.Visible = true;
-                click = false;
-            }
-             */
-        }
-
-        private void btnLogout_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void btnUpload_Click(object sender, EventArgs e)
@@ -294,41 +258,14 @@ namespace ICT4Events_Group1
 
         private void btnRefresh_Click(object sender, EventArgs e)
         {
-            //tbReactieTitle.Text = reactie.GetTitle();
-            tbReactieMessage.Text = reactie.GetMessage();
-        }
-
-        private void btnReactieImage_Click(object sender, EventArgs e)
-        {
-            if (reactie.GetPath() == null)
-            {
-                MessageBox.Show("No image here!");
-            }
-            else
-            {
-
-                Form form = new Form();
-
-                PictureBox pictureBox = new PictureBox();
-                pictureBox.Dock = DockStyle.Fill;
-                pictureBox.Image = Image.FromFile(reactie.GetPath());
-                pictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
-                form.Controls.Add(pictureBox);
-
-                form.ShowDialog();
-            }
+            getListMessages();
+            getListCategories();
         }
 
         private void lbCategorie_SelectedValueChanged(object sender, EventArgs e)
         {
-            mediasharing.logOut();
-            login.Show();
-            this.Hide();
-        }
-
-        private void btnLogout_Click_1(object sender, EventArgs e)
-        {
-            
+            string selCat = (string)lbCategorie.SelectedItem;
+            getListMessagesFromCat(selCat);
         }
 
         private void lbPosts_SelectedIndexChanged(object sender, EventArgs e)
@@ -367,6 +304,13 @@ namespace ICT4Events_Group1
             {
                 MessageBox.Show("Selecteer eerst een bericht en maak een reactie");
             }
+        }
+
+        private void btnLogout_Click_1(object sender, EventArgs e)
+        {
+            mediasharing.logOut();
+            login.Show();
+            this.Hide();
         }
     }
 }
