@@ -48,11 +48,12 @@ namespace ICT4Events_Group1
         }
         public override string ToString()
         {
-            string str = Auteur.Username + " ";
-            if (Title != "")
+            string str = "";
+            if (Title != null)
             {
-                str += Title;
+                str += "[" + Title + "]";
             }
+            str += " " + Auteur.Username + ":";
             str += " " + Inhoud;
 
             return str;
