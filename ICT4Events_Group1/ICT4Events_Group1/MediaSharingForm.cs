@@ -311,6 +311,7 @@ namespace ICT4Events_Group1
             mediasharing.logOut();
             login.Show();
             this.Hide();
+            login.clear();
         }
     }
 }

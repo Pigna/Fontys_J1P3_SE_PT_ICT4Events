@@ -48,8 +48,8 @@ namespace ICT4Events_Group1
 
                     lb_naam.Text = (string)cur["voornaam"] + " " + (string)cur["tussenvoegsel"] + " " + (string)cur["achternaam"];
                     lb_adress.Text = (string)cur["woonplaats"];
-                    pb_paspoort.ImageLocation = (string)cur["paspoort"];
-                    pb_profile.ImageLocation = (string)cur["foto"];
+                    //pb_paspoort.ImageLocation = (string)cur["paspoort"];
+                    //pb_profile.ImageLocation = (string)cur["foto"];
                     if (Convert.ToInt32(cur["betaald"]) == 0)
                     {
                         lb_payed.Text = "nog niet betaald";

@@ -134,6 +134,7 @@ namespace ICT4Events_Group1
                 db.logOut();
                 login.Show();
                 this.Hide();
+                login.clear();
             }
         }
 

@@ -21,7 +21,7 @@
   <Class Name="ICT4Events_Group1.MediaSharingDatabase">
     <Position X="17.75" Y="5.25" Width="2.5" />
     <TypeIdentifier>
-      <HashCode>AAAIAAAoAAQAAAAAAAAAAAAwAAAAAAAAAAAAAAAAQAA=</HashCode>
+      <HashCode>AAAIAAAoQAQgAAAAAAAAAAAwAAAAAAEAAAAABAAAQAA=</HashCode>
       <FileName>Database\MediaSharingDatabase.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -232,11 +232,9 @@
   <Class Name="ICT4Events_Group1.MediaSharingForm">
     <Position X="18.5" Y="8.5" Width="2.5" />
     <Members>
-      <Field Name="btnHide" Hidden="true" />
       <Field Name="btnImage" Hidden="true" />
       <Field Name="btnLike" Hidden="true" />
       <Field Name="btnPost" Hidden="true" />
-      <Field Name="btnProfile" Hidden="true" />
       <Field Name="btnReact" Hidden="true" />
       <Field Name="btnRefresh" Hidden="true" />
       <Field Name="btnUpload" Hidden="true" />
@@ -261,15 +259,15 @@
     </Compartments>
     <AssociationLine Name="UserLogin" Type="ICT4Events_Group1.UserLogin" ManuallyRouted="true">
       <Path>
-        <Point X="21" Y="10.015" />
-        <Point X="21.75" Y="10.015" />
+        <Point X="21" Y="10.111" />
+        <Point X="21.75" Y="10.111" />
         <Point X="21.75" Y="14.711" />
         <Point X="38.5" Y="14.711" />
         <Point X="38.5" Y="7.127" />
       </Path>
     </AssociationLine>
     <TypeIdentifier>
-      <HashCode>kMgAAsgkQHAQCaAgIBDK4ECaApAEAAKAACkCrEiAUAA=</HashCode>
+      <HashCode>kMgAAskkQHAQDSAgABDC4ECaAhAAAAKAACkCqGiAUAA=</HashCode>
       <FileName>MediaSharingForm.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -362,13 +360,9 @@
       <Compartment Name="Methods" Collapsed="true" />
     </Compartments>
     <TypeIdentifier>
-      <HashCode>AAgAAAAQAGAQABAIAgCAAIACAAAQAgAFAFAgAQAAAAA=</HashCode>
+      <HashCode>AEgAAAAQAGAQABAIAgCAAIACAAAQAgABAFAgAQAAAAA=</HashCode>
       <FileName>UserLogin.cs</FileName>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="MenuForm" />
-      <Property Name="Database" />
-    </ShowAsAssociation>
   </Class>
   <Class Name="ICT4Events_Group1.VerhuurForm">
     <Position X="10" Y="8.5" Width="4" />

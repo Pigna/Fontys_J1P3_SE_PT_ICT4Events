@@ -33,28 +33,6 @@ namespace ICT4Events_Group1
 
         }
 
-        public MenuForm MenuForm
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
-
-        internal Database Database
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
-
         private void btLogin_Click(object sender, EventArgs e)
         {
             lblMsg.Text = "";
@@ -119,11 +97,11 @@ namespace ICT4Events_Group1
         {
 
         }
-
-
-
-
-
+        public void clear()
+        {
+            txtPassword.Text = "";
+            txtUsername.Text = "";
+        }
 
         #region Command line open functions
         private void openCmdLine(Phidget p)
@@ -209,6 +187,5 @@ namespace ICT4Events_Group1
             Application.Exit();
         }
         #endregion
-
     }
 }

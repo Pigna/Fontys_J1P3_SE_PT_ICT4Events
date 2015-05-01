@@ -98,7 +98,6 @@
     </Compile>
     <Compile Include="Database.cs" />
     <Compile Include="Employee.cs" />
-    <Compile Include="Entrance.cs" />
     <Compile Include="Event.cs" />
     <Compile Include="GebruikerToevoegForm.cs">
       <SubType>Form</SubType>
